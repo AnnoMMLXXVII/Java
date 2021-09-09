@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
-Built-By: venividivicihofneondeion010101
-Build-Jdk: 10.0.2
+Built-By: Haku Wei
+Build-Jdk: 11.0.8
 Implementation-Title: SampleBlog
 Implementation-Version: 1.0-SNAPSHOT
 Implementation-Vendor-Id: com.mvn.blog

@@ -1,10 +1,10 @@
 Manifest-Version: 1.0
-Built-By: venividivicihofneondeion010101
-Build-Jdk: 10.0.2
+Built-By: Haku Wei
+Build-Jdk: 11.0.8
 Implementation-Title: SpringBoot2-JDBC-CRUD-EXAMPLE
 Implementation-Version: 0.0.1-SNAPSHOT
 Implementation-Vendor-Id: net.guide.springboot2
-Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
- ot-starter-parent/SpringBoot2-JDBC-CRUD-EXAMPLE
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/SpringBoot2-JDBC-CRUD-EXAMPLE
 Created-By: Maven Integration for Eclipse
 

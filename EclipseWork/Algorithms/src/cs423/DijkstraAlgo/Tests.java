@@ -1,7 +1,6 @@
 package cs423.DijkstraAlgo;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
@@ -26,8 +25,8 @@ public class Tests {
 	public Tests() {
 		
 		try {
-			Class.forName(driver);
-			Connection conn = DriverManager.getConnection(url, user, pass);
+//			Class.forName(driver);
+//			Connection conn = DriverManager.getConnection(url, user, pass);
 	// FOREIGN KEY DELETE HERE
 		
 			rowsAffected = removeAllForeignKeys(); // calls method at line 48
