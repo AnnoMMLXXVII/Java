@@ -1,0 +1,143 @@
+/* RESULTS! */
+
+Input(N) : 10^1 Avg  : 3.5370e+03
+Input(N) : 10^1 AvgI : 1.7940e+03
+--------------------------------------------------
+Input(N) : 10^2 Avg  : 8.4139e+04
+Input(N) : 10^2 AvgI : 9.1222e+04
+--------------------------------------------------
+Input(N) : 10^3 Avg  : 3.7115e+06
+Input(N) : 10^3 AvgI : 3.1559e+06
+--------------------------------------------------
+Input(N) : 10^4 Avg  : 2.1733e+07
+Input(N) : 10^4 AvgI : 3.8602e+07
+--------------------------------------------------
+Input(N) : 10^5 Avg  : 1.0213e+09
+Input(N) : 10^5 AvgI : 1.6312e+09
+--------------------------------------------------
+Input(N) : 10^6 Avg  : 9.7972e+10
+Input(N) : 10^6 AvgI : 1.6208e+11
+--------------------------------------------------
+
+
+/*----------- SOURCE CODE ---------------*/
+import java.math.BigDecimal;
+import java.util.Random;
+
+public class Test02 {
+	private int[] arr;
+	private BigDecimal time;
+	private BigDecimal timeI;
+
+	public static void main(String args[])  {
+		new Test02();
+	} // endae MAIN
+
+	Test02()  {
+		initRun();
+	} // endae Constructor
+	
+	Test02(boolean flag, int size)  {
+		arr = initArr(arr, size, 100);
+		if (flag == true) {
+			BinSertSort(arr);
+		} // endae IF
+		else {
+			insertSort(arr, arr.length);
+		} // endae ELSE
+	} // endae Constructor @ 2param
+	
+	private void initRun()  {
+		int n = 6, nn = 5; BigDecimal zz = new BigDecimal(nn) ;
+		BigDecimal sum = new BigDecimal(0), sumI = new BigDecimal(0), avg = new BigDecimal(0), avgI = new BigDecimal(0);
+		for (int i = 1; i <=n; i++) { 
+			// loop becomes exponent number for base 10 powers
+			for (int j = 0; j <nn; j++) { 
+			// inner loop will run each test 10 times and sum the times
+				Test02 t1 = new Test02(true, (int)Math.pow(10, i));
+				sum = sum.add(t1.getTime()); 
+				// adding the times (ns) for each run from j to nn
+			}
+			avg = sum.divide(zz); // computes average
+			System.out.printf("Input(N) : 10^%d Avg  : %1.4e\n",i, avg);
+			
+			for (int j = 0; j <nn; j++) { 
+				Test02 t2 = new Test02(false, (int)Math.pow(10, i));
+				sumI = sumI.add(t2.getTimeI());
+			}
+			avgI = sumI.divide(zz); // computes average
+			System.out.printf("Input(N) : 10^%d AvgI : %1.4e\n",i, avgI);
+			System.out.println("--------------------------------------------------");
+		} // endae FOR
+	} // endae initRun Method
+	
+	private void BinSertSort(int[] arr) {
+		int tmp, low = 0, high, mid, j, i;
+		long start = System.nanoTime();
+		for (i = 1; i <arr.length; i++) {
+			tmp = arr[i]; low = 0; high = i;
+			// checking via binary search method
+			while (low < high) {
+				 mid = (high+low) >>> 1; 
+					// logical right shift operator
+				 if (tmp >= arr[mid]) { low = mid+1; } 
+					// if tmp is >= to the mid val low upper half search
+				 else { high = mid;} 
+					// tmp <= to mid, lower half or mid search
+			} 
+			// Insert/swapping occurs
+			j=i;
+			while (j > low) {
+				arr[j] = arr[j-1];
+				j--;
+			} // endae WHILE
+			arr[low] = tmp;
+		} // endae FOR
+		setTime(new BigDecimal(System.nanoTime() - start));
+	} // endae BinSertSort method
+	
+	private void insertSort(int a[], int n) {
+		long start = System.nanoTime();
+		for (int j = 1; j < n; j++) {  
+            		int key = a[j];  
+           		int i = j-1;  
+            		while ((i > -1) && ( a[i] > key ) ) {
+                		a [i+1] = a [i];  
+               	 		i--;  
+           		 }  // endae WHILE
+            		a[i+1] = key;  
+        	}  // endae FOR
+		setTimeI(new BigDecimal(System.nanoTime()- start));
+	} // endae insertSort method (original insertSort)
+	
+	private int[] initArr(int[] arr, int n, int max) {
+		Random r = new Random();
+		int rand = r.nextInt(max)+0; 
+			// generates random number
+		arr = new int[n]; 
+			// new instance of array with init size
+		for (int i = 0; i < n; i++) {
+			arr[i] = rand; 
+				// populates with random number 
+			rand = r.nextInt(max)+0; 
+				// generates another new number
+		} // endae for
+		return arr; 
+	} // endae initArr method	
+	
+	private BigDecimal getTime() {
+		return time;
+	}
+
+	private void setTime(BigDecimal time) {
+		this.time = time;
+	}
+
+	private BigDecimal getTimeI() {
+		return timeI;
+	}
+
+	private void setTimeI(BigDecimal timeI) {
+		this.timeI = timeI;
+	}	
+}

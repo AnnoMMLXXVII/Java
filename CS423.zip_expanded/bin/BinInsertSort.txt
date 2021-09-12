@@ -1,0 +1,81 @@
+import java.util.Random;
+
+public class BinInsertSort {
+	private int[] arr;
+	Random r = new Random();
+	long time;
+
+	public static void main(String[] args) {
+			new BinInsertSort();
+	}
+	
+	BinInsertSort() { initRun(); }
+	
+	public BinInsertSort(int size) {
+		arr = initArr(arr, size);
+		binInsertSort(arr, arr.length);
+	}
+	
+	public void initRun() {
+		int n = 6, nn = 10;
+		float avg = 0; long sum = 0;
+		for (int i = 1; i <n; i++) {
+			for (int j = 1; j < nn; j++) {
+				BinInsertSort bis = new BinInsertSort((int)Math.pow(10, i));
+				sum = sum + bis.getTime();
+			}
+			avg = sum/nn;
+			System.out.printf("\n\n------- AVG Time (ns) for N = %6d : %12.2f ----------\n\n", (int)Math.pow(10, i), avg);
+		}
+	}
+	
+	private void setTime(long time) {
+		this.time = time;
+	}
+	
+	public long getTime() {
+		return time;
+	}
+	
+	private int[] initArr(int arr[], int n) {
+		int rand = r.nextInt(100)+0;
+		arr = new int[n];
+		for (int i = 0; i < n; i++) {
+			arr[i] = rand;
+			rand = r.nextInt(100)+0;
+		}
+		return arr;
+	}
+	
+
+
+	int	binSearch (int a[], int low, int high, int key) {
+	    int mid;
+	    if (low == high)
+	        return low;
+	    mid = low + ((high - low) / 2);
+	    if (key > a[mid])
+	        return binSearch (a, mid + 1, high, key);
+	    else if (key < a[mid])
+	        return binSearch (a, low, mid, key);
+	    return mid;
+	}
+	
+	void binInsertSort (int a[], int n) {
+	    int ins, i, j;
+	    int tmp;
+	    long start = System.nanoTime();
+	    for (i = 1; i < n; i++) { // O(n)
+	        ins = binSearch (a, 0, i, a[i]); // (O(log(n))
+	        tmp = a[i];
+	        for (j = i - 1; j >= ins; j--) { // (O(n)
+	            a[j + 1] = a[j]; // swapping
+	        }
+	        a[ins] = tmp; // finished swapping
+	    }
+	    setTime(System.nanoTime() - start);
+	    System.out.println(getTime());
+	    // n * (lg(n)+(n)) = nlg(n) + (n^2) = O(n^2)
+	}
+
+}
