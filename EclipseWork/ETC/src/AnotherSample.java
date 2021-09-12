@@ -1,4 +1,4 @@
-package main.java;
+
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -10,7 +10,7 @@ public class AnotherSample {
 	private static Random r = new Random();
 	public static void main(String[] args) {
 		List<Integer> numbers = new ArrayList<>();
-		initializeList(numbers,100000);
+		initializeList(numbers,10);
 		Collections.shuffle(numbers);
 		Integer[] list = new Integer[numbers.size()];
 
@@ -22,7 +22,7 @@ public class AnotherSample {
 			index = (numbers.size() == 1) ? r.nextInt(numbers.size())+0 : 0;
 			message = message + String.format("A[%d] = %d\n", i, list[i]);
 		}
-		System.out.println(message);
+		System.out.println(message+5);
 	}
 	
 	private static void initializeList(List<Integer> list) {
