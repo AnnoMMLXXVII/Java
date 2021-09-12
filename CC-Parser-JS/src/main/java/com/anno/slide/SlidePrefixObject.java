@@ -1,4 +1,4 @@
-package main.java.com.anno;
+package main.java.com.anno.slide;
 
 import java.util.List;
 

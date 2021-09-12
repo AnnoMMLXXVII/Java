@@ -1,14 +1,18 @@
-package main.java.com.anno;
+package main.java.com.anno.driver;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
+
+import main.java.com.anno.slide.SlideBodyObject;
+import main.java.com.anno.slide.SlideJSObject;
+import main.java.com.anno.slide.SlideLine;
+import main.java.com.anno.slide.SlidePrefixObject;
+import main.java.com.anno.slide.SlideSuffixObject;
 
 public class ParseCaptionsDFXP {
 
