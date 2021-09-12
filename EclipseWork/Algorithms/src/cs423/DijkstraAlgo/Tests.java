@@ -26,10 +26,16 @@ public class Tests {
 
 		try {
 //			Class.forName(driver);
+<<<<<<< HEAD
 			Connection conn = null;
 //			DriverManager.getConnection(url, user, pass);
 			// FOREIGN KEY DELETE HERE
 
+=======
+//			Connection conn = DriverManager.getConnection(url, user, pass);
+	// FOREIGN KEY DELETE HERE
+		
+>>>>>>> 0fd58fcb2afd83c31017800ac74c13f1dbcbd81a
 			rowsAffected = removeAllForeignKeys(); // calls method at line 48
 
 			// after all Foreign Keys are removed -->

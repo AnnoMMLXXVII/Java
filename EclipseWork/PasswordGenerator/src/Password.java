@@ -10,10 +10,10 @@ public class Password {
 	private String passwordString = "ABCDEGFHIJKLMONPQRSTUVWXYZabcdefhijklmnopqrstuvwxyz1234567890!@#$%&";
 	private char[] passCodes = new char[10];
 	private Password() {
-		for (int i = 0; i< 5; i++) {
-			if (i >0) {
-				System.out.println("\t" + i);
-			} // endae IF
+		for (int i = 0; i< 1; i++) {
+//			if (i >0) {
+//				System.out.println("\t" + i);
+//			} // endae IF
 			getPassword();
 		}
 	} // endae CONSTRUCTOR
