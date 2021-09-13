@@ -8,6 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
+import main.java.com.anno.shared.CC_Constant;
 import main.java.com.anno.slide.SlideBodyObject;
 import main.java.com.anno.slide.SlideJSObject;
 import main.java.com.anno.slide.SlideLine;
@@ -16,45 +17,32 @@ import main.java.com.anno.slide.SlideSuffixObject;
 
 public class ParseCaptionsDFXP {
 
-	private static final String APOSTROPHE = "'";
-	private static final String LEFT_TAG_P = "<p";
-	private static final String RIGHT_TAG_P = "p>";
-	private static final String DIV_EDITABLE_TAG = "-us\">";
-	private static final String PREFIX_TT_TAG = "<tt xmlns=\"http://www.w3.org/2006/10/ttaf1\">";
-	private static final String PREFIX_BODY_TAG = "<body>";
-	private static final String PREFIX_DIV_TAG = "<div"; //
-	private static final String SUFFIX_DIV_TAG = "</div>";
-
 	private static int slideNumber = 0;
 	private static int imageCount = 0;
 	private static int imageCountBound = 0;
 	private static String imageTitle = "";
-	private static String PREFIX_SLIDE_JQUERY;
-	private static String PREFIX_TABLE_TAG;
-	private static String IMAGE_TAG;
-	private static String IMAGE_EXTRA_TAG;
-	private static final String END_TAGS = "'</div></td></tr></tbody></table>');";
 
-	private static final String SUFFIX_BODY_TAG = "</body>";
-	private static final String SUFFIX_TT_TAG = "</tt>";
-	private static final String CKEDITOR = "CKEDITOR.replace('div');";
 	private static List<SlideBodyObject> slideBody = new ArrayList<>();
 	private static List<SlideJSObject> slideJSObject = new ArrayList<>();
 	private static List<String> disposedTags = new ArrayList<>();
+	private static List<String> allLines = new ArrayList<>();
 	private static SlidePrefixObject prefixObject;
 	private static SlideBodyObject bodyObject;
 	private static SlideSuffixObject suffixObject;
 
 	public static void main(String... args) {
+		String path = "js-slides-infect-pneum";
+//		String imageName = args[1];
 		initialize();
-		run();
+		run(path, "");
 	}
 
-	private static void run() {
+	private static void run(String dir, String title) {
+		validateArgs(title);
 		SlideJSObject slideObject;
-		File directory = new File("js-slides");
+		File directory = new File(dir);
 		imageCountBound = directory.list().length + 1;
-		setImageTitle("NonInfectLowAirCOPD");
+		setImageTitle(title);
 		List<File> files = Arrays.asList(directory.listFiles());
 		for (File f : files) {
 			String[] fileName = splitFileName(f.getName());
@@ -71,12 +59,19 @@ public class ParseCaptionsDFXP {
 	}
 
 	private static void initialize() {
-		disposedTags.add(PREFIX_TT_TAG);
-		disposedTags.add(PREFIX_BODY_TAG);
-		disposedTags.add(SUFFIX_BODY_TAG);
-		disposedTags.add(SUFFIX_TT_TAG);
-		disposedTags.add(SUFFIX_DIV_TAG);
+		disposedTags.add(CC_Constant.PREFIX_TT_TAG);
+		disposedTags.add(CC_Constant.PREFIX_BODY_TAG);
+		disposedTags.add(CC_Constant.SUFFIX_BODY_TAG);
+		disposedTags.add(CC_Constant.SUFFIX_TT_TAG);
+		disposedTags.add(CC_Constant.SUFFIX_DIV_TAG);
 		initializeStaticValues();
+	}
+
+	private static void validateArgs(String args) {
+		if (args.isBlank() || args.isEmpty() || args.equals("")) {
+			System.err.print("INVALID IMAGE FILE NAME : CANNOT BE EMPTY!");
+			System.exit(0);
+		}
 	}
 
 	private static SlideBodyObject parseFileCCDFXP(File file) {
@@ -86,10 +81,12 @@ public class ParseCaptionsDFXP {
 			String line = "";
 			while (z.hasNextLine()) {
 				line = z.nextLine().trim();
+				allLines.add(line);
 				line = checkIfLineIsValid(line);
 				if (!line.isEmpty() || !line.equals("")) {
 					temp.add(new SlideLine(line));
 				}
+//				System.out.println(line);
 			}
 		} catch (FileNotFoundException fnf) {
 			fnf.printStackTrace();
@@ -118,11 +115,11 @@ public class ParseCaptionsDFXP {
 	}
 
 	private static List<SlideLine> removeTags(List<SlideLine> lines) {
-		trimUnwanntedTags(lines, PREFIX_TT_TAG);
-		trimUnwanntedTags(lines, PREFIX_BODY_TAG);
-		trimUnwanntedTags(lines, SUFFIX_BODY_TAG);
-		trimUnwanntedTags(lines, SUFFIX_TT_TAG);
-		trimUnwanntedTags(lines, SUFFIX_DIV_TAG);
+		trimUnwanntedTags(lines, CC_Constant.PREFIX_TT_TAG);
+		trimUnwanntedTags(lines, CC_Constant.PREFIX_BODY_TAG);
+		trimUnwanntedTags(lines, CC_Constant.SUFFIX_BODY_TAG);
+		trimUnwanntedTags(lines, CC_Constant.SUFFIX_TT_TAG);
+		trimUnwanntedTags(lines, CC_Constant.SUFFIX_DIV_TAG);
 		return lines;
 	}
 
@@ -140,23 +137,24 @@ public class ParseCaptionsDFXP {
 	}
 
 	private static String replaceApostropheWithBreak(String s) {
-		return s.replace(APOSTROPHE, "\\'");
+		return s.replace(CC_Constant.APOSTROPHE, "\\'");
 	}
 
 	private static String replaceLeftPTag(String s) {
-		return s.replace(LEFT_TAG_P, "\'<p");
+		return s.replace(CC_Constant.LEFT_TAG_P, "\'<p");
 	}
 
 	private static String replaceRightPTag(String s) {
-		return s.replace(RIGHT_TAG_P, "p>'+");
+		return s.replace(CC_Constant.RIGHT_TAG_P, "p>'+");
 	}
 
 	private static String replacePrefixDivTag(String s) {
-		return s.replace(PREFIX_DIV_TAG, "'<div");
+		return s.replace(CC_Constant.PREFIX_DIV_TAG, "'<div");
 	}
 
 	private static String replaceDivContentEditableTag(String s) {
-		return s.replace(DIV_EDITABLE_TAG, "-us\" contenteditable=\"true\">'+");
+		return s.replace(CC_Constant.DIV_EDITABLE_TAG, "-us\" contenteditable=\"true\">'+");
+//		return s.replace(CC_Constant.DIV_EDITABLE_TAG, "-us\">'+");
 	}
 
 	private static void printLines(List<SlideLine> lines) {
@@ -167,10 +165,10 @@ public class ParseCaptionsDFXP {
 
 	private static SlidePrefixObject prefixInitialization() {
 		List<SlideLine> prefixLines = new ArrayList<>();
-		prefixLines.add(new SlideLine(PREFIX_SLIDE_JQUERY));
-		prefixLines.add(new SlideLine(PREFIX_TABLE_TAG));
-		prefixLines.add(new SlideLine(IMAGE_TAG));
-		prefixLines.add(new SlideLine(IMAGE_EXTRA_TAG));
+		prefixLines.add(new SlideLine(CC_Constant.PREFIX_SLIDE_JQUERY));
+		prefixLines.add(new SlideLine(CC_Constant.PREFIX_ARTICLE_TAG));
+		prefixLines.add(new SlideLine(CC_Constant.IMAGE_TAG));
+		prefixLines.add(new SlideLine(CC_Constant.IMAGE_EXTRA_TAG));
 
 		for (SlideLine sl : prefixLines) {
 			System.out.println(sl.toString());
@@ -180,8 +178,8 @@ public class ParseCaptionsDFXP {
 
 	private static SlideSuffixObject suffixInitialization() {
 		List<SlideLine> suffixLines = new ArrayList<>();
-		suffixLines.add(new SlideLine(END_TAGS));
-		suffixLines.add(new SlideLine(CKEDITOR));
+		suffixLines.add(new SlideLine(CC_Constant.END_TAGS));
+		suffixLines.add(new SlideLine(CC_Constant.CKEDITOR));
 		printLines(suffixLines);
 		return new SlideSuffixObject(suffixLines);
 	}
@@ -217,11 +215,11 @@ public class ParseCaptionsDFXP {
 	}
 
 	private static void initializeStaticValues() {
-		PREFIX_SLIDE_JQUERY = "$('#slide" + slideNumber + "').append(";
-		PREFIX_TABLE_TAG = "'<table><tbody><tr><td>'+";
-		IMAGE_TAG = "'<img src=\"./pictures/" + getImageTitle() + "_" + imageCount + "of" + imageCountBound + "'+";
-		IMAGE_EXTRA_TAG = "'.png\" alt=\"\" srcset=\"\" height = \"450\" width=\"750\">"
-				+ "</td></tr>'+\r\n'<tr><td>'+";
+		CC_Constant.PREFIX_SLIDE_JQUERY = "$('#slide" + slideNumber + "').append(";
+		CC_Constant.PREFIX_ARTICLE_TAG = "'<article><div>'+";
+		CC_Constant.IMAGE_TAG = "'<img src=\"./pictures/" + getImageTitle() + "_" + imageCount + "of" + imageCountBound
+				+ "'+";
+		CC_Constant.IMAGE_EXTRA_TAG = "'.png\" alt=\"\" srcset=\"\" height = \"450\" width=\"750\">'+";
 	}
 
 	public static SlidePrefixObject getPrefixObject() {

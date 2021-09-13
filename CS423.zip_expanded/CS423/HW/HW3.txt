@@ -1,0 +1,89 @@
+package com.SelectionSort;
+
+import java.util.Random;
+
+public class NumberSorting {
+	private Random r = new Random();;
+	private final int[]   X = new int[(int)Math.pow(10, 1)];
+	private final int[]   C = new int[(int)Math.pow(10, 2)];
+	private final int[]   m = new int[(int)Math.pow(10, 3)];
+	private final int[] mx4 = new int[(int)Math.pow(10, 4)];
+	private final int[] mx5 = new int[(int)Math.pow(10, 5)];
+	private final int[]   M = new int[(int)Math.pow(10, 6)];
+	private long runTime;
+
+	public NumberSorting() { initRun(); }
+	
+	private void initRun() {
+		callArray(X  , 10);
+		callArray(C  , 100);
+		callArray(m  , 1000);
+		callArray(mx4, 10000);
+		callArray(mx5, 100000);
+		callArray(M  , 1000000);
+	}
+	
+	protected void initializeArrayValues(int[] arr) {
+		int rand = r.nextInt()%10000+1;
+		int n = arr.length;
+		for (int i = 0; i < n; i++) {
+			arr[i] = rand;
+			rand = r.nextInt()%10000+1; // randomizing!
+		} // endae FOR
+	} // endae initializeArrayValues
+	
+	protected void selectionSort(int[] arr) {
+		int n = arr.length;
+		long start = System.nanoTime(); // starts timmer;
+		for (int i = 0; i < n-1; i++) { // iterate through array (n-1) times
+			int min_idx = i; // Find the min element in unsorted Array
+			for (int j = i+1; j < n; j++) { 
+				// iterate up the array stopping at the spot before the end
+				if(arr[j] < arr[min_idx]) { 
+					// Compares to see if arr[j] < than the arr[min_idx]
+					min_idx = j; // assigns j to min_idx
+				} // endae IF
+			} // endae inner FOR
+			// Swapping occurs here
+			int temp = arr[min_idx];
+			arr[min_idx] = arr[i];
+			arr[i] = temp;
+		} // endae FOR
+		setRunTime(System.nanoTime()-start); // sets the difference in time (end-start)
+		System.out.printf("%d ns\n", getRunTime());
+	} // endae sort method
+	
+	private void callArray(int[] arr, int inputSize) {
+		initializeArrayValues(arr);
+		System.out.printf("Inputs: %d || ", inputSize);
+		selectionSort(arr);
+	} // endae callArray method
+	
+	public long getRunTime() {
+		return runTime;
+	}
+
+	public void setRunTime(long runTime) {
+		this.runTime = runTime;
+	}
+	
+	public static void main(String args[]) {
+		new NumberSorting();
+	}	
+}
+
+ ------------------------------------------- OUTPUT ----------------------------------------------------------
+|   INPUTS	||	Time in ns    ||    Big-O: O(n^2)						      |
+ -------------------------------------------------------------------------------------------------------------
+Inputs: 10 	|| 	     3,458 ns || O(n^2) = O(10^2) = 100 (1 hundred)
+Inputs: 100 	||         169,738 ns || O(n^2) = O(100^2) = 10,000 (10 thousand)
+Inputs: 1000 	||       5,652,328 ns || O(n^2) = O(1000^2) = 1,000,000 (1 million)
+Inputs: 10000 	||      80,910,926 ns || O(n^2) = O(10000^2) = 100,000,000 (100 million)
+Inputs: 100000 	||   4,320,076,100 ns || O(n^2) = O(100000^2) = 10,000,000,000 (10 billion)
+Inputs: 1000000 || 405,604,449,519 ns || O(n^2) = O(1000000^2) = 1,000,000,000,000 (1 trillion)
+
+NOTE: Any higher than 10^6 the program would've taken too long to finish. I tried running it for just 10^7 and I was waiting at least 2 hours to finish. 
+
+
+
+
