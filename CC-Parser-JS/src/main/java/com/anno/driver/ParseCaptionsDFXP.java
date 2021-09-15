@@ -34,10 +34,10 @@ public class ParseCaptionsDFXP {
 	private static SlideSuffixObject suffixObject;
 
 	public static void main(String... args) {
-		String path = "js-slides-lung";
+		String path = "js-slides-thoracic";
 //		String imageName = args[1];
 		initialize();
-		run(path, "lungCancer");
+		run(path, "thoracic");
 	}
 
 	private static void run(String dir, String title) {
@@ -45,7 +45,7 @@ public class ParseCaptionsDFXP {
 		SlideJSObject slideObject;
 		File directory = new File(dir);
 //		imageCountBound = directory.list().length + 1;
-		imageCountBound = 56;
+		imageCountBound = 59;
 		setImageTitle(title);
 		List<File> files = Arrays.asList(directory.listFiles());
 		for (File f : files) {
