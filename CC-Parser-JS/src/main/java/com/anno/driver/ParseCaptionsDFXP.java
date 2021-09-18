@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -21,7 +22,9 @@ public class ParseCaptionsDFXP {
 	private static int imageCount = 0;
 	private static int imageCountBound = 0;
 	private static String imageTitle = "";
-
+	private static int imageOffSet = 0;
+	private static int slideOffSet = 0;
+	private static boolean offSetChanged = false;
 	private static List<SlideBodyObject> slideBody = new ArrayList<>();
 	private static List<SlideJSObject> slideJSObject = new ArrayList<>();
 	private static List<String> disposedTags = new ArrayList<>();
@@ -31,17 +34,18 @@ public class ParseCaptionsDFXP {
 	private static SlideSuffixObject suffixObject;
 
 	public static void main(String... args) {
-		String path = "js-slides-infect-pneum";
+		String path = "js-slides-thoracic";
 //		String imageName = args[1];
 		initialize();
-		run(path, "");
+		run(path, "thoracic");
 	}
 
 	private static void run(String dir, String title) {
 		validateArgs(title);
 		SlideJSObject slideObject;
 		File directory = new File(dir);
-		imageCountBound = directory.list().length + 1;
+//		imageCountBound = directory.list().length + 1;
+		imageCountBound = 59;
 		setImageTitle(title);
 		List<File> files = Arrays.asList(directory.listFiles());
 		for (File f : files) {
@@ -145,7 +149,7 @@ public class ParseCaptionsDFXP {
 	}
 
 	private static String replaceRightPTag(String s) {
-		return s.replace(CC_Constant.RIGHT_TAG_P, "p>'+");
+		return s.replace(CC_Constant.RIGHT_TAG_P, "</p>'+");
 	}
 
 	private static String replacePrefixDivTag(String s) {
@@ -179,13 +183,13 @@ public class ParseCaptionsDFXP {
 	private static SlideSuffixObject suffixInitialization() {
 		List<SlideLine> suffixLines = new ArrayList<>();
 		suffixLines.add(new SlideLine(CC_Constant.END_TAGS));
-		suffixLines.add(new SlideLine(CC_Constant.CKEDITOR));
+//		suffixLines.add(new SlideLine(CC_Constant.CKEDITOR));
 		printLines(suffixLines);
 		return new SlideSuffixObject(suffixLines);
 	}
 
 	private static String[] splitFileName(String s) {
-		return s.split("_");
+		return s.split("-");
 	}
 
 	protected static String getImageTitle() {
@@ -205,7 +209,13 @@ public class ParseCaptionsDFXP {
 	}
 
 	private static void constructBody(File f) {
-		bodyObject = parseFileCCDFXP(f);
+		if (!offSetChanged) {
+			bodyObject = parseFileCCDFXP(f);
+		} else {
+			List<SlideLine> slide = new ArrayList<>();
+			slide.add(new SlideLine("'<p></p>'+"));
+			bodyObject = new SlideBodyObject(slide);
+		}
 		setBodyObject(bodyObject);
 	}
 
@@ -215,11 +225,22 @@ public class ParseCaptionsDFXP {
 	}
 
 	private static void initializeStaticValues() {
-		CC_Constant.PREFIX_SLIDE_JQUERY = "$('#slide" + slideNumber + "').append(";
+		imageOffSet = getImageOffSet();
+		slideOffSet = getSlideOffSet();
+//		String relativeImagePath= "./pictures/" + getImageTitle() + "_"
+//				+ calcWithOffset(imageCount, imageOffSet) + "_" + imageCountBound +".png";
+//		File imageFile = new File(relativeImagePath);
+//		String rootPath = imageFile.getAbsolutePath()
+		CC_Constant.PREFIX_SLIDE_JQUERY = "$('#slide" + calcWithOffset(slideNumber, slideOffSet) + "').append(";
 		CC_Constant.PREFIX_ARTICLE_TAG = "'<article><div>'+";
-		CC_Constant.IMAGE_TAG = "'<img src=\"./pictures/" + getImageTitle() + "_" + imageCount + "of" + imageCountBound
-				+ "'+";
-		CC_Constant.IMAGE_EXTRA_TAG = "'.png\" alt=\"\" srcset=\"\" height = \"450\" width=\"750\">'+";
+		CC_Constant.IMAGE_TAG = "'<img src=\"./pictures/" + getImageTitle() + "-"
+				+ calcWithOffset(imageCount, imageOffSet) + "-" + imageCountBound + "'+";
+		CC_Constant.IMAGE_EXTRA_TAG = "'.png\" alt=\"NO_IMAGE\" srcset=\"\" height = \"450\" width=\"550\">'+";
+	}
+
+	private static String calcWithOffset(int count, int offset) {
+		int result = count + offset;
+		return result + "";
 	}
 
 	public static SlidePrefixObject getPrefixObject() {
@@ -244,6 +265,22 @@ public class ParseCaptionsDFXP {
 
 	public static void setSuffixObject(SlideSuffixObject suffixObject) {
 		ParseCaptionsDFXP.suffixObject = suffixObject;
+	}
+
+	private static int getImageOffSet() {
+		return imageOffSet;
+	}
+
+	private static void setImageOffSet(int imageOffSet) {
+		ParseCaptionsDFXP.imageOffSet = imageOffSet;
+	}
+
+	private static int getSlideOffSet() {
+		return slideOffSet;
+	}
+
+	private static void setSlideOffSet(int slideOffSet) {
+		ParseCaptionsDFXP.slideOffSet = slideOffSet;
 	}
 
 }

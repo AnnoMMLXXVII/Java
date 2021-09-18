@@ -4,7 +4,7 @@ public class CC_Constant {
 
 	public static final String APOSTROPHE = "'";
 	public static final String LEFT_TAG_P = "<p";
-	public static final String RIGHT_TAG_P = "p>";
+	public static final String RIGHT_TAG_P = "</p>";
 	public static final String DIV_EDITABLE_TAG = "-us\">";
 	public static final String PREFIX_TT_TAG = "<tt xmlns=\"http://www.w3.org/2006/10/ttaf1\">";
 	public static final String PREFIX_BODY_TAG = "<body>";
