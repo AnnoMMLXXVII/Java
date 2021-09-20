@@ -34,18 +34,18 @@ public class ParseCaptionsDFXP {
 	private static SlideSuffixObject suffixObject;
 
 	public static void main(String... args) {
-		String path = "js-slides-thoracic";
+		String path = "js-slides-hema";
 //		String imageName = args[1];
 		initialize();
-		run(path, "thoracic");
+		run(path, "hema");
 	}
 
 	private static void run(String dir, String title) {
 		validateArgs(title);
 		SlideJSObject slideObject;
 		File directory = new File(dir);
-//		imageCountBound = directory.list().length + 1;
-		imageCountBound = 59;
+		imageCountBound = directory.list().length+1;
+//		imageCountBound = 8;
 		setImageTitle(title);
 		List<File> files = Arrays.asList(directory.listFiles());
 		for (File f : files) {
@@ -171,8 +171,9 @@ public class ParseCaptionsDFXP {
 		List<SlideLine> prefixLines = new ArrayList<>();
 		prefixLines.add(new SlideLine(CC_Constant.PREFIX_SLIDE_JQUERY));
 		prefixLines.add(new SlideLine(CC_Constant.PREFIX_ARTICLE_TAG));
-		prefixLines.add(new SlideLine(CC_Constant.IMAGE_TAG));
-		prefixLines.add(new SlideLine(CC_Constant.IMAGE_EXTRA_TAG));
+		prefixLines.add(new SlideLine ("'<br>'+"));
+//		prefixLines.add(new SlideLine(CC_Constant.IMAGE_TAG));
+//		prefixLines.add(new SlideLine(CC_Constant.IMAGE_EXTRA_TAG));
 
 		for (SlideLine sl : prefixLines) {
 			System.out.println(sl.toString());
