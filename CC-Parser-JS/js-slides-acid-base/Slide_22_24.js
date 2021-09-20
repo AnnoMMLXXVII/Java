@@ -1,6 +1,6 @@
-$('#slide21').append(
+$('#slide22').append(
   '<table><tbody><tr><td>' +
-  '<img src="./pictures/AcidBaseBalance_21of24.png" alt="" srcset="" height = "450" width="750">' +
+  '<img src="./pictures/AcidBaseBalance_22of24.png" alt="" srcset="" height = "450" width="750">' +
   '</td></tr>' +
   '<tr><td>' +
   '<div xml:lang="en" contenteditable="true">' +
