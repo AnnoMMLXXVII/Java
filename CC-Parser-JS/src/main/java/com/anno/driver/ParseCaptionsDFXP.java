@@ -34,7 +34,7 @@ public class ParseCaptionsDFXP {
 	private static SlideSuffixObject suffixObject;
 
 	public static void main(String... args) {
-		String path = "js-slides-hema";
+		String path = "js-slides-assessHema";
 //		String imageName = args[1];
 		initialize();
 		run(path, "hema");
