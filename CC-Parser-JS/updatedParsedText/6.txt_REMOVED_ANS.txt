@@ -1,0 +1,333 @@
+Chapter 06: Concepts of Genetics and Genomics
+Ignatavicius: Medical-Surgical Nursing, 10th Edition
+MULTIPLE CHOICE
+
+1. A nurse is educating a client about genetic screening. The client asks why red-green color blindness, an X-linked recessive disorder noted in some family members, is expressed more frequently in males than females. How would the nurse r A nurse is educating a client about genetic screening. The client asks why red-green color blindness, an X-linked recessive disorder noted in some family members, is expressed more frequently in males than females. How would the nurse r
+ espond?
+a. Females have a decreased penetrance rate for this gene mutation and are therefore less likely to express the trait.?
+b. Females have two X chromosomes and one is always inactive. This inactivity
+decreases the effect of the gene.?
+c. The incidence of X-linked
+recessive disorders is higher in males because they do
+not have a second X chromosome to balance expression of the gene.?
+d. Males have only one X chromosome, which allows t
+ he X-linked recessive
+disorder to be transmitted from father to son.?
+
+[ANS : REMOVED]
+
+Because the number of X chromosomes in males and fem
+ ales is not the same (1:2), the
+number of X-linked chromosome genes in the two genders is also unequal. Males have only one X chromosome, a condition called hemizygosity, for any gene on the X chromosome. As a result, X-linked recessive genes have a dominant expressive pattern of inheritance in males 
+and a recessive expressive pattern of inheritance in females. This difference in expression occurs because males do not h
+ave a second X chromosome to balance the expression of any
+recessive gene on the first X chromosome. It is incorrect to say that one X chromosome of a pair is always inactive in females, or that females have a d
+ ecreased penetrance rate for this
+gene mutation. X-linked recessive disorders cannot be transmitted from father to son, but the trait is transmitted from father to all daughters who will be carriers.
+DIF: Understanding
+TOP: Integrated Process: Teaching/Learning
+KEY: Genetics, Patterns of inheritance
+MSC: Client Needs Category: Physiological Integrity
+
+2. A client is typed and crossmatched for a unit of blood. W A client is typed and crossmatched for a unit of blood. W
+ hich statement by the nurse indicates
+a need for further genetic education?
+a. Blood type is formed from
+three gene alleles: A, B, and O.?
+b. Each blood type allele is inherited from the mother or the father.?
+c. If the patients blood type is AB, then the client is homozygous for that trait.?
+d. If the client has dominant and recessive alleles, the dominant will be expressed.?
+
+[ANS : REMOVED]
+
+There are three possible gene alleles for blood type: A, B, and O, which are inherited from the parents. If both a dominant and recessive gene allele are present, the dominant one is always expressed. Blood type AB is a heterozygous type, meaning the two alleles are different. The nurse stating that type AB is homozygous needs further e
+ ducation.
+DIF: Understanding
+TOP: Integrated Process: Nursing Process: Intervention
+KEY: Genetics, Patterns of inheritance
+MSC: Client Needs Category: Physiological Integrity: Physiological Adaptation
+
+3. A nurse obtains health histories when admitting clients to a medical-surgical unit. With which client would the nurse discuss predisposition genetic testin A nurse obtains health histories when admitting clients to a medical-surgical unit. With which client would the nurse discuss predisposition genetic testin
+ g?
+a. Middle-age woman whose mother died at age 48 of breast cancer.
+b. Young man who has all the symptoms of rheumatoid arthritis.
+c. Pregnant woman whose father has sickle cell disease.
+d. Middle-age man of Eastern European Jewish ancestry.
+
+[ANS : REMOVED]
+
+A client with a family history of breast cancer would be provided information about 
+predisposition testing. Predisposition testing would be discussed with clients who are at high risk of hereditary breast, ovarian
+, and colorectal cancers so that the client can engage in
+heightened screening activities or interventions that reduce risk. The client with symptoms of rheumatoid arthritis would be given information about sym
+ ptomatic diagnostic testing. The
+client with a familial history of sickle cell disease and the client who is of Eastern European Jewish ancestry would be given information about carrier testing.
+DIF: Applying
+TOP: Integrated Process: Nursing Process: Assessment
+KEY: Genetics, Genetic testing
+MSC: Client Needs Category: Physiological Integrity: Reduction of Risk Potential
+
+4. A client who tests positive for a mutation in the BRCA1 gene allele asks a nurse to be present when she discloses this inform A client who tests positive for a mutation in the BRCA1 gene allele asks a nurse to be present when she discloses this inform
+ation to her adult daughter. How would the nurse respond?
+a. I will request a genetic counselor who is more qualified to be present for this 
+conversation.?
+b. The test results can be confusing; I will help you interpret them for your
+daughter.?
+c. Are you sure you want to share this information with your daughter, who may not 
+test positive for this gene mutation??
+d. This conversation may be
+difficult for both of you; I will be there to provide
+support.?
+
+[ANS : REMOVED]
+
+A nurse would provide emotion
+al support while the client tells her daughter the information
+she has learned about the test results. The nurse would not interpret the results or counsel the 
+client or her daughter. The nurse would refer the client for counseling or support, if necessary.
+DIF: Applying
+TOP: Integrated Process: Nursing Process: Implementation
+KEY: Genetics, Coping
+MSC: Client Needs Category: Psychosocial Integrity
+
+5. A nurse consults a genetic counselor for a client whose mother has Huntington disease and is considering genetic testing. The client states, I know I want this test. Why do I need to see a counselor?? How would the nurse respond? A nurse consults a genetic counselor for a client whose mother has Huntington disease and is considering genetic testing. The client states, I know I want this test. Why do I need to see a counselor?? How would the nurse respond?
+a. The counselor will advise you on whether you can have children or need to
+adopt.?
+b. Genetic testing can be a stressful experience. Counseling can provide support and 
+education throughout the process.?
+c. There is no cure for this d
+isease. The counselor will determine if there is any
+benefit to genetic testing.?
+d. Genetic testing is expensive. The counselor will advoc
+ ate for you and help you
+obtain financial support.?
+
+[ANS : REMOVED]
+
+Genetic testing is a stressful experience, and clients woul
+ d be provided with support,
+education, and assistance with coping. Genetic testing would be performed only after genetic counseling has occurred. The client has the right to decide whether to have children or to participate in genetic testing. Nursing staff would provide both benefits and risks to genetic 
+testing so that the client can make an informed decision. Financial support is not part of genetic counseling.
+DIF: Applying
+TOP: Integrated Process: Teaching/Lear
+ ning
+KEY: Genetics, Coping
+MSC: Client Needs Category: Psychosocial Integrity
+
+6. A primary health care provider prescribes genetic testing for a client who has a family history  A primary health care provider prescribes genetic testing for a client who has a family history 
+of colorectal cancer. Which action would the nurse take before scheduling the client for the procedure?
+a. Confirm that informed consent was obtained and placed on the patients chart.
+b. Provide genetic counseling to the client and the patients family members.
+c. Assess if the client is prepared for the risk of psychological side effects.
+d. Respect the patients right n
+ot to share the results of the genetic test.
+
+[ANS : REMOVED]
+
+Informed consent is required before genetic testing. The person tested is the one who gives consent. An advanced practice
+provider would explain the procedure and provide genetic
+counseling. Although the client would be prepared for the risk of psychological side effects 
+and the patients rights would be respected, the procedure cannot occur without informed consent.
+DIF: Applying
+TOP: Integrated Process: Communication and Documentation
+KEY: Genetics, Informed consent
+MSC: Client Needs Category: Safe and Effective Care Environment: Management of Care 7. A nurse cares for an adult client who has received geneti
+ c testing. The patients mother asks to
+receive the results of the genetic tests. Which action would the nurse take?
+a. Obtain a signed consent fro
+m the client allowing test results to be released to the
+mother.
+b. Invite the mother and other family members to participate in genetic counseling with the client.
+c. Encourage the mother to undergo genetic testing to determine if she has the same risks as her child.
+d. Direct the mother to speak with the client and support the clients decision to share or not share the results.
+
+[ANS : REMOVED]
+
+All conversations and test results must be kept confidential. The client has the right to determine who may be involved in discussions related to diagnosis and genetic testing, who may participate in genetic counseling with the patient, and what information may be disclosed 
+to family members. It is the nurses responsibility to provide a private environment for discussions and protect the patients information from improper disclosure. The nurse would support the patients right to disclose or not disclose information.
+DIF: Applying
+TOP: Integrated Process: Communication and Documentation
+KEY: Genetics, Confidentiality
+MSC: Client Needs Category: Safe and Effective Care Environment: Management of Care 
+
+8. A nurse cares for a client who has a genetic mutation that increases the risk for colon cancer. A nurse cares for a client who has a genetic mutation that increases the risk for colon cancer.
+The client states that he/she doe
+s not want any family to know about this result. How would
+the nurse respond?
+a. It is required by law that you inform your siblings and children about this result so that they also can be tested and monitored for colon cancer.?
+b. It is not necessary to tell your siblings because they are adults, but you would tell your children so that they can be tested before they de
+ cide to have children of their
+own.?
+c. It is not required that you tell anyone about this result. However, your siblings
+and children may also be at risk for colon cancer and this information might help
+them.?
+d. It is your decision to determine with whom, if anyone, you discuss this test result.
+However, you may be held liable if you withhold this information and a family
+member gets colon cancer.?
+
+[ANS : REMOVED]
+
+This situation represents an ethical dilemma. It is the clients decision whether to disclose the information. However, the information can affect others in
+ the clients family. The law does
+not require the client to tell family members about the results, nor can the client be held liable for not telling them. The nurse may consider it ethically correct for clients to tell family members so that they can take action to prevent the development of cancer, but the nurse must 
+respect the clients decision.
+DIF: Applying
+TOP: Integrated Process: Communication and Documentation
+KEY: Genetics, Confidentiality
+MSC: Client Needs Category: Psychosocial Integrity
+
+9. A nurse cares for a client who h A nurse cares for a client who h
+as a specific mutation in the a1AT (alpha1-antitrypsin) gene.
+What action would the nurse take?
+a. Teach the client to perform monthly breast self-examinations and schedule an
+annual mammogram.
+b. Support the client when sharing test results and encourages family members to be screened for cancer.
+c. Advise the client to limit exposure to secondhand smoke and other respiratory
+irritants.
+d. Obtain a complete health history to identify other genetic problems associated with 
+this gene mutation.
+
+[ANS : REMOVED]
+
+The a1AT gene mutation increases risk for developing early-onset emphysema. Clients would 
+be advised to limit exposure to smoke and other respiratory irritants as a means of decreasing environmental influences that may aggravate an early onset of emphysema. This gene
+mutation does not promote cancer, nor does it occur with other identified genetic problems.
+The BRCA1 gene mutation gives the client a higher risk f
+ or developing breast cancer.
+DIF: Applying
+TOP: Integ
+rated Process: Teaching/Learning
+KEY: Genetics, Genetic mutations
+MSC: Client Needs Category: Health Promotion and Maintena
+ nce
+
+10. A nurse cares for a pregnant client who has a family history of sickle cell disease. The client is unsure if she wants to participate in genetic testing. Wha A nurse cares for a pregnant client who has a family history of sickle cell disease. The client is unsure if she wants to participate in genetic testing. Wha
+ t action would the nurse take?
+a. Provide information about the risks and benefits of genetic testing.
+b. Empathize with the client and share a personal story about a hereditary disorder.
+c. Teach the client that early detection can minimize transmission to the fetus.
+d. Advocate for the client and her baby by encouraging genetic testing.
+
+[ANS : REMOVED]
+
+Genetic counseling is to be nondirective. The nurse would provide as much information as 
+possible about the risks and benefits but would not influence the patients decision to test or not test. Once the client has ma
+de a decision, the nurse would support the client in that
+decision. Carrier testing will determine if a client without symptoms has an allele for a recessive disorder that could be transmitted to his or her c
+ hild. Genetic testing will not
+minimize transmission of the disorder.
+DIF: Applying
+TOP: Integrated Process: Communication and Documentation
+KEY: Genetics, Genetic counseling
+MSC: Client Needs Category: Psychosocial Integrity
+
+11. A nurse cares for a client who recently completed genetic testing and received a negative result. The client states, I feel guilty because so many o A nurse cares for a client who recently completed genetic testing and received a negative result. The client states, I feel guilty because so many o
+ f my family members are carriers of
+this disease and I am not.? How would the nurse respond?
+a. You are not genetically pr
+edisposed for this disease but you could still become ill.
+Lets discuss a plan for prevention.?
+b. Since many of your family members are carriers, you would undergo further
+testing to verify the results are accurate.?
+c. We usually encourage clients to participate in counseling after receiving test results. Can I arrange this for you??
+d. It is normal to feel this way. I think you would share this news with your family so that they can support you.?
+
+[ANS : REMOVED]
+
+Clients who have negative genetic test results need counseling and support. Some clients may have an unrealistic view of wh
+at a negative result means for their general health. Others may
+feel guilty that they were spared? when some family members were not. The client will not 
+be symptomatic if he or she is not a carrier of the disease. A second round of testing is not recommended, because false negatives are rare with this type of testing. It is the clients choice to reveal test results to family members; the nurse would not encourage this.
+DIF: Applying
+TOP: Integrated Process: Caring
+KEY: Genetics, Genetic counsel
+ing
+MSC: Client Needs Category: Psychosocial Integrity
+MULTIPLE RESPONSE
+
+1. A nurse cares for a client who recently completed genetic testing that revealed that she has a BRCA1 gene mutation. What actions would the nurse tak A nurse cares for a client who recently completed genetic testing that revealed that she has a BRCA1 gene mutation. What actions would the nurse tak
+ e next? ( Select all that apply. )
+a. Assess the patients response to the test results.
+b. Assist the client to make a plan for prevention and risk reduction.
+c. Disclose the information to the medical insurance company.
+d. Discuss potential risks for other members of her family.
+e. Encourage support by sharin
+g the results with family members.
+f. Recommend the client complete weekly breast self-examinations.
+
+[ANS : REMOVED]
+
+The medical-surgical nurse can
+assess the patients response to the test results, discuss
+potential risks for other family members, encourage genetic counseling, and assist the client to make a plan for prevention, risk reduction, and early dete
+ ction. For some positive genetic test
+results, such as having a BRCA1 gene mutation, the risk for developing breast cancer is high but is not a certainty. Because the risk is high, the client would have a plan for prevention and risk reduction. One form of prevention is early detection. Breast self-examinations may be 
+helpful when performed monthly, but those performed every week may not be useful,
+especially around the time of m
+enses. A client who tests positive for a BRCA1 mutation would
+have at least yearly mammograms and ovarian ultrasounds to detect cancer at an early stage, when it is more easily cured. Owing to confidentiality, the
+ nurse would never reveal any
+information about a client to an insurance company or family members without the patients permission.
+DIF: Applying
+TOP: Integrated Process: Nursing Process: Planning
+KEY: Genetics, Genetic testing
+MSC: Client Needs Category: Health Promotion and Maintenance
+
+2. A nurse completes pedigree charts for clients at a community health center. Which diagnoses would the nurse refer for carrie A nurse completes pedigree charts for clients at a community health center. Which diagnoses would the nurse refer for carrie
+r genetic testing? ( Select all that apply. )
+a. Breast cancer
+b. Colorectal cancer
+c. Cystic fibrosis
+d. Hemophilia
+e. Huntington disease
+f. Sickle cell disease
+
+[ANS : REMOVED]
+
+Of the disease processes listed, the ones that would make
+ the client a candidate for carrier
+genetic testing would be hemophilia, sickle cell disease, and cystic fibrosis. Although Huntington disease, breast can
+cer, and colorectal cancer all have genetic components, there is
+no evidence that carrier genetic testing would be beneficial in diseases such as these.
+DIF: Remembering
+TOP: Integrated Process: Teaching/Learning
+KEY: Genetics, Genetic testing
+MSC: Client Needs Category: Physiological Integrity: Physiological Adaptation
+
+3. A nurse teaches clients about patterns of inheritance for genetic disorders among adults. A nurse teaches clients about patterns of inheritance for genetic disorders among adults.
+Which disorders have an autosomal dominant pattern of inheritance? ( Select all that apply. ) a. Breast cancer
+b. Alzheimer disease
+c. Hemophilia
+d. Huntington disease
+e. Marfan syndrome
+f. Cystic fibrosis
+
+[ANS : REMOVED]
+
+Breast cancer, Huntington disease, and Marfan syndrome have an autosomal dominant pattern of inheritance. Alzheimer disease is a complex disorder w
+ ith familial clustering, hemophilia is
+a sex-linked recessive disorder, and cystic fibrosis has an autosomal recessive pattern of inheritance.
+DIF: Remembering
+TOP: Integrated Process: Nursing Process: Assessment
+KEY: Genetics, Patterns of inheritance
+MSC: Client Needs Category: Physiological Integrity: Physiological Adaptation
+
+4. A nurse cares for a client who is scheduled for genetic testing. What actions would the nurse include in the patients pretesti A nurse cares for a client who is scheduled for genetic testing. What actions would the nurse include in the patients pretesti
+ng assessment? ( Select all that apply. )
+a. Assess the clients understanding of the genetic test.
+b. Obtain physical assessment data relevant to the at-risk disorder.
+c. Discuss prevention, early detection, and treatment options.
+d. Assess the clients perception of the test results.
+e. Discuss client rights and obligations regarding disclosure of information.
+
+[ANS : REMOVED]
+
+During the pretesting assessment, the nurse would evaluate the patients understanding of the genetic test being sought and obtain relevant information including physical assessment, 
+family history, psychosocial status, and social support. The nurse would also discuss client rights and obligations regarding d
+isclosure of information, risks and benefits of testing, and
+testing options. Discussion of prevention, early detection and treatment options, and an 
+assessment of the patients perception of the test results would occur after genetic testing is complete.
+DIF: Remembering
+TOP: Integrated Process: Nursing Process: Assessment
+KEY: Genetics, Patterns of inheritance
+MSC: Client Needs Category: Health Promotion and Maintenance

@@ -1,0 +1,509 @@
+Chapter 31: Concepts of Care for Patients With Dysrhythmias
+Ignatavicius: Medical-Surgical Nursing, 10th Edition
+MULTIPLE CHOICE
+
+1. A nurse assesses a clients electrocardiograph tracing and observes that not all QRS A nurse assesses a clients electrocardiograph tracing and observes that not all QRS
+complexes are preceded by a P wave. How would the nurse interpret this observation?
+a. The client has hyperkalemia causing irregular QRS c
+ omplexes.
+b. Ventricular tachycardia is overriding the normal atrial rhythm.
+c. The clients chest leads are not making sufficient contact with the skin.
+d. Ventricular and atrial depolarizations are initiated from different sites.
+
+[ANS : REMOVED]
+
+Normal rhythm shows one P wave preceding each QRS complex, indicating that all depolarization is initiated at the sinoatrial node. QRS complexes without a P wave indicate a 
+different source of initiation of depolarization. This finding on an electrocardiograph tracing is not an indication of hyperkalem
+ia, ventricular tachycardia, or disconnection of leads.
+DIF: Understanding
+TOP: Integrated
+ Process: Nursing Process: Analysis
+KEY: Cardiac electrical conduction
+MSC: Client Needs Category: Ph
+ysiological Integrity: Physiological Adaptation
+
+2. A nurse cares for a client who has a heart rate averaging 56 beats/min with no adverse symptoms. Which activity modification would the nurse suggest to avoid further slowing of the heart rate? A nurse cares for a client who has a heart rate averaging 56 beats/min with no adverse symptoms. Which activity modification would the nurse suggest to avoid further slowing of the heart rate?
+a. Make certain that your bath water is warm.?
+b. Avoid straining while having a bowel movement.?
+c. Limit your intake of caffe
+inated drinks to one a day.?
+d. Avoid strenuous exercise such as running.?
+
+[ANS : REMOVED]
+
+Bearing down strenuously duri
+ng a bowel movement is one type of Valsalva maneuver, which
+stimulates the vagus nerve and results in slowing of the heart rate. Such a response is not 
+desirable in a person who has bradycardia. The other instructions are not appropriate for this condition.
+DIF: Applying
+TOP: Integrated Process: Nursing Process: Implementation
+KEY: Cardiac electrical conduction, Health education
+MSC: Client Needs Category: Physiological Integrity: Reduction of Risk Potential 3. A nurse is assessing clients on a medical-surgical unit. W
+ hich client would the nurse identify
+as being at greatest risk for atrial fibrillation?
+a. A 45-year-old who takes a
+n aspirin daily.
+b. A 50-year-old who is post coronary artery bypass graft surgery.
+c. A 78-year-old who had a carotid endarterectomy.
+d. An 80-year-old with chronic obstructive pulmonary disease.
+
+[ANS : REMOVED]
+
+Atrial fibrillation occurs commonly in clients with cardiac disease. Other risk factors include hypertension (HTN), previous ischemic stroke, transient i
+ schemic attack (TIA) or other
+thromboembolic event, diabetes mellitus, heart failure, obesity, hyperthyroidism, chronic kidney disease, excessive alcohol use, and mitral valve disease. The other conditions do not place these clients at higher risk for atrial fibrillation.
+DIF: Remembering
+TOP: Integrated Process: Nursing Process: Assessment
+KEY: Cardiac electrical conduction, Risk factors
+MSC: Client Needs Category: Physiological Integrity: Reduction of Risk Potential 
+
+4. A nurse assesses a client with a A nurse assesses a client with a
+trial fibrillation. Which manifestation would alert the nurse to
+the possibility of a serious complication from this condition?
+a. Sinus tachycardia
+b. Speech alterations
+c. Fatigue
+d. Dyspnea with activity
+
+[ANS : REMOVED]
+
+Clients with atrial fibrillation are at risk for embolic stroke. Evidence of embolic events includes changes in mentation, speech, sensory function, and motor function. Clients with 
+atrial fibrillation often have a rapid ventricular response as a result. Fatigue is a nonspecific complaint. Clients with atrial fib
+rillation often have dyspnea as a result of the decreased
+cardiac output caused by the rhythm disturbance.
+DIF: Remembering
+TOP: Integrated Process: Nursing Process: Assessment
+KEY: Cardiac electrical conduction, Vascular perfusion
+MSC: Client Needs Category: Physiological Integrity: Reduction of Risk Potential 
+
+5. A nurse evaluates prescriptions for a client with chronic atrial fibrillation. Which medication would the nurse expect to find on this clients medication administration record to prevent a common complication of this condition? A nurse evaluates prescriptions for a client with chronic atrial fibrillation. Which medication would the nurse expect to find on this clients medication administration record to prevent a common complication of this condition?
+a. Sotalol
+b. Warfarin
+c. Atropine
+d. Lidocaine
+
+[ANS : REMOVED]
+
+Atrial fibrillation puts clients at risk for developing emboli. Clients at risk for emboli are 
+treated with anticoagulants, such as heparin, enoxaparin, or warfarin. Sotalol, atropine, and lidocaine are not appropriate for preventing this complication.
+DIF: Remembering
+TOP: Integrated
+ Process: Nursing Process: Analysis
+KEY: Cardiac electrical conduction, Medication
+MSC: Client Needs Category: Ph
+ysiological Integrity: Pharmacological and Parenteral Therapies
+
+6. A nurse administers prescribed adenosine to a client. Wh A nurse administers prescribed adenosine to a client. Wh
+ ich response would the nurse assess
+for as the expected therapeutic response?
+a. Decreased intraocular pressure
+b. Increased heart rate
+c. Short period of asystole
+d. Hypertensive crisis
+
+[ANS : REMOVED]
+
+Clients usually respond to adenosine with a short period of
+ asystole, bradycardia with long
+pauses, nausea, or vomiting. Adenosine has no impact on intraocular pressure nor does it cause increased heart rate or hypertensive crisis.
+DIF: Remembering
+TOP: Integrated Process: Nursing Process: Analysis
+KEY: Cardiac electrical conduction, Medication
+MSC: Client Needs Category: Physiological Integrity: Pharmacological and Parenteral Therapies 
+
+7. A telemetry nurse assesses a client who has a heart rate of 35 beats/min on the cardiac monitor. Which assessment wo A telemetry nurse assesses a client who has a heart rate of 35 beats/min on the cardiac monitor. Which assessment wo
+uld the nurse complete next?
+a. Pulmonary auscultation
+b. Pulse strength and amplitude
+c. Level of consciousness
+d. Mobility and gait stability
+
+[ANS : REMOVED]
+
+A heart rate of 40 beats/min or less could have hemodynamic consequences. The client is at risk for inadequate cerebral perfusion. The nurse would assess for level of consciousness, dizziness, confusion, syncope, chest pain, shortness of breath. Although the other assessments 
+would be completed, the nurse would assess the clients neurologic status next.
+DIF: Applying
+TOP: Integrated Process: Nursing Process: Assessment
+KEY: Cardiac electrical conduction, Vascular perfusion
+MSC: Client Needs Category: Physiological Integrity: Reduction of Risk Potential 8. A nurse cares for a client with an intravenous temporary pacemaker for bradycardia. The 
+nurse observes the presence of a pacing spike but no QRS complex on the clients electrocardiogram. What action would the nurse take next?
+a. Administer intravenous diltiazem.
+b. Assess vital signs and level of consciousness.
+c. Administer sublingual nitroglycerin.
+d. Assess capillary refill and t
+emperature.
+
+[ANS : REMOVED]
+
+In temporary pacing, the wires are threaded onto the epicardial surface of the heart and exit through the chest wall. The pa
+cemaker spike would be followed immediately by a QRS
+complex. Pacing spikes seen without subsequent QRS complexes imply loss of capture. If 
+there is no capture, then there is no ventricular depolarization and contraction. The nurse would assess for cardiac output via vital signs and level of consciousness. The other interventions would not determine if the client is tolerating the loss of capture.
+DIF: Applying
+TOP: Integrated Process: Nursing Process: Assessment
+KEY: Cardiac electrical conduct
+ion
+MSC: Client Needs Category: Physiological Integrity: Reduction of Risk Potential 
+
+9. A nurse prepares to defibrillate a client who is in ventricular fibrillation. Which intervention is appropriate for the nurse to perform prior to defibrillating this client? A nurse prepares to defibrillate a client who is in ventricular fibrillation. Which intervention is appropriate for the nurse to perform prior to defibrillating this client?
+a. Make sure that the defibrillator is set to the synchronous mode.
+b. Administer 1 mg of intravenous epinephrine.
+c. Test the equipment by delivering a smaller shock at 100 J.
+d. Ensure that everyone is clear of contact with the client and the bed.
+
+[ANS : REMOVED]
+
+To avoid injury, the rescuer com
+mands that all personnel clear contact with the client or the
+bed and ensures their compliance before delivery of the shock. Defibrillation is done in asynchronous mode. Equipment would not be tested befor
+ e a client is defibrillated because
+this is an emergency procedure; equipment would be checked on a routine basis.
+Defibrillation takes priority over any medications.
+DIF: Applying
+TOP: Integrated Process: Nursing Process: Implementation
+KEY: Cardiac electrical conduction, Safety
+MSC: Client Needs Category: Safe and Effective Care Environment: Safety and Infection Control 
+
+10. After teaching a client who has an implantable cardioverter-defibrillator (ICD), a nurse assesses the clients understand After teaching a client who has an implantable cardioverter-defibrillator (ICD), a nurse assesses the clients understand
+ing. Which statement by the client indicates correct
+understanding of the teaching?
+a. I would wear a snug-fitting shirt over the ICD.?
+b. I will avoid sources of strong electromagnetic fields.?
+c. I would participate in a strenuous exercise program.?
+d. Now I can discontinue my antidysrhythmic medication.?
+
+[ANS : REMOVED]
+
+The client being discharged with an ICD is instructed to avoid strong sources of electromagnetic fields, such as devices emitting microwaves (not microwave ovens); 
+transformers; radio, television, and radar transmitters; large electrical generators; metal detectors, including handheld s
+ecurity devices at airports; antitheft devices; arc welding
+equipment; and sources of 60-cycle (Hz) interference. Also avoid leaning directly over the 
+alternator of a running motor of a car or boat. Clients would avoid tight clothing, which could cause irritation over the ICD generator. The client would be encouraged to exercise but would not engage in strenuous activities that cause the heart rate to meet or exceed the ICD cutoff point because the ICD can discharge inappropriately. The
+ client would continue all prescribed
+medications.
+DIF: Analyzing
+TOP: Integrated Process: Teaching/Learning
+KEY: Cardiac electrical conduction, Health teaching
+MSC: Client Needs Category: Health Promotion and Maintenance
+
+11. A nurse cares for a client with atrial fibrillation who reports fatigue when completing  A nurse cares for a client with atrial fibrillation who reports fatigue when completing 
+activities of daily living. What intervention would the nurse implement to address this clients concerns?
+a. Administer oxygen therapy at 2 L per nasal cannula.
+b. Provide the client with a sleeping pill to stimulate res
+ t.
+c. Schedule periods of exercise and rest during the day.
+d. Ask assistive personnel (AP) to help bathe the client.
+
+[ANS : REMOVED]
+
+Clients who have atrial fibrillation are at risk for decreased cardiac output and fatigue when completing activities of daily living. The nurse would schedule periods of exercise and rest during the day to decrease fatigue. The other interventions will not assist the client with 
+performing self-care activities and there is no indication for oxygen.
+DIF: Applying
+TOP: Integrated Process: Teaching/Learning
+KEY: Cardiac electrical conduction
+MSC: Client Needs Category: Physiological Integrity: Basic C
+ are and Comfort
+
+12. A nurse assists with the cardio A nurse assists with the cardio
+version of a client experiencing acute atrial fibrillation. What
+action would the nurse take prior to the cardioversion?
+a. Administer intravenous adenosine.
+b. Turn off oxygen therapy.
+c. Ensure that a tongue blade is available.
+d. Position the client on the left side.
+
+[ANS : REMOVED]
+
+For safety during cardioversion, the nurse would turn off any oxygen therapy to prevent fire.
+The other interventions are not appropriate for a cardiove
+ rsion. The client would be placed in
+a supine position.
+DIF: Remembering
+TOP: Integrated Process: Nursing Process: Implementation
+KEY: Cardiac electrical conduction, Safety
+MSC: Client Needs Category: Safe and Effective Care Environment: Safety and Infection Control 
+
+13. A nurse prepares to discharge a client with a cardiac dysrhythmia who is prescribed home health care services. Which priority information would be communicated to the home health nurse upon discharge? A nurse prepares to discharge a client with a cardiac dysrhythmia who is prescribed home health care services. Which priority information would be communicated to the home health nurse upon discharge?
+a. Medication orders for home
+b. Immunization history
+c. Religious beliefs
+d. Nutrition preferences
+
+[ANS : REMOVED]
+
+The home health nurse needs to know current medications the client is taking to ensure assessment, evaluation, and further education related to these medications. The other 
+information might be used to plan care, but not as the priority.
+DIF: Applying
+TOP: Integrated Process: Communication and Documentation
+KEY: Hand-off communication, Safety
+MSC: Client Needs Category: Safe and Effective Care Environment: Management of Care 14. A nurse assesses a client with tachycardia. Which clinical manifestation requires immediate intervention by the nurse?
+a. Midsternal chest pain
+b. Increased urine output
+c. Mild orthostatic hypotension
+d. P wave touching the T wave
+
+[ANS : REMOVED]
+
+Chest pain, possibly angina, indicates that tachycardia may be increasing the clients 
+myocardial workload and oxygen demand to such an extent that normal oxygen delivery cannot keep pace. This results
+in myocardial hypoxia and pain. Increased urinary output and
+mild orthostatic hypotension are not life-threatening conditions and therefore do not require 
+immediate intervention. The P wave touching the T wave indicates significant tachycardia and would be assessed to determine the underlying rhythm and cause; this is an important assessment but is not as critical as chest pain, which indicates cardiac cell death.
+DIF: Applying
+TOP: Integrated Process: Nursing Process:
+Assessment
+KEY: Cardiac electrical conduction
+MSC: Client Needs Category: Saf
+e and Effective Care Environment: Management of Care
+
+15. A nurse teaches a client who experiences occasional premature atrial contractions (PACs) accompanied by palpitations that resolve spontaneously without treatment. Which statement would the nurse include in this clients teaching? A nurse teaches a client who experiences occasional premature atrial contractions (PACs) accompanied by palpitations that resolve spontaneously without treatment. Which statement would the nurse include in this clients teaching?
+a. Minimize or abstain from caffeine.?
+b. Lie on your side until the attack subsides.?
+c. Use your oxygen when you e
+xperience PACs.?
+d. Take amiodarone daily to prevent PACs.?
+
+[ANS : REMOVED]
+
+PACs usually have no hemodyna
+mic consequences. For a client experiencing infrequent
+PACs, the nurse would explore possible lifestyle causes, such as excessive caffeine intake and 
+stress. Lying on the side will not prevent or resolve PACs. Oxygen is not necessary. Although medications may be needed to control symptomatic dysrhythmias, for infrequent PACs, the client first would try lifestyle changes to control them.
+DIF: Applying
+TOP: Integrated Process: Teaching/Learning
+KEY: Cardiac electrical conduction, Health teaching
+MSC: Client Needs Category: Health Promotion and Maintenance
+
+16. The nurse asks a client who has experienced ventricular dysrhythmias about substance abuse. The nurse asks a client who has experienced ventricular dysrhythmias about substance abuse.
+The client asks, Why do you w
+ant to know if I use cocaine?? What is the nurses best
+response?
+a. Substance abuse puts clients at risk for many health issues.?
+b. The hospital requires that I ask you about cocaine use.?
+c. Clients who use cocaine are at risk for fatal dysrhythmias.?
+d. We can provide services for cessation of substance ab
+ use.?
+
+[ANS : REMOVED]
+
+Clients who use cocaine or illicit inhalants are particularly at risk for potentially fatal dysrhythmias. The other responses do not adequately add
+ ress the clients question.
+DIF: Understanding
+TOP: Integrated Process: Nursing Process: Assessment
+KEY: Cardiac electrical conduction, Substance abuse
+MSC: Client Needs Category: Physiological Integrity: Reduction of Risk Potential 17. A nurse supervises an assistive personnel (AP) applying electrocardiographic monitoring.
+Which statement would the nurse provide to the AP related to this procedure?
+a. Clean the skin and clip hairs if needed.?
+b. Add gel to the electrodes pr
+ior to applying them.?
+c. Place the electrodes on the posterior chest.?
+d. Turn off oxygen prior to monitoring the client.?
+
+[ANS : REMOVED]
+
+To ensure the best signal transmission, the skin would be clean and hairs clipped. Electrodes would be placed on the anterior chest, and no additional ge
+ l is needed. Oxygen has no impact
+on electrocardiographic monitoring.
+DIF: Understanding
+TOP: Integrated Process: Communication and Documentatio
+ n
+KEY: Cardiac electrical conduction, Delegation
+MSC: Client Needs Category: Saf
+e and Effective Care Environment: Management of Care
+
+18. A nurse assesses a clients electrocardiogram (ECG) and observes the reading shown below:  A nurse assesses a clients electrocardiogram (ECG) and observes the reading shown below: 
+How would the nurse document this clients ECG strip?
+a. Ventricular tachycardia 
+b. Ventricular fibrillation
+c. Sinus rhythm with premature atrial contractions (PACs)
+d. Sinus rhythm with premature ventricular contractions (PVCs)
+
+[ANS : REMOVED]
+
+Sinus rhythm with PVCs has an underlying regular sinus rhythm with ventricular depolarization that sometimes precede atrial depolarization. The PVC would exhibit as a 
+widened QRS without a preceding p wave. Ventricular tachycardia and ventricular fibrillation rhythms would not have sinus b
+eats present. Premature atrial contractions are atrial
+contractions initiated from another region of the atria before the sinus node initiates atrial 
+depolarization.
+DIF: Analyzing
+TOP: Integrated Process: Communication and Documentation
+KEY: Cardiac electrical conduction, Documentation
+MSC: Client Needs Category: Physiological Integrity: Physiological Adaptation 19. A nurse cares for a client who is on a cardiac monitor. The monitor displayed the rhythm shown below:
+What action would the nurse take first?
+a. Assess airway, breathing, and circulation.
+b. Administer an amiodarone bolus followed by a drip.
+c. Cardiovert the client with a biphasic defibrillator.
+d. Begin cardiopulmonary resuscitation (CPR).
+
+[ANS : REMOVED]
+
+Ventricular tachycardia occurs with repetitive firing of an irritable ventricular ectopic focus, usually at a rate of 140 to 180 beats/min or more. Ventric
+ ular tachycardia is a potentially
+lethal dysrhythmia. The nurse would first assess if the client is alert, breathing, and has a pulse. If this client is pulseless, then the nurse would call a Code Blue and begin CPR. The treatment of choice for pulseless ventricular tachycardia is defibrillation. If the client has a 
+pulse, then cardioversion would be indicated. Amiodarone is an appropriate antidysrhythmic, but it is not the first action.
+DIF: Analyzing
+TOP: Integrated Process: Nursing Process:
+Implementation
+KEY: Cardiac electrical conduction, Medical emergency
+MSC: Client Needs Category: Ph
+ysiological Integrity: Physiological Adaptation
+
+20. A nurse performs an admission assessment on a 75-year-old client with multiple chronic diseases. The clients blood pressure is 135/75 mm Hg and oxygen saturation is 94% on 2 L A nurse performs an admission assessment on a 75-year-old client with multiple chronic diseases. The clients blood pressure is 135/75 mm Hg and oxygen saturation is 94% on 2 L
+per nasal cannula. The nurse assesses the clients rhythm on the cardiac monitor and observes the reading shown below:
+What action would the nurse take first?
+a. Begin external temporary pacing.
+b. Assess peripheral pulse strength.
+c. Ask the client what medications he or she takes.
+d. Administer 1 mg of atropine.
+
+[ANS : REMOVED]
+
+This client is stable and therefore does not require any intervention except to determine the cause of the bradycardia. Bradycardia is often caused by
+ medications. Clients who have
+multiple chronic diseases are often on multiple medications that can interact with each other.
+The nurse would assess the clients current medications first. Pacing is not necessary.
+Peripheral pulses are assessed with a full assessment since this client is stable. Atropine is not 
+needed.
+DIF: Analyzing
+TOP: Integrated Process: Nursing Process: Assessment
+KEY: Cardiac electrical conduction, Nursing assessment
+MSC: Client Needs Category: Physiological Integrity: Pharmacological and Parenteral Therapies 21. The nurse is caring for a client on the medical-surgical unit who suddenly becomes unresponsive and has no pulse. The cardiac monitor show
+ s the rhythm below:
+After calling for assistance and a defibrillator, what action would the nurse take next?
+a. Perform a pericardial thump.
+b. Initiate cardiopulmonary resuscitation (CPR).
+c. Start an 18-gauge intravenous line.
+d. Ask the clients family about code status.
+
+[ANS : REMOVED]
+
+The clients rhythm is ventricular fibrillation. This is a lethal rhythm that is best treated with immediate defibrillation. While
+the nurse is waiting for the defibrillator to arrive, the nurse
+would start CPR. A pericardial thump is not a treatment for ventricular fibrillation. If the client does not already have an IV, other members of the
+ team can insert one after
+defibrillation. The clients code status would already be known by the nurse prior to this event.
+DIF: Analyzing
+TOP: Integrated Process: Nursing Process: Assessment
+KEY: Cardiac electrical conduction, Medical emergency
+MSC: Client Needs Category: Physiological Integrity: Physiological Adaptation 
+
+22. After assessing a client who is receiving an amiodarone intravenous infusion for unstable ventricular tachycardia, the nur After assessing a client who is receiving an amiodarone intravenous infusion for unstable ventricular tachycardia, the nur
+se documents the findings and compares these with the
+previous assessment findings:
+Vital Signs
+Nursing Assessment
+Time: 08:00
+Time: 08:00
+Temperature: 98° F (36.7° C)
+Client alert and oriented.
+Heart rate: 68 beats/min
+Cardiac rhythm: n
+ ormal sinus rhythm.
+Blood pressure: 135/60 mm Hg
+Skin: warm, dry, and appropriate for
+Respiratory rate: 14 breaths/m
+in
+race.
+Oxygen saturation: 96%
+Respirations equal and unlabored.
+Oxygen therapy: 2 L nasal cannula
+Client denies shortness of breath and
+chest pain.
+Time: 10:00
+Time: 10:00
+Temperature: 98.2° F (36.8° C)
+Client alert and oriented.
+Heart rate: 50 beats/min
+Cardiac rhythm: sinus bradycardia.
+Blood pressure: 132/57 mm Hg
+Skin: warm, dry, and appropriate for
+race.
+Respiratory rate: 16 breaths/min
+Respirations equal and unlabored.
+Oxygen saturation: 95%
+Client denies shortness of breath and
+chest pain.
+Oxygen therapy: 2 L nasal cannula
+Client voids 420 mL of clear yellow
+urine.
+Based on the assessments, what action would the nurse take?
+a. Stop the infusion and flush the IV.
+b. Slow the amiodarone infusion rate.
+c. Administer IV normal saline.
+d. Ask the client to cough and deep breathe.
+
+[ANS : REMOVED]
+
+Amiodarone lengthens the absolute refractory period and prolongs repolarization and the action potential duration (and heart rate), so IV administration of amiodarone may cause 
+bradycardia and atrioventricular (AV) block. The correct action for the nurse to take at this time is to slow the infusion, be
+cause the client is asymptomatic and no evidence reveals AV
+block that might require pacing. Abruptly ceasing the medication could allow fatal dysrhythmias to occur. The administration of IV fluids a
+ nd encouragement of coughing and
+deep-breathing exercises are not indicated, and will not increase the clients heart rate.
+DIF: Analyzing
+TOP: Integrated Process: Nursing Process: Implementation
+KEY: Cardiac electrical conduction, Medication
+MSC: Client Needs Category: Physiological Integrity: Pharmacological and Parenteral Therapies 
+MULTIPLE RESPONSE
+
+1. A nurse cares for a client with congestive heart failure who has a regular cardiac rhythm of 128 beats/min. For which physiologic alterations would the nurse assess? ( Select all that  A nurse cares for a client with congestive heart failure who has a regular cardiac rhythm of 128 beats/min. For which physiologic alterations would the nurse assess? ( Select all that 
+apply. )
+a. Decrease in cardiac output
+b. Increase in cardiac output 
+c. Decrease in blood pressure
+d. Increase in blood pressure
+e. Decrease in urine output
+f. Increase in urine output 
+
+[ANS : REMOVED]
+
+Elevated heart rates in a healthy client initially cause blood pressure and cardiac output to increase. However, in a client who has congestive heart failure or a client with long-term 
+tachycardia, ventricular filling time, cardiac output, and blood pressure eventually decrease.
+As cardiac output and blood pr
+essure decrease, urine output will fall.
+DIF: Applying
+TOP: Integrated Process: Nursing Process: Assessment
+KEY: Cardiac electrical conduction, Heart failure
+MSC: Client Needs Category: Physiological Integrity: Physiological Adaptation 
+
+2. A nurse teaches a client with a new permanent pacemaker. Which instructions would the nurse include in this clients teaching? ( Select all that apply. ) A nurse teaches a client with a new permanent pacemaker. Which instructions would the nurse include in this clients teaching? ( Select all that apply. )
+a. Until your incision is healed, do not submerge your pacemaker. Only take
+showers.?
+b. Report any pulse rates lower than your pacemaker settings.?
+c. If you feel weak, apply pr
+essure over your generator.?
+d. Have your pacemaker turned off before having magnetic resonance imaging
+(MRI).?
+e. Do not lift your left arm above the level of your shoulder for 8 weeks.?
+
+[ANS : REMOVED]
+
+The client would not submerge in water until the site has
+ healed; after the incision is healed,
+the client may take showers or baths without concern for the pacemaker. The client would be instructed to report changes in heart rate or rhythm, such as rates lower than the pacemaker setting or greater than 100 beats/min. The client would be advised of restrictions on physical 
+activity for 8 weeks to allow the pacemaker to settle in place. The client would never apply pressure over the generator and would avoid tight clothing. The client would never have MRI because, whether turned on or off, the pacemaker contains metal. The client would be advised to inform all health care providers that he or she has a pace
+ maker.
+DIF: Applying
+TOP: Integ
+rated Process: Teaching/Learning
+KEY: Cardiac electrical conduction, Health teaching
+MSC: Client Needs Category: Health Promotion and Maintenance
+
+3. A nurse is teaching a client who has premature ectopic beats. Which education would the nurse include in this clients teaching? ( Select all that apply. ) A nurse is teaching a client who has premature ectopic beats. Which education would the nurse include in this clients teaching? ( Select all that apply. )
+a. Smoking cessation
+b. Stress reduction and manage
+ment
+c. Avoiding vagal stimulation
+d. Adverse effects of medications
+e. Foods high in potassium
+f. Types of aerobic exercise
+
+[ANS : REMOVED]
+
+A client who has premature beats or ectopic rhythms would be taught to stop smoking, manage stress, take medications as prescribed, and report adverse effects of medications.
+Clients with premature beats are not at risk for vasovagal attacks or potassium imbalances.
+While exercise is beneficial, aerobic exercise is not specifically linked to this clients educational needs.
+DIF: Remembering
+TOP: Integrated Process: Nursing Process: Implementation
+KEY: Health teaching
+MSC: Client Needs Category: Health Promotion and Maintenance

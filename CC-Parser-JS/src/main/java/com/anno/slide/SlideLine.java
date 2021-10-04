@@ -8,6 +8,10 @@ public class SlideLine {
 		this.line = line;
 	}
 
+	public void setLine(String line) {
+		this.line = line;
+	}
+
 	public String getLine() {
 		return line;
 	}

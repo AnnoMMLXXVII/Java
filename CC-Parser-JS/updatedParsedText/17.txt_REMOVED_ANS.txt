@@ -1,0 +1,514 @@
+Chapter 17: Concepts of Care for Patients With HIV Disease
+Ignatavicius: Medical-Surgical Nursing, 10th Edition
+MULTIPLE CHOICE
+
+1. The nurse is caring for a client diagnosed with HIV-II. The clients CD4+ cell count is 399/mm3 (0.399 × 109/L). What action by the nurse is best? The nurse is caring for a client diagnosed with HIV-II. The clients CD4+ cell count is 399/mm3 (0.399 × 109/L). What action by the nurse is best?
+a. Counsel the client on safer sex practices/abstinence.
+b. Encourage the client to abstain from alcohol.
+c. Facilitate genetic testing for CD4+ CCR5/CXCR4 co-receptors.
+d. Help the client plan high-protein/iron meals.
+
+[ANS : REMOVED]
+
+This client is in the Centers for Disease Control and Prevention HIV-II case definition group.
+He or she remains highly infectious and would be counseled on either safer sex practices or 
+abstinence. Abstaining from alcohol is healthy but not required, although some medications may need to be taken while ab
+staining. Genetic testing is not commonly done, but an
+alteration on the CCR5/CXCR4 co-receptors is seen in long-term nonprogressors.
+High-protein/iron meals are important for people who ar
+ e immunosuppressed, but helping to
+plan them does not take precedence over stopping the spread of the disease.
+DIF: Applying
+TOP: Integrated Process: Teaching/Learning
+KEY: HIV disease, Health teaching
+MSC: Client Needs Category: Health Promotion and Maintenance
+
+2. The nurse is presenting information to a community group on safer sex practices. The nurse  The nurse is presenting information to a community group on safer sex practices. The nurse 
+would teach that which sexual practice is the riskiest?
+a. Anal intercourse
+b. Masturbation
+c. Oral sex
+d. Vaginal intercourse
+
+[ANS : REMOVED]
+
+Anal intercourse is the riskiest sexual practice because the fragile anal tissue can tear, creating a portal of entry for human immune deficiency virus in addition to providing mucus membrane contact with the virus.
+DIF: Understanding
+TOP: Integrated Process: Teaching/Learning
+KEY: HIV disease, Health teach
+ing
+MSC: Client Needs Category: Health Promotion and Maintenance
+
+3. The nurse providing direct client care uses specific practices to reduce the chance of acquiring infection with human immune deficiency virus (HIV) from clients. Which practice is most effective? The nurse providing direct client care uses specific practices to reduce the chance of acquiring infection with human immune deficiency virus (HIV) from clients. Which practice is most effective?
+a. Consistent use of Standard Precautions
+b. Double-gloving before body fluid exposure
+c. Labeling charts and armbands HIV+?
+d. Wearing a mask within 3 feet (1 m) of the client
+
+[ANS : REMOVED]
+
+According to The Joint Commission, the most effective preventative measure to avoid HIV
+exposure is consistent use of Standard Precautions. Stand
+ ard Precautions are required by the
+CDC. Double-gloving is not necessary. Labeling charts and armbands in this fashion is a violation of the Health Information Portability and Accountability Act (HIPAA). Wearing a mask within 3 feet (1 m) of the client is not necessary with every client contact.
+DIF: Remembering
+TOP: Integrated Process: Nursing Process: Implementation
+KEY: HIV disease, Standard precautions
+MSC: Client Needs Category: Safe and Effective Care Environment: Safety and Infection Control 4. A client with known HIV-II is admitted to the hospital with fever, night sweats, and severe cough. Laboratory results include a CD4+ cell count of 180/
+mm3 and a negative tuberculosis
+(TB) skin test 4 days ago. What action would the nurse take first?
+a. Initiate Droplet Precautions for the client.
+b. Notify the primary health care provider about the CD4+ results.
+c. Place the client under Airborne Precautions.
+d. Use Standard Precautions t
+o provide care.
+
+[ANS : REMOVED]
+
+Since this clients CD4+ cell count is so low, he or she may have energy, or the inability to mount an immune response to t
+he TB test. The client also appears to have progressed to
+HIV-III. The nurse would first place the client on Airborne Precautions to prevent the spread 
+of TB if it is present. Next the nurse notifies the primary health care provider about the low CD4+ count and requests alterative testing for TB. Droplet Precautions are not used for TB.
+Standard Precautions are not adequate in this case.
+DIF: Applying
+TOP: Integrated Process: Nursing Process: Implementation
+KEY: HIV disease, Transmission-based precautions
+MSC: Client Needs Category: Safe and Effective Care Environment: Safety and Infection Control 
+
+5. A nurse is talking with a client about a negative enzyme-linked immunosorbent assay (ELISA) test for human immu A nurse is talking with a client about a negative enzyme-linked immunosorbent assay (ELISA) test for human immu
+ne deficiency virus (HIV). The test is negative and the client
+states Whew! I was really worried about that result.? What action by the nurse is most 
+important?
+a. Assess the clients sexual activity and patterns.
+b. Express happiness over the test result.
+c. Remind the client about safer sex practices.
+d. Tell the client to be retested in 3 months.
+
+[ANS : REMOVED]
+
+The ELISA test can be falsely negative if testing occurs a
+ fter the client has become infected
+but prior to making antibodies to HIV. This period of time is known as the window period and can last up to 21 days. The conf
+irmatory Western Blot test takes an additional 7 days, so using
+that testing algorithm, the clients status may not truly be known for up to 28 days. The client 
+may have had exposure that has not yet been confirmed. The nurse needs to assess the clients sexual behavior further to determine the proper response. The other actions are not the most important, but discussing safer sex practices is always appropriate. Testing would be recommended every 3 months for someone engaging in h
+ igh risk behaviors.
+DIF: Applying
+TOP: Integ
+rated Process: Nursing Process: Assessment
+KEY: HIV disease, Nursing assessment
+MSC: Client Needs Category: Physiological Integrity: Reduc
+ tion of Risk Potential
+
+6. A client with HIV-II has had a su A client with HIV-II has had a su
+dden decline in status with a large increase in viral load.
+What action would the nurse take first?
+a. Ask the client about travel to any foreign countries.
+b. Assess the client for adherence to the drug regimen.
+c. Determine if the client has any new sexual partners.
+d. Request information about new living quarters or pets
+ .
+
+[ANS : REMOVED]
+
+Adherence to the complex drug regimen needed for HIV treatment can be daunting. Clients must take their medications on time and correctly at a mi
+ nimum of 90% of the time to be
+effective. Since this clients viral load has increased dramatically, the nurse would first assess this factor. After this, the other
+assessments may or may not be needed.
+DIF: Applying
+TOP: Integrated Process: Nursing Process: Assessment
+KEY: HIV disease, Nursing assessment
+MSC: Client Needs Category: Physiological Integrity: Physiological Adaptation
+
+7. A client is hospitalized with Pneumocystis jiroveci pneumonia. The client reports shortness of breath with activity and extreme fatigue. What intervention is best to promote comfort? A client is hospitalized with Pneumocystis jiroveci pneumonia. The client reports shortness of breath with activity and extreme fatigue. What intervention is best to promote comfort?
+a. Administer sleeping medication.
+b. Perform most activities for the client.
+c. Increase the clients oxygen during activity.
+d. Pace activities, allowing for adequate rest.
+
+[ANS : REMOVED]
+
+This client has two major reasons for fatigue: decreased oxygenation and systemic illness. The nurse would not do everything for the client but rather let the client do as much as possible within limits and allow for adequate rest in between. Sleeping medications may be needed but 
+not as the first step, and only with caution. Increasing oxygen during activities may or may not be warranted, but first the n
+urse must try pacing the clients activity.
+DIF: Applying
+TOP: Integrated Process: Nursing Process:
+Implementation
+KEY: HIV disease, Fatigue
+MSC: Client Needs Category: Ph
+ysiological Integrity: Basic Care and Comfort
+
+8. A client with HIV-III and wasting syndrome has inadequate nutrition. What assessment finding by the nurse best indicates that goals have been met for this client problem? A client with HIV-III and wasting syndrome has inadequate nutrition. What assessment finding by the nurse best indicates that goals have been met for this client problem?
+a. Chooses high-protein food.
+b. Has decreased oral discomfort.
+c. Eats 90% of meals and snacks.
+d. Has a weight gain of 2 lb (
+1 kg)/1 mo.
+
+[ANS : REMOVED]
+
+The weight gain is the best indicator that goals for this client problem have been met because it demonstrates that the client n
+ot only is eating well but also is able to absorb the nutrients.
+Choosing high-protein food is important, but only if the client eats and absorbs the nutrients.
+DIF: Analyzing
+TOP: Integrated Process: Nursing Process: Evaluation
+KEY: HIV disease, Nutrition
+MSC: Client Needs Category: Physiological Integrity: Basic Care and Comfort
+
+9. A client with HIV-III is hospitalized and has weeping Kaposi sarcoma lesions. The nurse dresses them with sterile gauze. A client with HIV-III is hospitalized and has weeping Kaposi sarcoma lesions. The nurse dresses them with sterile gauze.
+When changing these dressings, which action is most
+important for the nurses safety?
+a. Adhering to Standard Precautions
+b. Assessing tolerance to dressing changes
+c. Performing hand hygiene before and after care
+d. Disposing of soiled dressings properly
+
+[ANS : REMOVED]
+
+All of the actions are important, but due to the infectious nature of this illness, the nurse would ensure he or she is following Standard Precautions
+ (and Transmission-Based
+Precautions when necessary) to avoid a potential exposure.
+DIF: Applying
+TOP: Integrated Process: Nursing Process: Implementation
+KEY: HIV disease, Standard precautions
+MSC: Client Needs Category: Safe and Effective Care Environment: Safety and Infection Control 10. A client with HIV-III is admitted to the hospital with Toxoplasma gondii infection. Which 
+action by the nurse is most appropriate?
+a. Initiate Contact Precaution
+s.
+b. Conduct frequent neurologic assessments.
+c. Conduct frequent respiratory assessments.
+d. Initiate Protective Precautions.
+
+[ANS : REMOVED]
+
+Toxoplasma gondii infection is an opportunistic infection t
+ hat causes an encephalitis but poses
+only a rare threat to immunocompetent individuals The nurse would perform ongoing neurologic assessments. Contact and Protective Precautions are not needed. Good respiratory assessments are important to the client, but toxoplasmosis will demonstrate neurologic signs 
+and symptoms.
+DIF: Applying
+TOP: Integrated Process: Nursing Process: Implementation
+KEY: HIV disease, Nursing assessment
+MSC: Client Needs Category: Physiological Integrity: Reduction of Risk Potential 11. A client has just been informed of a positive HIV test. The client is distraught and does not 
+know what to do. What intervention by the nurse is best?
+a. Assess the client for support systems.
+b. Determine if a clergy member would help.
+c. Explain legal requirements to tell sex partners.
+d. Offer to tell the family for the client.
+
+[ANS : REMOVED]
+
+This client needs the assistance of support systems. The n
+ urse would help the client identify
+them and what role they can play in supporting him or her. A clergy member may or may not be welcome. Positive HIV test
+results are reportable in all 50 states, Washington, D.C., and
+Canada but the nurse works with the client to support his or her choices in disclosure. The 
+nurse would not tell the family for the client.
+DIF: Applying
+TOP: Integrated Process: Caring
+KEY: HIV disease, Psychosocial response
+MSC: Client Needs Category: Psychosocial Integrity
+
+12. A nurse is caring for a client w A nurse is caring for a client w
+ith HIV-III who was admitted with HAND. What sign or
+symptom would be most important for the nurse to report to the primary health care provider?
+a. Nausea
+b. Change in pupil size
+c. Weeping open lesions
+d. Cough
+
+[ANS : REMOVED]
+
+HIV-associated neurocognitive disorder (HAND) is a sign of neurologic involvement. The nurse would report any sign of increasing intracranial pre
+ ssure immediately, including change
+in pupil size, level of consciousness, vital signs, or limb strength. The other signs and symptoms are not life threateni
+ng and would be documented and reported appropriately.
+DIF: Applying
+TOP: Integrated Process: Communication and Documentation
+KEY: HIV disease
+MSC: Client Needs Category: Physiological Integrity: Physiological Adaptation
+
+13. A client has been hospitalized with an opportunistic infection secondary to HIV-III. The clients partner is listed as the emergency contact, but the clients mother insists that she should be listed instead. What action by the nurse is best? A client has been hospitalized with an opportunistic infection secondary to HIV-III. The clients partner is listed as the emergency contact, but the clients mother insists that she should be listed instead. What action by the nurse is best?
+a. Contact the social worker to assist the client with adv
+ ance directives.
+b. Ignore the mother; the client does not want her to be involved.
+c. Let the client know, gently, that nurses cannot be involved in these disputes.
+d. Tell the client that, legally, the mother is the emergency contact.
+
+[ANS : REMOVED]
+
+The client should make his or her wishes known and formalize them through advance directives. The nurse would help the client by contacting someone to help with this process.
+Ignoring the mother or telling the client that nurses cannot be involved does not help the situation. Legal statutes vary by s
+tate, but the nurse would be the clients advocate and help
+ensure his or her wishes are met.
+DIF: Applying
+TOP: Integrated Process: Communication and Documentation
+KEY: HIV disease, Ethics
+MSC: Client Needs Category: Safe and Effective Care Environment: Management of Care 
+
+14. A client with HIV-II is hospitalized for an unrelated condition, and several medications are prescribed in addition to the regimen already being used. What action by the nurse is most important? A client with HIV-II is hospitalized for an unrelated condition, and several medications are prescribed in addition to the regimen already being used. What action by the nurse is most important?
+a. Consult with the pharmacy about drug interactions.
+b. Ensure that the client under
+stands the new medications.
+c. Give the new drugs without considering the old ones.
+d. Schedule all medications at standard times.
+
+[ANS : REMOVED]
+
+The drug regimen for someone with HIV/AIDS is complex and consists of many medications that must be given at specific times of the day, and that h
+ ave many interactions with other
+drugs and food. The nurse would consult with a pharmacist about possible interactions. Client teaching is important but does not take precedence over ensuring the medications do not interfere with each other, which could lead to drug resistance or a resurgence of symptoms.
+DIF: Applying
+TOP: Integrated Process: Communication and Documentation
+KEY: HIV disease, Medication safety
+MSC: Client Needs Category: Physiological Integrity: Pharmacological and Parenteral Therapies 
+
+15. A client with HIV-III has been hos A client with HIV-III has been hos
+pitalized with suspected cryptosporidiosis. What physical
+assessment would be most important with this condition?
+a. Auscultating the lungs
+b. Assessing mucous membranes
+c. Listening to bowel sounds
+d. Performing a neurologic examination
+
+[ANS : REMOVED]
+
+Cryptosporidiosis can cause diarrhea and wasting with extreme loss of fluids and electrolytes.
+The nurse would assess signs of hydration/dehydration as the priority, including checking the 
+clients mucous membranes for dryness. The nurse will perform the other assessments as part of a comprehensive assessmen
+t.
+DIF: Applying
+TOP: Integrated Process: Nursing Process:
+Assessment
+KEY: HIV disease, Nursing assessment
+MSC: Client Needs Category: Physiological Integrity: Reduction of Risk Potential 
+
+16. A client with HIV-III asks the nurse why gabapentin is part of the drug regimen when the client does not have a history of seizures. What response by the nurse is best? A client with HIV-III asks the nurse why gabapentin is part of the drug regimen when the client does not have a history of seizures. What response by the nurse is best?
+a. Gabapentin can be used as an antidepressant too.?
+b. I have no idea why you would be taking this drug.?
+c. This drug helps treat the pain from nerve irritation.?
+d. You are at risk for seizure
+s due to fungal infections.?
+
+[ANS : REMOVED]
+
+Many classes of medications are used for neuropathic pain, including tricyclic antidepressants and anticonvulsants such as gabapentin. It is not being used to prevent seizures from fungal infections. If the nurse does not know the answer, he or she would find out for the client.
+DIF: Understanding
+TOP: Integrated Process: Teaching/Learning
+KEY: HIV disease, Pharmacologic pain management
+MSC: Client Needs Category: Physiological Integrity: Pharmacological and Parenteral Therapies 
+
+17. An HIV-negative client who ha An HIV-negative client who ha
+s an HIV-positive partner asks the nurse about receiving
+tenofovir/emtricitabine. What information is most important to teach the client about this drug?
+a. Does not reduce the need for safe sex practices.
+b. Has been taken off the market due to increases in cancer.
+c. Reduces the number of HIV tests you will need.
+d. Is only used for postexposure prophylaxis.
+
+[ANS : REMOVED]
+
+Tenofovir/emtricitabine is a newer drug used for preexposure prophylaxis and appears to reduce transmission of human immune deficiency virus (H
+ IV) from known HIV-positive
+people to HIV-negative people. The drug does not reduce the need for practicing safe sex.
+Since the drug can lead to drug resistance if used, clients will still need HIV testing every 3
+months. This drug has not been taken off the market and is not used for postexposure 
+prophylaxis.
+DIF: Understanding
+TOP: Integrated Process: Teaching/Learning
+KEY: HIV disease, Health teaching
+MSC: Client Needs Category: Physiological Integrity: Pharmacological and Parenteral Therapies MULTIPLE RESPONSE
+
+1. A nurse is learning about huma A nurse is learning about huma
+n immune deficiency virus (HIV) infection. Which statements
+about HIV infection are correct? ( Select all that apply. )
+a. CD4+ cells begin to create new HIV virus particles.
+b. Antibodies produced are incomplete and do not function well.
+c. Macrophages stop functioning properly.
+d. Opportunistic infections and cancer are leading causes of death.
+e. People with HIV-I disease are not infectious to others.
+f. The CD4+ T-cell is only af
+fected when the disease has progressed to HIV-III
+
+[ANS : REMOVED]
+
+In HIV, CD4+ cells begin to create new HIV particles. Antibodies the client produce are incomplete and do not function w
+ell. Macrophages also stop functioning properly.
+Opportunistic infections and cancer are the two leading causes of death in clients with HIV
+infection. People infected with HIV are infectious in all stages of the disease. The CD4+
+T-cell is the immune system cell most affected by infection with the HIV virus.
+DIF: Remembering
+TOP: Integrated Process: Teaching/Learning
+KEY: HIV disease, Pathophysiology
+MSC: Client Needs Category: Physiological Integrity: Physiological Adaptation
+
+2. Which findings are AIDS-defining characteristics? ( Sele Which findings are AIDS-defining characteristics? ( Sele
+ ct all that apply. )
+a. CD4+ cell count less than 200/mm3 (0.2 × 109/L) or less than 14%
+b. Infection with P. jiroveci
+c. Positive enzyme-linked immunosorbent assay (ELISA) test for human immune
+deficiency virus (HIV)
+d. Presence of HIV wasting syndrome
+e. Taking antiretroviral medications
+f. Confusion, dementia, or memory loss
+
+[ANS : REMOVED]
+
+A diagnosis of AIDS requires that the person be HIV positive and have either a CD4+ T-cell count of less than 200 cells/mm3 (0.2 × 109/L) or less tha
+ n 14% (even if the total CD4+ count
+is above 200 cells/mm3) or an opportunistic infection such as P. jiroveci and HIV wasting syndrome. Confusion, dementia, and memory loss are central nervous system indications.
+Having a positive ELISA test and taking antiretroviral medications are not AIDS-defining 
+characteristics.
+DIF: Remembering
+TOP: Integrated Process: Teaching/Learning
+KEY: HIV disease
+MSC: Client Needs Category: Physiological Integrity: Physio
+ logical Adaptation
+
+3. The nurse is teaching a client a The nurse is teaching a client a
+bout medications for HIV-II treatment. What drugs are paired
+with the correct information? ( Select all that apply. )
+a. Abacavir: avoid fatty and fried foods.
+b. Efavirenz: take 1 hour before or 2 hours after antacids.
+c. Atazanavir: check pulse daily and report pulse greater than 100 beats/min.
+d. Dolutegravir: do not take this medication if you becom
+ e pregnant.
+e. Enfuvirtide: teach client how to operate syringe infusion pump for administration.
+f. All drugs: you must adhere
+to the drug schedule at least 90% of the time for
+effectiveness.
+
+[ANS : REMOVED]
+
+Abacavir is a nucleoside rever
+se transcriptase inhibitor and clients are taught to avoid fried
+and fatty foods because they can lead to digestive upsets and even pancreatitis. Efavirenz is a 
+nonnucleoside reverse transcriptase inhibitor and clients are taught to take them (doraverene) all except spaced 1 hour before or 2 hours after antacids to avoid inhibiting drug absorption.
+Atazanavir is a protease inhibitor and can cause bradycardia which should be reported.
+Dolutegravir is an integrase inhibitor and can cause birth
+ defects. Enfuvirtide is a fusion
+inhibitor and is given subcutaneously. All drugs must be taken as scheduled 90% of the time in order to remain effective.
+DIF: Understanding
+TOP: Integrated Process: Teaching/Learning
+KEY: HIV disease, Medications
+MSC: Client Needs Category: Physiological Integrity: Pharmacological and Parenteral Therapies 
+
+4. A client with HIV-III is hospitalized with P. jiroveci pneumonia and is started on the drug of choice for this infection. What A client with HIV-III is hospitalized with P. jiroveci pneumonia and is started on the drug of choice for this infection. What
+laboratory values would be most important for the nurse report
+to the primary health care provider? ( Select all that apply. )
+a. Aspartate transaminase, alanine transaminase: elevat
+ ed
+b. CD4+ cell count: 180/mm3
+c. Creatinine: 1.0 mg/dL (88 mcmol/L)
+d. Platelet count: 80,000/mm3 (80 × 109/L)
+e. Serum sodium: 120 mEq/L (120 mmol/L)
+f. Serum potassium: 3.4 mEq/
+L (3.4 mmol/L)
+
+[ANS : REMOVED]
+
+The drug of choice to treat P. jiroveci pneumonia is trimethoprim with sulfamethoxazole. Side effects of this drug include hepa
+titis, hyponatremia, and thrombocytopenia. The elevated liver
+enzymes, low platelet count, and low sodium would all be reported. The CD4+ cell count is 
+within the expected range for a client with an AIDS-defining infection. The creatinine level is normal and the potassium is just below normal.
+DIF: Analyzing
+TOP: Integrated Process: Nursing Process: Analysis
+KEY: HIV disease, Medication side effects
+MSC: Client Needs Category: Physiological Integrity: Pharmacological and Parenteral Therapies 5. A client with HIV-III has oral thrush and difficulty eating. W
+hat actions does the nurse
+delegate to the assistive personnel (AP)? ( Select all that apply. )
+a. Apply oral anesthetic gels b
+efore meals.
+b. Assist the client with oral care every 2 hours.
+c. Offer the client frequent sips of cool drinks.
+d. Provide the client with alcohol-based mouthwash.
+e. Remind the client to use only a soft toothbrush.
+f. Offer the client soft foods like gelatin or pudding.
+
+[ANS : REMOVED]
+
+The AP can help the client with oral care, offer fluids, and remind the client of things the nurse (or other professional) has already taught. Soft foods and liquids are tolerated better 
+than harder foods. Applying medications is performed by the nurse. Alcohol-based
+mouthwashes are harsh and dr
+ying and would not be used.
+DIF: Applying
+TOP: Integrated Process: Communicat
+ ion and Documentation
+KEY: HIV disease, Delegation
+MSC: Client Needs Category: Saf
+e and Effective Care Environment: Management of Care
+
+6. A client with HIV-III is in the hospital with severe diarrhea. What actions does the nurse delegate to assistive personnel (AP)? ( Select all that apply. ) A client with HIV-III is in the hospital with severe diarrhea. What actions does the nurse delegate to assistive personnel (AP)? ( Select all that apply. )
+a. Assessing the clients fluid and electrolyte status
+b. Assisting the client to get out of bed to prevent falls
+c. Obtaining a bedside commode if the client is weak
+d. Providing gentle perianal c
+leansing after stools
+e. Reporting any perianal abnormalities
+
+[ANS : REMOVED]
+
+The AP can assist the client wi
+th getting out of bed, obtain a bedside commode for the clients
+use, cleanse the clients perianal area after bowel movements, and report any abnormal 
+observations such as redness or open areas. The nurse assesses fluid and electrolyte status.
+DIF: Applying
+TOP: Integrated Process: Communication and Documentation
+KEY: HIV disease, Delegation
+MSC: Client Needs Category: Safe and Effective Care Environment: Management of Care 7. The nurse is educating a client with HIV-II and the partner on self-care measures to prevent infection when blood counts are low. What information doe
+ s the nurse provide? ( Select all
+that apply. )
+a. Do not work in the garden or with houseplants.
+b. Do not empty the kitty litter boxes.
+c. Clean your toothbrush in the dishwasher daily.
+d. Bathe daily using antimicrobial soap.
+e. Avoid people who are sick and large crowds.
+f. Make sure meat, fish, and eggs are cooked well.
+
+[ANS : REMOVED]
+
+Ways to avoid infection when immunocompromised include not working in the garden or with houseplants; not emptying litter boxes; running the
+ toothbrush through the dishwasher at
+least weekly; bathing daily using antimicrobial soap; avoiding sick people and large crowds; and making sure meat, fish, and eggs are cooked well prior to eating them.
+DIF: Understanding
+TOP: Integrated Process: Teaching/Learning
+KEY: HIV disease, Health teaching
+MSC: Client Needs Category: Physiological Integrity: Physiological Adaptation
+
+8. A nurse is providing education about HIV risks at a healt A nurse is providing education about HIV risks at a healt
+ h fair. What groups would the nurse
+include as needing to be tested for HIV on an annual basis? ( Select all that apply. ) a. Anyone who received a blood product in 1989
+b. Couples planning on getting married
+c. Those who are sexually active with multiple partners
+d. Injection drugs users
+e. Sex workers and their customers
+f. Adults over the age of 65 years
+
+[ANS : REMOVED]
+
+The CDC recommends that HIV testing would be performed on those who received a
+transfusion between 1978 and 1985 only. People planning on
+getting married should be tested
+and all sexually active people should know their HIV status. Those engaged in sex work and their customers should also be tested, as well as injection drug users. Those over the age of 65
+years need a one-time screen. 
+DIF: Understanding
+TOP: Integrated Process: Teaching/Learning
+KEY: HIV disease, Secondary prevention
+MSC: Client Needs Category: Health Promotion and Maintenance
+
+9. A nurse begins a job at a Veter A nurse begins a job at a Veter
+ans Administration Hospital and asks why so much emphasis is
+on HIV testing for the veterans. What reasons is this nurse given? ( Select all that apply. ) a.
+Veterans have a high prevalence of substance abuse.
+b. Many veterans may engage in high risk behaviors.
+c. Many older veterans may not know their risks.
+d. Everyone should know their HIV status.
+e. Belief that the VA has tested them and would notify them if positive.
+
+[ANS : REMOVED]
+
+All options are correct for the veteran population. The nurse interacting with veteran would 
+ensure they know about the HIV testing offered by the VA.
+DIF: Remembering
+TOP: Integrated Process: Teaching/Learning
+KEY: HIV disease, Veterans' health considerations
+MSC: Client Needs Category: Health Promotion and Wellness

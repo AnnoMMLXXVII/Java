@@ -1,0 +1,553 @@
+Chapter 29: Critical Care of Patients With Respiratory Emergencies
+Ignatavicius: Medical-Surgical Nursing, 10th Edition
+MULTIPLE CHOICE
+
+1. A nurse answers a call light and finds a client anxious, short of breath, reporting chest pain, and has a blood pressure of 88/52 mm Hg. What action by the nurse takes priority? A nurse answers a call light and finds a client anxious, short of breath, reporting chest pain, and has a blood pressure of 88/52 mm Hg. What action by the nurse takes priority?
+a. Assess the clients lung sounds.
+b. Notify the Rapid Response Team.
+c. Provide reassurance to the client.
+d. Take a full set of vital signs.
+
+[ANS : REMOVED]
+
+This client has signs and symptoms of a pulmonary embolism, and the most critical action is to notify the Rapid Response Team for speedy diagnosis and treatment. The other actions are 
+appropriate also but are not the priority.
+DIF: Remembering
+TOP: Integrated Process: Communication and Documentation
+KEY: Pulmonary embolism, Critical rescue
+MSC: Client Needs Category: Ph
+ysiological Integrity: Physiological Adaptation
+
+2. A client is admitted with a pulmonary embolism (PE). The A client is admitted with a pulmonary embolism (PE). The
+ client is young, healthy, and active
+and has no known risk factors for PE. What action by the nurse is most appropriate?
+a. Encourage the client to walk 5 minutes each hour.
+b. Refer the client to smoking cessation classes.
+c. Teach the client about factor V Leiden testing.
+d. Tell the client that sometim
+es no cause for disease is found.
+
+[ANS : REMOVED]
+
+Factor V Leiden is an inherited thrombophilia that can lead to abnormal clotting events, including PE. A client with no know
+n risk factors for this disorder would be asked about
+family history and referred for testing. Encouraging the client to walk is healthy, but is not 
+related to the development of a PE in this case, nor is smoking. Although there are cases of disease where no cause is ever found, this assumption is premature.
+DIF: Applying
+TOP: Integrated Process: Teaching/Learning
+KEY: Pulmonary embolism, Genetic testing
+MSC: Client Needs Category: Physiological Integrity: Reduction of Risk Potential
+
+3. A client has a large pulmonary embolism and is started o A client has a large pulmonary embolism and is started o
+ n oxygen. The nurse asks the charge
+nurse why the clients oxygen saturation has not significantly improved. What response by the nurse is best?
+a. Breathing so rapidly interferes with oxygenation.?
+b. Maybe the client has respiratory distress syndrome.?
+c. The blood clot interferes with perfusion in the lungs.?
+d. The client needs immediate intubation and mechanical ventilation.?
+
+[ANS : REMOVED]
+
+A large blood clot in the lungs will significantly impair gas exchange and oxygenation. Unless the clot is dissolved, this process will continue unabated. H
+ yperventilation can interfere with
+oxygenation by shallow breathing, but there is no evidence that the client is hyperventilating, and this is also not the most precise physiologic answer. Acute respiratory distress syndrome can occur, but this is not as likely soon after the client starts on oxygen plus there is no 
+indication of how much oxygen the client is on. The client may need to be mechanically ventilated, but without concret
+e data on FiO2 and SaO2, the nurse cannot make that judgment.
+DIF: Applying
+TOP: Integrated Process: Teaching/Lear
+ ning
+KEY: Pulmonary embolism, Respiratory system
+MSC: Client Needs Category: Ph
+ysiological Integrity: Physiological Adaptation
+
+4. A client is on intravenous heparin to treat a pulmonary embolism. The clients most recent partial thromboplastin time (PTT) was 25 seconds. What order would the nurse anticipate? A client is on intravenous heparin to treat a pulmonary embolism. The clients most recent partial thromboplastin time (PTT) was 25 seconds. What order would the nurse anticipate?
+a. Decrease the heparin rate.
+b. Increase the heparin rate. 
+c. No change to the heparin rate.
+d. Stop heparin; start warfarin
+.
+
+[ANS : REMOVED]
+
+For clients on heparin, a PTT of 1.5 to 2.5 times the normal value is needed to demonstrate that the heparin is working. A nor
+mal PTT is 25 to 35 seconds, so this clients PTT value is
+too low. The heparin rate needs to be increased. Warfarin is not indicated in this situation.
+DIF: Applying
+TOP: Integrated Process: Nursing Process: Analysis
+KEY: Pulmonary embolism, Anticoagulants, Laboratory values
+MSC: Client Needs Category: Physiological Integrity: Reduction of Risk Potential
+
+5. A client is hospitalized with a second episode of pulmonary embolism (PE). Recent genetic testing reveals that the client has an alteration in the gene CYP2C19. What action by the nurse is best? A client is hospitalized with a second episode of pulmonary embolism (PE). Recent genetic testing reveals that the client has an alteration in the gene CYP2C19. What action by the nurse is best?
+a. Instruct the client to eliminate all vitamin K from the diet.
+b. Prepare preoperative teach
+ing for an inferior vena cava (IVC) filter.
+c. Refer the client to a chronic illness support group.
+d. Teach the client to use a soft-bristled toothbrush.
+
+[ANS : REMOVED]
+
+Often clients are discharged from the hospital on warfarin after a PE. However, clients with a 
+variation in the CYP2C19 gene do not metabolize warfarin well and have much higher blood levels and more side effects. This client is a poor candidate for warfarin therapy, and the prescriber will most likely order an IVC filter device to be implanted. The other option is to lower the dose of warfarin. The nurse would prepare to do p
+ reoperative teaching on this
+procedure. It would be impossible to eliminate all vitamin K from the diet. A chronic illness support group may be needed, but this is not the best intervention as it is not as specific to the client as the IVC filter. A soft-bristled toothbrush is a safety measure for clients on 
+anticoagulation therapy.
+DIF: Applying
+TOP: Integrated Process: Nursing Process: Analysis
+KEY: Pulmonary embolism, Genetic alterations
+MSC: Client Needs Category: Physiological Integrity: Physiological Adaptation
+
+6. A nurse is caring for four clients on intravenous heparin therapy. Which laboratory value possibly indicates that a serious side effect has occurred? A nurse is caring for four clients on intravenous heparin therapy. Which laboratory value possibly indicates that a serious side effect has occurred?
+a. Hemoglobin: 14.2 g/dL (142 g/L)
+b. Platelet count: 82,000/L (82 × 109/L)
+c. Red blood cell count: 4.8/mm3 (4.8 × 1012/L)
+d. White blood cell count: 8700/mm3 (8.7 × 109/L)
+
+[ANS : REMOVED]
+
+This platelet count is low and could indicate heparin-induc
+ ed thrombocytopenia. The other
+values are normal for either gender.
+DIF: Applying
+TOP: Integrated Process: Nursing Process: Assessment
+KEY: Anticoagulants, Laboratory values
+MSC: Client Needs Category: Physiological Integrity: Reduction of Risk Potential
+
+7. A client appears dyspneic, but the oxygen saturation is 97%. What action by the nurse is best? A client appears dyspneic, but the oxygen saturation is 97%. What action by the nurse is best?
+a. Assess for other signs of hypoxia.
+b. Change the sensor on the pulse oximeter.
+c. Obtain a new oximeter from central supply.
+d. Tell the client to take slow, deep breaths.
+
+[ANS : REMOVED]
+
+Pulse oximetry is not always the most accurate assessment tool for hypoxia as many factors can interfere, producing normal or near-normal readings i
+ n the setting of hypoxia. The nurse
+would conduct a more thorough assessment. The other actions are not appropriate for a hypoxic client.
+DIF: Applying
+TOP: Integrated Process: Nursing Process: Assessment
+KEY: Respiratory assessment, Hypoxia
+MSC: Client Needs Category: Physiological Integrity: Physiological Adaptation
+
+8. A nurse is assisting the primary health care provider (PHCP) who is intubating a client. The PHCP has been attempting to i A nurse is assisting the primary health care provider (PHCP) who is intubating a client. The PHCP has been attempting to i
+ntubate for 40 seconds. What action by the nurse is best?
+a. Ensure that the client has adequate sedation.
+b. Find another qualified provider to intubate.
+c. Interrupt the procedure to give oxygen.
+d. Monitor the clients oxygen saturation.
+
+[ANS : REMOVED]
+
+Each intubation attempt should not exceed 30 seconds (15 is preferable) as it causes hypoxia.
+The nurse would interrupt the intubation attempt and give the client oxygen. The nurse would also have adequate sedation during the procedure and monitor the clients oxygen saturation, 
+but these do not take priority. Finding another qualified provider to intubate the client is not appropriate at this time.
+DIF: Applying
+TOP: Integrated Process: Nursing Process:
+Implementation
+KEY: Respiratory system, Intubation
+MSC: Client Needs Category: Safe and Effective Care Environment: Management of Care 
+
+9. An intubated clients oxygen saturation has dropped to 88%. What action by the nurse takes priority? An intubated clients oxygen saturation has dropped to 88%. What action by the nurse takes priority?
+a. Determine if the tube is kinked.
+b. Ensure that all connections are patent.
+c. Listen to the clients lung sounds.
+d. Suction the endotracheal tube.
+
+[ANS : REMOVED]
+
+When an intubated client shows signs of hypoxia, check f
+ or DOPE: d isplaced tube (most
+common cause), o bstruction (often by secretions), p neumothorax, and e quipment problems.
+The nurse listens for equal, bilateral breath sounds first to determine if the endotracheal tube is still correctly placed. If this assessment is normal, the nurse would follow the mnemonic 
+and perform suction if needed, assess for pneumothorax, and finally check the equipment.
+DIF: Applying
+TOP: Integrated Process: Nursing Process: Assessment
+KEY: Mechanical ventilation, Respiratory assessment
+MSC: Client Needs Category: Safe and Effective Care Environment: Management of Care 10. A client with acute respiratory failure is on a ventilator and is sedated. What care may the 
+nurse delegate to the assistive personnel AP)?
+a. Assess the client for sedation needs.
+b. Get family permission for restraints.
+c. Provide frequent oral care per protocol.
+d. Use nonverbal pain assessment tools.
+
+[ANS : REMOVED]
+
+The client on mechanical ventilation needs frequent oral care, which can be delegated to the 
+AP. The other actions fall within the scope of practice of the nurse.
+DIF: Applying
+TOP: Integrated Process: Communication and Documentation
+KEY: Mechanical ventilation, Oral care, Delegation
+MSC: Client Needs Category: Safe and Effective Care Environment: Management of Care 11. A nurse is caring for a client on mechanical ventilation. When double-checking the ventilator 
+settings with the respiratory therapist, what would the nurse ensure?
+a. The client is able to initiate spontaneous breaths.
+b. The inspired oxygen has adequate humidification.
+c. The upper peak airway pressure limit alarm is off.
+d. The upper peak airway pressure limit alarm is on.
+
+[ANS : REMOVED]
+
+The upper peak airway pressure limit alarm will sound w
+ hen the airway pressure reaches a
+preset maximum. This is critical to prevent barotrauma to the lungs. Alarms are never be turned off. Initiating spontaneous breathing is important for some modes of ventilation but not others. Adequate humidification is important but does not take priority over preventing injury.
+DIF: Applying
+TOP: Integrated Process: Nursing Process: Implementation
+KEY: Mechanical ventilation, Equipment safety
+MSC: Client Needs Category: Safe and Effective Care Environment: Safety and Infection Control 
+
+12. A nurse is caring for a client o A nurse is caring for a client o
+n mechanical ventilation and finds the client agitated and
+thrashing about. What action by the nurse is most appropriate?
+a. Assess the cause of the agitation.
+b. Reassure the client that he or she is safe.
+c. Restrain the clients hands.
+d. Sedate the client immediately.
+
+[ANS : REMOVED]
+
+The nurse needs to determine t
+he cause of the agitation. The inability to communicate often
+makes clients anxious, even to the point of panic. Pain, confusion, and hypoxia can also cause agitation. Once the nurse determines the cause of the agi
+ tation, he or she can implement
+measures to relieve the underlying cause. Reassurance is also important but may not address the etiology of the agitation. Restraints and more sedation may be necessary but not as a first step. Ensuring the client is adequately oxygenated is the priority.
+DIF: Applying
+TOP: Integrated Process: Nursing Process: Assessment
+KEY: Mechanical ventilation, Anxiety
+MSC: Client Needs Category: Physiological Integrity: Reduction of Risk Potential
+
+13. A nurse is preparing to admit a cl A nurse is preparing to admit a cl
+ient on mechanical ventilation for acute respiratory failure
+from the emergency department. What action does the nurse take first?
+a. Assessing that the ventilator settings are correct
+b. Ensuring that there is a bag-valve-mask in the room
+c. Obtaining personal protective equipment
+d. Planning to suction the client upon arrival to the room
+
+[ANS : REMOVED]
+
+Having a bag-valve-mask device is critical in case the client needs manual breathing. The respiratory therapist is usually primarily responsible for setting up the ventilator, although the 
+nurse would know and check the settings. Personal protective equipment is important, but ensuring client safety is the mos
+t important action. The client may or may not need suctioning
+on arrival.
+DIF: Applying
+TOP: Integrated Process: Nursing Process: Implementation
+KEY: Mechanical ventilation, Client safety
+MSC: Client Needs Category: Safe and Effective Care Environment: Management of Care 
+
+14. A client is on mechanical ventilation and the clients spouse wonders why ranitidine is needed since the client only has lung problems.? What response by the nurse is best? A client is on mechanical ventilation and the clients spouse wonders why ranitidine is needed since the client only has lung problems.? What response by the nurse is best?
+a. It will increase the motility of the gastrointestinal tra
+ ct.?
+b. It will keep the gastrointestinal tract functioning normally.?
+c. It will prepare the gastrointestinal tract for enteral feedings.?
+d. It will prevent ulcers from the stress of mechanical ventilation.?
+
+[ANS : REMOVED]
+
+Stress ulcers can occur in many clients who are receiving mechanical ventilation, and often prophylactic medications are used to prevent them and possible subsequent aspiration.
+Frequently used medications include antacids, histamine blockers, and proton pump
+inhibitors. Ranitidine is a histamine-blocking agent.
+DIF: Understanding
+TOP: Integrated
+ Process: Teaching/Learning
+KEY: Mechanical ventilation, Histamine blocker
+MSC: Client Needs Category: Ph
+ysiological Integrity: Pharmacological and Parenteral Therapies
+
+15. A client has been brought to the emergency department w A client has been brought to the emergency department w
+ ith a life-threatening chest injury.
+What action by the nurse takes priority?
+a. Apply oxygen at 100%.
+b. Assess the respiratory rate.
+c. Ensure a patent airway. 
+d. Start two large-bore IV lines.
+
+[ANS : REMOVED]
+
+The priority for any chest trauma client is airway, breath
+ ing, and circulation. The nurse first
+ensures that the client has a patent airway. Assessing respiratory rate and applying oxygen are next, followed by inserting IVs.
+DIF: Remembering
+TOP: Integrated Process: Nursing Process: Assessment
+KEY: Emergency nursing, Primary survey, Trauma
+MSC: Client Needs Category: Safe and Effective Care Environment: Management of Care 
+
+16. A client with ARDS is receiving minimal amounts of IV fluids. The new nurse notes the client is scheduled to receive a diuret A client with ARDS is receiving minimal amounts of IV fluids. The new nurse notes the client is scheduled to receive a diuret
+ic at this time. The nurse consults the Staff Development Nurse
+to determine the best course of action. What will the new nurse do?
+a. Contact the primary health care provider.
+b. Give the ordered diuretic as scheduled.
+c. Request an increase in the IV rate.
+d. Calculate the clients 24-hour fluid balance.
+
+[ANS : REMOVED]
+
+Research has shown that clients with ARDS may benefit from conservative fluid therapy along with diuretics to maintain fluid balance. The nurse will give the ordered diuretic as 
+scheduled. There is no reason to contact the provider or request an increased IV rate. The nurse can calculate the 24-hou
+r fluid balance, but this will not influence the administration of
+the medication.
+DIF: Applying
+TOP: Integrated Process: Nursing Process: Implementation
+KEY: ARDS, Medication
+MSC: Client Needs Category: Physiological Integrity: Physiological Adaptation
+
+17. A nurse is assessing a client who is suspected of having ARDS. The nurse is confused that although the client appears dyspneic and the oxygen saturation is 88% on 6 L/min of oxygen, the clients lungs are clear. What explanation does the m A nurse is assessing a client who is suspected of having ARDS. The nurse is confused that although the client appears dyspneic and the oxygen saturation is 88% on 6 L/min of oxygen, the clients lungs are clear. What explanation does the m
+ ore senior nurse provide?
+a. The client is too dehydrated for moist-sounding lungs.?
+b. The client hasnt started having any bronchospasm yet.?
+c. Lung edema is in the interstitial tissues, not the airways.?
+d. Clients with ARDS usually have clear lung sounds.?
+
+[ANS : REMOVED]
+
+The clear lung sounds are due to the fact that the edema is found in the lung interstitial tissues, 
+where it cant be auscultated, instead of in the airways. It is not related to the client being dehydrated or having bronchospasm. The statement about all clients with ARDS having clear lung sounds does not provide any information.
+DIF: Understanding
+TOP: Integrated Process: Nursing Process: Assessment
+KEY: ARDS, Nursing assessmen
+t
+MSC: Client Needs Category: Physiological Integrity: Reduction of Risk Potential
+
+18. A client in the emergency department has several broken ribs and reports severe pain. What care measure will best promote comfort? A client in the emergency department has several broken ribs and reports severe pain. What care measure will best promote comfort?
+a. Prepare to assist with intercostal nerve block.
+b. Humidify the supplemental oxygen.
+c. Splint the chest with a large ACE wrap.
+d. Provide warmed blankets and warmed IV fluids.
+
+[ANS : REMOVED]
+
+Uncomplicated rib fractures generally are simple to manage; however, opioids may be needed for pain. For severe pain, an intercostal nerve block is beneficial. The client needs to be able to breathe deeply and cough so as not to get atelectasis and/or pneumonia. Humidifying the 
+oxygen will not help with the pain. Rib fractures are not wrapped or splinted in any way because this inhibits chest mov
+ement. Warmed blankets and warm IV fluids are nice comfort
+measures, but do not help with severe pain.
+DIF: Applying
+TOP: Integrated Process: Nursing Process: Implementation
+KEY: Respiratory system, Pharmacological pain management
+MSC: Client Needs Category: Physiological Integrity: Basic Care and Comfort
+
+19. A client has been diagnosed with a very large pulmonary embolism (PE) and has a dropping blood pressure. What medication would the nurse being most beneficial? A client has been diagnosed with a very large pulmonary embolism (PE) and has a dropping blood pressure. What medication would the nurse being most beneficial?
+a. Alteplase
+b. Enoxaparin
+c. Unfractionated heparin
+d. Warfarin sodium
+
+[ANS : REMOVED]
+
+Alteplase is a clot-busting? age
+nt indicated in large PEs in the setting of hemodynamic
+instability. The nurse knows that this drug is the priority, although heparin may be started 
+initially. Enoxaparin and warfarin are not indicated in this setting.
+DIF: Remembering
+TOP: Integrated Process: Nursing Process: Analysis
+KEY: Pulmonary embolism, Anticoagulants
+MSC: Client Needs Category: Physiological Integrity: Pharmacological and Parenteral Therapies 
+
+20. A client is brought to the emergency department after sustaining injuries in a severe car crash.
+The clients chest wall does not appear to be moving nor
+ mally with respirations, oxygen
+saturation is 82%, and the client is cyanotic. What action does the nurse take first?
+a. Administer oxygen and reassess.
+b. Auscultate the clients lung sounds.
+c. Facilitate a portable chest x-ray.
+d. Prepare to assist with intubation.
+
+[ANS : REMOVED]
+
+This client has signs and symptoms of flail chest and, with the other signs, needs to be intubated and mechanically ventilated immediately. The nurse does not have time to
+administer oxygen and wait to reassess, or to listen to lung sounds. A chest x-ray will be taken after the client is intubated. 
+DIF: Applying
+TOP: Integ
+rated Process: Nursing Process: Implementation
+KEY: Trauma, Respiratory system
+MSC: Client Needs Category: Physiological Integrity: Physiological Adaptation
+
+21. A new nurse asks for an explanation of refractory hypoxemia.? What answer by the staff development nurse is best?  A new nurse asks for an explanation of refractory hypoxemia.? What answer by the staff development nurse is best? 
+a. It is chronic hypoxemia that accompanies restrictive airway disease.?
+b. It is hypoxemia from lung damage due to mechanical ventilation.?
+c. It is hypoxemia that continues even after the client is weaned from oxygen.?
+d. It is hypoxemia that persists even with 100% oxygen administration.?
+
+[ANS : REMOVED]
+
+Refractory hypoxemia is hypoxemia that persists even with the administration of 100%
+oxygen. It is a cardinal sign of acute respiratory distress syndrome. It does not accompany restrictive airway disease and i
+s not caused by the use of mechanical ventilation or by being
+weaned from oxygen.
+DIF: Understanding
+TOP: Integrated Process: Teaching/Learning
+KEY: Respiratory disorders, Pathophysiology
+MSC: Client Needs Category: Physiological Integrity: Physiological Adaptation
+
+22. A nurse is caring for a client on the medical stepdown unit. The following data are related to this client: A nurse is caring for a client on the medical stepdown unit. The following data are related to this client:
+Subjective Information
+Laboratory Analysis
+Physical Assessment
+Shortness of breath for 20
+pH: 7.32
+Pulse: 120 beats/min
+minutes
+PaCO2: 28 mm Hg
+Respiratory rate: 34
+Reports feeling frightened
+PaO2: 78 mm Hg
+breaths/min
+Cant catch my breath?
+SaO2: 88%
+Blood pressure 158/92 mm
+Hg
+Lungs have crackles
+What action by the nurse is most appropriate?
+a. Call respiratory therapy for a breathing treatment.
+b. Facilitate a STAT pulmonary angiography.
+c. Prepare for immediate endotracheal intubation.
+d. Prepare to administer intravenous anticoagulants.
+
+[ANS : REMOVED]
+
+This client has signs and symptoms of pulmonary embolism (PE); however, many conditions 
+can cause the clients presentation. The gold standard for diagnosing a PE is pulmonary angiography. The nurse would facilitate this test as soon as possible. The client does not have wheezing, so a respiratory treatment is not needed. The client is not unstable enough to need intubation and mechanical ventilation. IV anticoagulants
+ are not given without a diagnosis of PE.
+DIF: Analyzing
+TOP: Integrated Process: Nursing Process: Implementation
+KEY: Pulmonary embolism
+MSC: Client Needs Category: Physiological Integrity: Reduction of Risk Potential
+MULTIPLE RESPONSE
+
+1. A nurse is caring for five clients. For which clients would the nurse assess a high risk for developing a pulmonary embolism (PE)? ( Select all that apply. ) A nurse is caring for five clients. For which clients would the nurse assess a high risk for developing a pulmonary embolism (PE)? ( Select all that apply. )
+a. Client who had a reaction to contrast dye yesterday
+b. Client with a new spinal cor
+d injury on a rotating bed
+c. Middle-age client with an exacerbation of asthma
+d. Older client who is 1 day post-hip replacement surger
+ y
+e. Young obese client with a fractured femur
+f. Middle-age adult with a history of deep vein thrombosis
+
+[ANS : REMOVED]
+
+Conditions that place clients at higher risk of developing PE include prolonged immobility, central venous catheters, surgery, obesity, advancing age, conditions that increase blood clotting, history of thromboembolism, smoking, pregnancy, estrogen therapy, heart failure, 
+stroke, cancer (particularly lung or prostate), and trauma. A contrast dye reaction and asthma pose no risk for PE.
+DIF: Remembering
+TOP: Integrated
+ Process: Nursing Process: Assessment
+KEY: Pulmonary embolism, Risk factors
+MSC: Client Needs Category: Ph
+ysiological Integrity: Physiological Adaptation
+
+2. When working with women who are taking hormonal birth control, what health promotion measures does the nurse teach to prevent possible pulmonary embolism (PE)? ( Select all that apply. ) When working with women who are taking hormonal birth control, what health promotion measures does the nurse teach to prevent possible pulmonary embolism (PE)? ( Select all that apply. )
+a. Avoid drinking alcohol. 
+b. Eat more omega-3 fatty acids.
+c. Exercise on a regular basis.
+d. Maintain a healthy weight.
+e. Stop smoking cigarettes.
+
+[ANS : REMOVED]
+
+Health promotion measures for clients to prevent thromboembolic events such as PE include 
+maintaining a healthy weight, exercising on a regular basis, and not smoking. Avoiding alcohol and eating more foods containing omega-3 fatty acids are heart-healthy actions but do not relate to the prevention of PE.
+DIF: Understanding
+TOP: Integrated Process: Teaching/Learning
+KEY: Pulmonary embolism, Hea
+lth teaching
+MSC: Client Needs Category: Health Promotion and Maintenance
+
+3. A client with a new pulmonary embolism (PE) is anxious. What nursing actions are most appropriate? ( Select all that apply. ) A client with a new pulmonary embolism (PE) is anxious. What nursing actions are most appropriate? ( Select all that apply. )
+a. Acknowledge the frightening nature of the illness.
+b. Delegate a back rub to the assistive personnel (AP).
+c. Give simple explanations of what is happening.
+d. Request a prescription for antianxiety medication.
+e. Stay with the client and speak in a quiet, calm voice.
+
+[ANS : REMOVED]
+
+Clients with PEs are often anxious. The nurse can acknowledge the clients fears, delegate comfort measures, give simple explanations the client will u
+ nderstand, and stay with the
+client. Using a calm, quiet voice is also reassuring. Sedatives and antianxiety medications are not used routinely because they can contribute to hypoxia. If the clients anxiety is interfering with diagnostic testing or treatment, they can be used, but there is no evidence that this is the 
+case.
+DIF: Applying
+TOP: Integrated Process: Nursing Process: Implementation
+KEY: Pulmonary embolism, Psychosocial response
+MSC: Client Needs Category: Psychosocial Integrity
+
+4. The nurse caring for mechanica The nurse caring for mechanica
+lly ventilated clients uses best practices to prevent
+ventilator-associated pneumonia. What actions are included in this practice? ( Select all that 
+apply. )
+a. Adherence to proper hand hygiene
+b. Administering antiulcer medication
+c. Elevating the head of the bed
+d. Providing oral care per protocol
+e. Suctioning the client on a r
+egular schedule
+f. Turning and positioning the client at least every 2 hours
+
+[ANS : REMOVED]
+
+The ventilator bundle? is a gr
+oup of care measures to prevent ventilator-associated
+pneumonia. Actions in the bundle include using proper hand hygiene, giving antiulcer 
+medications, elevating the head of the bed, providing frequent oral care per policy, preventing aspiration, turning and positioning, and providing pulmonary hygiene measures. Suctioning is done as needed.
+DIF: Remembering
+TOP: Integrated Process: Nursin
+g Process: Implementation
+KEY: Mechanical ventilation, Infection control
+MSC: Client Needs Category: Safe and Effective Care Environm
+ ent: Safety and Infection Control
+
+5. A nurse is caring for a client in acute respiratory failure who is on mechanical ventilation. A nurse is caring for a client in acute respiratory failure who is on mechanical ventilation.
+What actions will promote comfort in this client? ( Select all that apply. )
+a. Allow visitors at the clients bedside.
+b. Ensure that the client can communicate if awake.
+c. Keep the television tuned to a favorite channel.
+d. Provide back and hand massages when turning.
+e. Turn the client every 2 hours or more.
+
+[ANS : REMOVED]
+
+There are many basic care measures that can be employed
+ for the client who is on a ventilator.
+Allowing visitation, providing a means of communication, massaging the clients skin, and routinely turning and repositioning the client are some of them. Keeping the TV on will interfere with sleep and rest. 
+DIF: Applying
+TOP: Integrated Process: Nursing Process: Implementation
+KEY: Mechanical ventilation, Comfort measures
+MSC: Client Needs Category: Physiological Integrity: Basic Care and Comfort
+
+6. The nurse caring for mechanic The nurse caring for mechanic
+ally ventilated clients knows that older adults are at higher risk
+for weaning failure. What age-related changes contribute to this? ( Select all that apply. ) a. Chest wall stiffness
+b. Decreased muscle strength
+c. Inability to cooperate
+d. Less lung elasticity
+e. Poor vision and hearing
+f. Chronic anemia
+
+[ANS : REMOVED]
+
+Age-related changes that increase the difficulty of weani
+ ng older adults from mechanical
+ventilation include increased stiffness of the chest wall, decreased muscle strength, and less elasticity of lung tissue. Not all older adults have an inability to cooperate or poor sensory acuity. Anemia can make it difficult to wean a client, but this is not a normal age-related 
+change.
+DIF: Remembering
+TOP: Integrated Process: Nursing Process: Analysis
+KEY: Mechanical ventilation, Older adult
+MSC: Client Needs Category: Health Promotion and Maintenance
+
+7. A 100-kg client has developed ARDS and needs mechanical ventilation. Which of the following are potentially correct ventilator management A 100-kg client has developed ARDS and needs mechanical ventilation. Which of the following are potentially correct ventilator management
+ choices? ( Select all that apply. )
+a. Tidal volume: 600 mL
+b. Volume-controlled ventilation
+c. PEEP based on oxygen saturation
+d. Suctioning every hour
+e. High-frequency oscillatory
+ventilation
+f. Limited turning for ventilator pressures
+
+[ANS : REMOVED]
+
+The client with ARDS who ne
+eds mechanical ventilation benefits from open lung? and lung
+protective strategies, such as using low tidal volumes (6 mL/kg body weight).
+Pressure-controlled ventilation is preferred due to the high pressures often required in these clients. PEEP usually starts at 5 cm H2O and adjusted to keep oxygen saturations in an acceptable range. Suctioning may need to be frequent due to secretions, but is not scheduled hourly. High-frequency oscillatory ventilation is an alternative to traditional modes of 
+ventilation. Early mobility is encouraged as is turning and positioning the client.
+DIF: Understanding
+TOP: Integrated Process: Nursing Process: Implementation
+KEY: Mechanical ventilation, ARDS
+MSC: Client Needs Category: Ph
+ysiological Integrity: Physiological Adaptation

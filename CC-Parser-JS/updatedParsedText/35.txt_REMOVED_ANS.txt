@@ -1,0 +1,557 @@
+Chapter 35: Critical Care of Patients With Acute Coronary Syndromes
+Ignatavicius: Medical-Surgical Nursing, 10th Edition
+MULTIPLE CHOICE
+
+1. A client is receiving an infusion of tissue plasminogen activator (tPA). The nurse assesses the client to be disoriented to person, place, and time. What action by the nurse is best? A client is receiving an infusion of tissue plasminogen activator (tPA). The nurse assesses the client to be disoriented to person, place, and time. What action by the nurse is best?
+a. Assess the clients pupillary responses.
+b. Request a neurologic consultation.
+c. Call the primary health care provider immediately.
+d. Take and document a full set of vital signs.
+
+[ANS : REMOVED]
+
+A change in neurologic status in a client receiving t-PA could indicate intracranial hemorrhage. The nurse would notify the primary health care provider immediately. A full 
+assessment, including pupillary responses and vital signs, occurs next. The nurse may or may not need to call a neurologist.
+DIF: Applying
+TOP: Integrated Process: Nursing Process:
+Implementation
+KEY: Coronary artery disease, Thrombolytic agents, Critical rescue
+MSC: Client Needs Category: Ph
+ysiological Integrity: Pharmacological and Parenteral Therapies
+
+2. A client received tissue plasminogen activator (tPA) after a myocardial infarction and now is on an intravenous infusion of heparin. The clients spouse asks why the client needs this medication. What response by the nurse is best? A client received tissue plasminogen activator (tPA) after a myocardial infarction and now is on an intravenous infusion of heparin. The clients spouse asks why the client needs this medication. What response by the nurse is best?
+a. The t-PA didnt dissolve the entire coronary clot.?
+b. The heparin keeps that artery from getting blocked again.?
+c. Heparin keeps the blood a
+s thin as possible for a longer time.?
+d. The heparin prevents a stroke from occurring as the t-PA wears off.?
+
+[ANS : REMOVED]
+
+After the original intracoronary
+clot has dissolved, large amounts of thrombin are released
+into the bloodstream, increasing the chance of the vessel reoccluding. The other statements are 
+not accurate. Heparin is not a blood thinner,? although laypeople may refer to it as such.
+DIF: Understanding
+TOP: Integrated Process: Teaching/Learning
+KEY: Coronary artery disease, Anticoagulants
+MSC: Client Needs Category: Physiological Integrity: Pharmacological and Parenteral Therapies 3. A client is in the hospital after suffering a myocardial infarction and has bathroom privileges.
+The nurse assists the client to the bathroom and notes the
+ clients O2 saturation to be 95%,
+pulse 88 beats/min, and respiratory rate 16 breaths/min after returning to bed. What action by the nurse is best?
+a. Administer oxygen at 2 L/min.
+b. Allow continued bathroom privileges.
+c. Obtain a bedside commode.
+d. Suggest the client use a bedpan.
+
+[ANS : REMOVED]
+
+This clients physiologic parameters did not exceed normal during and after activity, so it is safe for the client to continue using the bathroom. There i
+ s no indication that the client needs
+oxygen, a commode, or a bedpan.
+DIF: Applying
+TOP: Integrated Process: Nursing Process: Assessment
+KEY: Coronary artery disease, Activity tolerance
+MSC: Client Needs Category: Physiological Integrity: Reduction of Risk Potential
+
+4. A nurse is caring for a client who had a myocardial infarction. The nurse is confused because  A nurse is caring for a client who had a myocardial infarction. The nurse is confused because 
+the client states that nothing is wrong and yet listens attentively while the nurse provides education on lifestyle changes an
+d healthy menu choices. What response by the charge nurse
+is best?
+a. Continue to educate the client on possible healthy changes.?
+b. Emphasize complications that can occur with noncompliance.?
+c. Tell the client that denial is normal and will soon go away.?
+d. You need to make sure the client understands this illness.?
+
+[ANS : REMOVED]
+
+Clients are often in denial after a coronary event. The client who seems to be in denial but is compliant with treatment may be using a healthy form of coping that allows time to process 
+the event and start to use problem-focused coping. The nurse would not discourage this type of denial and coping, but rathe
+r continue providing education in a positive manner.
+Emphasizing complications may make the client defensive and more anxious. Telling the 
+client that denial is normal is placing too much attention on the process. Forcing the client to verbalize understanding of the illness is also potentially threatening to the client.
+DIF: Understanding
+TOP: Integrated Process: Communication and Documentation
+KEY: Coronary artery disease, Psychosocial response
+MSC: Client Needs Category: Psychosocial Integrity
+
+5. A client undergoing hemodynamic monitoring after a myocardial infarction has a right atrial pressure of 0.5 mm Hg. What a A client undergoing hemodynamic monitoring after a myocardial infarction has a right atrial pressure of 0.5 mm Hg. What a
+ction by the nurse is most appropriate?
+a. Level the transducer at the phlebostatic axis.
+b. Lay the client in the supine position.
+c. Prepare to administer diuretics.
+d. Prepare to administer a fluid bolus.
+
+[ANS : REMOVED]
+
+Normal right atrial pressures are from 0 to 8 mm Hg. This pressure is at the extreme lower end, which indicates hypovolemia, so the nurse would prepare to administer a fluid bolus. The transducer would remain leveled at the phlebostatic axis. P
+ ositioning may or may not
+influence readings but a reading this low is definitive for volume depletion. Diuretics would be contraindicated.
+DIF: Applying
+TOP: Integrated Process: Nursing Process: Implementation
+KEY: Hemodynamic monitoring, Fluid and electrolyte imbalance
+MSC: Client Needs Category: Physiological Integrity: Physiological Adaptation
+
+6. A client has hemodynamic monitoring after a myocardial infarction. What safety precaution does the nurse implement for this client? A client has hemodynamic monitoring after a myocardial infarction. What safety precaution does the nurse implement for this client?
+a. Document pulmonary artery occlusion pressure (PAOP) readings and assess their
+trends.
+b. Ensure that the balloon does not remain wedged.
+c. Keep the client on strict NPO status.
+d. Maintain the client in a semi-Fowler position.
+
+[ANS : REMOVED]
+
+If the balloon remains inflated, it can cause pulmonary infarction or rupture. The nurse would ensure that the balloon remains deflated between PAOP readings. Documenting PAOP
+readings and assessing trends are important nursing actions related to hemodynamic
+monitoring, but are not specifi
+cally related to safety. The client does not have to be NPO
+while undergoing hemodynamic monitoring. Positioning is not related to safety with
+hemodynamic monitoring.
+DIF: Applying
+TOP: Integrated Process: Nursing Process: Implementation
+KEY: Hemodynamic monitoring, Equipment safety
+MSC: Client Needs Category: Safe and Effective Care Environment: Safety and Infection Control 7. A client has intra-arterial blood pressure monitoring after a myocardial infarction. The nurse notes that the clients heart rate has increased from 88 to 110 beats/min, and the blood 
+pressure dropped from 120/82 to 100/60 mm Hg. What action by the nurse is most
+appropriate?
+a. Allow the client to rest quietly.
+b. Assess the client for bleeding.
+c. Document the findings in the chart.
+d. Medicate the client for pain.
+
+[ANS : REMOVED]
+
+A major complication related to intra-arterial blood pressure monitoring is hemorrhage from the insertion site. Since these vital signs are out of the normal range, are a change, and are consistent with blood loss, the nurse would assess the cli
+ ent for any bleeding associated with
+the arterial line. The nurse would document the findings after a full assessment. The client may or may not need pain medi
+cation and rest; the nurse first needs to rule out any emergent
+bleeding.
+DIF: Applying
+TOP: Integrated Process: Nursing Process: Assessment
+KEY: Intra-arterial blood pressure monitoring, Equipment safety
+MSC: Client Needs Category: Physiological Integrity: Reduction of Risk Potential
+
+8. A client is in the preoperative holding area prior to an emergency coronary artery bypass graft (CABG). The client is yelling at family members and tells the doctor to just get this over with? when asked to sign the consent form. What action by t A client is in the preoperative holding area prior to an emergency coronary artery bypass graft (CABG). The client is yelling at family members and tells the doctor to just get this over with? when asked to sign the consent form. What action by t
+he nurse is best?
+a. Ask the family members to wait in the waiting area.
+b. Inform the client that this behavior is unacceptable.
+c. Stay out of the room to decrease the clients stress levels.
+d. Tell the client that anxiety is common and that you can help.
+
+[ANS : REMOVED]
+
+Preoperative fear and anxiety are common prior to cardiac surgery, especially in emergent 
+situations. The client is exhibiting anxiety, and the nurse would reassure the client that fear is common and offer to help. The other actions will not reduce the clients anxiety.
+DIF: Applying
+TOP: Integrated Process: Caring
+KEY: Coronary artery disease, Psychosocial response
+MSC: Client Needs Category: Psy
+chosocial Integrity
+
+9. A client is in the clinic a month after having a myocardial infarction. The client reports sleeping well since moving into the guest bedroom. What response by the nurse is best? A client is in the clinic a month after having a myocardial infarction. The client reports sleeping well since moving into the guest bedroom. What response by the nurse is best?
+a. Do you have any concerns about sexuality??
+b. Im glad to hear you are sleeping well now.?
+c. Sleep near your spouse in case of emergency.?
+d. Why would you move int
+o the guest room??
+
+[ANS : REMOVED]
+
+Concerns about resuming sexual activity are common after cardiac events. The nurse would gently inquire if this is the issue
+. While it is good that the client is sleeping well, the nurse
+would investigate the reason for the move. The other two responses are likely to cause the 
+client to be defensive.
+DIF: Applying
+TOP: Integrated Process: Caring
+KEY: Coronary artery disease, Sexuality MSC: Client Needs Category: Psychosocial Integrity 
+
+10. A client in the cardiac stepdown unit reports severe, crushing chest pain accompanied by nausea and vomiting. What action by the nurse takes priority? A client in the cardiac stepdown unit reports severe, crushing chest pain accompanied by nausea and vomiting. What action by the nurse takes priority?
+a. Administer an aspirin.
+b. Call for an electrocardiogram (ECG).
+c. Maintain airway patency.
+d. Notify the provider.
+
+[ANS : REMOVED]
+
+Airway always is the priority. The other actions are important in this situation as well, but the nurse would stay with the client and ensure that the airway remains patent (especially if 
+vomiting occurs) while another person calls the primary health care provider (or Rapid Response Team) and facilitates getting an ECG done. Aspirin will probably be administered, depending on the primary health care providers prescription and the clients current medications.
+DIF: Applying
+TOP: Integ
+rated Process: Nursing Process: Implementation
+KEY: Coronary artery disease, Critical rescue
+MSC: Client Needs Category: Safe and Effective Care Environment: Management of Care 11. An older adult is on cardiac monitoring after a myocardial infarction. The client shows frequent dysrhythmias. What action by the nurse is most appropriate?
+a. Assess for any hemodynamic effects of the rhythm.
+b. Prepare to administer antid
+ysrhythmic medication.
+c. Notify the primary health care provider or call the Rapid Response Team.
+d. Turn the alarms off on the cardiac monitor.
+
+[ANS : REMOVED]
+
+Older clients may have dysrhythmias due to age-related changes in the cardiac conduction system. Or this clients dysrhythmias could be a conseque
+ nce of the myocardial infarction.
+They may or may not have significant hemodynamic effects. The nurse would first assess for the effects of the dysrhythmia before proceeding further. The alarms on a cardiac monitor would never be shut off. The other two actions may or may not be needed.
+DIF: Applying
+TOP: Integrated Process: Nursing Process: Assessment
+KEY: Coronary artery disease, Dysrhythmias
+MSC: Client Needs Category: Physiological Integrity: Reduction of Risk Potential
+
+12. The nurse is preparing to change The nurse is preparing to change
+a clients sternal dressing. What action by the nurse is most
+important?
+a. Assess vital signs.
+b. Don a mask and gown.
+c. Gather needed supplies.
+d. Perform hand hygiene. 
+
+[ANS : REMOVED]
+
+To prevent a sternal wound infection, the nurse washes hands or performs hand hygiene as a priority and uses sterile technique when changing the dressing. Vital signs do not necessarily 
+need to be assessed beforehand. A mask and gown are not needed. The nurse would gather needed supplies, but this is not
+the priority.
+DIF: Applying
+TOP: Integrated Process: Nursing Process:
+Implementation
+KEY: Coronary artery disease, Infection control
+MSC: Client Needs Category: Safe and Effective Care Environment: Safety and Infection Control 
+
+13. A client has progressed to Killip class III heart failure after a myocardial infarction. What does the nurse anticipate the clients care to include? A client has progressed to Killip class III heart failure after a myocardial infarction. What does the nurse anticipate the clients care to include?
+a. Diuretics
+b. Nitrates
+c. Clopidogrel
+d. Dobutamine
+
+[ANS : REMOVED]
+
+The client in class III heart failure would benefit from a positive inotrope such as dobutamine.
+Clients in class I typically respond well to diuretics and nitrates so this client would already be on these medications. Clopidogrel is a platelet inhibitor that will be prescribed for anyone 
+having acute coronary syndrome for at least 12 months.
+DIF: Applying
+TOP: Integrated Process: Nursing Process: Implementation
+KEY: Heart failure, Inotropic medications
+MSC: Client Needs Category: Physiological Integrity: Pharmacological and Parenteral Therapies 14. A nurse is in charge of the coronary intensive care unit. Which client would the nurse see first?
+a. Client on a nitroglycerin infusion at 5 mcg/min, not titrated in the last 4 hours b. Client who is 1-day post coronary artery bypass graft, with blood pressure 88/64
+mm Hg
+c. Client who is 1-day post percutaneous coronary intervention, going home this
+morning
+d. Client who is 2-day post coronary artery bypass graft, who became dizzy this
+morning while walking 
+
+[ANS : REMOVED]
+
+Hypotension after coronary artery bypass graft surgery can be dangerous because it can lead to collapse of the graft. The charge nurse would see this
+ client first. The client who became
+dizzy earlier would be seen next. The client on the nitroglycerin drip is stable. The client going home can wait until the other clients are cared for.
+DIF: Analyzing
+TOP: Integrated Process: Nursing Process: Assessment
+KEY: Coronary artery disease, Coronary artery bypass graft
+MSC: Client Needs Category: Safe and Effective Care Environment: Management of Care 
+
+15. A client with coronary artery disease (CAD) asks the nurse about taking fish oil supplements. A client with coronary artery disease (CAD) asks the nurse about taking fish oil supplements.
+What response by the nurse is
+best?
+a. Fish oil is contraindicated with most drugs for CAD.?
+b. The best source is fish, but pills have benefits too.?
+c. There is no evidence to support fish oil use with CAD.?
+d. You can reverse CAD totally with diet and supplements.?
+
+[ANS : REMOVED]
+
+Omega-3 fatty acids have shown benefit in reducing lipid levels, in reducing the incidence of sudden cardiac death, and for stabilizing atherosclerotic plaque. The preferred source of omega-3 acids is from fish rich in long-chain n-3 polyunsaturated fatty acids two times a week 
+or a daily fish oil nutritional supplement (1 to 2 g/day). The other options are not accurate.
+DIF: Understanding
+TOP: Integrated Process: Teaching/Learning
+KEY: Coronary artery disease, Health teaching
+MSC: Client Needs Category: Health Promotion and Maintenance
+
+16. A client has presented to the emergency department with an acute myocardial infarction (MI). A client has presented to the emergency department with an acute myocardial infarction (MI).
+What action by the nurse is best for optimal client outcomes?
+a. Obtain an electrocardiogram (ECG) within 20 minutes.
+b. Give the client a nonenteric coated aspirin.
+c. Notify the Rapid Response Team immediately.
+d. Prepare to administer thrombolytics within 30 minutes.
+
+[ANS : REMOVED]
+
+Best practice recommendations for acute MI require that a
+ spirin is administered when a client
+with MI presents to the emergency department or when an MI occurs in the hospital. A rapid ECG (within 10 minutes) is vital for best outcomes. The Rapid Response Team is not needed if an emergency department provider is available. Thrombolytics may or may not be needed 
+depending on the type of myocardial infarction the client has.
+DIF: Remembering
+TOP: Integrated Process: Nursing Process: Implementation
+KEY: Coronary artery disease, Best practice
+MSC: Client Needs Category: Saf
+e and Effective Care Environment: Management of Care
+
+17. A nurse is caring for four client s. Which client would th A nurse is caring for four client s. Which client would th
+ e nurse assess first?
+a. Client with an acute myocardial infarction, pulse 102 beats/min
+b. Client who is 1 hour post-angioplasty, and has tongue swelling and anxiety
+c. Client who is post coronary artery bypass, with chest tube drained 100 mL/hr
+d. Client who is post coronary artery bypass, with potas
+ sium 4.2 mEq/L (4.2 mmol/L)
+
+[ANS : REMOVED]
+
+The post-angioplasty client with tongue swelling and anxiety is exhibiting signs and symptoms of an allergic reaction (perhaps to the contrast me
+dium) that could progress to
+anaphylaxis. The nurse would assess this client first. The client with a heart rate of 102
+beats/min may have increased oxygen demands but is just over the normal limit for heart rate.
+The two post coronary artery bypass clients are stable.
+DIF: Analyzing
+TOP: Integrated Process: Nursing Process: Analysis
+KEY: Coronary artery disease, Critical rescue
+MSC: Client Needs Category: Safe and Effective Care Environment: Management of Care 
+
+18. A nurse is caring for a client w A nurse is caring for a client w
+ho is intubated and has an intra-aortic balloon pump. The client
+is restless and agitated. What action would the nurse perform first for comfort?
+a. Allow family members to remain at the bedside.
+b. Ask the family if the client would like a fan in the room.
+c. Keep the television tuned to the clients favorite channel.
+d. Speak loudly to the client in case of hearing problems.
+
+[ANS : REMOVED]
+
+Allowing the family to remain at the bedside can help calm the client with familiar voices (and faces if the client wakes up). A fan might be helpful but may also spread germs through 
+air movement or may agitate the client further. The TV would not be kept on all the time to allow for rest. Speaking loudly
+may agitate the client more.
+DIF: Applying
+TOP: Integrated Process: Nursing Process: Implementation
+KEY: Intra-aortic balloon pump, Nonpharmacologic comfort measures
+MSC: Client Needs Category: Physiological Integrity: Basic Care and Comfort
+
+19. The nurse is caring for a client with a chest tube after a coronary artery bypass graft. The drainage stops suddenly. What action by the nurse is most important? The nurse is caring for a client with a chest tube after a coronary artery bypass graft. The drainage stops suddenly. What action by the nurse is most important?
+a. Increase the setting on the suction.
+b. Notify the primary health care provider immediately.
+c. Reposition the chest tube.
+d. Take the tubing apart to assess for clots.
+
+[ANS : REMOVED]
+
+If the drainage in the chest tube decreases significantly and dramatically, the tube may be blocked by a clot. This could lead to cardiac tamponade. The nurse would notify the primary health care provider immediately. The nurse would not independently increase the suction, 
+reposition the chest tube, or take the tubing apart.
+DIF: Applying
+TOP: Integrated Process: Communication and Documentation
+KEY: Coronary artery bypass graft, Chest tubes
+MSC: Client Needs Category: Safe and Effective Care Environment: Management of Care 20. A client is to receive a dopamine infusion. What does the nurse do to prepare for this infusion?
+a. Gather central line supplies.
+b. Mark the clients pedal pulses.
+c. Monitor the clients vital signs.
+d. Ensure an accurate weight is charted.
+
+[ANS : REMOVED]
+
+Dopamine should be infused through a central line to prevent extravasation and necrosis of tissue. The nurse would gather supplies for the primary h
+ ealth care provider to insert a central
+line. Monitoring vital signs is important for any client who has an acute cardiac problem, but this doesnt give the frequency of evaluation. Marking the clients pedal pulses and ensuring a weight is documented are not related to this infusion.
+DIF: Applying
+TOP: Integrated Process: Nursing Process: Assessment
+KEY: Inotropic agents, Medication safety
+MSC: Client Needs Category: Physiological Integrity: Pharmacological and Parenteral Therapies 
+
+21. A client had an acute myocard A client had an acute myocard
+ial infarction. What assessment finding indicates to the nurse
+that a significant complication has occurred?
+a. Blood pressure that is 20 mm Hg below baseline
+b. Oxygen saturation of 94% on room air
+c. Poor peripheral pulses and cool skin
+d. Urine output of 1.2 mL/kg/hr for 4 hours
+
+[ANS : REMOVED]
+
+Poor peripheral pulses and cool skin may be signs of impending cardiogenic shock and would be reported immediately. A blood pressure drop of 20 mm Hg may not be worrisome. An 
+oxygen saturation of 94% is just slightly below normal. A urine output of 1.2 mL/kg/hr for 4
+hours is normal.
+DIF: Remembering
+TOP: Integrated Process: Nursing Process: Analysis
+KEY: Coronary artery disease, Critical rescue
+MSC: Client Needs Category: Physiological Integrity: Reduction of Risk Potential
+
+22. A client presents to the emergency department with an acute myocardial infarction (MI) at 15:00 (3:00 p.m.). The facility has 24-hour catheterization laboratory abilities. To improve client outcomes, by what time would the client have a percutaneous coronary intervention performed? A client presents to the emergency department with an acute myocardial infarction (MI) at 15:00 (3:00 p.m.). The facility has 24-hour catheterization laboratory abilities. To improve client outcomes, by what time would the client have a percutaneous coronary intervention performed?
+a. 15:30 (3:30 p.m.)
+b.
+16:00 (4:00 p.m.)
+c. 16:30 (4:30 p.m.)
+d. 17:00 (5:00 p.m.)
+
+[ANS : REMOVED]
+
+Percutaneous coronary intervention would be performed within 90 minutes of diagnosis of 
+myocardial infarction. Therefore, the client would have a percutaneous coronary intervention performed no later than 16:30 (4:30 p.m.).
+DIF: Remembering
+TOP: Integrated Process: Communication and Documentation
+KEY: Coronary artery disease, P
+ercutaneous coronary intervention
+MSC: Client Needs Category: Safe and Effective Care Environment: Management of Care 
+
+23. The primary health care provider requests the nurse start an infusion of milrinone on a client. The primary health care provider requests the nurse start an infusion of milrinone on a client.
+How does the nurse explain the action of this drug to the client and spouse?
+a. It constricts vessels, improving blood flow.?
+b. It dilates vessels, which lessens the work of the hear
+ t.?
+c. It increases the force of the hearts contractions.?
+d. It slows the heart rate down for better filling.?
+
+[ANS : REMOVED]
+
+Milrinone, is a positive inotrope, is a medication that increases the strength of the hearts contractions. It is not a vasoconstrictor, a vasodilator, nor does it slow the heart rate.
+DIF: Understanding
+TOP: Integrated Process: Teaching/Learning
+KEY: Coronary artery disease, Inotropic agents
+MSC: Client Needs Category: Physiological Integrity: Pharmacological and Parenteral Therapies 
+
+24. A client had an inferior wall myocardial infarction (MI). The nurse notes the clients cardiac rhythm as shown below: A client had an inferior wall myocardial infarction (MI). The nurse notes the clients cardiac rhythm as shown below:
+What action by the nurse is most important?
+a. Assess the clients blood pressure and level of consciousness.
+b. Call the primary health car
+e provider or the Rapid Response Team.
+c. Obtain a permit for an emergency temporary pacemaker insertion.
+d. Prepare to administer antidysrhythmic medication.
+
+[ANS : REMOVED]
+
+Clients with an inferior wall MI often have bradycardia and blocks that lead to decreased 
+perfusion, as seen in this ECG strip. The nurse would first assess the clients hemodynamic status, including vital signs and level of consciousness. The client may or may not need the Rapid Response Team, a temporary pacemaker, or medication; there is no indication of this in the question.
+DIF: Analyzing
+TOP: Integ
+rated Process: Nursing Process: Implementation
+KEY: Coronary artery disease, Dysrhythmias
+MSC: Client Needs Category: Physiological Integrity: Physio
+ logical Adaptation
+
+25. A nurse prepares a client for coronary artery bypass graft surgery. The client states, I am afraid I might die.? What is the nurses best response? A nurse prepares a client for coronary artery bypass graft surgery. The client states, I am afraid I might die.? What is the nurses best response?
+a. This is a routine surgery and the risk of death is very low.?
+b. Would you like to speak with a chaplain prior to surgery??
+c. Tell me more about your concerns about the surgery.?
+d. What support systems do you have to assist you??
+
+[ANS : REMOVED]
+
+The nurse would discuss the clients feelings and concerns related to the surgery. The nurse would not provide false hope or simply call the chaplain. T
+ he nurse would address support
+systems after addressing the clients current issue.
+DIF: Applying
+TOP: Integrated Process: Teaching/Learning
+KEY: Coping, Anxiety
+MSC: Client Need
+ s Category: Psychosocial Integrity
+MULTIPLE RESPONSE
+
+1. A nurse learns about modifiable risk factors for coronary artery disease. Which factors does this include? ( Select all that appl A nurse learns about modifiable risk factors for coronary artery disease. Which factors does this include? ( Select all that appl
+y. )
+a. Age
+b. Hypertension
+c. Obesity
+d. Smoking
+e. Stress
+f. Gender
+
+[ANS : REMOVED]
+
+Hypertension, obesity, smoking, and excessive stress are
+ all modifiable risk factors for
+coronary artery disease. Age and gender are not nonmodifiable risk factors.
+DIF: Remembering
+TOP: Integrated Process: Teaching/Learning
+KEY: Coronary artery disease, Lifestyle factors
+MSC: Client Needs Category: Physiological Integrity: Physiological Adaptation
+
+2. A nurse is caring for a client who had coronary artery bypass grafting 2 days ago. What  A nurse is caring for a client who had coronary artery bypass grafting 2 days ago. What 
+actions does the nurse delegate to the assistive personnel (AP)? ( Select all that apply. ) a. Assist the client to the chair for meals and to the commode.
+b. Encourage the client to use the spirometer every 4 hours.
+c. Ensure that the client wears TED hose or sequential co
+ mpression devices.
+d. Have the client rate pain on a 0-10 scale and report to the nurse.
+e. Take and record a full set of vital signs per hospital protocol.
+
+[ANS : REMOVED]
+
+The nurse can delegate assisting the client to get up in the chair or commode (if the nurse has evaluated the client as being stable), applying TEDs or sequential compression devices, and taking/recording vital signs. The spirometer would be used every hour the day after surgery.
+Assessing pain using a 0-10 scale is a nursing assessment, although if the client reports pain, the AP would inform the nurse so a more detailed assessment is done.
+DIF: Applying
+TOP: Integrated Process: Communicat
+ ion and Documentation
+KEY: Coronary artery disease, Delegation
+MSC: Client Needs Category: Saf
+e and Effective Care Environment: Management of Care
+
+3. A nurse studying acute coronary syndromes learns that the pain of a myocardial infarction (MI) differs from stable angina in what ways? ( Select all that apply. ) A nurse studying acute coronary syndromes learns that the pain of a myocardial infarction (MI) differs from stable angina in what ways? ( Select all that apply. )
+a. Accompanied by shortness of breath
+b. Feelings of fear or anxiety
+c. Lasts less than 15 minutes
+d. No relief from taking nitro
+glycerin
+e. Pain occurs without known cause
+f. Can be precipitated by exertion or stress
+
+[ANS : REMOVED]
+
+The pain from an MI is often accompanied by shortness of breath and fear or anxiety. It lasts longer than 15 minutes and is not relieved by nitroglycer
+ in. It occurs without a known cause
+such as exertion or stress.
+DIF: Remembering
+TOP: Integrated Process: Teaching/Learning
+KEY: Coronary artery disease, Pathophysiology
+MSC: Client Needs Category: Physiological Integrity: Physiological Adaptation
+
+4. A client is 1-day postoperative after a coronary artery bypass graft. What nonpharmacologic  A client is 1-day postoperative after a coronary artery bypass graft. What nonpharmacologic 
+comfort measures does the nurse include when caring for this client? ( Select all that apply. ) a. Administer pain medicatio
+n before ambulating.
+b. Assist the client into a position of comfort in bed.
+c. Encourage high-protein diet selections.
+d. Provide complementary therapies such as music.
+e. Remind the client to splint the incision when coughing.
+
+[ANS : REMOVED]
+
+Nonpharmacologic comfort measures can include positioning, complementary therapies, and splinting the chest incision. Medications are not nonpharmacologic. Food choices are not comfort measures.
+DIF: Applying
+TOP: Integ
+rated Process: Nursing Process: Implementation
+KEY: Coronary artery disease, Nonpharmacologic comfort measures
+MSC: Client Needs Category: Physiological Integrity: Basic C
+ are and Comfort
+
+5. Prior to discharge, a client who ha Prior to discharge, a client who ha
+d an acute myocardial infarction and coronary artery bypass
+graft asks the nurse about sexual activity. What information does the nurse provide? ( Select 
+all that apply. )
+a. You will need to wait at least 6 weeks before intercourse.
+b. Your usual sexual activity is not likely to damage your heart.?
+c. Start having sex when you are most rested, like in the
+ morning.?
+d. When you can climb four flights of stairs, you can tolerate sex.?
+e. Dont eat for three hours be
+fore engaging in sexual activity.?
+f. Use a comfortable position that doesnt stress your incision.?
+
+[ANS : REMOVED]
+
+Clients have many concerns about resuming sexual activity after an acute coronary event.
+Generally, once the client can walk one block or climb two flights of stairs, he or she can 
+tolerate sex. The client should start after a period of rest and at least 11/2 hours after a heavy meal or exercise. Clients should be taught to choose a position that is comfortable for both parties and does not place undue stress on their incisions or on their hearts.
+DIF: Understanding
+TOP: Integrated Process: Teaching/Learning
+KEY: Coronary artery disease, H
+ealth teaching
+MSC: Client Needs Category: Psychosocial Integrity
+
+6. A nurse is studying hemodynamic monitoring. Which measurements are correctly matched with the physiologic cause? ( Select all that apply. ) A nurse is studying hemodynamic monitoring. Which measurements are correctly matched with the physiologic cause? ( Select all that apply. )
+a. Right atrial pressure 12 mm Hg: right ventricular failure
+b. Right atrial pressure 4 mm Hg: hypovolemia
+c. Pulmonary artery pressure 2
+0/10 mm Hg: normal finding
+d. Pulmonary artery occlusion pressure 20 mm Hg: mitral regurgitation
+e. Pulmonary artery occlusion pressure 2 mm Hg: afterlo
+ ad reduction
+
+[ANS : REMOVED]
+
+Normal right atrial pressure is 0 to 8 mm Hg; high readings can indicate right ventricular failure; low readings often signify hypovolemia. Normal p
+ ulmonary artery pressure ranges
+from 15 to 30 mm Hg systolic to 3 to 12 mm Hg diastolic. Pulmonary artery occlusion pressure ranges from 5 to 12 mm Hg; high values may indicate left ventricular failure, hypervolemia, mitral regurgitation, or intracardiac shunting. A decreased PAOP is seen with 
+hypovolemia or afterload reduction.
+DIF: Analyzing
+TOP: Integrated Process: Nursing Process: Evaluation
+KEY: Hemodynamic monitoring
+MSC: Client Needs Category: Physiological Integrity: Physiological Adaptation

@@ -34,18 +34,18 @@ public class ParseCaptionsDFXP {
 	private static SlideSuffixObject suffixObject;
 
 	public static void main(String... args) {
-		String path = "js-slides-assessHema";
+		String path = "js-slides-peripheral";
 //		String imageName = args[1];
 		initialize();
-		run(path, "hema");
+		run(path, "peripheral");
 	}
 
 	private static void run(String dir, String title) {
 		validateArgs(title);
 		SlideJSObject slideObject;
 		File directory = new File(dir);
-		imageCountBound = directory.list().length+1;
-//		imageCountBound = 8;
+//		imageCountBound = directory.list().length+1;
+		imageCountBound = 0;
 		setImageTitle(title);
 		List<File> files = Arrays.asList(directory.listFiles());
 		for (File f : files) {

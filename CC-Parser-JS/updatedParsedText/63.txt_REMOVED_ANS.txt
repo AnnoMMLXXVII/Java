@@ -1,0 +1,530 @@
+Chapter 63: Concepts of Care for Patients with Acute Kidney Injury and Chronic
+Kidney Disease
+Ignatavicius: Medical-Surgical Nursing, 10th Edition
+MULTIPLE CHOICE
+
+1. The nurse is assessing a client with a diagnosis of prerenal acute kidney injury (AKI). Which condition would the nurse expect to find in the patients The nurse is assessing a client with a diagnosis of prerenal acute kidney injury (AKI). Which condition would the nurse expect to find in the patients
+ recent history?
+a. Pyelonephritis
+b. Dehydration
+c. Bladder cancer
+d. Kidney stones
+
+[ANS : REMOVED]
+
+Prerenal causes of AKI are related to a decrease in perfusion, such as in clients who have 
+prolonged dehydration. Pyelonephritis is an intrinsic or intrarenal cause of AKI related to kidney damage. Bladder cancer
+and kidney stones are postrenal causes of AKI related to urine
+flow obstruction.
+DIF: Understanding
+TOP: Integrated Process: Nursing Process: Assessment
+KEY: Acute kidney injury, Assessment
+MSC: Client Needs Category: Physiological Integrity: Physiological Adaptation
+
+2. A marathon runner comes into the clinic and states I have not urinated very much in the last few days.? The nurse notes a heart rate of 110 beats/min and a blood pressure of 86/58 mm Hg. Which action by the nurse is most appropriate? A marathon runner comes into the clinic and states I have not urinated very much in the last few days.? The nurse notes a heart rate of 110 beats/min and a blood pressure of 86/58 mm Hg. Which action by the nurse is most appropriate?
+a. Give the client a bottle of water immediately.
+b. Start an intravenous line for
+fluids.
+c. Teach the patient to drink 2 to 3 L of water daily.
+d. Perform an electrocardiogram.
+
+[ANS : REMOVED]
+
+This athlete is mildly dehydrated as evidenced by the higher heart rate and lower blood 
+pressure. The nurse can start hydrating the client with a bottle of water first, followed by teaching the patient to drink 2 to 3 L of water each day. An intravenous line may be needed later, after the patients degree of dehydration is assessed. An electrocardiogram is not necessary at this time.
+DIF: Applying
+TOP: Integ
+rated Process: Nursing Process: Planning and Implementation
+KEY: Renal system, Dehydration
+MSC: Client Needs Category: Physiological Integrity: Reduc
+ tion of Risk Potential
+
+3. A client comes into the emergency department with a serum creatinine of 2.2 mg/dL (1944 A client comes into the emergency department with a serum creatinine of 2.2 mg/dL (1944
+mcmol/L) and a blood urea nitrogen (BUN) of 24 mL/dL (8.57 mmol/L). What question
+would the nurse ask first when taking this clients history?
+a. Have you been taking any aspirin, ibuprofen, or naproxen recently??
+b. Do you have anyone in your family with renal failure??
+c. Have you had a diet that is low in protein recently??
+d. Has a relative had a kidney transplant lately??
+
+[ANS : REMOVED]
+
+There are some medications that are nephrotoxic, such as t
+ he nonsteroidal anti-inflammatory
+drugs ibuprofen, aspirin, and naproxen. This would be a good question to initially ask the patient since both the serum creatinine and BUN are elevated, indicating some renal problems.
+A diet high in protein could be a factor in an increased BUN.
+DIF: Applying
+TOP: Integrated Process: Nursing Process: Assessment
+KEY: Renal system, Assessment
+MSC: Client Needs Category: Physiological Integrity: Reduction of Risk Potential
+
+4. A client is admitted with acute A client is admitted with acute
+kidney injury (AKI) and a urine output of 2000 mL/day. What
+is the major concern of the nurse regarding this patients care?
+a. Edema and pain
+b. Cardiac and respiratory status
+c. Electrolyte and fluid imbalance
+d. Mental health status
+
+[ANS : REMOVED]
+
+This client may have an inflammatory cause of AKI with proteins entering the glomerulus and holding the fluid in the filtrate, causing polyuria. Electrolyte loss and fluid balance are 
+essential. Edema and pain are not usually a problem with fluid loss. There could be changes in the clients cardiac, respiratory
+, and mental health status if the electrolyte imbalance is not
+treated.
+DIF: Applying
+TOP: Integrated Process: Nursing Process: Analysis
+KEY: Acute kidney injury, Analysis
+MSC: Client Needs Category: Physiological Integrity: Physiological Adaptation
+
+5. A client with acute kidney injury (AKI) has a blood pressure of 76/55 mm Hg. The primary health care provider prescribed 1000 mL of normal saline to be infused over 1 hour to maintain perfusion. The client starts to develop shortness A client with acute kidney injury (AKI) has a blood pressure of 76/55 mm Hg. The primary health care provider prescribed 1000 mL of normal saline to be infused over 1 hour to maintain perfusion. The client starts to develop shortness
+ of breath. What is the nurses
+priority action?
+a. Calculate the mean arterial
+pressure (MAP).
+b. Ask for insertion of a pulmonary artery catheter.
+c. Take the clients pulse.
+d. Decrease the rate of the IV infusion.
+
+[ANS : REMOVED]
+
+The nurse would assess that the client could be developing fluid overload and respiratory distress and slow down the normal saline infusion. The calculation of the MAP also reflects perfusion. The insertion of a pulmonary artery catheter would evaluate the clients
+hemodynamic status, but this would not be the initial or p
+ riority action by the nurse. Vital
+signs are also important after adjusting the intravenous infusion.
+DIF: Applying
+TOP: Integrated Process: Nursing Process: Planning and Implementation
+KEY: Acute kidney injury, Nursing intervention
+MSC: Client Needs Category: Safe and Effective Care Environment: Management of Care 6. A client has a serum potassium level of 6.5 mEq/L (6.5 mmol/L), a serum creatinine level of 2
+mg/dL (176 mcmol/L), and a urine output of 350 mL/day. What is the best action by the nurse?
+a. Place the client on a cardiac monitor immediately.
+b. Teach the client to limit high-potassium foods.
+c. Continue to monitor the clients intake and output.
+d. Ask to have the laboratory redraw the blood specimen.
+
+[ANS : REMOVED]
+
+The best action by the nurse would be to check the cardiac status with a monitor.
+High-potassium levels can lead to dysrhythmias. The other choices are logical nursing interventions for acute kidney injury but not the best immediate action.
+DIF: Applying
+TOP: Integrated Process: Nursing Process: Planning and Implementation
+KEY: Renal system, Nursing intervention
+MSC: Client Needs Category: Physiological Integrity: Physiological Adaptation
+
+7. A client with diabetes mellitus A client with diabetes mellitus
+type 2 has been well controlled with metformin. The client is
+scheduled for magnetic resonance imaging (MRI) scan with contrast. What priority would the 
+nurse take at this time?
+a. Teach the client about the purpose of the MRI.
+b. Assess the clients blood urea nitrogen and creatinine.
+c. Tell the client to withhold metformin for 24 hours before the MRI.
+d. Ask the client if he or she is taking antibiotics.
+
+[ANS : REMOVED]
+
+Contrast media can be nephrotoxic (damaging to the kidneys). Metformin can also be
+nephrotoxic and the client should not be exposed to two agents. Clients who have diabetes are already at risk for renal damage. 
+DIF: Understanding
+TOP: Integrated Process: Nursing Process: Planning and Implementation
+KEY: Renal system, Risk factors
+MSC: Client Needs Category: Physiological Integrity: Physiological Adaptation
+
+8. A client is started on continuous venovenous hemofiltration (CVVH). Which finding would require immediate action by the nurse? A client is started on continuous venovenous hemofiltration (CVVH). Which finding would require immediate action by the nurse?
+a. Potassium level of 5.5 mEq/L (5.5 mmol/L)
+b. Sodium level of 138 mEq/L (138 mmol/L)
+c. Blood pressure of 76/58 mm Hg
+d. Pulse rate of 88 beats/min
+
+[ANS : REMOVED]
+
+Hypotension can be a problem
+with CVVH if replacement fluid does not provide enough
+volume to maintain blood pressure. The nurse needs to monitor for ongoing fluid and
+electrolyte replacement. The sodium level is normal and the potassium level is slightly elevated, which could be normal findings for someone with acute kidney injury. A pulse rate of 88 beats/min is within usual limits.
+DIF: Applying
+TOP: Integrated Process: Nursing Process: Implementation
+KEY: Renal system, Dialysis, Nu
+rsing intervention
+MSC: Client Needs Category: Safe and Effective Care Environment: Management of Care 
+
+9. The nurse is caring for four clients with chronic kidney disease (CKD). Which client would the nurse assess first upon initial rounding? The nurse is caring for four clients with chronic kidney disease (CKD). Which client would the nurse assess first upon initial rounding?
+a. Client with a blood pressure of 158/90 mm Hg
+b. Client with Kussmaul respirations
+c. Client with skin itching from head to toe
+d. Client with halitosis and stomatitis
+
+[ANS : REMOVED]
+
+Kussmaul respirations indicate that the client has metabolic acidosis which is a complication of CKD. The client is increasing the rate and depth of breathing to excrete carbon dioxide through the lungs to lower serum pH. Hypertension is common in most patients with CKD, 
+and skin itching increases with calcium�phosphate imbalances and elevations of nitrogenous wastes, another common finding
+in CKD. Uremia from CKD causes ammonia to be formed,
+resulting in the common findings of halitosis and stomatitis.
+DIF: Analyzing
+TOP: Integrated Process: Nursing Process: Analysis
+KEY: Chronic kidney disease, Assessment
+MSC: Client Needs Category: Safe and Effective Care Environment: Management of Care 
+
+10. The nurse is teaching assistive personnel (AP) about fluid restriction for a client who has acute kidney injury (AKI). The clients 24-hour urinary output is 120 mL. How much fluid would the client be allowed to have over the next 24 hours? The nurse is teaching assistive personnel (AP) about fluid restriction for a client who has acute kidney injury (AKI). The clients 24-hour urinary output is 120 mL. How much fluid would the client be allowed to have over the next 24 hours?
+a. 380 mL
+b. 500 mL
+c. 620 mL
+d. 750 mL
+
+[ANS : REMOVED]
+
+The general principle for fluid restriction for clients is that they may have a daily fluid intake 
+of 500 mL plus the amount of their urinary output. In this case, 120 mL urinary output plus 500 mL equals 620 mL fluid allowance.
+DIF: Understanding
+TOP: Integrated Process: Nursing Process: Planning and Implementation
+KEY: Acute kidney injury, Nursing intervention
+MSC: Client Needs Category: Safe and Effective Care Environment: Management of Care 
+
+11. A client with chronic kidney disease (CKD) is refusing to take his medication and has missed two hemodialysis appointment A client with chronic kidney disease (CKD) is refusing to take his medication and has missed two hemodialysis appointment
+s. What is the best initial action for the nurse?
+a. Discuss what the treatment regimen means to the client.
+b. Refer the client to a mental health nurse practitioner.
+c. Reschedule the appointments to another date and time.
+d. Discuss the option of peritoneal dialysis.
+
+[ANS : REMOVED]
+
+The initial action for the nurse is to assess anxiety, coping styles, and the clients acceptance of the required treatment for CKD. The client may be in denial of the diagnosis. While rescheduling hemodialysis appointments may help, and r
+ eferral to a mental health practitioner
+and the possibility of peritoneal dialysis are all viable options, assessment of the clients acceptance of the treatment wo
+uld come first.
+DIF: Applying
+TOP: Integrated Process: Caring
+KEY: Chronic kidney disease, Coping
+MSC: Client Needs Category: Psychosocial Integrity
+
+12. A client is taking furosemide 40 mg/day for management of early chronic kidney disease (CKD). To assess the therapeutic effect of the medication A client is taking furosemide 40 mg/day for management of early chronic kidney disease (CKD). To assess the therapeutic effect of the medication
+ , what action of the nurse is best?
+a. Obtain daily weights of the client.
+b. Auscultate heart and breath sounds.
+c. Palpate the clients abdomen.
+d. Assess the clients diet history.
+
+[ANS : REMOVED]
+
+Furosemide is a loop diuretic that helps reduce fluid overload and hypertension in patients 
+with early stages of CKD. One kilogram of weight equals about 1 L of fluid retained in the client, so daily weights are nec
+essary to monitor the response of the client to the medication.
+Heart and breath sounds would be assessed if there is fluid retention, as in heart failure.
+Palpation of the clients abdomen is not necessary, but the
+ nurse would check for edema. The
+diet history of the client would be helpful to assess electrolyte replacement since potassium is lost with this diuretic, but this does not assess the effectiveness of the medication.
+DIF: Applying
+TOP: Integrated Process: Nursing Process: Evaluation
+KEY: Chronic kidney disease, Drug therapy
+MSC: Client Needs Category: Physiological Integrity: Pharmacological and Parenteral Therapies 
+
+13. A 70-kg adult client with chronic kidney disease (CKD) is on a 40-g protein diet. The patient has a reduced glomerular filtra A 70-kg adult client with chronic kidney disease (CKD) is on a 40-g protein diet. The patient has a reduced glomerular filtra
+tion rate and is not undergoing dialysis. Which result would be
+of most concern to the nurse?
+a. Albumin level of 2.5 g/dL (3.63 mcmol/L)
+b. Phosphorus level of 5 mg/dL (1.62 mmol/L)
+c. Sodium level of 135 mEq/L (135 mmol/L)
+d. Potassium level of 5.5 mEq/L (5.5 mmol/L)
+
+[ANS : REMOVED]
+
+Protein restriction is necessary with CKD due to the buildup of waste products from protein breakdown. The nurse would be concerned with the low a
+ lbumin level since this indicates that
+the protein in the diet is not enough for the clients metabolic needs. The electrolyte values are not related to the protein-restri
+cted diet.
+DIF: Analyzing
+TOP: Integrated Process: Nursing Process: Analysis
+KEY: Chronic kidney disease, Diet therapy
+MSC: Client Needs Category: Physiological Integrity: Reduction of Risk Potential
+
+14. The nurse is teaching a client with chronic kidney disease (CKD) about the sodium restriction needed in the diet to prevent edema and hypertension. Which statement by the client indicates that more teaching is needed? The nurse is teaching a client with chronic kidney disease (CKD) about the sodium restriction needed in the diet to prevent edema and hypertension. Which statement by the client indicates that more teaching is needed?
+a. I will probably lose weight by cutting out potato chi
+ ps.?
+b. I will cut out bacon with my eggs every morning.?
+c. My cooking style will change by not adding salt.?
+d. I am thrilled that I can continue to eat fast food.?
+
+[ANS : REMOVED]
+
+Fast-food restaurants usually serve food that is high in sodium. This statement indicates that more teaching needs to occur. The other statements show a correct understanding of the 
+teaching.
+DIF: Remembering
+TOP: Integrated Process: Teaching/Learning
+KEY: Chronic kidney disease, Renal diet
+MSC: Client Needs Category: Physiological Integrity: Reduc
+ tion of Risk Potential
+
+15. A client is placed on fluid restr A client is placed on fluid restr
+iction because of chronic kidney disease (CKD). Which
+assessment finding would alert the nurse that the clients fluid balance is stable at this time?
+a. Decreased calcium levels
+b. Increased phosphorus levels
+c. No adventitious sounds in the lungs
+d. Increased edema in the legs
+
+[ANS : REMOVED]
+
+The absence of adventitious sounds upon auscultation of the lungs indicates a lack of fluid overload and fluid balance in the clients body. Decreased
+ calcium levels and increased
+phosphorus levels are common findings with CKD. Edema would indicate a fluid imbalance.
+DIF: Applying
+TOP: Integrated Process: Nursing Process: Analysis
+KEY: Chronic kidney disease, Analysis
+MSC: Client Needs Category: Physiological Integrity: Physiological Adaptation
+
+16. The charge nurse is orienting a new nurse about care for an assigned client with an  The charge nurse is orienting a new nurse about care for an assigned client with an 
+arteriovenous (AV) fistula for hemodialysis in her left arm. Which action by the float nurse would be considered unsafe?
+a. Palpating the access site for a bruit or thrill
+b. Using the right arm for a blood pressure reading
+c. Administering intravenous fluids through the AV fistula
+d. Checking distal pulses in the left arm
+
+[ANS : REMOVED]
+
+The nurse would not use the arm with the AV fistula for intravenous infusion, blood pressure readings, or venipuncture. Compression and infection can result in the loss of the AV fistula.
+The AV fistula would be monitored by auscultating or palpating the access site. Checking the 
+distal pulse would be an appropriate assessment.
+DIF: Applying
+TOP: Integrated Process: Nursing Process: Planning and Implementation
+KEY: Chronic kidney disease, Safety
+MSC: Client Needs Category: Safe and Effective Care Environment: Safety and Infection Control 17. A client is having a peritoneal dialysis treatment. The nurse notes an opaque color to the 
+effluent. What is the priority action by the nurse?
+a. Warm the dialysate solution in a microwave before instillation.
+b. Obtain a sample of the effluent and send to the laboratory.
+c. Flush the tubing with normal saline to maintain patency of the catheter.
+d. Check the peritoneal catheter for kinking and curling.
+
+[ANS : REMOVED]
+
+An opaque or cloudy effluent is the first sign of peritonitis. A sample of the effluent would 
+need to be sent to the laboratory for culture and sensitivity in order to administer the correct antibiotic. Warming the dialys
+ate in a microwave and flushing the tubing are not safe actions
+by the nurse. Checking the catheter for obstruction is a viable option but will not treat the 
+peritonitis.
+DIF: Applying
+TOP: Integrated Process: Nursing Process: Planning and Implementation
+KEY: Chronic kidney disease, Safety
+MSC: Client Needs Category: Safe and Effective Care Enviro
+ nment: Safety and Infection Control
+
+18. The nurse is teaching a client h The nurse is teaching a client h
+ow to increase the flow of dialysate into the peritoneal cavity
+during dialysis. Which statement by the client demonstrates a correct understanding of the 
+teaching?
+a. I should leave the drainage bag above the level of my abdomen.?
+b. I could flush the tubing with normal saline if the flow stops.?
+c. I should take a stool softener every morning to avoi
+ d constipation.?
+d. My diet should have low fiber in it to prevent any irritation.?
+
+[ANS : REMOVED]
+
+Inflow and outflow problems of the dialysate are best con
+ trolled by preventing constipation. A
+daily stool softener is the best option for the client. The drainage bag should be below the level of the abdomen. Flushing t
+he tubing will not help with the flow. A diet high in fiber will
+also help with a constipation problem.
+DIF: Applying
+TOP: Integrated Process: Teaching/Learning
+KEY: Chronic kidney disease, Health teaching
+MSC: Client Needs Category: Health Promotion and Maintenance
+
+19. A nurse reviews the laboratory values of a client who returned from kidney transplantation 12 A nurse reviews the laboratory values of a client who returned from kidney transplantation 12
+hours ago:
+Sodium
+136 mEq/L (
+ 135 mmol/L)
+Potassium
+5 mEq/L (5 mmol/L)
+Blood urea nitrogen (BUN)
+44 mg/dL (15.7 mmol/L)
+Serum creatinine
+
+2.5 mg/dL (221 mcmol/L)5 mg/dL (221 mcmol/L)
+What initial intervention would the nurse anticipate?
+a. Start hemodialysis immedia
+tely.
+b. Discuss the need for peritoneal dialysis.
+c. Increase the dose of immunosuppression.
+d. Return the client to surgery for exploration.
+
+[ANS : REMOVED]
+
+The client may need a higher dose of immunosuppressive medication as evidenced by the elevated BUN and serum creatinine levels. This increased dose may reverse the possible acute rejection of the transplanted kidney. The client does not need hemodialysis, peritoneal dialysis, or further surgery at this point.
+DIF: Analyzing
+TOP: Integ
+rated Process: Nursing Process: Analysis
+KEY: Renal transplantation, Analysis
+MSC: Client Needs Category: Physiological Integrity: Reduc
+ tion of Risk Potential
+
+20. The nurse administers epoetin alfa to a client who has chronic kidney disease (CKD). Which laboratory test value would the nurse monitor to determine this drugs effectiveness? The nurse administers epoetin alfa to a client who has chronic kidney disease (CKD). Which laboratory test value would the nurse monitor to determine this drugs effectiveness?
+a. Potassium
+b. Sodium
+c. Renin
+d. Hemoglobin
+
+[ANS : REMOVED]
+
+The purpose of giving epoetin alfa to a client with CKD is to manage anemia by stimulating the bone marrow to produce more red blood cells. Theref
+ ore, monitoring the clients
+hemoglobin, hematocrit, and red blood cell count would indicate if the drug was effective.
+DIF: Remembering
+TOP: Integrated Process: Nursing Process: Evaluation
+KEY: Chronic kidney disease, Drug therapy
+MSC: Client Needs Category: Physiological Integrity: Physiological Adaptation
+
+21. A client with chronic kidney disease (CKD) has an elevated serum phosphorus level. What  A client with chronic kidney disease (CKD) has an elevated serum phosphorus level. What 
+drug would the nurse anticipate to be prescribed for this client?
+a. Calcium acetate
+b. Doxycyline
+c. Magnesium sulfate
+d. Lisinopril
+
+[ANS : REMOVED]
+
+The client with CKD often has a high phosphorus level which tends to lower the calcium level in an inverse relationship, and causes osteodystrophy. To prevent this bone disease, the client needs to take a drug that can bind with phosphorus for elimination via the GI tract. When phosphorus is lowered to within normal limits, normal calcium levels may be restored.
+DIF: Remembering
+TOP: Integrated Process: Nursing Process: Analysis
+KEY: Chronic kidney disease, Drug therapy
+MSC: Client Needs Category: Physiological Integrity: Pharm
+ acological and Parenteral Therapies
+MULTIPLE RESPONSE
+
+1. The nurse is caring for five clients on the medical-surgical unit. Which clients would the nurse consider to be at risk for postre The nurse is caring for five clients on the medical-surgical unit. Which clients would the nurse consider to be at risk for postre
+nal acute kidney injury (AKI)? ( Select all that apply. )
+a. Client with prostate cancer
+b. Client with blood clots in the urinary tract
+c. Client with ureterolithiasis
+d. Client with severe burns
+e. Client with lupus
+
+[ANS : REMOVED]
+
+Urine flow obstruction, such as prostate cancer, blood clots in the urinary tract, and kidney stones (ureterolithiasis), causes postrenal AKI. Severe bu
+ rns would be a prerenal cause. Lupus
+would be an intrarenal cause for AKI.
+DIF: Understanding
+TOP: Integrated Process: Nursing Process: Analysis
+KEY: Renal system, Risk factors
+MSC: Client Needs Category: Physiological Integrity: Physiological Adaptation
+
+2. A nurse is caring for a postoperative 70-kg client who had major blood loss during surgery. A nurse is caring for a postoperative 70-kg client who had major blood loss during surgery.
+Which findings by the nurse would prompt immediate action to prevent acute kidney injury?
+( Select all that apply. )
+a. Urine output of 100 mL in 4 hours
+b. Urine output of 500 mL in 12 hours
+c. Large amount of sediment in the urine
+d. Amber, odorless urine
+e. Blood pressure of 90/60 mm Hg
+
+[ANS : REMOVED]
+
+The low urine output, sedimen
+t, and blood pressure would be reported to the primary health
+care provider. Postoperatively, the nurse would measure intake and output, check the characteristics of the urine, and report sediment, hematur
+ ia, and urine output of less than 0.5
+mL/kg/hr for 3 to 4 hours. A urine output of 100 mL is low, but a urine output of 500 mL in 12 hours would be within normal limits. Perfusion to the kidneys is compromised with low blood pressure. The amber odorless urine is normal.
+DIF: Applying
+TOP: Integrated Process: Nursing Process: Assessment
+KEY: Renal system, Assessment
+MSC: Client Needs Category: Safe and Effective Care Environment: Management of Care 
+
+3. A client is hospitalized in the ol A client is hospitalized in the ol
+iguric phase of acute kidney injury (AKI) and is receiving
+tube feedings. The nurse is teaching the clients spouse about the renal-specific formulation 
+for the enteral solution compared to standard formulas. What components would be discussed in the teaching plan? ( Select all that apply. )
+a. Lower sodium
+b. Higher calcium
+c. Lower potassium
+d. Higher phosphorus
+e. Higher calories
+
+[ANS : REMOVED]
+
+Many clients with AKI are too
+ill to meet caloric goals and require tube feedings with
+renal-specific formulas that are lower in sodium, potassium, and phosphorus, and higher in 
+calories than are standard formulas.
+DIF: Understanding
+TOP: Integrated Process: Teaching/Learning
+KEY: Chronic kidney disease, Diet therapy
+MSC: Client Needs Category: Health Promotion and Maintenance
+
+4. The nurse is caring for a client with a new diagnosis of chronic kidney disease. Which priority complications would the nurse anticipate? ( Select all tha The nurse is caring for a client with a new diagnosis of chronic kidney disease. Which priority complications would the nurse anticipate? ( Select all tha
+ t apply. )
+a. Dehydration
+b. Anemia
+c. Hypertension
+d. Dysrhythmias
+e. Heart failure
+
+[ANS : REMOVED]
+
+The client who has CKD has fluid overload and electrolyte imbalances, especially
+hyperkalemia, that can cause hypertension, heart failure, and dysrhythmias. Anemia results because erythropoietin production by the kidneys is decreased.
+DIF: Applying
+TOP: Integrated Process: Nursing Process: Assessment
+KEY: Chronic kidney disease, A
+ssessment
+MSC: Client Needs Category: Physiological Integrity: Physiological Adaptation
+
+5. A nurse is giving discharge instructions to a client recently diagnosed with chronic kidney disease (CKD). Which statements made by the client ind A nurse is giving discharge instructions to a client recently diagnosed with chronic kidney disease (CKD). Which statements made by the client ind
+ icate a correct understanding of the
+teaching? ( Select all that apply. )
+a. I can continue to take antacids to relieve heartburn.?
+b. I need to ask for an antibiotic when scheduling a dental appointment.?
+c. Ill need to check my blood sugar often to prevent hypoglycemia.?
+d. The dose of my pain medi
+cation may have to be adjusted.?
+e. I should watch for bleeding when taking my anticoagulants.?
+
+[ANS : REMOVED]
+
+In discharge teaching, the nurse m
+ust emphasize that the client needs to have an antibiotic
+prophylactically before dental procedures to prevent infection. There may be a need for dose reduction in medications if the kidney is not excreting th
+ em properly (antacids with
+magnesium, antibiotics, antidiabetic drugs, insulin, opioids, and anticoagulants).
+DIF: Applying
+TOP: Integrated Process: Teaching/Learning
+KEY: Chronic kidney disease, Drug therapy
+MSC: Client Needs Category: Health Promotion and Maintenance
+
+6. A client is undergoing hemodialysis. The clients blood pressure at the beginning of the  A client is undergoing hemodialysis. The clients blood pressure at the beginning of the 
+procedure was 136/88 mm Hg, and now it is 110/54 mm Hg. What actions would the nurse perform to maintain blood pres
+sure? ( Select all that apply. )
+a. Adjust the rate of extracorporeal blood flow.
+b. Place the patient in the Trendelenburg position.
+c. Stop the hemodialysis treatment.
+d. Administer a 250-mL bolus of normal saline.
+e. Contact the primary health care provider.
+
+[ANS : REMOVED]
+
+Hypotension occurs often during hemodialysis treatments as a result of vasodilation from the warmed dialysate. Modest decreases in blood pressure, as
+ is the case with this client, can be
+maintained with rate adjustment, Trendelenburg positioning, and a fluid bolus. If the blood pressure drops considerably af
+ter two boluses and cooling dialysate, the hemodialysis can be
+stopped and the primary health care provider contacted.
+DIF: Applying
+TOP: Integrated Process: Nursing Process: Planning and Implementation
+KEY: Hemodialysis, Safety
+MSC: Client Needs Category: Safe and Effective Care Environment: Safety and Infection Control 
+
+7. A client is unsure of the decision to undergo peritoneal dialysis (PD) and wishes to discuss the advantages of this treatment with the nurse. Which statements by the nurse are correct regarding PD? ( Select all that apply. ) A client is unsure of the decision to undergo peritoneal dialysis (PD) and wishes to discuss the advantages of this treatment with the nurse. Which statements by the nurse are correct regarding PD? ( Select all that apply. )
+a. You will not need vascular access to perform PD.?
+b. There is less restriction of protein and fluids.?
+c. You will have no risk for infection with PD.?
+d. You have flexible scheduling for the exchanges.?
+e. It takes less time than hemodialysis treatments.?
+
+[ANS : REMOVED]
+
+PD is based on exchanges of waste, fluid, and electrolytes in the peritoneal cavity. There is no need for vascular access. Protein is lost in the exchange, w
+ hich allows for more protein and
+fluid in the diet. There is flexibility in the time for exchanges, but the treatment takes a longer period of time compared to hemodialysis. There still is risk for infection with PD, especially peritonitis.
+DIF: Understanding
+TOP: Integrated Process: Teaching/Learning
+KEY: Dialysis, Health teaching
+MSC: Client Needs Category: Physiological Integrity: Basic Care and Comfort
