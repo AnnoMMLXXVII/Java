@@ -34,10 +34,10 @@ public class ParseCaptionsDFXP {
 	private static SlideSuffixObject suffixObject;
 
 	public static void main(String... args) {
-		String path = "js-slides-peripheral";
+		String path = "js-slides-hypertension";
 //		String imageName = args[1];
 		initialize();
-		run(path, "peripheral");
+		run(path, "FILLER");
 	}
 
 	private static void run(String dir, String title) {
@@ -171,7 +171,7 @@ public class ParseCaptionsDFXP {
 		List<SlideLine> prefixLines = new ArrayList<>();
 		prefixLines.add(new SlideLine(CC_Constant.PREFIX_SLIDE_JQUERY));
 		prefixLines.add(new SlideLine(CC_Constant.PREFIX_ARTICLE_TAG));
-		prefixLines.add(new SlideLine ("'<br>'+"));
+		prefixLines.add(new SlideLine("'<br>'+"));
 //		prefixLines.add(new SlideLine(CC_Constant.IMAGE_TAG));
 //		prefixLines.add(new SlideLine(CC_Constant.IMAGE_EXTRA_TAG));
 
