@@ -1,46 +1,46 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>io.eclipse.springbootquickstart</groupId>
-  <artifactId>course-api</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>EclipseQStart API</name>
-  <description>Sample for Starting Spring Boot. Testing it out. Currently</description>
-  
-  <properties>
-  	<start-class>io.eclipse.springbootquickstart.CourseAPIApp.java</start-class>
-  	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  	<java.version>1.8</java.version>
-  </properties>
-  
-  <parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId> 
-		<version> 1.5.7.RELEASE</version>
-  </parent>
-  <!-- ^^^ delcaring current project is a child of the maven project  -->
-  
-  
-  
-  <dependencies>
-  		<dependency>
-  			<groupId>org.springframework.boot</groupId>
-  			<artifactId>spring-boot-starter-web</artifactId>
-  		</dependency>
-  </dependencies>
-  
-  <build>
-  	<plugins>
-  		<plugin>
-  			<groupId>org.springframework.boot</groupId>
-  			<artifactId>spring-boot-maven-plugin</artifactId>
-  		</plugin>
-  		<plugin>
-  			<groupId>org.apache.tomcat.maven</groupId>
-  			<artifactId>tomcat7-maven-plugin</artifactId>
-  			<version>2.2</version>
-  		</plugin>
-  	</plugins>
-  </build>
-  
-  
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>io.eclipse.springbootquickstart</groupId>
+    <artifactId>course-api</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>EclipseQStart API</name>
+    <description>Sample for Starting Spring Boot. Testing it out. Currently</description>
+
+    <properties>
+        <start-class>io.eclipse.springbootquickstart.CourseAPIApp.java</start-class>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.7.RELEASE</version>
+    </parent>
+    <!-- ^^^ delcaring current project is a child of the maven project  -->
+
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+            </plugin>
+        </plugins>
+    </build>
+
+
 </project>

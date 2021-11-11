@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="inventoryHomeScreenContainer" maxHeight="526.0" maxWidth="1014.0" minHeight="480.0" minWidth="1000.0" prefHeight="526.0" prefWidth="1014.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeScreenController">
+   <children>
+      <Label fx:id="inventoryHomeScreenMainHeaderLbl" layoutX="24.0" layoutY="15.0" prefHeight="61.0" prefWidth="762.0" style="-fx-border-color: Magenta; -fx-border-width: 1; -fx-label-padding: 4; -fx-border-radius: 20;" text="Inventory Management System" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Black" size="30.0" />
+         </font>
+      </Label>
+      <Button fx:id="inventoryHomeScreenExitBtn" layoutX="838.0" layoutY="477.0" mnemonicParsing="false" onAction="#homeScreenExitBtn" prefHeight="42.0" prefWidth="151.0" text="Exit" textFill="RED">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font></Button>
+      <AnchorPane id="outterPartsBoxMain" layoutX="14.0" layoutY="100.0" prefHeight="366.0" prefWidth="485.0" style="-fx-border-radius: 20; -fx-border-color: gray;">
+         <children>
+            <Label id="partsLabelMain" prefHeight="48.0" prefWidth="78.0" style="-fx-label-padding: 10;" text="Parts">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <TextField id="partsSearchFieldMain" fx:id="inventoryHomeScreenPartSearchInput" layoutX="10.0" layoutY="37.0" onKeyTyped="#searchPartWhileOnKey" prefHeight="31.0" prefWidth="310.0" promptText="Enter Part Id or Part Name" style="-fx-padding: 2; -fx-border-color: gray;">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label fx:id="partSearchErrorLabel" layoutX="60.0" layoutY="8.0" prefHeight="31.0" prefWidth="260.0" textFill="RED">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="inventoryHomeScreenAddPartBtn" layoutX="18.0" layoutY="313.0" mnemonicParsing="false" onAction="#homeScreenAddPart" prefHeight="41.0" prefWidth="120.0" style="-fx-padding: 10;" text="Add Part">
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
+            <Button fx:id="inventoryHomeScreenModifyPartBtn" layoutX="178.0" layoutY="313.0" mnemonicParsing="false" onAction="#homeScreenUpdatePart" prefHeight="41.0" prefWidth="120.0" style="-fx-padding: 10;" text="Modify Part">
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
+            <Button fx:id="inventoryHomeScreenDeleteBtn" layoutX="339.0" layoutY="313.0" mnemonicParsing="false" onAction="#homeScreenRemovePart" prefHeight="41.0" prefWidth="120.0" style="-fx-padding: 10;" text="Delete" textFill="RED">
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
+            <TableView fx:id="inventoryHomeScreenPartsTable" layoutX="10.0" layoutY="78.0" prefHeight="226.0" prefWidth="467.0">
+               <items>
+               </items>
+               <columns>
+                  <TableColumn fx:id="inventoryHomeScreenPartIDColHeader" prefWidth="115.0" text="Part ID">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="id" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="inventoryHomeScreenPartNameColHeader" prefWidth="115.0" text="Part Name">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="name" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="inventoryHomeScreenPartCountColHeader" prefWidth="115.0" style="text-align: justify;" text="inventory Count">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="stock" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="inventoryHomeScreenPartPriceColHeader" prefWidth="115.0" style="text-align: justify;" text="Part Price/Cost">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="price" />
+                     </cellValueFactory>
+                  </TableColumn>
+               </columns>
+            </TableView>
+            <Button fx:id="inventoryHomeScreenPartSearchBtn" layoutX="330.0" layoutY="37.0" mnemonicParsing="false" onAction="#homeScreenSearchPartBtn" prefHeight="31.0" prefWidth="142.0" text="Search Part">
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane id="outterPRoductsBoxMain" layoutX="505.0" layoutY="100.0" prefHeight="366.0" prefWidth="485.0" style="-fx-border-radius: 20; -fx-border-color: gray;">
+         <children>
+            <Label id="productsLabelMain" alignment="TOP_LEFT" style="-fx-label-padding: 10;" text="Products">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <TextField id="productSearchFieldMain" fx:id="inventoryHomeScreenProductSearchInput" layoutX="10.0" layoutY="37.0" onKeyTyped="#searchProductWhileOnKey" prefHeight="31.0" prefWidth="310.0" promptText="Enter Product Id or Product Name" style="-fx-padding: 2; -fx-border-color: gray;">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label fx:id="productSearchErrorLabel" layoutX="93.0" layoutY="8.0" prefHeight="31.0" prefWidth="260.0" textFill="RED">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="inventoryHomeScreenProductDeleteBtn" layoutX="339.0" layoutY="313.0" mnemonicParsing="false" onAction="#homeScreenRemoveProduct" prefHeight="41.0" prefWidth="120.0" style="-fx-padding: 10;" text="Delete" textFill="RED">
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
+            <Button fx:id="inventoryHomeScreenProductModifyBtn" layoutX="178.0" layoutY="313.0" mnemonicParsing="false" onAction="#homeScreenUpdateProduct" prefHeight="42.0" prefWidth="127.0" style="-fx-padding: 10;" text="Modify Product">
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
+            <Button fx:id="inventoryHomeScreenAddProductBtn" layoutX="18.0" layoutY="313.0" mnemonicParsing="false" onAction="#homeScreenAddProduct" prefHeight="42.0" prefWidth="120.0" style="-fx-padding: 10;" text="Add Product">
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
+            <TableView fx:id="inventoryHomeScreenProductsTable" layoutX="10.0" layoutY="78.0" prefHeight="226.0" prefWidth="467.0">
+               <columns>
+                  <TableColumn fx:id="inventoryHomeScreenProductIDColHeader" prefWidth="115.0" text="Product ID">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="id" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="inventoryHomeScreenProductNameColHeader" prefWidth="115.0" text="Product Name">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="name" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="inventoryHomeScreenProductCountColHeader" prefWidth="115.0" style="text-align: justify;" text="inventory Count">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="stock" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="inventoryHomeScreenProductPriceColHeader" prefWidth="115.0" style="text-align: justify;" text="Product Price/Cost">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="price" />
+                     </cellValueFactory>
+                  </TableColumn>
+               </columns>
+            </TableView>
+            <Button fx:id="inventoryHomeScreenProductSearchBtn" layoutX="330.0" layoutY="37.0" mnemonicParsing="false" onAction="#homeScreenSearchProductBtn" prefHeight="31.0" prefWidth="142.0" text="Search Product">
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

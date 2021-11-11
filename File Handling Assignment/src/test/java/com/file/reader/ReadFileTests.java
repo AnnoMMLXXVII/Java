@@ -25,7 +25,7 @@ class ReadFileTests {
 	void setUp() throws Exception {
 		instance = ReadFile.getInstance();
 	}
-	
+
 	@Test
 	void testIfInstanceIsAlreadyExists() {
 		instance = ReadFile.getInstance();

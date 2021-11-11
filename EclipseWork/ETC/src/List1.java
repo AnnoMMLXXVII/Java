@@ -7,5 +7,4 @@ public interface List1<E> {
     void add(E element, int pos);
 
 
-
 }

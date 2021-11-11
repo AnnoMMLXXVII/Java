@@ -6,5 +6,6 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="jtidy-r938.jar" sourcepath="jtidy-r938-sources.zip"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -6,7 +6,7 @@ public class Account implements IAccount {
 
 	public Account() {
 		/*
-		 * 
+		 *
 		 */
 	}
 
@@ -52,6 +52,6 @@ public class Account implements IAccount {
 		return "accountNumber=" + accountNumber;
 	}
 
-	
-	
+
+
 }

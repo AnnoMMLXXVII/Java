@@ -3,9 +3,9 @@ package com.file.accounts.model;
 import java.util.List;
 
 public class Accounts {
-	
+
 	private List<IAccount> accounts;
-	
+
 	public Accounts(List<IAccount> accounts) {
 		this.accounts = accounts;
 	}
@@ -17,15 +17,15 @@ public class Accounts {
 	public void setAccounts(List<IAccount> accounts) {
 		this.accounts = accounts;
 	}
-	
+
 	public void addValidAccount(IAccount account) {
 		accounts.add(account);
 	}
-	
+
 	public IAccount getAccountByIndex(int index) {
 		return accounts.get(index);
 	}
-	
+
 	public IAccount getAccountByNumber(String number) {
 		return accounts.stream().filter(e -> e.getAccountNumber().equalsIgnoreCase(number)).findFirst().orElseGet(null);
 	}
@@ -58,7 +58,7 @@ public class Accounts {
 	public String toString() {
 		return accounts.toString();
 	}
-	
-	
-	
+
+
+
 }

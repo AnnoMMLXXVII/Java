@@ -34,7 +34,7 @@ public class ReadFile {
 		file = new File(filePath);
 		parseThroughFile();
 	}
-	
+
 	public void readDirectoryFile() {
 		directories = new ArrayList<>();
 		try(Scanner z = new Scanner(new FileReader(FileHandlingManager.getDirectoryFile()))) {
@@ -48,13 +48,13 @@ public class ReadFile {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public List<Directory> getDirectories() {
 		return directories;
 	}
-	
+
 	public void readSourceFile(String filePath) {
-		
+
 		file = new File(filePath);
 		parseThroughSourceFile();
 	}
@@ -81,7 +81,7 @@ public class ReadFile {
 			e.printStackTrace();
 		}
 	}
-	
+
 	private void parseThroughSourceFile() {
 		List<String> source = new ArrayList<>();
 		try (Scanner z = new Scanner(new FileReader(file))) {

@@ -1,54 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
-  <display-name>Servlet_Annotations_Config</display-name>
-  <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
-    <welcome-file>index.htm</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
-  </welcome-file-list>
-  
-  <!--  SERVLET TAGS HAVE PAIRS
-  		servlet
-  			servlet-name
-  			servlet-class
-  		servlet-mapping
-  			serlvet-name
-  			url-pattern
-  			
-  		EACH PAIR IS ONE SERVLET
-   -->
-<!-- COMMENTING OUT TO KEEP ORIGINAL
-	
-		USING ANNOTATIONS TO PERFORM THE SAME TASK BY CALLING SERVLETS
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         id="WebApp_ID" version="4.0">
+    <display-name>Servlet_Annotations_Config</display-name>
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.htm</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>default.html</welcome-file>
+        <welcome-file>default.htm</welcome-file>
+        <welcome-file>default.jsp</welcome-file>
+    </welcome-file-list>
 
-  -->  
-<!--  
+    <!--  SERVLET TAGS HAVE PAIRS
+            servlet
+                servlet-name
+                servlet-class
+            servlet-mapping
+                serlvet-name
+                url-pattern
 
- <servlet>
-  	<servlet-name> primus </servlet-name>
-  	<servlet-class>	com.HakuWei.AddServlet </servlet-class>
-  </servlet>
-  
-  <servlet-mapping>
-	<servlet-name> primus </servlet-name>
-  	<url-pattern> /add </url-pattern>
-  </servlet-mapping>
-  
-  <servlet>
-  	<servlet-name> secundus </servlet-name>
-  	<servlet-class>	com.HakuWei.SqServlet </servlet-class>
-  </servlet>
-  
-  <servlet-mapping>
-	<servlet-name> secundus </servlet-name>
-  	<url-pattern> /sq </url-pattern>
-  </servlet-mapping> 
-  
-  -->
-  
-  
-  
+            EACH PAIR IS ONE SERVLET
+     -->
+    <!-- COMMENTING OUT TO KEEP ORIGINAL
+
+            USING ANNOTATIONS TO PERFORM THE SAME TASK BY CALLING SERVLETS
+
+      -->
+    <!--
+
+     <servlet>
+          <servlet-name> primus </servlet-name>
+          <servlet-class>	com.HakuWei.AddServlet </servlet-class>
+      </servlet>
+
+      <servlet-mapping>
+        <servlet-name> primus </servlet-name>
+          <url-pattern> /add </url-pattern>
+      </servlet-mapping>
+
+      <servlet>
+          <servlet-name> secundus </servlet-name>
+          <servlet-class>	com.HakuWei.SqServlet </servlet-class>
+      </servlet>
+
+      <servlet-mapping>
+        <servlet-name> secundus </servlet-name>
+          <url-pattern> /sq </url-pattern>
+      </servlet-mapping>
+
+      -->
+
+
 </web-app>

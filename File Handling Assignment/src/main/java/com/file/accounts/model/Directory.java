@@ -1,10 +1,10 @@
 package com.file.accounts.model;
 
 public class Directory {
-	
+
 	private String name;
 	private String phoneNumber;
-	
+
 	public Directory(String name, String phoneNumber) {
 		this.name = name;
 		this.phoneNumber = phoneNumber;
@@ -61,6 +61,6 @@ public class Directory {
 	public String toString() {
 		return name + "," + phoneNumber;
 	}
-	
-	
+
+
 }

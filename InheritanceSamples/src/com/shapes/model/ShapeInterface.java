@@ -9,5 +9,5 @@ public interface ShapeInterface {
 	double getVolume();
 
 	double getCircumference();
-	
+
 }

@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="949.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UpdateProductController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="949.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UpdateProductController">
     <children>
         <AnchorPane layoutX="13.0" layoutY="13.0" prefHeight="455.0" prefWidth="923.0" style="-fx-border-color: gray; -fx-border-radius: 10;">
             <children>
@@ -52,32 +52,32 @@
                <font>
                   <Font size="15.0" />
                </font></TextField>
-                <TextField fx:id="updateProductNameInput" layoutX="146.0" layoutY="116.0" onMouseClicked="#clearTextField" prefHeight="40.0" prefWidth="225.0" promptText="Enter Product Name">
+                <TextField fx:id="updateProductNameInput" layoutX="146.0" layoutY="116.0" onMouseClicked="#clsTxtOnClick" prefHeight="40.0" prefWidth="225.0" promptText="Enter Product Name">
                <font>
                   <Font size="15.0" />
                </font></TextField>
-                <TextField fx:id="updateProductStockInput" layoutX="146.0" layoutY="166.0" onMouseClicked="#clearTextField" prefHeight="40.0" prefWidth="225.0" promptText="Enter Product Count">
+                <TextField fx:id="updateProductStockInput" layoutX="146.0" layoutY="166.0" onMouseClicked="#clsTxtOnClick" prefHeight="40.0" prefWidth="225.0" promptText="Enter Product Count">
                <font>
                   <Font size="15.0" />
                </font></TextField>
-                <TextField fx:id="updateProductPriceInput" layoutX="146.0" layoutY="216.0" onMouseClicked="#clearTextField" prefHeight="40.0" prefWidth="225.0" promptText="Enter Product Price">
+                <TextField fx:id="updateProductPriceInput" layoutX="146.0" layoutY="216.0" onMouseClicked="#clsTxtOnClick" prefHeight="40.0" prefWidth="225.0" promptText="Enter Product Price">
                <font>
                   <Font size="15.0" />
                </font></TextField>
-                <TextField fx:id="updateProductMaxInput" layoutX="146.0" layoutY="266.0" onMouseClicked="#clearTextField" prefHeight="40.0" prefWidth="225.0" promptText="Enter Max Qty">
+                <TextField fx:id="updateProductMaxInput" layoutX="146.0" layoutY="266.0" onMouseClicked="#clsTxtOnClick" prefHeight="40.0" prefWidth="225.0" promptText="Enter Max Qty">
                <font>
                   <Font size="15.0" />
                </font></TextField>
-                <TextField fx:id="updateProductMinInput" layoutX="146.0" layoutY="313.0" onMouseClicked="#clearTextField" prefHeight="40.0" prefWidth="225.0" promptText="Enter Min Qty">
+                <TextField fx:id="updateProductMinInput" layoutX="146.0" layoutY="313.0" onMouseClicked="#clsTxtOnClick" prefHeight="40.0" prefWidth="225.0" promptText="Enter Min Qty">
                <font>
                   <Font size="15.0" />
                </font></TextField>
-                <Button fx:id="updateProductSearchBtn" layoutX="439.0" layoutY="17.0" mnemonicParsing="false" onMouseClicked="#modifyProductSearch" prefHeight="35.0" prefWidth="125.0" text="Search">
+                <Button fx:id="updateProductSearchBtn" layoutX="439.0" layoutY="17.0" mnemonicParsing="false" onMouseClicked="#searchProductOnUpdateScreen" prefHeight="35.0" prefWidth="125.0" text="Search">
                     <font>
                         <Font size="15.0" />
                     </font>
                 </Button>
-                <TextField fx:id="updateProductSearchBarInput" layoutX="600.0" layoutY="17.0" onMouseClicked="#clearTextField" prefHeight="35.0" prefWidth="306.0" promptText="Enter Part Id or Part Name">
+                <TextField fx:id="updateProductSearchBarInput" layoutX="600.0" layoutY="17.0" onMouseClicked="#clsTxtOnClick" prefHeight="35.0" prefWidth="306.0" promptText="Enter Part Id or Part Name">
                <font>
                   <Font size="15.0" />
                </font></TextField>
@@ -100,17 +100,17 @@
                         </TableColumn>
                     </columns>
                 </TableView>
-                <Button fx:id="updateProductAddBtn" layoutX="439.0" layoutY="221.0" mnemonicParsing="false" onMouseClicked="#addPart" prefHeight="30.0" prefWidth="125.0" text="Add">
+                <Button fx:id="updateProductAddBtn" layoutX="439.0" layoutY="221.0" mnemonicParsing="false" onMouseClicked="#savePartOnUpdateScreen" prefHeight="30.0" prefWidth="125.0" text="Add">
                     <font>
                         <Font size="15.0" />
                     </font>
                 </Button>
-                <Button fx:id="updateProductDeleteBtn" layoutX="575.0" layoutY="414.0" mnemonicParsing="false" onMouseClicked="#deletePart" prefHeight="30.0" prefWidth="125.0" text="Delete" textFill="RED">
+                <Button fx:id="updateProductDeleteBtn" layoutX="575.0" layoutY="414.0" mnemonicParsing="false" onMouseClicked="#removeProductOnUpdateScreen" prefHeight="30.0" prefWidth="125.0" text="Delete" textFill="RED">
                     <font>
                         <Font size="15.0" />
                     </font>
                 </Button>
-                <Button fx:id="updateProductCancelBtn" layoutX="14.0" layoutY="411.0" mnemonicParsing="false" onMouseClicked="#cancelModify" prefHeight="35.0" prefWidth="125.0" text="Cancel" textFill="RED">
+                <Button fx:id="updateProductCancelBtn" layoutX="14.0" layoutY="411.0" mnemonicParsing="false" onMouseClicked="#cancelProductOnUpdateScreen" prefHeight="35.0" prefWidth="125.0" text="Cancel" textFill="RED">
                <font>
                   <Font size="15.0" />
                </font></Button>
@@ -133,7 +133,7 @@
                         </TableColumn>
                     </columns>
                 </TableView>
-                <Button fx:id="updateProductUpdateBtn" layoutX="436.0" layoutY="414.0" mnemonicParsing="false" onMouseClicked="#saveProduct" prefHeight="30.0" prefWidth="125.0" text="Update">
+                <Button fx:id="updateProductUpdateBtn" layoutX="436.0" layoutY="414.0" mnemonicParsing="false" onMouseClicked="#updateProductOnUpdateScreen" prefHeight="30.0" prefWidth="125.0" text="Update">
                     <font>
                         <Font size="15.0" />
                     </font>

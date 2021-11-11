@@ -1,16 +1,16 @@
 package com.question.questions;
 
 public class Question {
-	private String question, Save, lever;
-	private int Points;
+    private String question, Save, lever;
+    private int Points;
 
-	public Question() {
-	}
+    public Question() {
+    }
 
-	Question(String question, int Points) {
+    Question(String question, int Points) {
 
-		this.question = question;
-		this.Points = Points;
-	}
+        this.question = question;
+        this.Points = Points;
+    }
 
 }

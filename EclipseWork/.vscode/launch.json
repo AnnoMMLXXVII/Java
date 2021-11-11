@@ -1,25 +1,25 @@
 {
-    "configurations": [
+  "configurations": [
     {
-        "type": "java",
-        "name": "Debug (Launch) - External Terminal",
-        "request": "launch",
-        "console": "externalTerminal",
-        "mainClass": ""
+      "type": "java",
+      "name": "Debug (Launch) - External Terminal",
+      "request": "launch",
+      "console": "externalTerminal",
+      "mainClass": ""
     },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - Binary",
-            "request": "launch",
-            "mainClass": "Binary",
-            "projectName": "ExtraPractice"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - Exam3",
-            "request": "launch",
-            "mainClass": "StringToChar",
-            "projectName": "ExtraPractice"
-        }
-    ]
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - Binary",
+      "request": "launch",
+      "mainClass": "Binary",
+      "projectName": "ExtraPractice"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - Exam3",
+      "request": "launch",
+      "mainClass": "StringToChar",
+      "projectName": "ExtraPractice"
+    }
+  ]
 }

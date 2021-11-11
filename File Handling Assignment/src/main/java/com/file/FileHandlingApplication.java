@@ -6,7 +6,7 @@ public class FileHandlingApplication {
 
 	public static void main(String...args) {
 		FileHandlingManager.run();
-		
+
 	}
 
 }

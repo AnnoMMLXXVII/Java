@@ -12,27 +12,27 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/sq") // annotation similar to servlet-mapping > url-pattern
 public class SqServlet extends HttpServlet {
 
-/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+    /**
+     *
+     */
+    private static final long serialVersionUID = 1L;
 
-protected void  doGet(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
-		
-		int k = 0;
-		
-		Cookie cookie[] = req.getCookies();
-		for (Cookie c : cookie) {
-			if (c.getName().equalsIgnoreCase("k")) {
-				k = Integer.parseInt(c.getValue());
-			}
-		}
-		
-		k = k*k;
-			
-		PrintWriter out = res.getWriter();
-		
-		out.printf("Result is: %d", k);
-		
-	}
+    protected void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
+
+        int k = 0;
+
+        Cookie cookie[] = req.getCookies();
+        for (Cookie c : cookie) {
+            if (c.getName().equalsIgnoreCase("k")) {
+                k = Integer.parseInt(c.getValue());
+            }
+        }
+
+        k = k * k;
+
+        PrintWriter out = res.getWriter();
+
+        out.printf("Result is: %d", k);
+
+    }
 }

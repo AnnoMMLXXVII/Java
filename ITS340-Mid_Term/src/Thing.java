@@ -45,7 +45,7 @@ public class Thing {
 			}
 		}
 	}
-	
+
 	private void swap(double a, double b) {
 		double temp = a;
 		a = b;

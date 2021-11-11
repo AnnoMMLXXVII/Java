@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 // ALLOWS FOR METHODS THAT CAN MAKE THE APPROPIRATE ACTIONS BASED ON USER REQUESTS
 public class HelloController {
-	
-	@RequestMapping("/hello")
-	public String getPrompt() {
-		return "Hello";
-	}
+
+    @RequestMapping("/hello")
+    public String getPrompt() {
+        return "Hello";
+    }
 }

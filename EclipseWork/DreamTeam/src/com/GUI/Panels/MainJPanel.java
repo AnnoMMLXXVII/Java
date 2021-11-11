@@ -13,52 +13,52 @@ import com.Player.RosterManager.RosterManager;
 
 public class MainJPanel extends JPanel {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	private JPanel centerJPnl;
-	private JTable jtable;
-	private RosterManager rm;
-	public MainJPanel() {
-		rm = RosterManager.getInstance();
-		initBackgrd();
-		initBord();
-		initLayout();
-		addJBtn();
+    /**
+     *
+     */
+    private static final long serialVersionUID = 1L;
+    private JPanel centerJPnl;
+    private JTable jtable;
+    private RosterManager rm;
 
-	}
-	
-	private void initLayout() {
-		setLayout(new BorderLayout());
-	}
-	
-	private void initBackgrd() {
-		setBackground(Color.cyan);
-	}
-	
-	private void initBord() {
-		Border bord = BorderFactory.createLineBorder(Color.black, 3, true);
-		setBorder(bord);
-	}
-	
-	
-	private void addJBtn() {
+    public MainJPanel() {
+        rm = RosterManager.getInstance();
+        initBackgrd();
+        initBord();
+        initLayout();
+        addJBtn();
+
+    }
+
+    private void initLayout() {
+        setLayout(new BorderLayout());
+    }
+
+    private void initBackgrd() {
+        setBackground(Color.cyan);
+    }
+
+    private void initBord() {
+        Border bord = BorderFactory.createLineBorder(Color.black, 3, true);
+        setBorder(bord);
+    }
+
+
+    private void addJBtn() {
 //		initJButton();
-		add(new JButton("CENTER"), BorderLayout.CENTER);
-		add(new JButton("SOUTH"), BorderLayout.SOUTH);
-		add(new JButton("NORTH"), BorderLayout.NORTH);
-		add(new JButton("WEST"), BorderLayout.WEST);
-		add(new JButton("EAST"), BorderLayout.EAST);
-	}
-	
-	private JPanel addCenterJPnl() {
-		centerJPnl = new JPanel();
-		jtable = new JTable();
-		
-		return centerJPnl;
-	}
-	
-	
-	
+        add(new JButton("CENTER"), BorderLayout.CENTER);
+        add(new JButton("SOUTH"), BorderLayout.SOUTH);
+        add(new JButton("NORTH"), BorderLayout.NORTH);
+        add(new JButton("WEST"), BorderLayout.WEST);
+        add(new JButton("EAST"), BorderLayout.EAST);
+    }
+
+    private JPanel addCenterJPnl() {
+        centerJPnl = new JPanel();
+        jtable = new JTable();
+
+        return centerJPnl;
+    }
+
+
 }

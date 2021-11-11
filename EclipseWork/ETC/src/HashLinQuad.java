@@ -11,19 +11,20 @@ public class HashLinQuad {
             table[i] = null;
         }
     }
+
     /*
      * int != Integer
-     * 
+     *
      * primitive data types
      * 		boolean, double, etc
      * Classes || Objects
      * 		Boolean, Double, etc
      */
     public int addLin(Integer obj) {
-        int count = 0, hInd =  hashCode(obj, capacity);
-        
-        if (hInd < 0) { 
-        	hInd+=table.length;
+        int count = 0, hInd = hashCode(obj, capacity);
+
+        if (hInd < 0) {
+            hInd += table.length;
 //        	System.out.println(" hInd < 0");
         }
 //        System.out.println(hInd);
@@ -31,24 +32,24 @@ public class HashLinQuad {
             if (count == capacity || size == capacity) {
                 return -1;
             }
-            
+
             hInd = (hInd + 1) % capacity;
-            System.out.println("\tHIND : "+hInd);
+            System.out.println("\tHIND : " + hInd);
             count++;
         }
-        
+
         table[hInd] = obj;
         return count;
     }
-    
-    
-	private static int hashCode(int value, int maxLength) {
-		int hash = value % maxLength;
-		if (hash < 0) {
-			hash += maxLength;
-		}
-		return hash;
-	}
-    
-    
+
+
+    private static int hashCode(int value, int maxLength) {
+        int hash = value % maxLength;
+        if (hash < 0) {
+            hash += maxLength;
+        }
+        return hash;
+    }
+
+
 }

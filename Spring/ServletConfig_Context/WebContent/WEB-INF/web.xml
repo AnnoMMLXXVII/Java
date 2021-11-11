@@ -1,49 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
-  <display-name>ServletConfig_Context</display-name>
-  <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
-    <welcome-file>index.htm</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
-  </welcome-file-list>
-  
-  <servlet>
-  	<servlet-name> primus</servlet-name>
-  	<servlet-class> com.HakuWei.MyServlet </servlet-class>
-  	<!-- TO USE CONFIG! -->
-  	<!-- If user has 5 servlets, there will be 5 servlet_context objects -->
-  	<init-param>
-  		<param-name>name</param-name>
-  		<param-value> Haku Wei</param-value>
-  	</init-param>
-  	
-  </servlet>
-  
-  <servlet-mapping>
-  	<servlet-name> primus </servlet-name>
-  	<url-pattern>/home</url-pattern>
-  </servlet-mapping>
-  
-  <!-- can initialize the parameter in this code -->
-  	<!-- SYNTAX
-  		context-param
-  			param-name
-  			param-value 
-  	-->
-  	<!-- Context servlet is shared by all other servlets if you have more than one servlet  -->
-  
-  <context-param>
-  	<param-name> Name </param-name>
-  	<param-value> Haku </param-value>
-  </context-param>
-  
-  <context-param>
-  	<param-name> Occupation </param-name>
-  	<param-value> Software Engineer </param-value>
-  </context-param>
-  
-  
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         id="WebApp_ID" version="4.0">
+    <display-name>ServletConfig_Context</display-name>
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.htm</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>default.html</welcome-file>
+        <welcome-file>default.htm</welcome-file>
+        <welcome-file>default.jsp</welcome-file>
+    </welcome-file-list>
+
+    <servlet>
+        <servlet-name>primus</servlet-name>
+        <servlet-class>com.HakuWei.MyServlet</servlet-class>
+        <!-- TO USE CONFIG! -->
+        <!-- If user has 5 servlets, there will be 5 servlet_context objects -->
+        <init-param>
+            <param-name>name</param-name>
+            <param-value>Haku Wei</param-value>
+        </init-param>
+
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>primus</servlet-name>
+        <url-pattern>/home</url-pattern>
+    </servlet-mapping>
+
+    <!-- can initialize the parameter in this code -->
+    <!-- SYNTAX
+        context-param
+            param-name
+            param-value
+    -->
+    <!-- Context servlet is shared by all other servlets if you have more than one servlet  -->
+
+    <context-param>
+        <param-name>Name</param-name>
+        <param-value>Haku</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>Occupation</param-name>
+        <param-value>Software Engineer</param-value>
+    </context-param>
+
+
 </web-app>

@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="inventoryHomeScreenContainer" maxHeight="504.0" maxWidth="949.0" minHeight="480.0" minWidth="1000.0" prefHeight="480.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.inventory.inventorymanagementsystem.HomeScreenController">
+<AnchorPane fx:id="inventoryHomeScreenContainer" maxHeight="504.0" maxWidth="949.0" minHeight="480.0" minWidth="1000.0" prefHeight="480.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeScreenController">
     <children>
         <MenuBar fx:id="inventoryHomeScreenMainMenuBar" prefHeight="32.0" prefWidth="1000.0" AnchorPane.bottomAnchor="448.0">
             <menus>
@@ -21,7 +21,7 @@
                 <Font name="Arial Black" size="30.0" />
             </font>
         </Label>
-        <Button fx:id="inventoryHomeScreenExitBtn" layoutX="810.0" layoutY="41.0" mnemonicParsing="false" onMouseClicked="#homeScreenExitBtn" prefHeight="42.0" prefWidth="151.0" text="Exit" textFill="RED">
+        <Button fx:id="inventoryHomeScreenExitBtn" layoutX="810.0" layoutY="41.0" mnemonicParsing="false" onAction="#homeScreenExitBtn" prefHeight="42.0" prefWidth="151.0" text="Exit" textFill="RED">
          <font>
             <Font name="System Bold" size="19.0" />
          </font></Button>
@@ -36,15 +36,15 @@
                <font>
                   <Font size="15.0" />
                </font></TextField>
-                <Button fx:id="inventoryHomeScreenAddPartBtn" layoutX="18.0" layoutY="313.0" mnemonicParsing="false" onMouseClicked="#homeScreenAddPart" prefWidth="100.0" style="-fx-padding: 10;" text="Add">
+                <Button fx:id="inventoryHomeScreenAddPartBtn" layoutX="18.0" layoutY="313.0" mnemonicParsing="false" onAction="#homeScreenAddPart" prefWidth="100.0" style="-fx-padding: 10;" text="Add">
                <font>
                   <Font size="15.0" />
                </font></Button>
-                <Button fx:id="inventoryHomeScreenModifyPartBtn" layoutX="178.0" layoutY="313.0" mnemonicParsing="false" onMouseClicked="#homeScreenUpdatePart" prefWidth="100.0" style="-fx-padding: 10;" text="Modify">
+                <Button fx:id="inventoryHomeScreenModifyPartBtn" layoutX="178.0" layoutY="313.0" mnemonicParsing="false" onAction="#homeScreenUpdatePart" prefWidth="100.0" style="-fx-padding: 10;" text="Modify">
                <font>
                   <Font size="15.0" />
                </font></Button>
-                <Button fx:id="inventoryHomeScreenDeleteBtn" layoutX="339.0" layoutY="313.0" mnemonicParsing="false" onMouseClicked="#homeScreenRemovePart" prefWidth="100.0" style="-fx-padding: 10;" text="Delete" textFill="RED">
+                <Button fx:id="inventoryHomeScreenDeleteBtn" layoutX="339.0" layoutY="313.0" mnemonicParsing="false" onAction="#homeScreenRemovePart" prefWidth="100.0" style="-fx-padding: 10;" text="Delete" textFill="RED">
                <font>
                   <Font size="15.0" />
                </font></Button>
@@ -69,7 +69,7 @@
                         </TableColumn>
                     </columns>
                 </TableView>
-                <Button fx:id="inventoryHomeScreenPartSearchBtn" layoutX="330.0" layoutY="37.0" mnemonicParsing="false" onMouseClicked="#homeScreenSearchPartBtn" prefHeight="31.0" prefWidth="142.0" text="Search Part">
+                <Button fx:id="inventoryHomeScreenPartSearchBtn" layoutX="330.0" layoutY="37.0" mnemonicParsing="false" onAction="#homeScreenSearchPartBtn" prefHeight="31.0" prefWidth="142.0" text="Search Part">
                <font>
                   <Font size="15.0" />
                </font></Button>
@@ -86,15 +86,15 @@
                <font>
                   <Font size="15.0" />
                </font></TextField>
-                <Button fx:id="inventoryHomeScreenProductDeleteBtn" layoutX="339.0" layoutY="313.0" mnemonicParsing="false" onMouseClicked="#homeScreenRemoveProduct" prefWidth="100.0" style="-fx-padding: 10;" text="Delete" textFill="RED">
+                <Button fx:id="inventoryHomeScreenProductDeleteBtn" layoutX="339.0" layoutY="313.0" mnemonicParsing="false" onAction="#homeScreenRemoveProduct" prefWidth="100.0" style="-fx-padding: 10;" text="Delete" textFill="RED">
                <font>
                   <Font size="15.0" />
                </font></Button>
-                <Button fx:id="inventoryHomeScreenProductModifyBtn" layoutX="178.0" layoutY="313.0" mnemonicParsing="false" onMouseClicked="#homeScreenUpdateProduct" prefHeight="42.0" prefWidth="100.0" style="-fx-padding: 10;" text="Modify">
+                <Button fx:id="inventoryHomeScreenProductModifyBtn" layoutX="178.0" layoutY="313.0" mnemonicParsing="false" onAction="#homeScreenUpdateProduct" prefHeight="42.0" prefWidth="100.0" style="-fx-padding: 10;" text="Modify">
                <font>
                   <Font size="15.0" />
                </font></Button>
-                <Button fx:id="inventoryHomeScreenAddProductBtn" layoutX="18.0" layoutY="313.0" mnemonicParsing="false" onMouseClicked="#homeScreenAddProduct" prefHeight="42.0" prefWidth="100.0" style="-fx-padding: 10;" text="Add">
+                <Button fx:id="inventoryHomeScreenAddProductBtn" layoutX="18.0" layoutY="313.0" mnemonicParsing="false" onAction="#homeScreenAddProduct" prefHeight="42.0" prefWidth="100.0" style="-fx-padding: 10;" text="Add">
                <font>
                   <Font size="15.0" />
                </font></Button>
@@ -117,7 +117,7 @@
                         </TableColumn>
                     </columns>
                 </TableView>
-                <Button fx:id="inventoryHomeScreenProductSearchBtn" layoutX="330.0" layoutY="37.0" mnemonicParsing="false" onMouseClicked="#homeScreenSearchProductBtn" prefHeight="31.0" prefWidth="142.0" text="Search Product">
+                <Button fx:id="inventoryHomeScreenProductSearchBtn" layoutX="330.0" layoutY="37.0" mnemonicParsing="false" onAction="#homeScreenSearchProductBtn" prefHeight="31.0" prefWidth="142.0" text="Search Product">
                <font>
                   <Font size="15.0" />
                </font></Button>

@@ -16,7 +16,7 @@ public class ReversingStrings {
 		}
 		return instance;
 	}
-	
+
 	public void reverseString_V1(String str) {
 			Stack<String> stack = new Stack<>();
 			int n = str.length();
@@ -29,7 +29,7 @@ public class ReversingStrings {
 			}
 			System.out.println(reverseStr);
 	}
-	
+
 	public void reverseString_V2(String str) {
 		Stack<Character> stack = new Stack<>();
 		char[] letters = new char[str.length()];

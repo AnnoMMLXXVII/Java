@@ -1,13 +1,13 @@
 package com.file.handler.reader;
 
 public class ValidateCheckDigits {
-	
+
 	public ValidateCheckDigits() {
 		/*
-		 * 
+		 *
 		 */
 	}
-	
+
 	public static boolean isValidAccount(String number) {
 		int sum = 0;
 		String firstFive = number.substring(0, number.length() - 1);

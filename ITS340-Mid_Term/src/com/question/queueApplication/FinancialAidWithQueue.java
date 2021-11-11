@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class FinancialAidWithQueue {
 
 	private static FinancialAidWithQueue instance;
-	
+
 	public static FinancialAidWithQueue getInstance() {
 		if(instance == null) {
 			synchronized(FinancialAidWithQueue.class) {
@@ -18,7 +18,7 @@ public class FinancialAidWithQueue {
 		}
 		return instance;
 	}
-	
+
 	private FinancialAidWithQueue() {
 		application();
 	}

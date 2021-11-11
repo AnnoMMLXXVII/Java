@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="949.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="949.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddProductController">
     <children>
         <AnchorPane layoutX="13.0" layoutY="13.0" prefHeight="455.0" prefWidth="923.0" style="-fx-border-color: gray; -fx-border-radius: 10;">
             <children>
@@ -52,32 +52,32 @@
                <font>
                   <Font size="15.0" />
                </font></TextField>
-                <TextField fx:id="addProductNameInput" layoutX="156.0" layoutY="123.0" onMouseClicked="#clearTextField" prefHeight="40.0" prefWidth="225.0" promptText="Please Enter Product Name">
+                <TextField fx:id="addProductNameInput" layoutX="156.0" layoutY="123.0" onAction="#clsTxtOnClick" prefHeight="40.0" prefWidth="225.0" promptText="Please Enter Product Name">
                <font>
                   <Font size="15.0" />
                </font></TextField>
-                <TextField fx:id="addProductStockInput" layoutX="156.0" layoutY="173.0" onMouseClicked="#clearTextField" prefHeight="40.0" prefWidth="225.0" promptText="Inventory Count">
+                <TextField fx:id="addProductStockInput" layoutX="156.0" layoutY="173.0" onAction="#clsTxtOnClick" prefHeight="40.0" prefWidth="225.0" promptText="Inventory Count">
                <font>
                   <Font size="15.0" />
                </font></TextField>
-                <TextField fx:id="addProductPriceInput" layoutX="156.0" layoutY="223.0" onMouseClicked="#clearTextField" prefHeight="40.0" prefWidth="225.0" promptText="Please Enter Product Price">
+                <TextField fx:id="addProductPriceInput" layoutX="156.0" layoutY="223.0" onAction="#clsTxtOnClick" prefHeight="40.0" prefWidth="225.0" promptText="Please Enter Product Price">
                <font>
                   <Font size="15.0" />
                </font></TextField>
-                <TextField fx:id="addProductMaxInput" layoutX="155.0" layoutY="272.0" onMouseClicked="#clearTextField" prefHeight="40.0" prefWidth="225.0" promptText="Enter Max Qty">
+                <TextField fx:id="addProductMaxInput" layoutX="155.0" layoutY="272.0" onAction="#clsTxtOnClick" prefHeight="40.0" prefWidth="225.0" promptText="Enter Max Qty">
                <font>
                   <Font size="15.0" />
                </font></TextField>
-                <TextField fx:id="addProductMinInput" layoutX="156.0" layoutY="318.0" onMouseClicked="#clearTextField" prefHeight="40.0" prefWidth="225.0" promptText="Enter Min Qty">
+                <TextField fx:id="addProductMinInput" layoutX="156.0" layoutY="318.0" onAction="#clsTxtOnClick" prefHeight="40.0" prefWidth="225.0" promptText="Enter Min Qty">
                <font>
                   <Font size="15.0" />
                </font></TextField>
-                <Button fx:id="addProductSearchBtn" layoutX="416.0" layoutY="18.0" mnemonicParsing="false" onMouseClicked="#searchForPart" prefHeight="30.0" prefWidth="125.0" text="Search">
+                <Button fx:id="addProductSearchBtn" layoutX="416.0" layoutY="18.0" mnemonicParsing="false" onAction="#searchForPart" prefHeight="30.0" prefWidth="125.0" text="Search">
                     <font>
                         <Font size="15.0" />
                     </font>
                 </Button>
-                <TextField fx:id="addProductSearchInput" layoutX="558.0" layoutY="18.0" onMouseClicked="#clearField" prefHeight="31.0" prefWidth="330.0" promptText="Search by Part Id or Part Name">
+                <TextField fx:id="addProductSearchInput" layoutX="558.0" layoutY="18.0" onAction="#clearField" prefHeight="31.0" prefWidth="330.0" promptText="Search by Part Id or Part Name">
                <font>
                   <Font size="15.0" />
                </font></TextField>
@@ -100,17 +100,17 @@
                         </TableColumn>
                     </columns>
                 </TableView>
-                <Button fx:id="addProductAddBtn" layoutX="416.0" layoutY="220.0" mnemonicParsing="false" onMouseClicked="#addPart" prefHeight="30.0" prefWidth="125.0" text="Add">
+                <Button fx:id="addProductAddBtn" layoutX="416.0" layoutY="220.0" mnemonicParsing="false" onAction="#addPart" prefHeight="30.0" prefWidth="125.0" text="Add">
                     <font>
                         <Font size="15.0" />
                     </font>
                 </Button>
-                <Button fx:id="addProductDeleteBtn" layoutX="571.0" layoutY="415.0" mnemonicParsing="false" onMouseClicked="#deletePart" prefHeight="30.0" prefWidth="125.0" text="Delete" textFill="RED">
+                <Button fx:id="addProductDeleteBtn" layoutX="571.0" layoutY="415.0" mnemonicParsing="false" onAction="#deletePart" prefHeight="30.0" prefWidth="125.0" text="Delete" textFill="RED">
                     <font>
                         <Font size="15.0" />
                     </font>
                 </Button>
-                <Button fx:id="addProductCancelBtn" layoutX="14.0" layoutY="416.0" mnemonicParsing="false" onMouseClicked="#cancelAddProduct" prefHeight="30.0" prefWidth="125.0" text="Cancel" textFill="RED">
+                <Button fx:id="addProductCancelBtn" layoutX="14.0" layoutY="416.0" mnemonicParsing="false" onAction="#cancelAddProduct" prefHeight="30.0" prefWidth="125.0" text="Cancel" textFill="RED">
                <font>
                   <Font size="15.0" />
                </font></Button>
@@ -133,7 +133,7 @@
                         </TableColumn>
                     </columns>
                 </TableView>
-                <Button fx:id="addProductSaveBtn" layoutX="416.0" layoutY="415.0" mnemonicParsing="false" onMouseClicked="#saveAddProduct" prefHeight="30.0" prefWidth="125.0" text="Add">
+                <Button fx:id="addProductSaveBtn" layoutX="416.0" layoutY="415.0" mnemonicParsing="false" onAction="#saveAddProduct" prefHeight="30.0" prefWidth="125.0" text="Add">
                     <font>
                         <Font size="15.0" />
                     </font>

@@ -1,50 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Post and Get</title>
+    <meta charset="UTF-8">
+    <title>Post and Get</title>
 </head>
 <body>
 
-	<p>
-		Conventional usage of GET / POST<br>
-		Client sSends data To Server || Server fetching data from Client: POST <br>
-		Client Fetches Data from Server || Server sends data to Client : GET <rb>
-		By default, uses GET request
-		
-		<br>
-		simply in form tag add attribute method = 'post' || 'get'
-	</p>
-	
+<p>
+    Conventional usage of GET / POST<br>
+    Client sSends data To Server || Server fetching data from Client: POST <br>
+    Client Fetches Data from Server || Server sends data to Client : GET
+    <rb>
+        By default, uses GET request
 
-	<!-- IF POST ==> EX: http://localhost:8080/GetPostMethods/nameYear -->
-	<form action = 'nameYear' method = 'get'>
-	
-	<table BORDER=2  >
-		<tbody>
-			<tr>
-				<td>
-					Please enter your Name
-				</td>
-				<td>
-					<input type = 'text' name = 'name'><br>
-				</td>
-			</tr>
-			
-			<tr>
-				<td>
-				Please enter a Year!
-				</td>
-				<td>
-					<input type = 'text' name = 'year'><br>
-				</td>
-			</tr>
-		</tbody>
-	</table>	
-	<input type = 'Submit'>
-	</form>
-	
-		
+        <br>
+        simply in form tag add attribute method = 'post' || 'get'
+</p>
+
+
+<!-- IF POST ==> EX: http://localhost:8080/GetPostMethods/nameYear -->
+<form action='nameYear' method='get'>
+
+    <table BORDER=2>
+        <tbody>
+        <tr>
+            <td>
+                Please enter your Name
+            </td>
+            <td>
+                <input type='text' name='name'><br>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Please enter a Year!
+            </td>
+            <td>
+                <input type='text' name='year'><br>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <input type='Submit'>
+</form>
+
 
 </body>
 </html>
