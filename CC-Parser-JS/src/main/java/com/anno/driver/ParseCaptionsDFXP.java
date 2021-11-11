@@ -1,12 +1,16 @@
 package main.java.com.anno.driver;
 
+import java.awt.Toolkit;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 
 import main.java.com.anno.shared.CC_Constant;
@@ -29,23 +33,31 @@ public class ParseCaptionsDFXP {
 	private static List<SlideJSObject> slideJSObject = new ArrayList<>();
 	private static List<String> disposedTags = new ArrayList<>();
 	private static List<String> allLines = new ArrayList<>();
+	private static Map<String, String> images = new HashMap<>();
+	private static String jsClippyLines = "";
 	private static SlidePrefixObject prefixObject;
 	private static SlideBodyObject bodyObject;
 	private static SlideSuffixObject suffixObject;
 
 	public static void main(String... args) {
-		String path = "js-slides-hypertension";
+		images = WebScraper.parsingImagesFromSite(CC_Constant.IMAGE_REPOSITORY);
+//		images.forEach((e, v) -> {
+//			if (e.contains("kidneyFailure")) {
+//				System.out.printf("%s -> %s\n", e, v);
+//			}
+//		});
+		String path = "C:\\Users\\Haku Wei\\Documents\\git\\nursing-health-plan\\VOICE_THREAD_CC\\WEEK10\\Pancreatitis\\js-slides-Pancreatitis";
 //		String imageName = args[1];
 		initialize();
-		run(path, "FILLER");
+		run(path, "pancreatitis");
+		copyToClipboard();
 	}
 
 	private static void run(String dir, String title) {
 		validateArgs(title);
 		SlideJSObject slideObject;
 		File directory = new File(dir);
-//		imageCountBound = directory.list().length+1;
-		imageCountBound = 0;
+		imageCountBound = directory.list().length;
 		setImageTitle(title);
 		List<File> files = Arrays.asList(directory.listFiles());
 		for (File f : files) {
@@ -93,7 +105,7 @@ public class ParseCaptionsDFXP {
 //				System.out.println(line);
 			}
 		} catch (FileNotFoundException fnf) {
-			fnf.printStackTrace();
+			System.err.println("COULD NOT FIND FILE! " + file.getName());
 		}
 		removeTags(temp);
 		printLines(temp);
@@ -157,13 +169,14 @@ public class ParseCaptionsDFXP {
 	}
 
 	private static String replaceDivContentEditableTag(String s) {
-		return s.replace(CC_Constant.DIV_EDITABLE_TAG, "-us\" contenteditable=\"true\">'+");
-//		return s.replace(CC_Constant.DIV_EDITABLE_TAG, "-us\">'+");
+		return s.replace(CC_Constant.DIV_EDITABLE_TAG, "-us\">'+");
 	}
 
 	private static void printLines(List<SlideLine> lines) {
 		for (SlideLine s : lines) {
 			System.out.println(s);
+			jsClippyLines = jsClippyLines + s + "\n";
+
 		}
 	}
 
@@ -171,13 +184,14 @@ public class ParseCaptionsDFXP {
 		List<SlideLine> prefixLines = new ArrayList<>();
 		prefixLines.add(new SlideLine(CC_Constant.PREFIX_SLIDE_JQUERY));
 		prefixLines.add(new SlideLine(CC_Constant.PREFIX_ARTICLE_TAG));
-		prefixLines.add(new SlideLine("'<br>'+"));
-//		prefixLines.add(new SlideLine(CC_Constant.IMAGE_TAG));
+//		prefixLines.add(new SlideLine("'<br>'+"));
+		prefixLines.add(new SlideLine(CC_Constant.IMAGE_TAG));
 //		prefixLines.add(new SlideLine(CC_Constant.IMAGE_EXTRA_TAG));
 
-		for (SlideLine sl : prefixLines) {
-			System.out.println(sl.toString());
-		}
+//		for (SlideLine sl : prefixLines) {
+//			System.out.println(sl.toString());
+//		}
+		printLines(prefixLines);
 		return new SlidePrefixObject(prefixLines);
 	}
 
@@ -228,15 +242,17 @@ public class ParseCaptionsDFXP {
 	private static void initializeStaticValues() {
 		imageOffSet = getImageOffSet();
 		slideOffSet = getSlideOffSet();
-//		String relativeImagePath= "./pictures/" + getImageTitle() + "_"
-//				+ calcWithOffset(imageCount, imageOffSet) + "_" + imageCountBound +".png";
-//		File imageFile = new File(relativeImagePath);
-//		String rootPath = imageFile.getAbsolutePath()
-		CC_Constant.PREFIX_SLIDE_JQUERY = "$('#slide" + calcWithOffset(slideNumber, slideOffSet) + "').append(";
+		String relativeImagePath = getImageTitle() + "-" + calcWithOffset(imageCount, imageOffSet) + "-"
+				+ imageCountBound + ".png";
+		String src = images.get(relativeImagePath);
+		File imageFile = new File(relativeImagePath);
+		String rootPath = imageFile.getAbsolutePath();
+		CC_Constant.PREFIX_SLIDE_JQUERY = "$(\'#slide" + calcWithOffset(slideNumber, slideOffSet) + "\').append(";
 		CC_Constant.PREFIX_ARTICLE_TAG = "'<article><div>'+";
-		CC_Constant.IMAGE_TAG = "'<img src=\"./pictures/" + getImageTitle() + "-"
-				+ calcWithOffset(imageCount, imageOffSet) + "-" + imageCountBound + "'+";
-		CC_Constant.IMAGE_EXTRA_TAG = "'.png\" alt=\"NO_IMAGE\" srcset=\"\" height = \"450\" width=\"550\">'+";
+		CC_Constant.IMAGE_TAG = "'<p>'+\n" + "'<img src=\"" + src + "\" alt=\"" + relativeImagePath
+				+ "\" width = \"100%\">'+\n"
+//				+ "'<canvas id =canvas" + imageCount + " height=\"163.08\" height=\"148.4\"></canvas>'+\n" 
+				+ "'</p>'+\n";
 	}
 
 	private static String calcWithOffset(int count, int offset) {
@@ -284,4 +300,9 @@ public class ParseCaptionsDFXP {
 		ParseCaptionsDFXP.slideOffSet = slideOffSet;
 	}
 
+	private static void copyToClipboard() {
+		StringSelection stringSelection = new StringSelection(jsClippyLines);
+		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+		clipboard.setContents(stringSelection, null);
+	}
 }
