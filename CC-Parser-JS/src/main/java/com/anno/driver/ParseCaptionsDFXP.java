@@ -46,10 +46,10 @@ public class ParseCaptionsDFXP {
 //				System.out.printf("%s -> %s\n", e, v);
 //			}
 //		});
-		String path = "C:\\Users\\Haku Wei\\Documents\\git\\nursing-health-plan\\VOICE_THREAD_CC\\WEEK10\\Pancreatitis\\js-slides-Pancreatitis";
+		String path = "C:\\Users\\Haku Wei\\Documents\\git\\nursing-health-plan\\VOICE_THREAD_CC\\WEEK14\\ClientWithHIVAndAIDS\\js-slides-ClientWithHIVAndAIDS";
 //		String imageName = args[1];
 		initialize();
-		run(path, "pancreatitis");
+		run(path, "clientHIVandAIDS");
 		copyToClipboard();
 	}
 
