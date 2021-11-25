@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="516.0" prefWidth="1200.0" style="-fx-background-color: #57A0D3;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AppointmentController">
+    <effect>
+        <SepiaTone level="0.15" />
+    </effect>
+    <children>
+        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="1200.0" text="Appointments" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <TableView fx:id="appointmentsTableView" layoutY="75.0" prefHeight="240.0" prefWidth="1200.0">
+            <columns>
+                <TableColumn fx:id="apptIDCol" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="120.0" text="Appointment_ID" />
+                <TableColumn fx:id="titleCol" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="120.0" text="Title" />
+                <TableColumn fx:id="descriptionCol" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="120.0" text="Description" />
+                <TableColumn fx:id="locationCol" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="120.0" text="Location" />
+                <TableColumn fx:id="contactCol" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="120.80010986328125" text="Contact" />
+                <TableColumn fx:id="typeCol" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="119.199951171875" text="Type" />
+                <TableColumn fx:id="startCol" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="120.0" text="Start" />
+                <TableColumn fx:id="endCol" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="120.0" text="End" />
+                <TableColumn fx:id="customerIDCol" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="120.0" text="Customer_ID" />
+                <TableColumn fx:id="userIDCol" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="120.0" text="User_ID" />
+            </columns>
+        </TableView>
+        <Button fx:id="editBtn" layoutX="667.0" layoutY="451.0" mnemonicParsing="false" onAction="#onEditBtn" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: palegreen;" text="Edit Selected" />
+        <Button fx:id="deleteBtn" layoutX="506.0" layoutY="451.0" mnemonicParsing="false" onAction="#onDeleteBtn" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: lightcoral;" text="Delete Selected" />
+        <Button fx:id="addBtn" layoutX="839.0" layoutY="451.0" mnemonicParsing="false" onAction="#onAddBtn" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: aqua;" text="Add new" />
+        <Button fx:id="cancelBtn" layoutX="1007.0" layoutY="451.0" mnemonicParsing="false" onAction="#onCancelBtn" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #EBECF0;" text="Cancel" />
+        <TextField fx:id="titleOfAppt" layoutX="174.0" layoutY="355.0" prefHeight="20.0" prefWidth="150.0" style="-fx-background-color: #EBECF0;" />
+        <TextField fx:id="description" layoutX="334.0" layoutY="355.0" prefHeight="20.0" prefWidth="150.0" style="-fx-background-color: #EBECF0;" />
+        <TextField fx:id="location" layoutX="501.0" layoutY="355.0" prefHeight="20.0" prefWidth="150.0" style="-fx-background-color: #EBECF0;" />
+        <TextField fx:id="contact" layoutX="662.0" layoutY="355.0" prefHeight="20.0" prefWidth="150.0" style="-fx-background-color: #EBECF0;" />
+        <TextField fx:id="url" layoutX="834.0" layoutY="355.0" prefHeight="20.0" prefWidth="150.0" style="-fx-background-color: #EBECF0;" />
+        <Label layoutX="9.0" layoutY="325.0" prefHeight="20.0" prefWidth="150.0" text="Customer">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="174.0" layoutY="325.0" prefHeight="20.0" prefWidth="150.0" text="Title of Appointment">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="334.0" layoutY="325.0" prefHeight="20.0" prefWidth="150.0" text="Description">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="501.0" layoutY="325.0" prefHeight="20.0" prefWidth="150.0" text="Location">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="662.0" layoutY="325.0" prefHeight="20.0" prefWidth="150.0" text="Conctact">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="339.0" layoutY="381.0" prefHeight="20.0" prefWidth="150.0" text="Type of Appointment">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="834.0" layoutY="325.0" prefHeight="20.0" prefWidth="150.0" text="URL">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="customerSelect" layoutX="9.0" layoutY="355.0" prefHeight="20.0" prefWidth="150.0" promptText="Choose Customer" style="-fx-background-color: #EBECF0;" />
+        <Label layoutX="1002.0" layoutY="325.0" prefHeight="20.0" prefWidth="150.0" text="Date">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="typeSelect" layoutX="339.0" layoutY="410.0" prefHeight="20.0" prefWidth="150.0" promptText="Select Appt. Type" style="-fx-background-color: #EBECF0;" />
+        <DatePicker fx:id="dateSelect" layoutX="1002.0" layoutY="355.0" prefHeight="20.0" prefWidth="150.0" promptText="Select date" style="-fx-background-color: #EBECF0;" />
+        <Label layoutX="10.0" layoutY="381.0" prefHeight="20.0" prefWidth="150.0" text="Start Time">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="startSelect" layoutX="10.0" layoutY="410.0" prefHeight="20.0" prefWidth="150.0" promptText="Choose Start Time" style="-fx-background-color: #EBECF0;" />
+        <Label layoutX="175.0" layoutY="381.0" prefHeight="20.0" prefWidth="150.0" text="End Time">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="endSelect" layoutX="175.0" layoutY="410.0" prefHeight="20.0" prefWidth="150.0" promptText="Choose End Time" style="-fx-background-color: #EBECF0;" />
+        <TextField fx:id="apptID" editable="false" layoutX="506.0" layoutY="410.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-color: #EBECF0;" />
+        <Label layoutX="506.0" layoutY="381.0" prefHeight="20.0" prefWidth="150.0" text="Appointment_ID">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <BorderPane layoutY="315.0" opacity="0.5" prefHeight="10.0" prefWidth="1200.0" style="-fx-background-color: #000000;" />
+        <HBox alignment="CENTER" layoutY="50.0" prefHeight="25.0" prefWidth="1200.0">
+            <children>
+                <RadioButton fx:id="weekRadioBtn" mnemonicParsing="false" onAction="#onWeekRadioBtn" text="This &amp; Next week">
+                    <padding>
+                        <Insets right="30.0" />
+                    </padding>
+                    <toggleGroup>
+                        <ToggleGroup fx:id="group" />
+                    </toggleGroup>
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </RadioButton>
+                <RadioButton fx:id="monthRadioBtn" mnemonicParsing="false" onAction="#onMonthRadioBtn" text="Next month" toggleGroup="$group">
+                    <padding>
+                        <Insets left="30.0" right="30.0" />
+                    </padding>
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </RadioButton>
+                <RadioButton fx:id="allRadioBtn" mnemonicParsing="false" onAction="#onAllRadioBtn" text="Show all" toggleGroup="$group">
+                    <HBox.margin>
+                        <Insets left="30.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </RadioButton>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>

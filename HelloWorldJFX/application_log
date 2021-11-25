@@ -1,0 +1,744 @@
+Nov 25, 2021 5:54:45 AM logs.Logs logINFO
+INFO: 2021-11-25 05:54:45 
+--------Program initialized---------
+
+Nov 25, 2021 5:54:49 AM logs.Logs logINFO
+INFO: 2021-11-25 05:54:49 Database Connection was Successful
+Nov 25, 2021 5:54:49 AM logs.Logs logINFO
+INFO: 2021-11-25 05:54:49 Prepared Statement created successfully
+Nov 25, 2021 5:54:49 AM logs.Logs logINFO
+INFO: 2021-11-25 05:54:49 Retrieving Prepared Statement
+Nov 25, 2021 5:54:49 AM logs.Logs logWARN
+WARNING: 2021-11-25 05:54:49 Failed to Login
+Nov 25, 2021 5:54:52 AM logs.Logs logINFO
+INFO: 2021-11-25 05:54:52 Closed Database Connection
+Nov 25, 2021 5:54:57 AM logs.Logs logINFO
+INFO: 2021-11-25 05:54:57 Database Connection was Successful
+Nov 25, 2021 5:54:57 AM logs.Logs logINFO
+INFO: 2021-11-25 05:54:57 Prepared Statement created successfully
+Nov 25, 2021 5:54:57 AM logs.Logs logINFO
+INFO: 2021-11-25 05:54:57 Retrieving Prepared Statement
+Nov 25, 2021 5:54:57 AM logs.Logs logINFO
+INFO: 2021-11-25 05:54:57 Closing window Appointment Scheduler V.1
+Nov 25, 2021 5:54:57 AM logs.Logs logINFO
+INFO: 2021-11-25 05:54:57 Closed Database Connection
+Nov 25, 2021 5:54:57 AM logs.Logs logINFO
+INFO: 2021-11-25 05:54:57 Navigating to Home Screen Directory
+Nov 25, 2021 5:54:59 AM logs.Logs logINFO
+INFO: 2021-11-25 05:54:59 Closing window Home Screen Directory
+Nov 25, 2021 5:54:59 AM logs.Logs logINFO
+INFO: 2021-11-25 05:54:59 Navigating to Login Screen
+Nov 25, 2021 5:55:04 AM logs.Logs logINFO
+INFO: 2021-11-25 05:55:04 Database Connection was Successful
+Nov 25, 2021 5:55:04 AM logs.Logs logINFO
+INFO: 2021-11-25 05:55:04 Prepared Statement created successfully
+Nov 25, 2021 5:55:04 AM logs.Logs logINFO
+INFO: 2021-11-25 05:55:04 Retrieving Prepared Statement
+Nov 25, 2021 5:55:04 AM logs.Logs logWARN
+WARNING: 2021-11-25 05:55:04 Failed to Login
+Nov 25, 2021 5:55:06 AM logs.Logs logINFO
+INFO: 2021-11-25 05:55:06 Closed Database Connection
+Nov 25, 2021 5:55:09 AM logs.Logs logINFO
+INFO: 2021-11-25 05:55:09 Database Connection was Successful
+Nov 25, 2021 5:55:09 AM logs.Logs logINFO
+INFO: 2021-11-25 05:55:09 Prepared Statement created successfully
+Nov 25, 2021 5:55:09 AM logs.Logs logINFO
+INFO: 2021-11-25 05:55:09 Retrieving Prepared Statement
+Nov 25, 2021 5:55:09 AM logs.Logs logINFO
+INFO: 2021-11-25 05:55:09 Closing window Login Screen
+Nov 25, 2021 5:55:09 AM logs.Logs logINFO
+INFO: 2021-11-25 05:55:09 Closed Database Connection
+Nov 25, 2021 5:55:09 AM logs.Logs logINFO
+INFO: 2021-11-25 05:55:09 Navigating to Home Screen Directory
+Nov 25, 2021 5:55:10 AM logs.Logs logINFO
+INFO: 2021-11-25 05:55:10 Closing window Home Screen Directory
+Nov 25, 2021 5:55:10 AM logs.Logs logINFO
+INFO: 2021-11-25 05:55:10 Navigating to Customer Screen
+Nov 25, 2021 5:55:48 AM logs.Logs logINFO
+INFO: 2021-11-25 05:55:48 
+--------Program initialized---------
+
+Nov 25, 2021 5:56:30 AM logs.Logs logINFO
+INFO: 2021-11-25 05:56:30 Database Connection was Successful
+Nov 25, 2021 5:56:30 AM logs.Logs logINFO
+INFO: 2021-11-25 05:56:30 Prepared Statement created successfully
+Nov 25, 2021 5:56:30 AM logs.Logs logINFO
+INFO: 2021-11-25 05:56:30 Retrieving Prepared Statement
+Nov 25, 2021 5:56:30 AM logs.Logs logINFO
+INFO: 2021-11-25 05:56:30 Closing window Appointment Scheduler V.1
+Nov 25, 2021 5:56:30 AM logs.Logs logINFO
+INFO: 2021-11-25 05:56:30 Closed Database Connection
+Nov 25, 2021 5:56:30 AM logs.Logs logINFO
+INFO: 2021-11-25 05:56:30 Navigating to Home Screen Directory
+Nov 25, 2021 5:56:32 AM logs.Logs logINFO
+INFO: 2021-11-25 05:56:32 Closing window Home Screen Directory
+Nov 25, 2021 5:56:32 AM logs.Logs logINFO
+INFO: 2021-11-25 05:56:32 Navigating to Login Screen
+nov. 25, 2021 5:58:23 AM logs.Logs logINFO
+INFO: 2021-11-25 05:58:23 
+--------Program initialized---------
+
+nov. 25, 2021 5:58:23 AM logs.Logs logINFO
+INFO: 2021-11-25 05:58:23 Updating Login To French!
+nov. 25, 2021 5:58:27 AM logs.Logs logINFO
+INFO: 2021-11-25 05:58:27 Database Connection was Successful
+nov. 25, 2021 5:58:27 AM logs.Logs logINFO
+INFO: 2021-11-25 05:58:27 Prepared Statement created successfully
+nov. 25, 2021 5:58:27 AM logs.Logs logINFO
+INFO: 2021-11-25 05:58:27 Retrieving Prepared Statement
+nov. 25, 2021 5:58:27 AM logs.Logs logINFO
+INFO: 2021-11-25 05:58:27 Closing window Appointment Scheduler V.1
+nov. 25, 2021 5:58:27 AM logs.Logs logINFO
+INFO: 2021-11-25 05:58:27 Closed Database Connection
+nov. 25, 2021 5:58:27 AM logs.Logs logINFO
+INFO: 2021-11-25 05:58:27 Navigating to Home Screen Directory
+nov. 25, 2021 5:58:30 AM logs.Logs logINFO
+INFO: 2021-11-25 05:58:30 Closing window Home Screen Directory
+nov. 25, 2021 5:58:30 AM logs.Logs logINFO
+INFO: 2021-11-25 05:58:30 Navigating to Customer Screen
+nov. 25, 2021 5:58:47 AM logs.Logs logINFO
+INFO: 2021-11-25 05:58:47 Updating Login To French!
+nov. 25, 2021 6:01:08 AM logs.Logs logINFO
+INFO: 2021-11-25 06:01:08 
+--------Program initialized---------
+
+nov. 25, 2021 6:01:09 AM logs.Logs logINFO
+INFO: 2021-11-25 06:01:09 Updating Login To French!
+nov. 25, 2021 6:02:53 AM logs.Logs logINFO
+INFO: 2021-11-25 06:02:53 
+--------Program initialized---------
+
+nov. 25, 2021 6:02:54 AM logs.Logs logINFO
+INFO: 2021-11-25 06:02:54 Updating Login To French!
+nov. 25, 2021 6:03:02 AM logs.Logs logINFO
+INFO: 2021-11-25 06:03:02 Database Connection was Successful
+nov. 25, 2021 6:03:02 AM logs.Logs logINFO
+INFO: 2021-11-25 06:03:02 Prepared Statement created successfully
+nov. 25, 2021 6:03:02 AM logs.Logs logINFO
+INFO: 2021-11-25 06:03:02 Retrieving Prepared Statement
+nov. 25, 2021 6:03:02 AM logs.Logs logWARN
+WARNING: 2021-11-25 06:03:02 Failed to Login
+nov. 25, 2021 6:10:50 AM logs.Logs logINFO
+INFO: 2021-11-25 06:10:50 Closed Database Connection
+nov. 25, 2021 6:12:27 AM logs.Logs logINFO
+INFO: 2021-11-25 06:12:27 
+--------Program initialized---------
+
+nov. 25, 2021 6:12:27 AM logs.Logs logINFO
+INFO: 2021-11-25 06:12:27 Updating Login To French!
+Nov 25, 2021 6:12:48 AM logs.Logs logINFO
+INFO: 2021-11-25 06:12:48 
+--------Program initialized---------
+
+Nov 25, 2021 6:17:16 AM logs.Logs logINFO
+INFO: 2021-11-25 06:17:16 
+--------Program initialized---------
+
+Nov 25, 2021 6:21:07 AM logs.Logs logINFO
+INFO: 2021-11-25 06:21:07 
+--------Program initialized---------
+
+Nov 25, 2021 6:21:07 AM logs.Logs logINFO
+INFO: 2021-11-25 06:21:07 Updating Login To French!
+Nov 25, 2021 6:22:54 AM logs.Logs logINFO
+INFO: 2021-11-25 06:22:54 
+--------Program initialized---------
+
+Nov 25, 2021 6:23:18 AM logs.Logs logINFO
+INFO: 2021-11-25 06:23:18 Database Connection was Successful
+Nov 25, 2021 6:23:18 AM logs.Logs logINFO
+INFO: 2021-11-25 06:23:18 Prepared Statement created successfully
+Nov 25, 2021 6:23:18 AM logs.Logs logINFO
+INFO: 2021-11-25 06:23:18 Retrieving Prepared Statement
+Nov 25, 2021 6:23:18 AM logs.Logs logINFO
+INFO: 2021-11-25 06:23:18 Closing window Appointment Scheduler V.1
+Nov 25, 2021 6:23:18 AM logs.Logs logINFO
+INFO: 2021-11-25 06:23:18 Closed Database Connection
+Nov 25, 2021 6:23:18 AM logs.Logs logINFO
+INFO: 2021-11-25 06:23:18 Navigating to Home Screen Directory
+Nov 25, 2021 6:23:19 AM logs.Logs logINFO
+INFO: 2021-11-25 06:23:19 Closing window Home Screen Directory
+Nov 25, 2021 6:23:19 AM logs.Logs logINFO
+INFO: 2021-11-25 06:23:19 Navigating to Login Screen
+Nov 25, 2021 6:26:27 AM logs.Logs logINFO
+INFO: 2021-11-25 06:26:27 
+--------Program initialized---------
+
+Nov 25, 2021 6:26:27 AM logs.Logs logINFO
+INFO: 2021-11-25 06:26:27 Error Alert initialized
+Nov 25, 2021 6:26:27 AM logs.Logs logINFO
+INFO: 2021-11-25 06:26:27 Confirmation Alert initialized
+Nov 25, 2021 6:29:50 AM logs.Logs logINFO
+INFO: 2021-11-25 06:29:50 
+--------Program initialized---------
+
+Nov 25, 2021 6:29:50 AM logs.Logs logINFO
+INFO: 2021-11-25 06:29:50 Error Alert initialized
+Nov 25, 2021 6:29:50 AM logs.Logs logINFO
+INFO: 2021-11-25 06:29:50 Confirmation Alert initialized
+Nov 25, 2021 6:31:41 AM logs.Logs logINFO
+INFO: 2021-11-25 06:31:41 
+--------Program initialized---------
+
+Nov 25, 2021 6:31:41 AM logs.Logs logINFO
+INFO: 2021-11-25 06:31:41 Error Alert initialized
+Nov 25, 2021 6:31:41 AM logs.Logs logINFO
+INFO: 2021-11-25 06:31:41 Confirmation Alert initialized
+Nov 25, 2021 6:31:44 AM logs.Logs logINFO
+INFO: 2021-11-25 06:31:44 Closing window Appointment Scheduler V.1
+Nov 25, 2021 6:33:57 AM logs.Logs logINFO
+INFO: 2021-11-25 06:33:57 
+--------Program initialized---------
+
+Nov 25, 2021 6:33:58 AM logs.Logs logINFO
+INFO: 2021-11-25 06:33:58 Error Alert initialized
+Nov 25, 2021 6:33:58 AM logs.Logs logINFO
+INFO: 2021-11-25 06:33:58 Confirmation Alert initialized
+Nov 25, 2021 6:34:00 AM logs.Logs logINFO
+INFO: 2021-11-25 06:34:00 Closing window Appointment Scheduler V.1
+Nov 25, 2021 6:34:00 AM logs.Logs logINFO
+INFO: 2021-11-25 06:34:00 Program Terminated
+Nov 25, 2021 6:34:44 AM logs.Logs logINFO
+INFO: 2021-11-25 06:34:44 
+--------Program initialized---------
+
+Nov 25, 2021 6:34:44 AM logs.Logs logINFO
+INFO: 2021-11-25 06:34:44 Error Alert initialized
+Nov 25, 2021 6:34:44 AM logs.Logs logINFO
+INFO: 2021-11-25 06:34:44 Confirmation Alert initialized
+Nov 25, 2021 6:34:48 AM logs.Logs logINFO
+INFO: 2021-11-25 06:34:48 Database Connection was Successful
+Nov 25, 2021 6:34:48 AM logs.Logs logINFO
+INFO: 2021-11-25 06:34:48 Prepared Statement created successfully
+Nov 25, 2021 6:34:48 AM logs.Logs logINFO
+INFO: 2021-11-25 06:34:48 Retrieving Prepared Statement
+Nov 25, 2021 6:34:48 AM logs.Logs logINFO
+INFO: 2021-11-25 06:34:48 Closing window Appointment Scheduler V.1
+Nov 25, 2021 6:34:48 AM logs.Logs logINFO
+INFO: 2021-11-25 06:34:48 Closed Database Connection
+Nov 25, 2021 6:34:48 AM logs.Logs logINFO
+INFO: 2021-11-25 06:34:48 Navigating to Home Screen Directory
+Nov 25, 2021 6:34:50 AM logs.Logs logINFO
+INFO: 2021-11-25 06:34:50 Closing window Home Screen Directory
+Nov 25, 2021 6:34:50 AM logs.Logs logINFO
+INFO: 2021-11-25 06:34:50 Closed Database Connection
+Nov 25, 2021 6:34:50 AM logs.Logs logINFO
+INFO: 2021-11-25 06:34:50 Navigating to Customer Screen
+Nov 25, 2021 6:34:52 AM logs.Logs logINFO
+INFO: 2021-11-25 06:34:52 Error Alert initialized
+Nov 25, 2021 6:34:52 AM logs.Logs logINFO
+INFO: 2021-11-25 06:34:52 Confirmation Alert initialized
+Nov 25, 2021 6:35:13 AM logs.Logs logINFO
+INFO: 2021-11-25 06:35:13 Database Connection was Successful
+Nov 25, 2021 6:35:13 AM logs.Logs logINFO
+INFO: 2021-11-25 06:35:13 Prepared Statement created successfully
+Nov 25, 2021 6:35:13 AM logs.Logs logINFO
+INFO: 2021-11-25 06:35:13 Retrieving Prepared Statement
+Nov 25, 2021 6:35:13 AM logs.Logs logINFO
+INFO: 2021-11-25 06:35:13 Closing window Customer Screen
+Nov 25, 2021 6:35:14 AM logs.Logs logINFO
+INFO: 2021-11-25 06:35:14 Closed Database Connection
+Nov 25, 2021 6:35:14 AM logs.Logs logINFO
+INFO: 2021-11-25 06:35:14 Navigating to Home Screen Directory
+Nov 25, 2021 6:35:15 AM logs.Logs logINFO
+INFO: 2021-11-25 06:35:15 Closed Database Connection
+Nov 25, 2021 6:35:20 AM logs.Logs logINFO
+INFO: 2021-11-25 06:35:20 
+--------Program initialized---------
+
+Nov 25, 2021 6:35:20 AM logs.Logs logINFO
+INFO: 2021-11-25 06:35:20 Error Alert initialized
+Nov 25, 2021 6:35:20 AM logs.Logs logINFO
+INFO: 2021-11-25 06:35:20 Confirmation Alert initialized
+Nov 25, 2021 6:35:24 AM logs.Logs logINFO
+INFO: 2021-11-25 06:35:24 Database Connection was Successful
+Nov 25, 2021 6:35:24 AM logs.Logs logINFO
+INFO: 2021-11-25 06:35:24 Prepared Statement created successfully
+Nov 25, 2021 6:35:24 AM logs.Logs logINFO
+INFO: 2021-11-25 06:35:24 Retrieving Prepared Statement
+Nov 25, 2021 6:35:24 AM logs.Logs logINFO
+INFO: 2021-11-25 06:35:24 Closing window Appointment Scheduler V.1
+Nov 25, 2021 6:35:24 AM logs.Logs logINFO
+INFO: 2021-11-25 06:35:24 Closed Database Connection
+Nov 25, 2021 6:35:24 AM logs.Logs logINFO
+INFO: 2021-11-25 06:35:24 Navigating to Home Screen Directory
+Nov 25, 2021 6:35:27 AM logs.Logs logINFO
+INFO: 2021-11-25 06:35:27 Closing window Home Screen Directory
+Nov 25, 2021 6:35:27 AM logs.Logs logINFO
+INFO: 2021-11-25 06:35:27 Closed Database Connection
+Nov 25, 2021 6:35:27 AM logs.Logs logINFO
+INFO: 2021-11-25 06:35:27 Navigating to Customer Screen
+Nov 25, 2021 6:35:35 AM logs.Logs logINFO
+INFO: 2021-11-25 06:35:35 Closing window Customer Screen
+Nov 25, 2021 6:35:35 AM logs.Logs logINFO
+INFO: 2021-11-25 06:35:35 Closed Database Connection
+Nov 25, 2021 6:35:35 AM logs.Logs logINFO
+INFO: 2021-11-25 06:35:35 Navigating to Appointments Screen
+Nov 25, 2021 6:35:35 AM logs.Logs logERROR
+SEVERE: 2021-11-25 06:35:35 
+/C:/Users/Haku%20Wei/Desktop/trash/HelloWorldJFX/out/production/JavaFxApplication/view/Appointment.fxml
+
+Nov 25, 2021 6:35:35 AM logs.Logs logINFO
+INFO: 2021-11-25 06:35:35 Closed Database Connection
+Nov 25, 2021 6:37:32 AM logs.Logs logINFO
+INFO: 2021-11-25 06:37:32 
+--------Program initialized---------
+
+Nov 25, 2021 6:37:33 AM logs.Logs logINFO
+INFO: 2021-11-25 06:37:33 Error Alert initialized
+Nov 25, 2021 6:37:33 AM logs.Logs logINFO
+INFO: 2021-11-25 06:37:33 Confirmation Alert initialized
+Nov 25, 2021 6:37:36 AM logs.Logs logINFO
+INFO: 2021-11-25 06:37:36 Database Connection was Successful
+Nov 25, 2021 6:37:36 AM logs.Logs logINFO
+INFO: 2021-11-25 06:37:36 Prepared Statement created successfully
+Nov 25, 2021 6:37:36 AM logs.Logs logINFO
+INFO: 2021-11-25 06:37:36 Retrieving Prepared Statement
+Nov 25, 2021 6:37:36 AM logs.Logs logINFO
+INFO: 2021-11-25 06:37:36 Closing window Appointment Scheduler V.1
+Nov 25, 2021 6:37:36 AM logs.Logs logINFO
+INFO: 2021-11-25 06:37:36 Closed Database Connection
+Nov 25, 2021 6:37:36 AM logs.Logs logINFO
+INFO: 2021-11-25 06:37:36 Closed Database Connection
+Nov 25, 2021 6:37:36 AM logs.Logs logINFO
+INFO: 2021-11-25 06:37:36 Navigating to Home Screen Directory
+Nov 25, 2021 6:37:37 AM logs.Logs logINFO
+INFO: 2021-11-25 06:37:37 Closing window Home Screen Directory
+Nov 25, 2021 6:37:37 AM logs.Logs logINFO
+INFO: 2021-11-25 06:37:37 Closed Database Connection
+Nov 25, 2021 6:37:37 AM logs.Logs logINFO
+INFO: 2021-11-25 06:37:37 Closed Database Connection
+Nov 25, 2021 6:37:37 AM logs.Logs logINFO
+INFO: 2021-11-25 06:37:37 Navigating to Appointments Screen
+Nov 25, 2021 6:37:37 AM logs.Logs logERROR
+SEVERE: 2021-11-25 06:37:37 
+/C:/Users/Haku%20Wei/Desktop/trash/HelloWorldJFX/out/production/JavaFxApplication/view/Appointment.fxml
+
+Nov 25, 2021 6:37:37 AM logs.Logs logINFO
+INFO: 2021-11-25 06:37:37 Closed Database Connection
+Nov 25, 2021 6:39:37 AM logs.Logs logINFO
+INFO: 2021-11-25 06:39:37 
+--------Program initialized---------
+
+Nov 25, 2021 6:45:20 AM logs.Logs logINFO
+INFO: 2021-11-25 06:45:20 
+--------Program initialized---------
+
+Nov 25, 2021 6:45:20 AM logs.Logs logINFO
+INFO: 2021-11-25 06:45:20 Error Alert initialized
+Nov 25, 2021 6:45:20 AM logs.Logs logINFO
+INFO: 2021-11-25 06:45:20 Confirmation Alert initialized
+Nov 25, 2021 6:45:25 AM logs.Logs logINFO
+INFO: 2021-11-25 06:45:25 Database Connection was Successful
+Nov 25, 2021 6:45:25 AM logs.Logs logINFO
+INFO: 2021-11-25 06:45:25 Prepared Statement created successfully
+Nov 25, 2021 6:45:25 AM logs.Logs logINFO
+INFO: 2021-11-25 06:45:25 Retrieving Prepared Statement
+Nov 25, 2021 6:45:25 AM logs.Logs logINFO
+INFO: 2021-11-25 06:45:25 Closing window Appointment Scheduler V.1
+Nov 25, 2021 6:45:25 AM logs.Logs logINFO
+INFO: 2021-11-25 06:45:25 Closed Database Connection
+Nov 25, 2021 6:45:25 AM logs.Logs logINFO
+INFO: 2021-11-25 06:45:25 Closed Database Connection
+Nov 25, 2021 6:45:25 AM logs.Logs logINFO
+INFO: 2021-11-25 06:45:25 Navigating to Home Screen Directory
+Nov 25, 2021 6:45:27 AM logs.Logs logINFO
+INFO: 2021-11-25 06:45:27 Closing window Home Screen Directory
+Nov 25, 2021 6:45:27 AM logs.Logs logINFO
+INFO: 2021-11-25 06:45:27 Closed Database Connection
+Nov 25, 2021 6:45:27 AM logs.Logs logINFO
+INFO: 2021-11-25 06:45:27 Closed Database Connection
+Nov 25, 2021 6:45:27 AM logs.Logs logINFO
+INFO: 2021-11-25 06:45:27 Navigating to Appointments Screen
+Nov 25, 2021 6:45:27 AM logs.Logs logERROR
+SEVERE: 2021-11-25 06:45:27 
+/C:/Users/Haku%20Wei/Desktop/trash/HelloWorldJFX/out/production/JavaFxApplication/view/Appointment.fxml
+
+Nov 25, 2021 6:45:27 AM logs.Logs logINFO
+INFO: 2021-11-25 06:45:27 Closed Database Connection
+Nov 25, 2021 6:51:10 AM logs.Logs logINFO
+INFO: 2021-11-25 06:51:10 
+--------Program initialized---------
+
+Nov 25, 2021 6:51:10 AM logs.Logs logINFO
+INFO: 2021-11-25 06:51:10 Error Alert initialized
+Nov 25, 2021 6:51:10 AM logs.Logs logINFO
+INFO: 2021-11-25 06:51:10 Confirmation Alert initialized
+Nov 25, 2021 6:51:13 AM logs.Logs logINFO
+INFO: 2021-11-25 06:51:13 Database Connection was Successful
+Nov 25, 2021 6:51:13 AM logs.Logs logINFO
+INFO: 2021-11-25 06:51:13 Prepared Statement created successfully
+Nov 25, 2021 6:51:13 AM logs.Logs logINFO
+INFO: 2021-11-25 06:51:13 Retrieving Prepared Statement
+Nov 25, 2021 6:51:13 AM logs.Logs logINFO
+INFO: 2021-11-25 06:51:13 Closing window Appointment Scheduler V.1
+Nov 25, 2021 6:51:13 AM logs.Logs logINFO
+INFO: 2021-11-25 06:51:13 Closed Database Connection
+Nov 25, 2021 6:51:13 AM logs.Logs logINFO
+INFO: 2021-11-25 06:51:13 Closed Database Connection
+Nov 25, 2021 6:51:13 AM logs.Logs logINFO
+INFO: 2021-11-25 06:51:13 Navigating to Home Screen Directory
+Nov 25, 2021 6:51:14 AM logs.Logs logINFO
+INFO: 2021-11-25 06:51:14 Closed Database Connection
+Nov 25, 2021 6:51:14 AM logs.Logs logINFO
+INFO: 2021-11-25 06:51:14 Navigating to Appointments Screen
+Nov 25, 2021 6:51:14 AM logs.Logs logERROR
+SEVERE: 2021-11-25 06:51:14 
+/C:/Users/Haku%20Wei/Desktop/trash/HelloWorldJFX/out/production/JavaFxApplication/view/Appointment.fxml
+
+Nov 25, 2021 6:52:48 AM logs.Logs logINFO
+INFO: 2021-11-25 06:52:48 Closed Database Connection
+Nov 25, 2021 6:52:52 AM logs.Logs logINFO
+INFO: 2021-11-25 06:52:52 
+--------Program initialized---------
+
+Nov 25, 2021 6:52:52 AM logs.Logs logINFO
+INFO: 2021-11-25 06:52:52 Error Alert initialized
+Nov 25, 2021 6:52:52 AM logs.Logs logINFO
+INFO: 2021-11-25 06:52:52 Confirmation Alert initialized
+Nov 25, 2021 6:52:58 AM logs.Logs logINFO
+INFO: 2021-11-25 06:52:58 Database Connection was Successful
+Nov 25, 2021 6:52:58 AM logs.Logs logINFO
+INFO: 2021-11-25 06:52:58 Prepared Statement created successfully
+Nov 25, 2021 6:52:58 AM logs.Logs logINFO
+INFO: 2021-11-25 06:52:58 Retrieving Prepared Statement
+Nov 25, 2021 6:52:58 AM logs.Logs logINFO
+INFO: 2021-11-25 06:52:58 Closing window Appointment Scheduler V.1
+Nov 25, 2021 6:52:58 AM logs.Logs logINFO
+INFO: 2021-11-25 06:52:58 Closed Database Connection
+Nov 25, 2021 6:52:58 AM logs.Logs logINFO
+INFO: 2021-11-25 06:52:58 Closed Database Connection
+Nov 25, 2021 6:52:58 AM logs.Logs logINFO
+INFO: 2021-11-25 06:52:58 Navigating to Home Screen Directory
+Nov 25, 2021 6:52:59 AM logs.Logs logINFO
+INFO: 2021-11-25 06:52:59 Closing window Home Screen Directory
+Nov 25, 2021 6:52:59 AM logs.Logs logINFO
+INFO: 2021-11-25 06:52:59 Closed Database Connection
+Nov 25, 2021 6:52:59 AM logs.Logs logINFO
+INFO: 2021-11-25 06:52:59 Closed Database Connection
+Nov 25, 2021 6:52:59 AM logs.Logs logINFO
+INFO: 2021-11-25 06:52:59 Navigating to Appointments Screen
+Nov 25, 2021 6:52:59 AM logs.Logs logERROR
+SEVERE: 2021-11-25 06:52:59 
+/C:/Users/Haku%20Wei/Desktop/trash/HelloWorldJFX/out/production/JavaFxApplication/view/Appointment.fxml
+
+Nov 25, 2021 6:52:59 AM logs.Logs logINFO
+INFO: 2021-11-25 06:52:59 Closed Database Connection
+Nov 25, 2021 6:53:18 AM logs.Logs logINFO
+INFO: 2021-11-25 06:53:18 
+--------Program initialized---------
+
+Nov 25, 2021 6:53:18 AM logs.Logs logINFO
+INFO: 2021-11-25 06:53:18 Error Alert initialized
+Nov 25, 2021 6:53:18 AM logs.Logs logINFO
+INFO: 2021-11-25 06:53:18 Confirmation Alert initialized
+Nov 25, 2021 6:53:21 AM logs.Logs logINFO
+INFO: 2021-11-25 06:53:21 Database Connection was Successful
+Nov 25, 2021 6:53:21 AM logs.Logs logINFO
+INFO: 2021-11-25 06:53:21 Prepared Statement created successfully
+Nov 25, 2021 6:53:21 AM logs.Logs logINFO
+INFO: 2021-11-25 06:53:21 Retrieving Prepared Statement
+Nov 25, 2021 6:53:21 AM logs.Logs logINFO
+INFO: 2021-11-25 06:53:21 Closing window Appointment Scheduler V.1
+Nov 25, 2021 6:53:21 AM logs.Logs logINFO
+INFO: 2021-11-25 06:53:21 Closed Database Connection
+Nov 25, 2021 6:53:21 AM logs.Logs logINFO
+INFO: 2021-11-25 06:53:21 Closed Database Connection
+Nov 25, 2021 6:53:21 AM logs.Logs logINFO
+INFO: 2021-11-25 06:53:21 Navigating to Home Screen Directory
+Nov 25, 2021 6:53:22 AM logs.Logs logINFO
+INFO: 2021-11-25 06:53:22 Closing window Home Screen Directory
+Nov 25, 2021 6:53:22 AM logs.Logs logINFO
+INFO: 2021-11-25 06:53:22 Closed Database Connection
+Nov 25, 2021 6:53:22 AM logs.Logs logINFO
+INFO: 2021-11-25 06:53:22 Closed Database Connection
+Nov 25, 2021 6:53:22 AM logs.Logs logINFO
+INFO: 2021-11-25 06:53:22 Navigating to Customer Screen
+Nov 25, 2021 6:53:26 AM logs.Logs logINFO
+INFO: 2021-11-25 06:53:26 Closing window Customer Screen
+Nov 25, 2021 6:53:26 AM logs.Logs logINFO
+INFO: 2021-11-25 06:53:26 Closed Database Connection
+Nov 25, 2021 6:53:26 AM logs.Logs logINFO
+INFO: 2021-11-25 06:53:26 Closed Database Connection
+Nov 25, 2021 6:53:26 AM logs.Logs logINFO
+INFO: 2021-11-25 06:53:26 Navigating to Home Screen
+Nov 25, 2021 6:53:26 AM logs.Logs logINFO
+INFO: 2021-11-25 06:53:26 Closed Database Connection
+Nov 25, 2021 6:53:26 AM logs.Logs logINFO
+INFO: 2021-11-25 06:53:26 Navigating to Appointments Screen
+Nov 25, 2021 6:53:26 AM logs.Logs logERROR
+SEVERE: 2021-11-25 06:53:26 
+/C:/Users/Haku%20Wei/Desktop/trash/HelloWorldJFX/out/production/JavaFxApplication/view/Appointment.fxml
+
+Nov 25, 2021 6:53:26 AM logs.Logs logINFO
+INFO: 2021-11-25 06:53:26 Closing window Home Screen
+Nov 25, 2021 6:53:26 AM logs.Logs logINFO
+INFO: 2021-11-25 06:53:26 Closed Database Connection
+Nov 25, 2021 6:53:26 AM logs.Logs logINFO
+INFO: 2021-11-25 06:53:26 Closed Database Connection
+Nov 25, 2021 6:54:29 AM logs.Logs logINFO
+INFO: 2021-11-25 06:54:29 
+--------Program initialized---------
+
+Nov 25, 2021 6:54:29 AM logs.Logs logINFO
+INFO: 2021-11-25 06:54:29 Error Alert initialized
+Nov 25, 2021 6:54:29 AM logs.Logs logINFO
+INFO: 2021-11-25 06:54:29 Confirmation Alert initialized
+Nov 25, 2021 6:54:35 AM logs.Logs logINFO
+INFO: 2021-11-25 06:54:35 Database Connection was Successful
+Nov 25, 2021 6:54:35 AM logs.Logs logINFO
+INFO: 2021-11-25 06:54:35 Prepared Statement created successfully
+Nov 25, 2021 6:54:35 AM logs.Logs logINFO
+INFO: 2021-11-25 06:54:35 Retrieving Prepared Statement
+Nov 25, 2021 6:54:35 AM logs.Logs logINFO
+INFO: 2021-11-25 06:54:35 Closing window Appointment Scheduler V.1
+Nov 25, 2021 6:54:35 AM logs.Logs logINFO
+INFO: 2021-11-25 06:54:35 Closed Database Connection
+Nov 25, 2021 6:54:35 AM logs.Logs logINFO
+INFO: 2021-11-25 06:54:35 Closed Database Connection
+Nov 25, 2021 6:54:35 AM logs.Logs logINFO
+INFO: 2021-11-25 06:54:35 Navigating to Home Screen Directory
+Nov 25, 2021 6:54:36 AM logs.Logs logINFO
+INFO: 2021-11-25 06:54:36 Closed Database Connection
+Nov 25, 2021 6:54:36 AM logs.Logs logINFO
+INFO: 2021-11-25 06:54:36 Navigating to Appointments Screen
+Nov 25, 2021 6:54:37 AM logs.Logs logERROR
+SEVERE: 2021-11-25 06:54:37 Unable to Navigate to Appointments Screen
+Nov 25, 2021 6:54:37 AM logs.Logs logINFO
+INFO: 2021-11-25 06:54:37 Closing window Home Screen Directory
+Nov 25, 2021 6:54:37 AM logs.Logs logINFO
+INFO: 2021-11-25 06:54:37 Closed Database Connection
+Nov 25, 2021 6:54:37 AM logs.Logs logINFO
+INFO: 2021-11-25 06:54:37 Closed Database Connection
+Nov 25, 2021 6:59:20 AM logs.Logs logINFO
+INFO: 2021-11-25 06:59:20 
+--------Program initialized---------
+
+Nov 25, 2021 6:59:20 AM logs.Logs logINFO
+INFO: 2021-11-25 06:59:20 Error Alert initialized
+Nov 25, 2021 6:59:20 AM logs.Logs logINFO
+INFO: 2021-11-25 06:59:20 Confirmation Alert initialized
+Nov 25, 2021 6:59:24 AM logs.Logs logINFO
+INFO: 2021-11-25 06:59:24 Database Connection was Successful
+Nov 25, 2021 6:59:24 AM logs.Logs logINFO
+INFO: 2021-11-25 06:59:24 Prepared Statement created successfully
+Nov 25, 2021 6:59:24 AM logs.Logs logINFO
+INFO: 2021-11-25 06:59:24 Retrieving Prepared Statement
+Nov 25, 2021 6:59:25 AM logs.Logs logINFO
+INFO: 2021-11-25 06:59:25 Closing window Appointment Scheduler V.1
+Nov 25, 2021 6:59:25 AM logs.Logs logINFO
+INFO: 2021-11-25 06:59:25 Closed Database Connection
+Nov 25, 2021 6:59:25 AM logs.Logs logINFO
+INFO: 2021-11-25 06:59:25 Closed Database Connection
+Nov 25, 2021 6:59:25 AM logs.Logs logINFO
+INFO: 2021-11-25 06:59:25 Navigating to Home Screen Directory
+Nov 25, 2021 6:59:26 AM logs.Logs logINFO
+INFO: 2021-11-25 06:59:26 Closed Database Connection
+Nov 25, 2021 6:59:26 AM logs.Logs logINFO
+INFO: 2021-11-25 06:59:26 Navigating to Appointments Screen
+Nov 25, 2021 6:59:26 AM logs.Logs logINFO
+INFO: 2021-11-25 06:59:26 Closing window Home Screen Directory
+Nov 25, 2021 6:59:26 AM logs.Logs logINFO
+INFO: 2021-11-25 06:59:26 Closed Database Connection
+Nov 25, 2021 7:37:00 AM logs.Logs logINFO
+INFO: 2021-11-25 07:37:00 Closed Database Connection
+Nov 25, 2021 7:49:53 AM logs.Logs logINFO
+INFO: 2021-11-25 07:49:53 
+--------Program initialized---------
+
+Nov 25, 2021 7:49:54 AM logs.Logs logINFO
+INFO: 2021-11-25 07:49:54 Error Alert initialized
+Nov 25, 2021 7:49:54 AM logs.Logs logINFO
+INFO: 2021-11-25 07:49:54 Confirmation Alert initialized
+Nov 25, 2021 7:49:58 AM logs.Logs logINFO
+INFO: 2021-11-25 07:49:58 Closing window Appointment Scheduler V.1
+Nov 25, 2021 7:49:58 AM logs.Logs logINFO
+INFO: 2021-11-25 07:49:58 Program Terminated
+Nov 25, 2021 8:47:31 AM logs.Logs logINFO
+INFO: 2021-11-25 08:47:31 
+--------Program initialized---------
+
+Nov 25, 2021 8:47:31 AM logs.Logs logINFO
+INFO: 2021-11-25 08:47:31 Error Alert initialized
+Nov 25, 2021 8:47:31 AM logs.Logs logINFO
+INFO: 2021-11-25 08:47:31 Confirmation Alert initialized
+Nov 25, 2021 8:47:54 AM logs.Logs logINFO
+INFO: 2021-11-25 08:47:54 Database Connection was Successful
+Nov 25, 2021 8:47:54 AM logs.Logs logINFO
+INFO: 2021-11-25 08:47:54 Prepared Statement created successfully
+Nov 25, 2021 8:47:54 AM logs.Logs logINFO
+INFO: 2021-11-25 08:47:54 Retrieving Prepared Statement
+Nov 25, 2021 8:47:54 AM logs.Logs logINFO
+INFO: 2021-11-25 08:47:54 Closing window Appointment Scheduler V.1
+Nov 25, 2021 8:47:54 AM logs.Logs logINFO
+INFO: 2021-11-25 08:47:54 Closed Database Connection
+Nov 25, 2021 8:47:54 AM logs.Logs logINFO
+INFO: 2021-11-25 08:47:54 Closed Database Connection
+Nov 25, 2021 8:47:54 AM logs.Logs logINFO
+INFO: 2021-11-25 08:47:54 Navigating to Home Screen Directory
+Nov 25, 2021 8:47:58 AM logs.Logs logINFO
+INFO: 2021-11-25 08:47:58 Closing window Home Screen Directory
+Nov 25, 2021 8:47:58 AM logs.Logs logINFO
+INFO: 2021-11-25 08:47:58 Closed Database Connection
+Nov 25, 2021 8:47:58 AM logs.Logs logINFO
+INFO: 2021-11-25 08:47:58 Closed Database Connection
+Nov 25, 2021 8:47:58 AM logs.Logs logINFO
+INFO: 2021-11-25 08:47:58 Navigating to Customer Screen
+Nov 25, 2021 8:54:34 AM logs.Logs logINFO
+INFO: 2021-11-25 08:54:34 
+--------Program initialized---------
+
+Nov 25, 2021 8:54:34 AM logs.Logs logINFO
+INFO: 2021-11-25 08:54:34 Error Alert initialized
+Nov 25, 2021 8:54:34 AM logs.Logs logINFO
+INFO: 2021-11-25 08:54:34 Confirmation Alert initialized
+Nov 25, 2021 8:54:42 AM logs.Logs logINFO
+INFO: 2021-11-25 08:54:42 Database Connection was Successful
+Nov 25, 2021 8:54:42 AM logs.Logs logINFO
+INFO: 2021-11-25 08:54:42 Prepared Statement created successfully
+Nov 25, 2021 8:54:42 AM logs.Logs logINFO
+INFO: 2021-11-25 08:54:42 Retrieving Prepared Statement
+Nov 25, 2021 8:54:42 AM logs.Logs logINFO
+INFO: 2021-11-25 08:54:42 Closing window Appointment Scheduler V.1
+Nov 25, 2021 8:54:42 AM logs.Logs logINFO
+INFO: 2021-11-25 08:54:42 Closed Database Connection
+Nov 25, 2021 8:54:42 AM logs.Logs logINFO
+INFO: 2021-11-25 08:54:42 Closed Database Connection
+Nov 25, 2021 8:54:42 AM logs.Logs logINFO
+INFO: 2021-11-25 08:54:42 Navigating to Home Screen Directory
+Nov 25, 2021 8:54:43 AM logs.Logs logINFO
+INFO: 2021-11-25 08:54:43 Closing window Home Screen Directory
+Nov 25, 2021 8:54:43 AM logs.Logs logINFO
+INFO: 2021-11-25 08:54:43 Closed Database Connection
+Nov 25, 2021 8:54:43 AM logs.Logs logINFO
+INFO: 2021-11-25 08:54:43 Closed Database Connection
+Nov 25, 2021 8:54:43 AM logs.Logs logINFO
+INFO: 2021-11-25 08:54:43 Navigating to Customer Screen
+Nov 25, 2021 8:58:10 AM logs.Logs logINFO
+INFO: 2021-11-25 08:58:10 
+--------Program initialized---------
+
+Nov 25, 2021 8:58:11 AM logs.Logs logINFO
+INFO: 2021-11-25 08:58:11 Error Alert initialized
+Nov 25, 2021 8:58:11 AM logs.Logs logINFO
+INFO: 2021-11-25 08:58:11 Confirmation Alert initialized
+Nov 25, 2021 8:58:15 AM logs.Logs logINFO
+INFO: 2021-11-25 08:58:15 Database Connection was Successful
+Nov 25, 2021 8:58:15 AM logs.Logs logINFO
+INFO: 2021-11-25 08:58:15 Prepared Statement created successfully
+Nov 25, 2021 8:58:15 AM logs.Logs logINFO
+INFO: 2021-11-25 08:58:15 Retrieving Prepared Statement
+Nov 25, 2021 8:58:15 AM logs.Logs logINFO
+INFO: 2021-11-25 08:58:15 Closing window Appointment Scheduler V.1
+Nov 25, 2021 8:58:15 AM logs.Logs logINFO
+INFO: 2021-11-25 08:58:15 Closed Database Connection
+Nov 25, 2021 8:58:15 AM logs.Logs logINFO
+INFO: 2021-11-25 08:58:15 Closed Database Connection
+Nov 25, 2021 8:58:15 AM logs.Logs logINFO
+INFO: 2021-11-25 08:58:15 Navigating to Home Screen Directory
+Nov 25, 2021 8:58:16 AM logs.Logs logINFO
+INFO: 2021-11-25 08:58:16 Closing window Home Screen Directory
+Nov 25, 2021 8:58:16 AM logs.Logs logINFO
+INFO: 2021-11-25 08:58:16 Closed Database Connection
+Nov 25, 2021 8:58:16 AM logs.Logs logINFO
+INFO: 2021-11-25 08:58:16 Closed Database Connection
+Nov 25, 2021 8:58:16 AM logs.Logs logINFO
+INFO: 2021-11-25 08:58:16 Navigating to Customer Screen
+Nov 25, 2021 8:58:49 AM logs.Logs logINFO
+INFO: 2021-11-25 08:58:49 Closing window Customer Screen
+Nov 25, 2021 8:58:49 AM logs.Logs logINFO
+INFO: 2021-11-25 08:58:49 Closed Database Connection
+Nov 25, 2021 8:58:49 AM logs.Logs logINFO
+INFO: 2021-11-25 08:58:49 Closed Database Connection
+Nov 25, 2021 8:58:49 AM logs.Logs logINFO
+INFO: 2021-11-25 08:58:49 Navigating to Home Screen
+Nov 25, 2021 8:58:51 AM logs.Logs logINFO
+INFO: 2021-11-25 08:58:51 Closed Database Connection
+Nov 25, 2021 8:58:55 AM logs.Logs logINFO
+INFO: 2021-11-25 08:58:55 
+--------Program initialized---------
+
+Nov 25, 2021 8:58:56 AM logs.Logs logINFO
+INFO: 2021-11-25 08:58:56 Error Alert initialized
+Nov 25, 2021 8:58:56 AM logs.Logs logINFO
+INFO: 2021-11-25 08:58:56 Confirmation Alert initialized
+Nov 25, 2021 8:59:01 AM logs.Logs logINFO
+INFO: 2021-11-25 08:59:01 Database Connection was Successful
+Nov 25, 2021 8:59:01 AM logs.Logs logINFO
+INFO: 2021-11-25 08:59:01 Prepared Statement created successfully
+Nov 25, 2021 8:59:01 AM logs.Logs logINFO
+INFO: 2021-11-25 08:59:01 Retrieving Prepared Statement
+Nov 25, 2021 8:59:01 AM logs.Logs logINFO
+INFO: 2021-11-25 08:59:01 Closing window Appointment Scheduler V.1
+Nov 25, 2021 8:59:01 AM logs.Logs logINFO
+INFO: 2021-11-25 08:59:01 Closed Database Connection
+Nov 25, 2021 8:59:01 AM logs.Logs logINFO
+INFO: 2021-11-25 08:59:01 Closed Database Connection
+Nov 25, 2021 8:59:01 AM logs.Logs logINFO
+INFO: 2021-11-25 08:59:01 Navigating to Home Screen Directory
+Nov 25, 2021 8:59:02 AM logs.Logs logINFO
+INFO: 2021-11-25 08:59:02 Closing window Home Screen Directory
+Nov 25, 2021 8:59:02 AM logs.Logs logINFO
+INFO: 2021-11-25 08:59:02 Closed Database Connection
+Nov 25, 2021 8:59:02 AM logs.Logs logINFO
+INFO: 2021-11-25 08:59:02 Closed Database Connection
+Nov 25, 2021 8:59:02 AM logs.Logs logINFO
+INFO: 2021-11-25 08:59:02 Navigating to Customer Screen
+Nov 25, 2021 8:59:17 AM logs.Logs logINFO
+INFO: 2021-11-25 08:59:17 0
+Nov 25, 2021 8:59:17 AM logs.Logs logINFO
+INFO: 2021-11-25 08:59:17 []
+Nov 25, 2021 8:59:20 AM logs.Logs logINFO
+INFO: 2021-11-25 08:59:20 0
+Nov 25, 2021 8:59:20 AM logs.Logs logINFO
+INFO: 2021-11-25 08:59:20 []
+Nov 25, 2021 8:59:37 AM logs.Logs logINFO
+INFO: 2021-11-25 08:59:37 0
+Nov 25, 2021 8:59:37 AM logs.Logs logINFO
+INFO: 2021-11-25 08:59:37 []
+Nov 25, 2021 9:00:27 AM logs.Logs logINFO
+INFO: 2021-11-25 09:00:27 Closed Database Connection
+Nov 25, 2021 9:00:33 AM logs.Logs logINFO
+INFO: 2021-11-25 09:00:33 
+--------Program initialized---------
+
+Nov 25, 2021 9:00:33 AM logs.Logs logINFO
+INFO: 2021-11-25 09:00:33 Error Alert initialized
+Nov 25, 2021 9:00:33 AM logs.Logs logINFO
+INFO: 2021-11-25 09:00:33 Confirmation Alert initialized
+Nov 25, 2021 9:00:42 AM logs.Logs logINFO
+INFO: 2021-11-25 09:00:42 Database Connection was Successful
+Nov 25, 2021 9:00:42 AM logs.Logs logINFO
+INFO: 2021-11-25 09:00:42 Prepared Statement created successfully
+Nov 25, 2021 9:00:42 AM logs.Logs logINFO
+INFO: 2021-11-25 09:00:42 Retrieving Prepared Statement
+Nov 25, 2021 9:00:42 AM logs.Logs logINFO
+INFO: 2021-11-25 09:00:42 Closing window Appointment Scheduler V.1
+Nov 25, 2021 9:00:42 AM logs.Logs logINFO
+INFO: 2021-11-25 09:00:42 Closed Database Connection
+Nov 25, 2021 9:00:42 AM logs.Logs logINFO
+INFO: 2021-11-25 09:00:42 Closed Database Connection
+Nov 25, 2021 9:00:42 AM logs.Logs logINFO
+INFO: 2021-11-25 09:00:42 Navigating to Home Screen Directory
+Nov 25, 2021 9:00:48 AM logs.Logs logINFO
+INFO: 2021-11-25 09:00:48 Closing window Home Screen Directory
+Nov 25, 2021 9:00:48 AM logs.Logs logINFO
+INFO: 2021-11-25 09:00:48 Closed Database Connection
+Nov 25, 2021 9:00:48 AM logs.Logs logINFO
+INFO: 2021-11-25 09:00:48 Closed Database Connection
+Nov 25, 2021 9:00:48 AM logs.Logs logINFO
+INFO: 2021-11-25 09:00:48 Navigating to Customer Screen
+Nov 25, 2021 9:01:06 AM logs.Logs logINFO
+INFO: 2021-11-25 09:01:06 0
+Nov 25, 2021 9:01:06 AM logs.Logs logINFO
+INFO: 2021-11-25 09:01:06 []
+Nov 25, 2021 9:08:49 AM logs.Logs logINFO
+INFO: 2021-11-25 09:08:49 Closing window Customer Screen
+Nov 25, 2021 9:08:49 AM logs.Logs logINFO
+INFO: 2021-11-25 09:08:49 Closed Database Connection
+Nov 25, 2021 9:08:49 AM logs.Logs logINFO
+INFO: 2021-11-25 09:08:49 Closed Database Connection
+Nov 25, 2021 9:08:49 AM logs.Logs logINFO
+INFO: 2021-11-25 09:08:49 Navigating to Home Screen
+Nov 25, 2021 9:08:50 AM logs.Logs logINFO
+INFO: 2021-11-25 09:08:50 Closed Database Connection

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="316.0" prefWidth="572.0" style="-fx-background-color: #57A0D3;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <children>
+      <VBox alignment="BASELINE_CENTER" prefHeight="316.0" prefWidth="572.0">
+         <children>
+            <Label fx:id="headerLblLogin" alignment="CENTER" contentDisplay="CENTER" prefHeight="35.0" prefWidth="572.0" style="-fx-background-color: #EBECF0;" text="Scheduler Login">
+               <font>
+                  <Font size="27.0" />
+               </font>
+               <effect>
+                  <SepiaTone />
+               </effect>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="userNameLblLogin" alignment="CENTER" prefHeight="46.0" prefWidth="270.0" text="Username:  ">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin></Label>
+                  <TextField fx:id="userNameInputLogin" prefHeight="45.0" prefWidth="275.0" promptText="Enter the Username" style="-fx-background-color: #EBECF0;">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="passwordLblLogin" alignment="CENTER" prefHeight="45.0" prefWidth="265.0" text="Password:  ">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Label>
+                  <PasswordField fx:id="passwordInputLogin" prefHeight="45.0" prefWidth="275.0" promptText="Enter the password" style="-fx-background-color: #EBECF0;">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </PasswordField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="cxlBtnLogin" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#cancelBtnLogin" prefHeight="45.0" prefWidth="125.0" style="-fx-background-color: #EBECF0;" text="Cancel" textFill="RED">
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnLogin" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#acceptBtnLogin" prefHeight="45.0" prefWidth="125.0" style="-fx-background-color: #EBECF0;" text="Login" textFill="#00ff22">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <effect>
+            <SepiaTone level="0.35" />
+         </effect>
+      </VBox>
+   </children>
+</AnchorPane>
