@@ -1,24 +1,41 @@
 package controller;
 
+import dao.CountryDAO;
 import dao.CustomerDAO;
+import dao.DivisionDAO;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.collections.ObservableMap;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import model.Country;
 import model.Customer;
 import model.Division;
-import shared.Common;
-import shared.Constants;
 
 import java.net.URL;
+import java.text.ParseException;
+import java.util.Optional;
 import java.util.ResourceBundle;
+
+import static shared.Common.*;
+import static shared.Constants.DBCOLUMNS;
+import static shared.Constants.FXMLVIEW;
 
 public class CustomerController implements Initializable {
 
     private CustomerDAO dao;
+    private DivisionDAO divisionDAO;
+    private CountryDAO countryDAO;
     private boolean isAddAction = false;
     private boolean tableViewHasBeenClicked = false;
+    private Customer customerCopy;
+    private ObservableList<Country> countries;
+    private ObservableMap<Integer, ObservableList<Division>> mappedDivision;
+    private ObservableList<Division> divisions;
 
     @FXML
     private Button addBtnCustomer;
@@ -27,25 +44,34 @@ public class CustomerController implements Initializable {
     private TextField address1InputCustomer;
 
     @FXML
-    private TextField address2InputCustomer;
-
-    @FXML
     private Button cancelBtnCustomer;
 
     @FXML
-    private ComboBox<Customer> countryDropDownCustomer;
+    private ComboBox<String> countryDropDownCustomer;
 
     @FXML
     private Label customerIdLblCustomer;
 
     @FXML
-    private ComboBox<Division> divisionDropDownCustomer;
+    private ComboBox<String> divisionDropDownCustomer;
 
     @FXML
-    private TableColumn<Integer, Customer> idColumnCustomer;
+    private TableColumn<Customer, Integer> idColumnCustomer;
 
     @FXML
-    private TableColumn<String, Customer> nameColumnCustomer;
+    private TableColumn<Customer, String> nameColumnCustomer;
+
+    @FXML
+    private TableColumn<Customer, String> divisionColumnCustomer;
+
+    @FXML
+    private TableColumn<Customer, String> createDateColumnCustomer;
+
+    @FXML
+    private TableColumn<Customer, String> updateDateColumnCustomer;
+
+    @FXML
+    private TableColumn<Customer, String> addressColumnCustomer;
 
     @FXML
     private TextField nameInputCustomer;
@@ -63,7 +89,30 @@ public class CustomerController implements Initializable {
     private Button saveBtnCustomer;
 
     @FXML
-    private TableView<?> tableViewCustomer;
+    private TableView<Customer> tableViewCustomer;
+
+    /**
+     * A method call on load that will create a new CustomerDAO object
+     * On load will also preset buttons, inputs, and tableViews
+     * Certain boolean modifiers will also be preset on load.
+     *
+     * @param url            URL
+     * @param resourceBundle ResourceBundle
+     */
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        dao = new CustomerDAO();
+        countryDAO = new CountryDAO();
+        divisionDAO = new DivisionDAO();
+        countries = FXCollections.observableArrayList();
+        mappedDivision = FXCollections.observableHashMap();
+        divisions = FXCollections.observableArrayList();
+        initializeOnStartup();
+        toggleDisable(true);
+        saveBtnCustomer.setDisable(true);
+        removeBtnCustomer.setDisable(true);
+        setTableViewHasBeenClicked(false);
+    }
 
     /**
      * Cancel can take on many variations. In any condition though, a Confirmation will appear.
@@ -81,45 +130,50 @@ public class CustomerController implements Initializable {
     @FXML
     void cancelAction(ActionEvent event) {
         if (isAddAction) {
-            if (Common.confirmationPopup("Are you sure you want to cancel? Any unsaved data will be lost.")) {
+            if (confirmationPopup("Are you sure you want to cancel? Any unsaved data will be lost.")) {
                 resetAddActionPresets();
-                /**
-                 * Canceling Add action
-                 */
             }
         } else if (isTableViewHasBeenClicked()) {
-            if (Common.confirmationPopup("Are you sure you want to cancel? Any unsaved data will be lost.")) {
-                /**
-                 * Canceling Modfication/remove actions
-                 */
+            if (confirmationPopup("Are you sure you want to cancel? Any unsaved data will be lost.")) {
                 resetAfterRemoveOrModifyAction();
+                tableViewCustomer.getSelectionModel().clearSelection();
             }
         } else {
-            if (Common.confirmationPopup("Navigating back to the Home Screen")) {
-                Common.closePreviousWindow(cancelBtnCustomer);
-                Common.naviateToWindow(Constants.FXML.HOMESCREEN, "Home Screen");
+            if (confirmationPopup("Navigating back to the Home Screen")) {
+                closePreviousWindow(cancelBtnCustomer);
+                navigateToWindow(FXMLVIEW.HOMESCREEN, "Home Screen");
             }
         }
     }
 
+    /**
+     * Method for the Country Drop Down
+     *
+     * @param event ActionEvent
+     */
     @FXML
     void clickOnCountryDropDown(ActionEvent event) {
+        String selection = countryDropDownCustomer.getSelectionModel().getSelectedItem();
+        Optional<Country> opt = countries.stream().filter(e -> e.getCountry().equalsIgnoreCase(selection)).findFirst();
+        if (opt.isPresent()) {
+            Country country = opt.get();
+            System.out.println(country);
+            initializeDivisionDropDownBy(country.getCountry_id());
+        }
 
     }
 
+    /**
+     * @param event MouseEvent
+     */
     @FXML
     void clickOnTableViewCustomer(MouseEvent event) {
-        Common.getApplicationLogger().logINFO(tableViewCustomer.getSelectionModel().getSelectedCells().size() + "");
-        Common.getApplicationLogger().logINFO(tableViewCustomer.getSelectionModel().getSelectedCells() + "");
-        if (tableViewCustomer.getSelectionModel().getSelectedCells().size() > 0 || tableViewCustomer.getSelectionModel().getSelectedCells() != null) {
+        if (!tableViewCustomer.getSelectionModel().getSelectedCells().isEmpty()) {
+            getApplicationLogger().logINFO(tableViewCustomer.getSelectionModel().getSelectedCells() + "");
             toggleForRemoveOrModify();
+            customerCopy = dao.getById(tableViewCustomer.getSelectionModel().getSelectedItem().getCustomer_id());
+            initializeInputsOnSelectedRow();
         }
-
-//        else {
-//            setTableViewHasBeenClicked(false);
-//            toggleDisable(true);
-//            addBtnCustomer.setDisable(false);
-//        }
     }
 
     /**
@@ -133,6 +187,12 @@ public class CustomerController implements Initializable {
     @FXML
     void createCustomerAction(ActionEvent event) {
         toggleForAdd();
+//        nameInputCustomer.setText("Iokaste the Steadfast");
+//        address1InputCustomer.setText("994 OneThousandMinusOne Rd");
+//        postCodeInputCustomer.setText("01594-450");
+//        phoneInputCustomer.setText("999-999-9994");
+//        countryDropDownCustomer.getSelectionModel().select("U.S");
+//        divisionDropDownCustomer.getSelectionModel().select("New Hampshire");
         // When Add is Successful -- setDisabled to false for Remove and TableViewCustomer, add to table, and clear fields
         // If User cancels Add Action -- SetDisabled to false for Remove and TableViewCustomer, clear fields
         //
@@ -151,12 +211,13 @@ public class CustomerController implements Initializable {
      */
     @FXML
     void removeCustomerAction(ActionEvent event) {
-//
-        if (isTableViewHasBeenClicked() && Common.confirmationPopup("Confirm Delete Action")) {
-
-//        dao.remove(null);
-            resetAfterRemoveOrModifyAction();
-            Common.getActivityLogger().logINFO(" {NAME} Has Been Removed");
+        if (isTableViewHasBeenClicked() && confirmationPopup("Confirm Delete Action")) {
+            if (dao.removeById(Integer.parseInt(customerIdLblCustomer.getText()))) {
+                getActivityLogger().logINFO(String.format("%s Has Been Removed by %s", customerCopy.getCustomer_name(), getUserLoggedIn()));
+                tableViewCustomer.getSelectionModel().clearSelection();
+                tableViewCustomer.setItems(dao.getAll());
+                resetAfterRemoveOrModifyAction();
+            }
         }
 
     }
@@ -179,37 +240,30 @@ public class CustomerController implements Initializable {
      */
     @FXML
     void saveCustomerAction(ActionEvent event) {
-
-        if (isTableViewHasBeenClicked() && Common.confirmationPopup("Confirm Update Action")) {
-//            dao.update(null);
-            resetAfterRemoveOrModifyAction();
-            Common.getActivityLogger().logINFO(" {NAME} Has Been Updated");
-        } else {
-            if (Common.confirmationPopup("Confirm Save Action")) {
-//              dao.create(null);
-                resetAddActionPresets();
-                Common.getActivityLogger().logINFO("{NAME} Has added a new Customer: {CustomerName}");
+        if (isTableViewHasBeenClicked() && confirmationPopup("Confirm Update Action")) {
+            String originalCustomerName = customerCopy.getCustomer_name();
+            if (dao.update(prepareUpdateCustomerRequest())) {
+                getActivityLogger().logINFO(String.format(" %s Has Been Updated by %s",
+                        originalCustomerName, getUserLoggedIn()));
+                resetAfterRemoveOrModifyAction();
+            } else {
+                getApplicationLogger().logERROR("Unable to Perform the Modification Action");
             }
-
+        } else {
+            if (confirmationPopup("Confirm Save Action")) {
+                if (dao.create(prepareCreateCustomerRequest())) {
+                    getActivityLogger().logINFO(String.format("%s Has added a new Customer: %s",
+                            getUserLoggedIn(), nameInputCustomer.getText()));
+                    resetAddActionPresets();
+                } else {
+                    getApplicationLogger().logERROR("Unable to Perform the Add Action");
+                }
+            }
         }
-
+        tableViewCustomer.getSelectionModel().clearSelection();
+        tableViewCustomer.setItems(dao.getAll());
     }
 
-    /**
-     * A method call on load that will create a new CustomerDAO object
-     * On load will also preset buttons, inputs, and tableViews
-     * Certain boolean modifiers will also be preset on load.
-     *
-     * @param url            URL
-     * @param resourceBundle ResourceBundle
-     */
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        dao = new CustomerDAO();
-        toggleDisable(true);
-        saveBtnCustomer.setDisable(true);
-        setTableViewHasBeenClicked(false);
-    }
 
     /**
      * Helper method that toggles all Input fields to be Disabled
@@ -220,7 +274,6 @@ public class CustomerController implements Initializable {
         customerIdLblCustomer.setDisable(isDisabled);
         nameInputCustomer.setDisable(isDisabled);
         address1InputCustomer.setDisable(isDisabled);
-        address2InputCustomer.setDisable(isDisabled);
         divisionDropDownCustomer.setDisable(isDisabled);
         countryDropDownCustomer.setDisable(isDisabled);
         postCodeInputCustomer.setDisable(isDisabled);
@@ -231,9 +284,9 @@ public class CustomerController implements Initializable {
      * Helper method that will clear all input fields or dropdowns when called
      */
     private void clearAllFields() {
+        customerIdLblCustomer.setText("");
         nameInputCustomer.clear();
         address1InputCustomer.clear();
-        address2InputCustomer.clear();
         divisionDropDownCustomer.getSelectionModel().clearSelection();
         countryDropDownCustomer.getSelectionModel().clearSelection();
         postCodeInputCustomer.clear();
@@ -250,6 +303,8 @@ public class CustomerController implements Initializable {
         addBtnCustomer.setDisable(true);
         saveBtnCustomer.setDisable(false);
         isAddAction = true;
+        divisionDropDownCustomer.setPromptText("Select Division");
+        countryDropDownCustomer.setPromptText("Select Country");
     }
 
     /**
@@ -275,6 +330,7 @@ public class CustomerController implements Initializable {
         saveBtnCustomer.setText("UPDATE");
         saveBtnCustomer.setDisable(false);
         addBtnCustomer.setDisable(true);
+        tableViewCustomer.setDisable(true);
     }
 
     /**
@@ -287,14 +343,142 @@ public class CustomerController implements Initializable {
         saveBtnCustomer.setText("SAVE");
         saveBtnCustomer.setDisable(true);
         addBtnCustomer.setDisable(false);
+        tableViewCustomer.setDisable(false);
     }
 
+    /**
+     * @return boolean
+     */
     private boolean isTableViewHasBeenClicked() {
         return tableViewHasBeenClicked;
     }
 
+    /**
+     * @param tableViewHasBeenClicked boolean
+     */
     private void setTableViewHasBeenClicked(boolean tableViewHasBeenClicked) {
         this.tableViewHasBeenClicked = tableViewHasBeenClicked;
     }
+
+    /**
+     * Helper Method that will initialize TableView and ComboBoxes
+     */
+    private void initializeOnStartup() {
+        initializeTableView();
+        initializeComboBoxes();
+    }
+
+    /**
+     * Helper Method that is called by the initializeOnStartup
+     * Initializes the Table View
+     */
+    private void initializeTableView() {
+        tableViewCustomer.setItems(dao.getAll());
+        idColumnCustomer.setCellValueFactory(new PropertyValueFactory(DBCOLUMNS.CUSTOMER_ID.getValue().toLowerCase()));
+        nameColumnCustomer.setCellValueFactory(new PropertyValueFactory(DBCOLUMNS.CUSTOMER_NAME.getValue().toLowerCase()));
+        divisionColumnCustomer.setCellValueFactory(new PropertyValueFactory(DBCOLUMNS.DIVISION_ID.getValue().toLowerCase()));
+        updateDateColumnCustomer.setCellValueFactory(new PropertyValueFactory(DBCOLUMNS.LAST_UPDATE.getValue().toLowerCase()));
+        createDateColumnCustomer.setCellValueFactory(new PropertyValueFactory(DBCOLUMNS.CREATE_DATE.getValue().toLowerCase()));
+        addressColumnCustomer.setCellValueFactory(new PropertyValueFactory(DBCOLUMNS.ADDRESS.getValue().toLowerCase()));
+    }
+
+    /**
+     * Helper Method that is called by the initializeOnStartup
+     * Initializes the ComboBoxes
+     */
+    private void initializeComboBoxes() {
+        ObservableList<String> countryNames = FXCollections.observableArrayList();
+        countries = countryDAO.getAll();
+        countries.forEach(e -> {
+            countryNames.add(e.getCountry());
+        });
+        countryDropDownCustomer.setItems(countryNames);
+        mappedDivision = divisionDAO.getAllDivision();
+        divisions = divisionDAO.getAll();
+    }
+
+    /**
+     * @param id int
+     */
+    private void initializeDivisionDropDownBy(int id) {
+        ObservableList<String> divisionNames = FXCollections.observableArrayList();
+        mappedDivision.get(id).forEach(e -> {
+            divisionNames.add(e.getDivision());
+        });
+        divisionDropDownCustomer.setItems(divisionNames);
+    }
+
+    /**
+     * @return Customer
+     */
+    private Customer prepareCreateCustomerRequest() {
+        Customer customer = null;
+        try {
+            customer = new Customer(
+                    -1,
+                    nameInputCustomer.getText(),
+                    address1InputCustomer.getText(),
+                    postCodeInputCustomer.getText(),
+                    phoneInputCustomer.getText(),
+                    formatDateTimeUsingSDF(getCurrentDate(), getCurrentTime()),
+                    getUserLoggedIn(),
+                    formatDateTimeUsingSDF(getCurrentDate(), getCurrentTime()),
+                    getUserLoggedIn(),
+                    convertDivisionNameToInt(divisionDropDownCustomer.getSelectionModel().getSelectedItem())
+            );
+        } catch (ParseException e) {
+            getApplicationLogger().logERROR("Unable to Parse Date and Time: " + e.getMessage());
+        }
+        return customer;
+    }
+
+    /**
+     * @return Customer
+     */
+    private Customer prepareUpdateCustomerRequest() {
+        Customer customer = null;
+        try {
+            customer = new Customer(
+                    Integer.parseInt(customerIdLblCustomer.getText()),
+                    nameInputCustomer.getText(),
+                    address1InputCustomer.getText(),
+                    postCodeInputCustomer.getText(),
+                    phoneInputCustomer.getText(),
+                    customerCopy.getCreate_date(),
+                    customerCopy.getCreate_by(),
+                    formatDateTimeUsingSDF(getCurrentDate(), getCurrentTime()),
+                    getUserLoggedIn(),
+                    convertDivisionNameToInt(divisionDropDownCustomer.getSelectionModel().getSelectedItem())
+            );
+        } catch (ParseException e) {
+            getApplicationLogger().logERROR("Unable to Parse Date and Time: " + e.getMessage());
+        }
+        return customer;
+    }
+
+    /**
+     * @param name String
+     * @return Integer
+     */
+    private Integer convertDivisionNameToInt(String name) {
+        Optional<Division> opt = divisions.stream().filter(e -> e.getDivision().equalsIgnoreCase(name)).findFirst();
+        return (opt.isPresent()) ? opt.get().getDivision_id() : -1;
+    }
+
+    /**
+     * Helper method that
+     */
+    private void initializeInputsOnSelectedRow() {
+        customerIdLblCustomer.setText(customerCopy.getCustomer_id() + "");
+        nameInputCustomer.setText(customerCopy.getCustomer_name());
+        address1InputCustomer.setText(customerCopy.getAddress());
+        Division division = divisionDAO.getById(customerCopy.getDivision_id());
+        Country country = countryDAO.getById(division.getCountry_id());
+        countryDropDownCustomer.getSelectionModel().select(country.getCountry());
+        divisionDropDownCustomer.getSelectionModel().select(division.getDivision());
+        postCodeInputCustomer.setText(customerCopy.getPostal_code());
+        phoneInputCustomer.setText(customerCopy.getPhone());
+    }
+
 }
 

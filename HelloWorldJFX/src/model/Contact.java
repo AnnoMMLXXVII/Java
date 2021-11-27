@@ -105,7 +105,7 @@ public class Contact {
 
     @Override
     public String toString() {
-        return "Contacts [contact_id=" + contact_id + ", contact_name=" + contact_name + ", email=" + email + "]";
+        return contact_name;
     }
 
 }

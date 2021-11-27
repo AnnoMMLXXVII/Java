@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #57A0D3;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeScreenController">
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="1200.0" style="-fx-background-color: #57A0D3;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeScreenController">
    <children>
       <GridPane alignment="CENTER" layoutX="-6.0" layoutY="-3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="400.0" prefWidth="607.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <columnConstraints>
@@ -24,14 +24,14 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="601.0" style="-fx-background-color: #EBECF0;" text="Schedular Directory" GridPane.vgrow="NEVER">
+            <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1200.0" style="-fx-background-color: #000000;" text="SCHEDULER DIRECTORY" textFill="WHITE" GridPane.vgrow="NEVER">
                <font>
-                  <Font name="System Bold" size="25.0" />
+                  <Font name="System Bold" size="48.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="35.0" prefWidth="150.0" style="-fx-alignment: center;" text="Customers" GridPane.rowIndex="1">
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="100.0" prefWidth="345.0" style="-fx-alignment: center;" text="Customers" textFill="WHITE" GridPane.rowIndex="1">
                <font>
-                  <Font name="System Bold" size="20.0" />
+                  <Font name="System Bold" size="28.0" />
                </font>
                <effect>
                   <SepiaTone />
@@ -40,9 +40,9 @@
                   <Insets left="10.0" />
                </GridPane.margin>
             </Label>
-            <Label alignment="CENTER" contentDisplay="CENTER" minWidth="-Infinity" prefHeight="35.0" prefWidth="150.0" text="Appointments" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <Label alignment="CENTER" contentDisplay="CENTER" minWidth="-Infinity" prefHeight="100.0" prefWidth="345.0" text="Appointments" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <font>
-                  <Font name="System Bold" size="20.0" />
+                  <Font name="System Bold" size="28.0" />
                </font>
                <effect>
                   <SepiaTone />
@@ -51,9 +51,9 @@
                   <Insets left="10.0" />
                </GridPane.margin>
             </Label>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="35.0" prefWidth="150.0" text="Reports" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="1">
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="100.0" prefWidth="345.0" text="Reports" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="1">
                <font>
-                  <Font name="System Bold" size="20.0" />
+                  <Font name="System Bold" size="28.0" />
                </font>
                <effect>
                   <SepiaTone />
@@ -62,116 +62,60 @@
                   <Insets left="10.0" />
                </GridPane.margin>
             </Label>
-            <Button fx:id="customerBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#customerViewBtn" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #EBECF0;" text=" Customers View" GridPane.rowIndex="2">
-               <effect>
-                  <Lighting diffuseConstant="2.0" specularConstant="1.62" specularExponent="40.0" surfaceScale="2.37">
-                     <bumpInput>
-                        <Shadow height="15.07" radius="3.2675" width="0.0" />
-                     </bumpInput>
-
-                  </Lighting>
-               </effect>
+            <Button fx:id="customerBtn" alignment="CENTER" contentDisplay="CENTER" depthTest="DISABLE" mnemonicParsing="false" onAction="#customerViewBtn" prefHeight="75.0" prefWidth="345.0" style="-fx-background-color: #EBECF0;" text=" Customers View" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets left="10.0" />
                </GridPane.margin>
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font name="System Bold" size="24.0" />
                </font>
             </Button>
-            <Button fx:id="appointmentsBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#apptViewBtn" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #EBECF0;" text=" Appointments View" GridPane.columnIndex="2" GridPane.rowIndex="2">
-               <effect>
-                  <Lighting diffuseConstant="2.0" specularConstant="1.62" specularExponent="40.0" surfaceScale="2.37">
-                     <bumpInput>
-                        <Shadow height="15.07" radius="3.2675" width="0.0" />
-                     </bumpInput>
-
-                  </Lighting>
-               </effect>
+            <Button fx:id="appointmentsBtn" alignment="CENTER" contentDisplay="CENTER" depthTest="DISABLE" mnemonicParsing="false" onAction="#apptViewBtn" prefHeight="75.0" prefWidth="345.0" style="-fx-background-color: #EBECF0;" text=" Appointments View" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets left="10.0" />
                </GridPane.margin>
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font name="System Bold" size="24.0" />
                </font>
             </Button>
-            <Button fx:id="monthWeekBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#monthWeekBtn" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #EBECF0;" text="Month &amp; View Week" GridPane.columnIndex="2" GridPane.rowIndex="3">
-               <effect>
-                  <Lighting diffuseConstant="2.0" specularConstant="1.62" specularExponent="40.0" surfaceScale="2.37">
-                     <bumpInput>
-                        <Shadow height="15.07" radius="3.2675" width="0.0" />
-                     </bumpInput>
-
-                  </Lighting>
-               </effect>
+            <Button fx:id="monthWeekBtn" alignment="CENTER" contentDisplay="CENTER" depthTest="DISABLE" mnemonicParsing="false" onAction="#monthWeekBtn" prefHeight="75.0" prefWidth="345.0" style="-fx-background-color: #EBECF0;" text="Month &amp; View Week" GridPane.columnIndex="2" GridPane.rowIndex="3">
                <GridPane.margin>
                   <Insets left="10.0" />
                </GridPane.margin>
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font name="System Bold" size="24.0" />
                </font>
             </Button>
-            <Button fx:id="appointmentsTypeBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#apptTypeBtn" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #EBECF0;" text="Appt. type by month" GridPane.columnIndex="4" GridPane.rowIndex="2">
-               <effect>
-                  <Lighting diffuseConstant="2.0" specularConstant="1.62" specularExponent="40.0" surfaceScale="2.37">
-                     <bumpInput>
-                        <Shadow height="15.07" radius="3.2675" width="0.0" />
-                     </bumpInput>
-
-                  </Lighting>
-               </effect>
+            <Button fx:id="appointmentsTypeBtn" alignment="CENTER" contentDisplay="CENTER" depthTest="DISABLE" mnemonicParsing="false" onAction="#apptTypeBtn" prefHeight="75.0" prefWidth="345.0" style="-fx-background-color: #EBECF0;" text="Appt. type by month" GridPane.columnIndex="4" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets left="10.0" />
                </GridPane.margin>
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font name="System Bold" size="24.0" />
                </font>
             </Button>
-            <Button fx:id="scheduleConsultantBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#scheduleByConsultantBtn" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #EBECF0;" text="Schedule by Consultant" GridPane.columnIndex="4" GridPane.rowIndex="3">
-               <effect>
-                  <Lighting diffuseConstant="2.0" specularConstant="1.62" specularExponent="40.0" surfaceScale="2.37">
-                     <bumpInput>
-                        <Shadow height="15.07" radius="3.2675" width="0.0" />
-                     </bumpInput>
-
-                  </Lighting>
-               </effect>
+            <Button fx:id="scheduleConsultantBtn" alignment="CENTER" contentDisplay="CENTER" depthTest="DISABLE" mnemonicParsing="false" onAction="#scheduleByConsultantBtn" prefHeight="75.0" prefWidth="345.0" style="-fx-background-color: #EBECF0;" text="Schedule by Consultant" GridPane.columnIndex="4" GridPane.rowIndex="3">
                <GridPane.margin>
                   <Insets left="10.0" />
                </GridPane.margin>
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font name="System Bold" size="24.0" />
                </font>
             </Button>
-            <Button fx:id="customerScheduleBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#customerByScheduleBtn" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #EBECF0;" text="Customer by Schedule" GridPane.rowIndex="3">
-               <effect>
-                  <Lighting diffuseConstant="2.0" specularConstant="1.62" specularExponent="40.0" surfaceScale="2.37">
-                     <bumpInput>
-                        <Shadow height="15.07" radius="3.2675" width="0.0" />
-                     </bumpInput>
-
-                  </Lighting>
-               </effect>
+            <Button fx:id="customerScheduleBtn" alignment="CENTER" contentDisplay="CENTER" depthTest="DISABLE" mnemonicParsing="false" onAction="#customerByScheduleBtn" prefHeight="75.0" prefWidth="345.0" style="-fx-background-color: #EBECF0;" text="Customer by Schedule" GridPane.rowIndex="3">
                <GridPane.margin>
                   <Insets left="10.0" />
                </GridPane.margin>
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font name="System Bold" size="24.0" />
                </font>
             </Button>
-            <Button fx:id="databaseLogoutBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onDBLogoutBtn" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #EBECF0;" text="Logout" GridPane.columnIndex="4" GridPane.rowIndex="4">
-               <effect>
-                  <Lighting diffuseConstant="2.0" specularConstant="1.62" specularExponent="40.0" surfaceScale="2.37">
-                     <bumpInput>
-                        <Shadow height="15.07" radius="3.2675" width="0.0" />
-                     </bumpInput>
-
-                  </Lighting>
-               </effect>
+            <Button fx:id="databaseLogoutBtn" alignment="CENTER" contentDisplay="CENTER" depthTest="DISABLE" mnemonicParsing="false" onAction="#onDBLogoutBtn" prefHeight="75.0" prefWidth="345.0" style="-fx-background-color: #EBECF0;" text="Logout" GridPane.columnIndex="4" GridPane.rowIndex="4">
                <GridPane.margin>
                   <Insets left="10.0" />
                </GridPane.margin>
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font name="System Bold" size="24.0" />
                </font>
             </Button>
          </children>

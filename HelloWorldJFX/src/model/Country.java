@@ -1,7 +1,7 @@
 package model;
 
 public class Country {
-    private String country_id;
+    private Integer country_id;
     private String country;
     private String create_date;
     private String create_by;
@@ -23,7 +23,7 @@ public class Country {
      * @param last_update String
      * @param last_updated_by String
      */
-    public Country(String country_id, String country, String create_date, String create_by, String last_update,
+    public Country(Integer country_id, String country, String create_date, String create_by, String last_update,
                    String last_updated_by) {
         super();
         this.country_id = country_id;
@@ -37,7 +37,7 @@ public class Country {
     /**
      * @return the country_id
      */
-    public String getCountry_id() {
+    public Integer getCountry_id() {
         return country_id;
     }
 
@@ -79,7 +79,7 @@ public class Country {
     /**
      * @param country_id the country_id to set
      */
-    public void setCountry_id(String country_id) {
+    public void setCountry_id(Integer country_id) {
         this.country_id = country_id;
     }
 

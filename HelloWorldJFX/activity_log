@@ -1,100 +1,20 @@
-Nov 25, 2021 5:54:57 AM logs.Logs logINFO
-INFO: 2021-11-25 05:54:57 test Login Successful
-Nov 25, 2021 5:55:09 AM logs.Logs logINFO
-INFO: 2021-11-25 05:55:09 test Login Successful
-Nov 25, 2021 5:56:30 AM logs.Logs logINFO
-INFO: 2021-11-25 05:56:30 test Login Successful
-nov. 25, 2021 5:58:27 AM logs.Logs logINFO
-INFO: 2021-11-25 05:58:27 test Login Successful
-Nov 25, 2021 6:23:18 AM logs.Logs logINFO
-INFO: 2021-11-25 06:23:18 test Login Successful
-Nov 25, 2021 6:34:48 AM logs.Logs logINFO
-INFO: 2021-11-25 06:34:48 test Login Successful
-Nov 25, 2021 6:35:13 AM logs.Logs logINFO
-INFO: 2021-11-25 06:35:13 test Login Successful
-Nov 25, 2021 6:35:24 AM logs.Logs logINFO
-INFO: 2021-11-25 06:35:24 test Login Successful
-Nov 25, 2021 6:37:36 AM logs.Logs logINFO
-INFO: 2021-11-25 06:37:36 test Login Successful
-Nov 25, 2021 6:45:25 AM logs.Logs logINFO
-INFO: 2021-11-25 06:45:25 test Login Successful
-Nov 25, 2021 6:51:13 AM logs.Logs logINFO
-INFO: 2021-11-25 06:51:13 test Login Successful
-Nov 25, 2021 6:52:58 AM logs.Logs logINFO
-INFO: 2021-11-25 06:52:58 test Login Successful
-Nov 25, 2021 6:53:21 AM logs.Logs logINFO
-INFO: 2021-11-25 06:53:21 test Login Successful
-Nov 25, 2021 6:54:35 AM logs.Logs logINFO
-INFO: 2021-11-25 06:54:35 test Login Successful
-Nov 25, 2021 6:59:25 AM logs.Logs logINFO
-INFO: 2021-11-25 06:59:25 test Login Successful
-Nov 25, 2021 8:47:54 AM logs.Logs logINFO
-INFO: 2021-11-25 08:47:54 test Login Successful
-Nov 25, 2021 8:47:59 AM logs.Logs logINFO
-INFO: 2021-11-25 08:47:59 {NAME} Has added a new Customer: {CustomerName}
-Nov 25, 2021 8:48:20 AM logs.Logs logINFO
-INFO: 2021-11-25 08:48:20  {NAME} Has Been Saved
-Nov 25, 2021 8:48:24 AM logs.Logs logINFO
-INFO: 2021-11-25 08:48:24 {NAME} Has added a new Customer: {CustomerName}
-Nov 25, 2021 8:48:28 AM logs.Logs logINFO
-INFO: 2021-11-25 08:48:28  {NAME} Has Been Saved
-Nov 25, 2021 8:48:38 AM logs.Logs logINFO
-INFO: 2021-11-25 08:48:38  {NAME} Has Been Removed
-Nov 25, 2021 8:48:42 AM logs.Logs logINFO
-INFO: 2021-11-25 08:48:42 {NAME} Has added a new Customer: {CustomerName}
-Nov 25, 2021 8:48:45 AM logs.Logs logINFO
-INFO: 2021-11-25 08:48:45  {NAME} Has Been Saved
-Nov 25, 2021 8:54:42 AM logs.Logs logINFO
-INFO: 2021-11-25 08:54:42 test Login Successful
-Nov 25, 2021 8:54:51 AM logs.Logs logINFO
-INFO: 2021-11-25 08:54:51  {NAME} Has Been Saved
-Nov 25, 2021 8:54:57 AM logs.Logs logINFO
-INFO: 2021-11-25 08:54:57  {NAME} Has Been Removed
-Nov 25, 2021 8:55:00 AM logs.Logs logINFO
-INFO: 2021-11-25 08:55:00 {NAME} Has added a new Customer: {CustomerName}
-Nov 25, 2021 8:55:09 AM logs.Logs logINFO
-INFO: 2021-11-25 08:55:09  {NAME} Has Been Removed
-Nov 25, 2021 8:55:13 AM logs.Logs logINFO
-INFO: 2021-11-25 08:55:13  {NAME} Has Been Removed
-Nov 25, 2021 8:55:13 AM logs.Logs logINFO
-INFO: 2021-11-25 08:55:13  {NAME} Has Been Removed
-Nov 25, 2021 8:55:13 AM logs.Logs logINFO
-INFO: 2021-11-25 08:55:13  {NAME} Has Been Removed
-Nov 25, 2021 8:55:14 AM logs.Logs logINFO
-INFO: 2021-11-25 08:55:14  {NAME} Has Been Removed
-Nov 25, 2021 8:55:14 AM logs.Logs logINFO
-INFO: 2021-11-25 08:55:14  {NAME} Has Been Removed
-Nov 25, 2021 8:55:38 AM logs.Logs logINFO
-INFO: 2021-11-25 08:55:38  {NAME} Has Been Removed
-Nov 25, 2021 8:55:38 AM logs.Logs logINFO
-INFO: 2021-11-25 08:55:38  {NAME} Has Been Removed
-Nov 25, 2021 8:55:39 AM logs.Logs logINFO
-INFO: 2021-11-25 08:55:39  {NAME} Has Been Removed
-Nov 25, 2021 8:58:15 AM logs.Logs logINFO
-INFO: 2021-11-25 08:58:15 test Login Successful
-Nov 25, 2021 8:58:17 AM logs.Logs logINFO
-INFO: 2021-11-25 08:58:17  {NAME} Has Been Removed
-Nov 25, 2021 8:58:18 AM logs.Logs logINFO
-INFO: 2021-11-25 08:58:18  {NAME} Has Been Removed
-Nov 25, 2021 8:58:18 AM logs.Logs logINFO
-INFO: 2021-11-25 08:58:18  {NAME} Has Been Removed
-Nov 25, 2021 8:59:01 AM logs.Logs logINFO
-INFO: 2021-11-25 08:59:01 test Login Successful
-Nov 25, 2021 8:59:05 AM logs.Logs logINFO
-INFO: 2021-11-25 08:59:05 {NAME} Has added a new Customer: {CustomerName}
-Nov 25, 2021 8:59:08 AM logs.Logs logINFO
-INFO: 2021-11-25 08:59:08  {NAME} Has Been Saved
-Nov 25, 2021 8:59:20 AM logs.Logs logINFO
-INFO: 2021-11-25 08:59:20  {NAME} Has Been Removed
-Nov 25, 2021 8:59:29 AM logs.Logs logINFO
-INFO: 2021-11-25 08:59:29  {NAME} Has Been Saved
-Nov 25, 2021 9:00:42 AM logs.Logs logINFO
-INFO: 2021-11-25 09:00:42 test Login Successful
-Nov 25, 2021 9:00:56 AM logs.Logs logINFO
-INFO: 2021-11-25 09:00:56 {NAME} Has added a new Customer: {CustomerName}
-Nov 25, 2021 9:00:58 AM logs.Logs logINFO
-INFO: 2021-11-25 09:00:58  {NAME} Has Been Saved
-Nov 25, 2021 9:01:16 AM logs.Logs logINFO
-INFO: 2021-11-25 09:01:16 {NAME} Has added a new Customer: {CustomerName}
-Nov 25, 2021 9:01:21 AM logs.Logs logINFO
-INFO: 2021-11-25 09:01:21 {NAME} Has added a new Customer: {CustomerName}
+Nov 27, 2021 6:25:22 AM logs.Logs logINFO
+INFO: 2021-11-27 06:25:22 test Login Successful
+Nov 27, 2021 7:16:09 AM logs.Logs logINFO
+INFO: 2021-11-27 07:16:09 test Login Successful
+Nov 27, 2021 7:16:52 AM logs.Logs logINFO
+INFO: 2021-11-27 07:16:52 test Login Successful
+Nov 27, 2021 7:17:42 AM logs.Logs logINFO
+INFO: 2021-11-27 07:17:42 test Login Successful
+Nov 27, 2021 7:21:10 AM logs.Logs logINFO
+INFO: 2021-11-27 07:21:10 test Login Successful
+Nov 27, 2021 7:22:39 AM logs.Logs logINFO
+INFO: 2021-11-27 07:22:39 test Login Successful
+Nov 27, 2021 7:33:38 AM logs.Logs logINFO
+INFO: 2021-11-27 07:33:38 test Login Successful
+Nov 27, 2021 7:45:58 AM logs.Logs logINFO
+INFO: 2021-11-27 07:45:58 test Login Successful
+Nov 27, 2021 7:50:28 AM logs.Logs logINFO
+INFO: 2021-11-27 07:50:28 test Login Successful
+Nov 27, 2021 8:06:44 AM logs.Logs logINFO
+INFO: 2021-11-27 08:06:44 test Login Successful

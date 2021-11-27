@@ -2,7 +2,7 @@ package dao;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import model.User;
+import model.Country;
 import shared.DataAccessObject;
 import shared.JDBC;
 
@@ -14,21 +14,21 @@ import static shared.Common.*;
 import static shared.Constants.DBCOLUMNS;
 import static shared.Constants.DB_TABLES;
 
-public class LoginDAO implements DataAccessObject<User> {
+public class CountryDAO implements DataAccessObject<Country> {
 
-    private ObservableList<User> users;
+    private Country country;
+    private ObservableList<Country> countries;
     private ResultSet rs;
-    private User user;
 
     @Override
-    public ObservableList<User> getAll() {
+    public ObservableList<Country> getAll() {
         JDBC.openConnection();
-        users = FXCollections.observableArrayList();
+        countries = FXCollections.observableArrayList();
         try {
-            JDBC.makePreparedStatement(queryAll(DB_TABLES.users.name()), JDBC.getConnection());
+            JDBC.makePreparedStatement(queryAll(DB_TABLES.countries.name()), JDBC.getConnection());
             rs = JDBC.getPreparedStatement().executeQuery();
             while (rs.next()) {
-                users.add(getAllColumnsUsingResultSet(rs));
+                countries.add(getAllColumnsUsingResultSet(rs));
             }
         } catch (SQLException e) {
             getApplicationLogger().logERROR("SQL EXCEPTION : " + e.getMessage());
@@ -37,19 +37,19 @@ public class LoginDAO implements DataAccessObject<User> {
         } finally {
             JDBC.closeConnection();
         }
-        return users;
+        return countries;
     }
 
     @Override
-    public User getById(int id) {
+    public Country getById(int id) {
         JDBC.openConnection();
         try {
-            JDBC.makePreparedStatement(queryAllByCondition(DB_TABLES.users.name(),
-                    DBCOLUMNS.USER_ID.getValue(), id + ""), JDBC.getConnection());
+            JDBC.makePreparedStatement(queryAllByCondition(DB_TABLES.countries.name(),
+                    DBCOLUMNS.COUNTRY_ID.getValue(), id + ""), JDBC.getConnection());
             rs = JDBC.getPreparedStatement().executeQuery();
             while (rs.next()) {
-                user = getAllColumnsUsingResultSet(rs);
-                if (user == null) {
+                country = getAllColumnsUsingResultSet(rs);
+                if (country == null) {
                     getApplicationLogger().logERROR("NULL EXCEPTION Using ID " + id);
                     throw new NullPointerException("Could not retrieve Customer By ID : " + id);
                 }
@@ -59,21 +59,21 @@ public class LoginDAO implements DataAccessObject<User> {
         } finally {
             JDBC.closeConnection();
         }
-        return user;
+        return country;
     }
 
     @Override
-    public boolean create(User object) {
+    public boolean create(Country object) {
         return false;
     }
 
     @Override
-    public boolean update(User object) {
+    public boolean update(Country object) {
         return false;
     }
 
     @Override
-    public boolean remove(User object) {
+    public boolean remove(Country object) {
         return false;
     }
 
@@ -83,10 +83,10 @@ public class LoginDAO implements DataAccessObject<User> {
     }
 
     @Override
-    public User getAllColumnsUsingResultSet(ResultSet rs) throws SQLException {
-        return new User(Integer.parseInt(rs.getString(DBCOLUMNS.USER_ID.getValue())),
-                rs.getString(DBCOLUMNS.USER_NAME.getValue()),
-                rs.getString(DBCOLUMNS.PASSWORD.getValue()),
+    public Country getAllColumnsUsingResultSet(ResultSet rs) throws SQLException {
+        return new Country(
+                rs.getInt(DBCOLUMNS.COUNTRY_ID.getValue()),
+                rs.getString(DBCOLUMNS.COUNTRY.getValue()),
                 rs.getString(DBCOLUMNS.CREATE_DATE.getValue()),
                 rs.getString(DBCOLUMNS.CREATED_BY.getValue()),
                 rs.getString(DBCOLUMNS.LAST_UPDATE.getValue()),
@@ -95,7 +95,7 @@ public class LoginDAO implements DataAccessObject<User> {
     }
 
     @Override
-    public void executeModificationQuery(PreparedStatement ps, User object) throws SQLException {
-        return;
+    public void executeModificationQuery(PreparedStatement ps, Country object) throws SQLException {
+
     }
 }

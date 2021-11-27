@@ -2,7 +2,7 @@ package dao;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import model.User;
+import model.Contact;
 import shared.DataAccessObject;
 import shared.JDBC;
 
@@ -14,21 +14,23 @@ import static shared.Common.*;
 import static shared.Constants.DBCOLUMNS;
 import static shared.Constants.DB_TABLES;
 
-public class LoginDAO implements DataAccessObject<User> {
 
-    private ObservableList<User> users;
+public class ContactDAO implements DataAccessObject<Contact> {
+
+    private Contact contact;
+    private ObservableList<Contact> contacts;
     private ResultSet rs;
-    private User user;
+    private PreparedStatement ps;
 
     @Override
-    public ObservableList<User> getAll() {
+    public ObservableList<Contact> getAll() {
         JDBC.openConnection();
-        users = FXCollections.observableArrayList();
+        contacts = FXCollections.observableArrayList();
         try {
-            JDBC.makePreparedStatement(queryAll(DB_TABLES.users.name()), JDBC.getConnection());
+            JDBC.makePreparedStatement(queryAll(DB_TABLES.contacts.name()), JDBC.getConnection());
             rs = JDBC.getPreparedStatement().executeQuery();
             while (rs.next()) {
-                users.add(getAllColumnsUsingResultSet(rs));
+                contacts.add(getAllColumnsUsingResultSet(rs));
             }
         } catch (SQLException e) {
             getApplicationLogger().logERROR("SQL EXCEPTION : " + e.getMessage());
@@ -37,19 +39,19 @@ public class LoginDAO implements DataAccessObject<User> {
         } finally {
             JDBC.closeConnection();
         }
-        return users;
+        return contacts;
     }
 
     @Override
-    public User getById(int id) {
+    public Contact getById(int id) {
         JDBC.openConnection();
         try {
-            JDBC.makePreparedStatement(queryAllByCondition(DB_TABLES.users.name(),
-                    DBCOLUMNS.USER_ID.getValue(), id + ""), JDBC.getConnection());
+            JDBC.makePreparedStatement(queryAllByCondition(DB_TABLES.contacts.name(),
+                    DBCOLUMNS.CONTACT_ID.getValue(), id + ""), JDBC.getConnection());
             rs = JDBC.getPreparedStatement().executeQuery();
             while (rs.next()) {
-                user = getAllColumnsUsingResultSet(rs);
-                if (user == null) {
+                contact = getAllColumnsUsingResultSet(rs);
+                if (contact == null) {
                     getApplicationLogger().logERROR("NULL EXCEPTION Using ID " + id);
                     throw new NullPointerException("Could not retrieve Customer By ID : " + id);
                 }
@@ -59,21 +61,21 @@ public class LoginDAO implements DataAccessObject<User> {
         } finally {
             JDBC.closeConnection();
         }
-        return user;
+        return contact;
     }
 
     @Override
-    public boolean create(User object) {
+    public boolean create(Contact object) {
         return false;
     }
 
     @Override
-    public boolean update(User object) {
+    public boolean update(Contact object) {
         return false;
     }
 
     @Override
-    public boolean remove(User object) {
+    public boolean remove(Contact object) {
         return false;
     }
 
@@ -83,19 +85,15 @@ public class LoginDAO implements DataAccessObject<User> {
     }
 
     @Override
-    public User getAllColumnsUsingResultSet(ResultSet rs) throws SQLException {
-        return new User(Integer.parseInt(rs.getString(DBCOLUMNS.USER_ID.getValue())),
-                rs.getString(DBCOLUMNS.USER_NAME.getValue()),
-                rs.getString(DBCOLUMNS.PASSWORD.getValue()),
-                rs.getString(DBCOLUMNS.CREATE_DATE.getValue()),
-                rs.getString(DBCOLUMNS.CREATED_BY.getValue()),
-                rs.getString(DBCOLUMNS.LAST_UPDATE.getValue()),
-                rs.getString(DBCOLUMNS.LAST_UPDATED_BY.getValue())
+    public Contact getAllColumnsUsingResultSet(ResultSet rs) throws SQLException {
+        return new Contact(
+                rs.getString(DBCOLUMNS.CONTACT_ID.getValue()),
+                rs.getString(DBCOLUMNS.CONTACT_NAME.getValue()),
+                rs.getString(DBCOLUMNS.EMAIL.getValue())
         );
     }
 
-    @Override
-    public void executeModificationQuery(PreparedStatement ps, User object) throws SQLException {
+    public void executeModificationQuery(PreparedStatement ps, Contact object) throws SQLException {
         return;
     }
 }

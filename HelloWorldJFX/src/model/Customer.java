@@ -1,16 +1,16 @@
 package model;
 
 public class Customer {
-    private String customer_id;
-    private String contact_name;
+    private Integer customer_id;
+    private String customer_name;
     private String address;
     private String postal_code;
     private String phone;
     private String create_date;
     private String create_by;
     private String last_update;
-    private String last_updated;
-    private String division;
+    private String last_updated_by;
+    private Integer division_id;
 
     /**
      * Empty Constructor
@@ -20,44 +20,44 @@ public class Customer {
     }
 
     /**
-     * @param customer_id String
-     * @param contact_name String
-     * @param address String
-     * @param postal_code String
-     * @param phone String
-     * @param create_date String
-     * @param create_by String
-     * @param last_update String
-     * @param last_updated String
-     * @param division String
+     * @param customer_id  String
+     * @param customer_name String
+     * @param address      String
+     * @param postal_code  String
+     * @param phone        String
+     * @param create_date  String
+     * @param create_by    String
+     * @param last_update  String
+     * @param last_updated_by String
+     * @param division_id  String
      */
-    public Customer(String customer_id, String contact_name, String address, String postal_code, String phone,
-                    String create_date, String create_by, String last_update, String last_updated, String division) {
+    public Customer(Integer customer_id, String customer_name, String address, String postal_code, String phone,
+                    String create_date, String create_by, String last_update, String last_updated_by, Integer division_id) {
         super();
         this.customer_id = customer_id;
-        this.contact_name = contact_name;
+        this.customer_name = customer_name;
         this.address = address;
         this.postal_code = postal_code;
         this.phone = phone;
         this.create_date = create_date;
         this.create_by = create_by;
         this.last_update = last_update;
-        this.last_updated = last_updated;
-        this.division = division;
+        this.last_updated_by = last_updated_by;
+        this.division_id = division_id;
     }
 
     /**
      * @return the customer_id
      */
-    public String getCustomer_id() {
+    public Integer getCustomer_id() {
         return customer_id;
     }
 
     /**
-     * @return the contact_name
+     * @return the customer_name
      */
-    public String getContact_name() {
-        return contact_name;
+    public String getCustomer_name() {
+        return customer_name;
     }
 
     /**
@@ -103,31 +103,31 @@ public class Customer {
     }
 
     /**
-     * @return the last_updated
+     * @return the last_updated_by
      */
-    public String getLast_updated() {
-        return last_updated;
+    public String getLast_updated_by() {
+        return last_updated_by;
     }
 
     /**
-     * @return the division
+     * @return the division_id
      */
-    public String getDivision() {
-        return division;
+    public Integer getDivision_id() {
+        return division_id;
     }
 
     /**
      * @param customer_id the customer_id to set
      */
-    public void setCustomer_id(String customer_id) {
+    public void setCustomer_id(Integer customer_id) {
         this.customer_id = customer_id;
     }
 
     /**
-     * @param contact_name the contact_name to set
+     * @param customer_name the customer_name to set
      */
-    public void setContact_name(String contact_name) {
-        this.contact_name = contact_name;
+    public void setCustomer_name(String customer_name) {
+        this.customer_name = customer_name;
     }
 
     /**
@@ -168,22 +168,22 @@ public class Customer {
     /**
      * @param last_update the last_update to set
      */
-    public void setLast_update(String last_update) {
+    public void setLast_update_by(String last_update) {
         this.last_update = last_update;
     }
 
     /**
-     * @param last_updated the last_updated to set
+     * @param last_updated_by the last_updated_by to set
      */
-    public void setLast_updated(String last_updated) {
-        this.last_updated = last_updated;
+    public void setLast_updated_by(String last_updated_by) {
+        this.last_updated_by = last_updated_by;
     }
 
     /**
-     * @param division the division to set
+     * @param division_id the division_id to set
      */
-    public void setDivision(String division) {
-        this.division = division;
+    public void setDivision_id(Integer division_id) {
+        this.division_id = division_id;
     }
 
     @Override
@@ -191,13 +191,13 @@ public class Customer {
         final int prime = 31;
         int result = 1;
         result = prime * result + ((address == null) ? 0 : address.hashCode());
-        result = prime * result + ((contact_name == null) ? 0 : contact_name.hashCode());
+        result = prime * result + ((customer_name == null) ? 0 : customer_name.hashCode());
         result = prime * result + ((create_by == null) ? 0 : create_by.hashCode());
         result = prime * result + ((create_date == null) ? 0 : create_date.hashCode());
         result = prime * result + ((customer_id == null) ? 0 : customer_id.hashCode());
-        result = prime * result + ((division == null) ? 0 : division.hashCode());
+        result = prime * result + ((division_id == null) ? 0 : division_id.hashCode());
         result = prime * result + ((last_update == null) ? 0 : last_update.hashCode());
-        result = prime * result + ((last_updated == null) ? 0 : last_updated.hashCode());
+        result = prime * result + ((last_updated_by == null) ? 0 : last_updated_by.hashCode());
         result = prime * result + ((phone == null) ? 0 : phone.hashCode());
         result = prime * result + ((postal_code == null) ? 0 : postal_code.hashCode());
         return result;
@@ -217,10 +217,10 @@ public class Customer {
                 return false;
         } else if (!address.equals(other.address))
             return false;
-        if (contact_name == null) {
-            if (other.contact_name != null)
+        if (customer_name == null) {
+            if (other.customer_name != null)
                 return false;
-        } else if (!contact_name.equals(other.contact_name))
+        } else if (!customer_name.equals(other.customer_name))
             return false;
         if (create_by == null) {
             if (other.create_by != null)
@@ -237,20 +237,20 @@ public class Customer {
                 return false;
         } else if (!customer_id.equals(other.customer_id))
             return false;
-        if (division == null) {
-            if (other.division != null)
+        if (division_id == null) {
+            if (other.division_id != null)
                 return false;
-        } else if (!division.equals(other.division))
+        } else if (!division_id.equals(other.division_id))
             return false;
         if (last_update == null) {
             if (other.last_update != null)
                 return false;
         } else if (!last_update.equals(other.last_update))
             return false;
-        if (last_updated == null) {
-            if (other.last_updated != null)
+        if (last_updated_by == null) {
+            if (other.last_updated_by != null)
                 return false;
-        } else if (!last_updated.equals(other.last_updated))
+        } else if (!last_updated_by.equals(other.last_updated_by))
             return false;
         if (phone == null) {
             if (other.phone != null)
@@ -267,10 +267,7 @@ public class Customer {
 
     @Override
     public String toString() {
-        return "Customers [customer_id=" + customer_id + ", contact_name=" + contact_name + ", address=" + address
-                + ", postal_code=" + postal_code + ", phone=" + phone + ", create_date=" + create_date + ", create_by="
-                + create_by + ", last_update=" + last_update + ", last_updated=" + last_updated + ", division="
-                + division + "]";
+        return customer_name;
     }
 
 }

@@ -4,12 +4,14 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import shared.Common;
-import shared.Constants;
 
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
+
+import static shared.Common.closePreviousWindow;
+import static shared.Common.navigateToWindow;
+import static shared.Constants.FXMLVIEW;
 
 public class HomeScreenController implements Initializable {
 
@@ -41,8 +43,8 @@ public class HomeScreenController implements Initializable {
 
     @FXML
     void apptViewBtn(ActionEvent event) {
-        Common.naviateToWindow(Constants.FXML.APPOINTMENTS, "Appointments Screen");
-        Common.closePreviousWindow(appointmentsBtn);
+        closePreviousWindow(appointmentsBtn);
+        navigateToWindow(FXMLVIEW.APPOINTMENT, "Appointments Screen");
     }
 
     @FXML
@@ -52,8 +54,8 @@ public class HomeScreenController implements Initializable {
 
     @FXML
     void customerViewBtn(ActionEvent event) throws SQLException {
-        Common.closePreviousWindow(customerBtn);
-        Common.naviateToWindow(Constants.FXML.CUSTOMER, "Customer Screen");
+        closePreviousWindow(customerBtn);
+        navigateToWindow(FXMLVIEW.CUSTOMER, "Customer Screen");
     }
 
     @FXML
@@ -63,8 +65,8 @@ public class HomeScreenController implements Initializable {
 
     @FXML
     void onDBLogoutBtn(ActionEvent event) throws SQLException {
-        Common.closePreviousWindow(databaseLogoutBtn);
-        Common.naviateToWindow(Constants.FXML.LOGIN, "Login Screen");
+        closePreviousWindow(databaseLogoutBtn);
+        navigateToWindow(FXMLVIEW.LOGIN, "Login Screen");
     }
 
     @FXML

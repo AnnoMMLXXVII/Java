@@ -1,13 +1,13 @@
 package model;
 
 public class Division {
-    private String division_id;
+    private Integer division_id;
     private String division;
     private String create_date;
     private String create_by;
     private String last_update;
     private String last_updated_by;
-    private String country_id;
+    private Integer country_id;
 
     /**
      *  Empty Constructor
@@ -16,16 +16,16 @@ public class Division {
         super();
     }
     /**
-     * @param division_id String
+     * @param division_id Integer
      * @param division String
      * @param create_date String
      * @param create_by String
      * @param last_update String
      * @param last_updated_by String
-     * @param country_id String
+     * @param country_id Integer
      */
-    public Division(String division_id, String division, String create_date, String create_by,
-                    String last_update, String last_updated_by, String country_id) {
+    public Division(Integer division_id, String division, String create_date, String create_by,
+                    String last_update, String last_updated_by, Integer country_id) {
         super();
         this.division_id = division_id;
         this.division = division;
@@ -38,7 +38,7 @@ public class Division {
     /**
      * @return the division_id
      */
-    public String getDivision_id() {
+    public Integer getDivision_id() {
         return division_id;
     }
     /**
@@ -74,13 +74,13 @@ public class Division {
     /**
      * @return the country_id
      */
-    public String getCountry_id() {
+    public Integer getCountry_id() {
         return country_id;
     }
     /**
      * @param division_id the division_id to set
      */
-    public void setDivision_id(String division_id) {
+    public void setDivision_id(Integer division_id) {
         this.division_id = division_id;
     }
     /**
@@ -116,7 +116,7 @@ public class Division {
     /**
      * @param country_id the country_id to set
      */
-    public void setCountry_id(String country_id) {
+    public void setCountry_id(Integer country_id) {
         this.country_id = country_id;
     }
     @Override

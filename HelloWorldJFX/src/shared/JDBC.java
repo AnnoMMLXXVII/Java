@@ -5,6 +5,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+import static shared.Common.getApplicationLogger;
+
 public class JDBC {
     private static final String schema = "client_schema";
     private static final String jdbcUrl = "jdbc:mysql://localhost/" + schema + "?connectionTimeZone = SERVER"; // LOCAL
@@ -16,11 +18,11 @@ public class JDBC {
         try {
             Class.forName(driver); // Locate Driver
             connection = DriverManager.getConnection(jdbcUrl, System.getProperty("CLIENTID"), System.getProperty("CLIENTSECRET")); // reference Connection object
-            Common.getApplicationLogger().logINFO("Database Connection was Successful");
+            getApplicationLogger().logINFO("Database Connection was Successful");
         } catch (ClassNotFoundException e) {
-            Common.getApplicationLogger().logERROR("ClassNotFoundError: " + e.getMessage());
+            getApplicationLogger().logERROR("ClassNotFoundError: " + e.getMessage());
         } catch (SQLException e) {
-            Common.getApplicationLogger().logERROR("SQLError:" + e.getMessage());
+            getApplicationLogger().logERROR("SQLError:" + e.getMessage());
         }
     }
 
@@ -31,27 +33,27 @@ public class JDBC {
     public static void closeConnection() {
         try {
             connection.close();
-            Common.getApplicationLogger().logINFO("Closed Database Connection");
+            getApplicationLogger().logINFO("Closed Database Connection");
         } catch (SQLException e) {
-            Common.getApplicationLogger().logERROR("SQLError:" + e.getMessage());
+            getApplicationLogger().logERROR("SQLError:" + e.getMessage());
         }
     }
 
     public static void makePreparedStatement(String sqlStatement, Connection conn) throws SQLException {
         if (conn != null) {
             preparedStatement = conn.prepareStatement(sqlStatement);
-            Common.getApplicationLogger().logINFO("Prepared Statement created successfully");
+            getApplicationLogger().logINFO("Prepared Statement created successfully");
         } else {
-            Common.getApplicationLogger().logERROR("Prepared Statement Creation Failed!");
+            getApplicationLogger().logERROR("Prepared Statement Creation Failed!");
         }
     }
 
-    public static PreparedStatement getPreparedStatement() throws SQLException {
+    public static PreparedStatement getPreparedStatement() throws NullPointerException {
         if (preparedStatement != null) {
-            Common.getApplicationLogger().logINFO("Retrieving Prepared Statement");
+            getApplicationLogger().logINFO("Retrieving Prepared Statement");
             return preparedStatement;
         } else {
-            Common.getApplicationLogger().logERROR("Null reference to Prepared Statement");
+            getApplicationLogger().logERROR("Null reference to Prepared Statement");
             return null;
         }
 

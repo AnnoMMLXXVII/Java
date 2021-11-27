@@ -1,10 +1,13 @@
 package shared;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.ComboBox;
 import javafx.stage.Stage;
 import logs.ActivityLogger;
 import logs.ApplicationLogger;
@@ -19,15 +22,16 @@ import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.Optional;
 
+import static shared.Constants.FXMLVIEW;
 
 public class Common {
 
     private static Alert conf, error;
     private static ActivityLogger activityLogger;
     private static ApplicationLogger applicationLogger;
+    private static String clientName;
 
     /**
-     *
      * @param fields String...
      * @return boolean
      */
@@ -40,12 +44,58 @@ public class Common {
         return false;
     }
 
+    public static String queryAll(String table) {
+        String query = String.format("SELECT * FROM %s", table);
+        getApplicationLogger().logINFO("QUERY: " + query);
+        return query;
+    }
+
+    public static String queryAllByCondition(String table, String colName, String value) {
+        String query = String.format("SELECT * FROM %s WHERE %s = %s", table, colName, value);
+        getApplicationLogger().logINFO("QUERY: " + query);
+        return query;
+    }
+
+    public static String createInsertQuery(String table, int rsCount) {
+        String query = String.format("INSERT INTO `%s` VALUES ( %s )", table, createQuestionMarksForQuery(rsCount));
+        getApplicationLogger().logINFO("QUERY: " + query);
+        return query;
+    }
+
+    public static String createUpdateQuery(String table, String primaryKey, String value, Constants.DBCOLUMNS... dbcolumns) {
+        String query = String.format("UPDATE `%s` SET %s WHERE %s = %s", table, createColumnQuestionMarkMapForUpdateQuery(dbcolumns), primaryKey, value);
+        getApplicationLogger().logINFO("QUERY: " + query);
+        return query;
+    }
+
+    public static String createDeleteQueryByCondition(String table, String colNum, String value) {
+        String query = String.format("DELETE FROM `%s` WHERE %s = %s", table, colNum, value);
+        getApplicationLogger().logINFO("QUERY: " + query);
+        return query;
+    }
+
+    private static String createColumnQuestionMarkMapForUpdateQuery(Constants.DBCOLUMNS[] dbColumns) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < dbColumns.length; i++) {
+            sb.append(String.format("%s=?,", dbColumns[i].getValue()));
+        }
+        return sb.toString().substring(0, sb.length() - 1);
+    }
+
+    private static String createQuestionMarksForQuery(int count) {
+        StringBuilder sb = new StringBuilder();
+        sb.append("NULL,");
+        for (int i = 0; i < count; i++) {
+            sb.append("?,");
+        }
+        return sb.toString().substring(0, sb.length() - 1);
+    }
+
     /**
-     *
      * @param source FXML
-     * @param title String
+     * @param title  String
      */
-    public static void naviateToWindow(Constants.FXML source, String title) {
+    public static void navigateToWindow(FXMLVIEW source, String title) {
         try {
             closeConnectionConditionally();
             FXMLLoader loader = new FXMLLoader();
@@ -63,6 +113,7 @@ public class Common {
 
     /**
      * Reuseable method that can close a previous window
+     *
      * @param btn Button
      * @throws SQLException sqlException
      */
@@ -81,13 +132,12 @@ public class Common {
             if (JDBC.getConnection() != null) {
                 JDBC.closeConnection();
             }
-        } catch(SQLException e) {
+        } catch (SQLException e) {
             getApplicationLogger().logWARN("Unable To Close DB Connection");
         }
     }
 
     /**
-     *
      * @return LocalDate
      */
     public static LocalDate getCurrentDate() {
@@ -95,7 +145,15 @@ public class Common {
     }
 
     /**
-     *
+     * @param date String
+     * @return LocalDate
+     */
+    public static LocalDate getCurrentDate(String date) {
+        String[] split = date.split("/");
+        return LocalDate.of(Integer.parseInt(split[0]), Integer.parseInt(split[1]), Integer.parseInt(split[2]));
+    }
+
+    /**
      * @return LocalDate
      */
     public static LocalTime getCurrentTime() {
@@ -103,7 +161,15 @@ public class Common {
     }
 
     /**
-     *
+     * @param time String
+     * @return LocalTime
+     */
+    public static LocalTime getCurrentTime(String time) {
+        String[] split = time.split(":");
+        return LocalTime.of(Integer.parseInt(split[0]), Integer.parseInt(split[1]), Integer.parseInt(split[2]));
+    }
+
+    /**
      * @param date LocalDate
      * @param time LocalTime
      * @return String.Format
@@ -116,7 +182,6 @@ public class Common {
     }
 
     /**
-     *
      * @param alert Alert
      */
     public static void setConfAlert(Alert alert) {
@@ -125,7 +190,6 @@ public class Common {
     }
 
     /**
-     *
      * @param alert Alert
      */
     public static void setErrorAlert(Alert alert) {
@@ -134,7 +198,6 @@ public class Common {
     }
 
     /**
-     *
      * @return boolean
      */
     public static boolean confirmationPopup() {
@@ -161,8 +224,17 @@ public class Common {
         error.showAndWait();
     }
 
+    public static void setUserLoggedIn(String clientName) {
+        Common.clientName = clientName;
+    }
+
+    public static String getUserLoggedIn() {
+        return Common.clientName;
+    }
+
     /**
      * Reuseable ErrorPopup
+     *
      * @param string String
      */
     public static void errorPopup(String string) {
@@ -171,7 +243,20 @@ public class Common {
     }
 
     /**
-     *
+     * @param dao      DataAccessObject : ?
+     * @param comboBox ComboBox : String
+     * @return ComboBox : String
+     */
+    public static ComboBox<String> initializeComboBox(DataAccessObject<?> dao, ComboBox<String> comboBox) {
+        ObservableList<String> strings = FXCollections.observableArrayList();
+        dao.getAll().forEach(e -> {
+            strings.add(e.toString());
+        });
+        comboBox.setItems(strings);
+        return comboBox;
+    }
+
+    /**
      * @param logger Logs
      */
     public static void setActivityLogger(Logs<?> logger) {
@@ -179,7 +264,6 @@ public class Common {
     }
 
     /**
-     *
      * @param logger Logs
      */
     public static void setApplicationLogger(Logs<?> logger) {
@@ -187,7 +271,6 @@ public class Common {
     }
 
     /**
-     *
      * @return ActivityLogger
      */
     public static Logs getActivityLogger() {
@@ -195,7 +278,6 @@ public class Common {
     }
 
     /**
-     *
      * @return ApplicationLogger
      */
     public static Logs getApplicationLogger() {

@@ -6,66 +6,78 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="316.0" prefWidth="572.0" style="-fx-background-color: #57A0D3;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+<AnchorPane id="AnchorPane" prefHeight="434.0" prefWidth="1200.0" style="-fx-background-color: #57A0D3;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
    <children>
-      <VBox alignment="BASELINE_CENTER" prefHeight="316.0" prefWidth="572.0">
+      <VBox alignment="BASELINE_CENTER" prefHeight="500.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label fx:id="headerLblLogin" alignment="CENTER" contentDisplay="CENTER" prefHeight="35.0" prefWidth="572.0" style="-fx-background-color: #EBECF0;" text="Scheduler Login">
+            <Label fx:id="headerLblLogin" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="117.0" prefWidth="1200.0" style="-fx-background-color: BLACK;" text="SCHEDULER LOGIN" textFill="WHITE">
                <font>
-                  <Font size="27.0" />
+                  <Font size="48.0" />
                </font>
                <effect>
                   <SepiaTone />
                </effect>
+               <padding>
+                  <Insets left="50.0" right="50.0" top="50.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="-60.0" />
+               </VBox.margin>
             </Label>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+            <HBox alignment="CENTER" prefHeight="125.0" prefWidth="1200.0" style="-fx-border-color: BLACK;">
                <children>
-                  <Label fx:id="userNameLblLogin" alignment="CENTER" prefHeight="46.0" prefWidth="270.0" text="Username:  ">
+                  <Label fx:id="userNameLblLogin" alignment="CENTER" prefHeight="75.0" prefWidth="350.0" text="Username:  " textFill="WHITE">
                      <font>
-                        <Font size="24.0" />
+                        <Font size="36.0" />
                      </font>
                      <HBox.margin>
-                        <Insets />
+                        <Insets right="25.0" />
                      </HBox.margin></Label>
-                  <TextField fx:id="userNameInputLogin" prefHeight="45.0" prefWidth="275.0" promptText="Enter the Username" style="-fx-background-color: #EBECF0;">
+                  <TextField fx:id="userNameInputLogin" prefHeight="75.0" prefWidth="375.0" promptText="Enter the Username" style="-fx-background-color: #EBECF0;">
                      <font>
-                        <Font size="15.0" />
+                        <Font size="36.0" />
                      </font>
                      <HBox.margin>
-                        <Insets />
+                        <Insets left="75.0" />
                      </HBox.margin>
                   </TextField>
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+            <HBox alignment="CENTER" prefHeight="125.0" prefWidth="1200.0" style="-fx-border-color: BLACK;">
                <children>
-                  <Label fx:id="passwordLblLogin" alignment="CENTER" prefHeight="45.0" prefWidth="265.0" text="Password:  ">
+                  <Label fx:id="passwordLblLogin" alignment="CENTER" prefHeight="75.0" prefWidth="350.0" text="Password:  " textFill="WHITE">
                      <font>
-                        <Font size="24.0" />
-                     </font></Label>
-                  <PasswordField fx:id="passwordInputLogin" prefHeight="45.0" prefWidth="275.0" promptText="Enter the password" style="-fx-background-color: #EBECF0;">
-                     <font>
-                        <Font size="15.0" />
+                        <Font size="36.0" />
                      </font>
+                     <HBox.margin>
+                        <Insets right="25.0" />
+                     </HBox.margin></Label>
+                  <PasswordField fx:id="passwordInputLogin" prefHeight="75.0" prefWidth="375.0" promptText="Enter the password" style="-fx-background-color: #EBECF0;">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="75.0" />
+                     </HBox.margin>
                   </PasswordField>
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+            <HBox alignment="CENTER" prefHeight="125.0" prefWidth="1200.0" style="-fx-border-color: BLACK;">
                <children>
-                  <Button fx:id="cxlBtnLogin" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#cancelBtnLogin" prefHeight="45.0" prefWidth="125.0" style="-fx-background-color: #EBECF0;" text="Cancel" textFill="RED">
+                  <Button fx:id="cxlBtnLogin" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#cancelBtnLogin" prefHeight="75.0" prefWidth="250.0" style="-fx-background-color: #EBECF0;" text="Cancel" textFill="RED">
                      <HBox.margin>
-                        <Insets right="50.0" />
+                        <Insets right="25.0" />
                      </HBox.margin>
                      <font>
-                        <Font size="18.0" />
+                        <Font size="36.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnLogin" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#acceptBtnLogin" prefHeight="45.0" prefWidth="125.0" style="-fx-background-color: #EBECF0;" text="Login" textFill="#00ff22">
+                  <Button fx:id="btnLogin" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#acceptBtnLogin" prefHeight="75.0" prefWidth="250.0" style="-fx-background-color: #EBECF0;" text="Login" textFill="#00ff22">
                      <HBox.margin>
                         <Insets left="50.0" />
                      </HBox.margin>
                      <font>
-                        <Font size="18.0" />
+                        <Font size="36.0" />
                      </font>
                   </Button>
                </children>

@@ -8,8 +8,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import model.User;
-import shared.Common;
-import shared.Constants;
 import shared.JDBC;
 
 import java.io.IOException;
@@ -18,6 +16,9 @@ import java.util.Locale;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
+import static shared.Common.*;
+import static shared.Constants.FXMLVIEW;
+import static shared.Constants.LANG_RB;
 /**
  *
  */
@@ -57,13 +58,13 @@ public class LoginController implements Initializable {
         String clientSecret = passwordInputLogin.getText();
 
         if (validLogin(clientName, clientSecret)) {
-            Common.getActivityLogger().logINFO(clientName + " Login Successful");
-            Common.closePreviousWindow(btnLogin);
-            Common.naviateToWindow(Constants.FXML.HOMESCREEN, "Home Screen Directory");
-
+            getActivityLogger().logINFO(clientName + " Login Successful");
+            closePreviousWindow(btnLogin);
+            setUserLoggedIn(clientName);
+            navigateToWindow(FXMLVIEW.HOMESCREEN, "Home Screen Directory");
         } else {
-            Common.getApplicationLogger().logWARN("Failed to Login");
-            Common.errorPopup();
+            getApplicationLogger().logWARN("Failed to Login");
+            errorPopup();
             if (!JDBC.getConnection().isClosed()) {
                 JDBC.closeConnection();
             }
@@ -72,10 +73,10 @@ public class LoginController implements Initializable {
 
     @FXML
     void cancelBtnLogin(ActionEvent event) {
-        if (Common.confirmationPopup()) {
-            Common.closeConnectionConditionally();
-            Common.closePreviousWindow(cxlBtnLogin);
-            Common.getApplicationLogger().logINFO("Program Terminated");
+        if (confirmationPopup()) {
+            closeConnectionConditionally();
+            closePreviousWindow(cxlBtnLogin);
+            getApplicationLogger().logINFO("Program Terminated");
             System.exit(0);
         }
     }
@@ -83,15 +84,19 @@ public class LoginController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         boolean flag = Locale.getDefault().getDefault().getLanguage() == Locale.FRENCH.getLanguage();
-        updateLoginToLanguage(ResourceBundle.getBundle(flag ? Constants.LANG_RB : Constants.LANG_RB, Locale.getDefault()));
+        updateLoginToLanguage(ResourceBundle.getBundle(flag ? LANG_RB : LANG_RB, Locale.getDefault()));
         dao = new LoginDAO();
     }
 
-    private boolean validLogin(String clientName, String clientSecret) throws Exception {
-        dao.queryGetAllUsers();
-        users = dao.getAllLoginUsers();
+    private boolean validLogin(String clientName, String clientSecret) {
+        users = dao.getAll();
         Optional<User> opt = users.stream().filter(e -> e.getUser_name().equals(clientName) && e.getPassword().equals(clientSecret)).findFirst();
-        return opt.isPresent() ? true : false;
+        if (opt.isPresent()) {
+            setUserLoggedIn(opt.get().getUser_name());
+            return true;
+        } else {
+            return false;
+        }
     }
 
     private void updateLoginToLanguage(ResourceBundle rb) {
@@ -102,8 +107,8 @@ public class LoginController implements Initializable {
         passwordLblLogin.setText(rb.getString("passwordLblLogin"));
         btnLogin.setText(rb.getString("btnLogin"));
         cxlBtnLogin.setText(rb.getString("cxlBtnLogin"));
-        Common.setErrorAlert(setLanguageInvalidLoginAlert(rb));
-        Common.setConfAlert(setLanguageConfirmationAlert(rb));
+        setErrorAlert(setLanguageInvalidLoginAlert(rb));
+        setConfAlert(setLanguageConfirmationAlert(rb));
     }
 
     private Alert setLanguageConfirmationAlert(ResourceBundle rb) {
