@@ -51,6 +51,7 @@ public class BattleGame {
 				dmgTaken = performCastAction(rand);
 			} else if (answer.equalsIgnoreCase("Q")) {
 				goodbyeMessage();
+				return true;
 			} else {
 				printErrorInputMessage();
 				return playingGame(rand);
@@ -64,6 +65,7 @@ public class BattleGame {
 				dmgTaken = performCastAction(rand);
 			} else if (answer.equalsIgnoreCase("Q")) {
 				goodbyeMessage();
+				return true;
 			} else {
 				printErrorInputMessage();
 				return playingGame(rand);
@@ -82,13 +84,13 @@ public class BattleGame {
 
 	private static double playersTurn(int rand) {
 		double primusAttack = primus.getAttackDamage(rand);
-		print("Player Attack Dmg", primusAttack + "");
+		print("Player Attack Dmg", String.format("%.2f",primusAttack));
 		return exPrimus.takeDamage(primusAttack);
 	}
 
 	private static double playersTurn(String spell, int damage) {
 		double primusAttack = primus.castSpell(spell, damage);
-		print("Player Attack Dmg", primusAttack + "");
+		print("Player Attack Dmg", String.format("%.2f",primusAttack));
 		if (primusAttack == 0.0) {
 			print("Player Failed to Cast Spell ", spell);
 		}
@@ -97,13 +99,13 @@ public class BattleGame {
 
 	private static double monstersTurn(int rand) {
 		double exPrimusAttack = exPrimus.getAttackDamage(rand);
-		print("Monster Attack Dmg", exPrimusAttack + "");
+		print("Monster Attack Dmg", String.format("%.2f",exPrimusAttack));
 		return primus.takeDamage(exPrimusAttack);
 	}
 
 	private static double monstersTurn(String spell, int damage) {
 		double exPrimusAttack = exPrimus.castSpell(spell, damage);
-		print("Monster Attack Dmg", exPrimusAttack + "");
+		print("Monster Attack Dmg", String.format("%.2f",exPrimusAttack));
 		if (exPrimusAttack == 0.0) {
 			print("Monster Failed to Cast Spell ", spell);
 		}

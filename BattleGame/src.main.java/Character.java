@@ -86,7 +86,7 @@ public class Character {
 			Spell s = opt.get();
 			return s.getMagicDamage(damage);
 		}
-		return -1;
+		return 0.0;
 	}
 
 	public void displaySpells() {
