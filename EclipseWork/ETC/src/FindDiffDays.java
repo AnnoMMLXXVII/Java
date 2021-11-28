@@ -4,7 +4,7 @@ import java.time.temporal.ChronoUnit;
 
 public class FindDiffDays {
 	public static void main(String... args) {
-		LocalDate startDateInclusive = LocalDate.of(2020, 11, 01);
+		LocalDate startDateInclusive = LocalDate.of(2020, 10, 01);
 		LocalDate endDateExclusive = LocalDate.now();
 		long diff = ChronoUnit.DAYS.between(startDateInclusive, endDateExclusive);
 		Period period = Period.between(startDateInclusive, endDateExclusive);
