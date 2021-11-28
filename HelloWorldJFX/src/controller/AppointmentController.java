@@ -3,9 +3,11 @@ package controller;
 import dao.AppointmentDAO;
 import dao.ContactDAO;
 import dao.CustomerDAO;
+import dao.UserDAO;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
@@ -13,22 +15,32 @@ import javafx.scene.layout.Pane;
 import model.Appointment;
 import model.Contact;
 import model.Customer;
+import model.User;
+import shared.DataAccessObject;
 
 import java.net.URL;
+import java.text.ParseException;
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.temporal.ChronoUnit;
 import java.util.ResourceBundle;
 
 import static shared.Common.*;
 import static shared.Constants.DBCOLUMNS;
 import static shared.Constants.FXMLVIEW;
 
-public class AppointmentController implements Initializable {
+public class AppointmentController implements Controller<Appointment> {
 
     private boolean isAddAction = false;
     private boolean isTableViewClicked = false;
-    private AppointmentDAO dao;
-    private CustomerDAO customerDAO;
-    private ContactDAO contactDAO;
+    private DataAccessObject<Appointment> dao;
+    private DataAccessObject<Customer> customerDAO;
+    private DataAccessObject<Contact> contactDAO;
+    private DataAccessObject<User> userDAO;
     private Appointment appointmentCopy;
+    private ObservableList<Appointment> appointments;
+
 
     @FXML
     private Button addBtn;
@@ -46,13 +58,13 @@ public class AppointmentController implements Initializable {
     private TextField apptID;
 
     @FXML
-    private TableColumn<Appointment, ?> apptIDCol;
+    private TableColumn<Appointment, Integer> apptIDCol;
 
     @FXML
     private Button cancelBtn;
 
     @FXML
-    private ComboBox contactSelect;
+    private ComboBox<String> contactSelect;
 
     @FXML
     private TableColumn<Appointment, String> contactCol;
@@ -88,9 +100,6 @@ public class AppointmentController implements Initializable {
     private TextField endTimeInputAppointment;
 
     @FXML
-    private ToggleGroup group;
-
-    @FXML
     private TextField location;
 
     @FXML
@@ -123,12 +132,24 @@ public class AppointmentController implements Initializable {
     @FXML
     private RadioButton weekRadioBtn;
 
+    @FXML
+    private Label errorLblAppointments;
+
+    /**
+     * Overridden Method from the Initializable Interface
+     *
+     * @param url
+     * @param resourceBundle
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         dao = new AppointmentDAO();
         customerDAO = new CustomerDAO();
         contactDAO = new ContactDAO();
+        userDAO = new UserDAO();
+        appointments = FXCollections.observableArrayList();
         initializeTableView();
+        allRadioBtn.setSelected(true);
         customerSelect = initializeComboBox(customerDAO, customerSelect);
         contactSelect = initializeComboBox(contactDAO, contactSelect);
         appointmentsFormPane.setDisable(true);
@@ -137,19 +158,51 @@ public class AppointmentController implements Initializable {
         updateBtnAppointment.setDisable(true);
     }
 
+    /**
+     * Method that will Disable TableView, remove, and the Add Button
+     * Save, Cancel, and Appointment Form shall be enabled.
+     * The Create method does NOT actually perform the Save Action or the Database call. The save method will perform that.
+     * Create method only toggles the UI related components such the User will be directed to follow the Add action
+     *
+     * @param event ActionEvent
+     */
     @FXML
-    void onAddBtn(ActionEvent event) {
+    public void addAction(ActionEvent event) {
         toggleForAddAction();
         toggleRadioButtons(true);
+        // TODO: REMOVE LINE BELOW BEFORE SUBMISSION
+        titleOfAppt.setText("Team's Daily Stand Up");
+        description.setText("Revisit Unexplored Mount Pangeon");
+        location.setText("Zoom");
+        contactSelect.getSelectionModel().select(2);
+        typeInputAppointment.setText("BZP");
+        customerSelect.getSelectionModel().select("Tiro the Benevolent");
+        startDatePickerAppointment.setValue(LocalDate.of(2021, 12, 20));
+        startTimeInputAppointment.setText("13:30:00");
+        endDatePickerAppointment.setValue(LocalDate.of(2021, 12, 31));
+        endTimeInputAppointment.setText("14:00:00");
     }
 
     @FXML
     void onAllRadioBtn(ActionEvent event) {
-
+        appointmentsTableView.setItems(dao.getAll());
     }
 
+    /**
+     * Cancel can take on many variations. In any condition though, a Confirmation will appear.
+     * If the user does not perform the Add or modification actions,
+     * a confirmation will prompt to confirm the user to go back to the home screen
+     * If the user performs the Add Action and cancels the action,
+     * a confirmation will prompt the user to confirm and acknowledge any unsaved data will be lost.
+     * Furthermore, upon approval, all buttons will reset to the same state when loaded
+     * If the user performs the modification action and cancels the action,
+     * a confirmation will prompt the user to confirm and acknowledge any unsaved data will be lost.
+     * Furthermore, upon approval, all buttons will reset to the same state when loaded
+     *
+     * @param event ActionEvent
+     */
     @FXML
-    void onCancelBtn(ActionEvent event) {
+    public void cancelAction(ActionEvent event) {
         if (isAddAction) {
             if (confirmationPopup("Are you sure you want to cancel? Any unsaved data will be lost.")) {
                 resetAfterAddAction();
@@ -166,70 +219,128 @@ public class AppointmentController implements Initializable {
         }
     }
 
+    /**
+     * Remove Appointment can only be performed outside of the Add Action
+     * Remove Appointment will also be enabled if at least one Item has been selected in the TableView
+     * Attempting to Remove an existing Appointment will prompt a Confirmation
+     * Approving the Confirmation will raise an alert indicating the removal result of the action
+     * On success, the appointment will be removed, the Table View will be updated, and an Informational Alert will be prompted
+     * On failure, the appointment will not be removed, the table will not be updated, and an Error Alert will be prompted
+     *
+     * @param event ActionEvent
+     */
     @FXML
-    void onDeleteBtn(ActionEvent event) {
+    public void removeAction(ActionEvent event) {
         if (isTableViewClicked && confirmationPopup("Confirm Delete Action")) {
-            getActivityLogger().logINFO(String.format("%s has removed the Appointment for %s", getUserLoggedIn(), "{NAME}"));
-            appointmentsTableView.getSelectionModel().clearSelection();
-//            appointmentsTableView.setItems(dao.getAll());
-            resetAfterRemoveOrModifyAction();
-        }
-    }
+            if (dao.removeById(appointmentsTableView.getSelectionModel().getSelectedItem().getAppointment_id())) {
+                getActivityLogger().logINFO(String.format("%s has removed the Appointment Id %s", getUserLoggedIn(), appointmentCopy.getAppointment_id()));
+                appointmentsTableView.getSelectionModel().clearSelection();
+                appointmentsTableView.setItems(dao.getAll());
+                resetAfterRemoveOrModifyAction();
 
-    @FXML
-    void onUpdateAction(ActionEvent event) {
-        if (isTableViewClicked && confirmationPopup("Confirm Delete Action")) {
-//            String originalAppointment = appointmentCopy.getApptName();
-            getActivityLogger().logINFO(String.format("%s has updated the Appointment for %s", getUserLoggedIn(), "{NAME}"));
-            resetAfterRemoveOrModifyAction();
-//            else {
-//                getApplicationLogger().logERROR("Unable to Perform the Modification Action");
-//            }
-        } else {
-            if (confirmationPopup("Confirm Save Action")) {
-                getActivityLogger().logINFO(String.format("%s has added Appointment for %s", getUserLoggedIn(), "{NAME}"));
-                resetAfterAddAction();
-            } else {
-                getApplicationLogger().logERROR("Unable to Perform the Add Action");
             }
         }
-        appointmentsTableView.getSelectionModel().clearSelection();
-//        appointmentsTableView.setItems(dao.getAll());
     }
 
+    /**
+     * Update Action will be Disabled On Load
+     * The save Action will only be enabled under two conditions
+     * 1. If The user has Selected an existing Item in the TableView
+     * 2. If the User performs the add Action
+     * The Save action will be the last line of defense on the UI for any modified changes.
+     * Upon performing the Save action, the user will be prompted under the two conditions
+     * If appointment is during the Add Action, a confirmation will be prompted
+     * Approving the Confirmation will re-enable all Previously Disabled objects in the UI
+     * Approving will also clear/reset the previously entered fields
+     * If the Customer saves after clicking the TableView, a confirmation will be prompted
+     * Approving the confirmation will send update the values regardless if any changes have been modified
+     * The Appointment Fields will NOT be cleared. The Remove and Add Buttons will be enabled again.
+     *
+     * @param event ActionEvent
+     */
+    @FXML
+    public void updateAction(ActionEvent event) {
+        if (isValidAppointmentForm()) {
+            if (isTableViewClicked && confirmationPopup("Confirm Update Action")) {
+                Integer originalAppointment = appointmentCopy.getAppointment_id();
+                if (dao.update(prepareUpdateRequest())) {
+                    getActivityLogger().logINFO(String.format("%s has updated the Appointment %s", getUserLoggedIn(), originalAppointment));
+                    resetAfterRemoveOrModifyAction();
+                } else {
+                    getApplicationLogger().logERROR("Unable to Perform the Modification Action");
+                }
+            }
+            if (isAddAction) {
+                if (confirmationPopup("Confirm Save Action")) {
+                    if (dao.create(prepareCreateRequest())) {
+                        getActivityLogger().logINFO(String.format("%s has added Appointment for %s", getUserLoggedIn(), apptID.getText().trim()));
+                        resetAfterAddAction();
+                    } else {
+                        getApplicationLogger().logERROR("Unable to Perform the Add Action");
+                    }
+                }
+            }
+            appointmentsTableView.getSelectionModel().clearSelection();
+            appointmentsTableView.setItems(dao.getAll());
+        }
+        errorLblAppointments.setText("");
+    }
+
+    /**
+     * Listener Method that will update the Appointment Form is a row is selected
+     *
+     * @param event MouseEvent
+     */
     @FXML
     void onTableViewAppointments(MouseEvent event) {
         if (!appointmentsTableView.getSelectionModel().getSelectedCells().isEmpty()) {
             getApplicationLogger().logINFO(appointmentsTableView.getSelectionModel().getSelectedCells() + "");
             toggleForRemoveOrModify();
             appointmentCopy = dao.getById(appointmentsTableView.getSelectionModel().getSelectedItem().getAppointment_id());
-
-            Customer customer = customerDAO.getById(appointmentCopy.getCustomer_id());
-            customerSelect.getSelectionModel().select(customer.getCustomer_name());
-            Contact contact = contactDAO.getById(appointmentCopy.getContact_id());
-            contactSelect.getSelectionModel().select(contact.getContact_name());
             String[] start = appointmentCopy.getStart().split(" ");
             String[] end = appointmentCopy.getEnd().split(" ");
-            apptID.setText(appointmentCopy.getAppointment_id() + "");
-            titleOfAppt.setText(appointmentCopy.getTitle());
-            description.setText(appointmentCopy.getDescription());
-            location.setText(appointmentCopy.getLocation());
-            startDatePickerAppointment.setValue(getCurrentDate(start[0]));
-            endDatePickerAppointment.setValue(getCurrentDate(end[0]));
-            startTimeInputAppointment.setText(start[1]);
-            endTimeInputAppointment.setText(end[1]);
-
+            initializeInputsOnTableViewClick(
+                    start[1], end[1],
+                    truncateDate(formatUsingDTF(getCurrentDate(start[0].trim()), "MM/dd/yyyy")),
+                    truncateDate(formatUsingDTF(getCurrentDate(end[0].trim()), "MM/dd/yyyy"))
+            );
         }
     }
 
+    /**
+     * @param event ActionEvent
+     */
     @FXML
     void onMonthRadioBtn(ActionEvent event) {
-
+        getApplicationLogger().logINFO("Retrieving all Appointments for Next Month");
+        appointments.clear();
+        dao.getAll().stream().forEach(e -> {
+            LocalDate current = getCurrentDate();
+            LocalDate date = getCurrentDate(e.getStart().split(" ")[0]);
+            System.out.printf("CURR DAY: %s\nDIFF --> %s\nAPPT DAY: %s\n",
+                    current.toString(), ChronoUnit.MONTHS.between(current, date), date.toString());
+            if (ChronoUnit.MONTHS.between(current, date) == 0) {
+                appointments.add(e);
+            }
+        });
+        appointmentsTableView.setItems(appointments);
     }
 
+    /**
+     * @param event ActionEvent
+     */
     @FXML
     void onWeekRadioBtn(ActionEvent event) {
-
+        getApplicationLogger().logINFO("Retrieving all Appointments for this week and next week");
+        appointments.clear();
+        dao.getAll().stream().forEach(e -> {
+            LocalDate current = getCurrentDate();
+            LocalDate date = getCurrentDate(e.getStart().split(" ")[0]);
+            if (ChronoUnit.DAYS.between(current, date) < 8 && ChronoUnit.DAYS.between(current, date) >= 0) {
+                appointments.add(e);
+            }
+        });
+        appointmentsTableView.setItems(appointments);
     }
 
     /**
@@ -252,12 +363,11 @@ public class AppointmentController implements Initializable {
         description.clear();
         location.clear();
         contactSelect.getSelectionModel().clearSelection();
-        startDatePickerAppointment.getEditor().clear();
-        endDatePickerAppointment.getEditor().clear();
         startTimeInputAppointment.clear();
         endTimeInputAppointment.clear();
         typeInputAppointment.clear();
         apptID.clear();
+        errorLblAppointments.setText("");
     }
 
     /**
@@ -272,6 +382,9 @@ public class AppointmentController implements Initializable {
         addBtn.setDisable(true);
         appointmentsTableView.setDisable(true);
         toggleRadioButtons(true);
+        unsetStyling(titleOfAppt, description, location, typeInputAppointment,
+                startTimeInputAppointment, endTimeInputAppointment, contactSelect,
+                customerSelect, startDatePickerAppointment, endDatePickerAppointment);
     }
 
     /**
@@ -286,6 +399,11 @@ public class AppointmentController implements Initializable {
         updateBtnAppointment.setDisable(true);
         isAddAction = false;
         toggleRadioButtons(false);
+        allRadioBtn.setSelected(true);
+        unsetStyling(titleOfAppt, description, location, typeInputAppointment,
+                startTimeInputAppointment, endTimeInputAppointment, contactSelect,
+                customerSelect, startDatePickerAppointment, endDatePickerAppointment);
+        errorLblAppointments.setText("");
     }
 
     /**
@@ -302,6 +420,11 @@ public class AppointmentController implements Initializable {
         appointmentsTableView.getSelectionModel().clearSelection();
         appointmentsTableView.setDisable(false);
         toggleRadioButtons(false);
+        allRadioBtn.setSelected(true);
+        unsetStyling(titleOfAppt, description, location, typeInputAppointment,
+                startTimeInputAppointment, endTimeInputAppointment, contactSelect,
+                customerSelect, startDatePickerAppointment, endDatePickerAppointment);
+        errorLblAppointments.setText("");
     }
 
     /**
@@ -315,8 +438,14 @@ public class AppointmentController implements Initializable {
         updateBtnAppointment.setDisable(false);
         isAddAction = true;
         toggleRadioButtons(true);
+        unsetStyling(titleOfAppt, description, location, typeInputAppointment,
+                startTimeInputAppointment, endTimeInputAppointment, contactSelect,
+                customerSelect, startDatePickerAppointment, endDatePickerAppointment);
     }
 
+    /**
+     * Helper method that will initialize the table view values and column headers
+     */
     private void initializeTableView() {
         appointmentsTableView.setItems(dao.getAll());
         apptIDCol.setCellValueFactory(new PropertyValueFactory(DBCOLUMNS.APPOINTMENT_ID.getValue().toLowerCase()));
@@ -324,11 +453,188 @@ public class AppointmentController implements Initializable {
         descriptionCol.setCellValueFactory(new PropertyValueFactory(DBCOLUMNS.DESCRIPTION.getValue().toLowerCase()));
         locationCol.setCellValueFactory(new PropertyValueFactory(DBCOLUMNS.LOCATION.getValue().toLowerCase()));
         contactCol.setCellValueFactory(new PropertyValueFactory(DBCOLUMNS.CONTACT_ID.getValue().toLowerCase()));
-        typeCol.setCellValueFactory(new PropertyValueFactory(DBCOLUMNS.TITLE.getValue().toLowerCase()));
+        typeCol.setCellValueFactory(new PropertyValueFactory(DBCOLUMNS.TYPE.getValue().toLowerCase()));
         startCol.setCellValueFactory(new PropertyValueFactory(DBCOLUMNS.START.getValue().toLowerCase()));
         endCol.setCellValueFactory(new PropertyValueFactory(DBCOLUMNS.END.getValue().toLowerCase()));
         customerIDCol.setCellValueFactory(new PropertyValueFactory(DBCOLUMNS.CUSTOMER_ID.getValue().toLowerCase()));
         userIDCol.setCellValueFactory(new PropertyValueFactory(DBCOLUMNS.USER_ID.getValue().toLowerCase()));
     }
+
+    /**
+     * Helper method that instantiates an Appointment object for the Add/Create Action
+     *
+     * @return Appointment
+     */
+    private Appointment prepareCreateRequest() {
+        Appointment appointment = null;
+        try {
+            appointment = new Appointment(
+                    -1,
+                    titleOfAppt.getText().trim(),
+                    description.getText().trim(),
+                    location.getText().trim(),
+                    typeInputAppointment.getText().trim(),
+                    formatDateTimeForDB(truncateDate(startDatePickerAppointment.getEditor().getText().trim()),
+                            getCurrentTime(startTimeInputAppointment.getText().trim())),
+                    formatDateTimeForDB(truncateDate(endDatePickerAppointment.getEditor().getText().trim()),
+                            getCurrentTime(endTimeInputAppointment.getText().trim())),
+                    formatDateTimeForDB(getCurrentDate(), getCurrentTime()).trim(),
+                    getUserLoggedIn().trim(),
+                    formatDateTimeForDB(getCurrentDate(), getCurrentTime()).trim(),
+                    getUserLoggedIn().trim(),
+                    customerDAO.getIdFrom(customerSelect.getSelectionModel().getSelectedItem().trim()).getCustomer_id(),
+                    userDAO.getIdFrom(getUserLoggedIn().trim()).getUser_id(),
+                    contactDAO.getIdFrom(contactSelect.getSelectionModel().getSelectedItem().trim()).getContact_id()
+            );
+        } catch (ParseException e) {
+            getApplicationLogger().logERROR("Unable to Parse Date and Time : " + e.getMessage());
+            getActivityLogger().logINFO(String.format("%s failed to create a new Appointment", getUserLoggedIn()));
+        }
+        return appointment;
+    }
+
+    /**
+     * Helper method that instantiates a new Appointment object for the Update/modify action
+     *
+     * @return Appointment
+     */
+    private Appointment prepareUpdateRequest() {
+        Appointment appointment = null;
+        try {
+            appointment = new Appointment(
+                    Integer.parseInt(apptID.getText().trim()),
+                    titleOfAppt.getText().trim(),
+                    description.getText().trim(),
+                    location.getText().trim(),
+                    typeInputAppointment.getText().trim(),
+                    formatDateTimeForDB(truncateDate(startDatePickerAppointment.getEditor().getText().trim()),
+                            getCurrentTime(startTimeInputAppointment.getText().trim())),
+                    formatDateTimeForDB(truncateDate(endDatePickerAppointment.getEditor().getText().trim()),
+                            getCurrentTime(endTimeInputAppointment.getText().trim())),
+                    appointmentCopy.getCreate_date().trim(),
+                    appointmentCopy.getCreated_by().trim(),
+                    formatDateTimeForDB(getCurrentDate(), getCurrentTime()).trim(),
+                    getUserLoggedIn().trim(),
+                    customerDAO.getIdFrom(customerSelect.getSelectionModel().getSelectedItem().trim()).getCustomer_id(),
+                    userDAO.getIdFrom(getUserLoggedIn().trim()).getUser_id(),
+                    contactDAO.getIdFrom(contactSelect.getSelectionModel().getSelectedItem().trim()).getContact_id()
+            );
+        } catch (ParseException e) {
+            getApplicationLogger().logERROR("Unable to Parse Date and Time : " + e.getMessage());
+            getActivityLogger().logINFO(String.format("%s failed to update the Appointment: %s", getUserLoggedIn(), appointmentCopy.getAppointment_id()));
+        }
+        return appointment;
+    }
+
+    /**
+     * Helper method that will populate the input fields, and dropdowns in the appointment form
+     *
+     * @param startTime String
+     * @param endTime   String
+     * @param startDate LocalDate
+     * @param endDate   LocalDate
+     */
+    private void initializeInputsOnTableViewClick(String startTime, String endTime, LocalDate startDate, LocalDate endDate) {
+        Customer customer = customerDAO.getById(appointmentCopy.getCustomer_id());
+        customerSelect.getSelectionModel().select(customer.getCustomer_name());
+        Contact contact = contactDAO.getById(appointmentCopy.getContact_id());
+        contactSelect.getSelectionModel().select(contact.getContact_name());
+        apptID.setText(appointmentCopy.getAppointment_id() + "");
+        titleOfAppt.setText(appointmentCopy.getTitle());
+        description.setText(appointmentCopy.getDescription());
+        location.setText(appointmentCopy.getLocation());
+        typeInputAppointment.setText(appointmentCopy.getType());
+        startDatePickerAppointment.setValue(startDate);
+        endDatePickerAppointment.setValue(endDate);
+        startTimeInputAppointment.setText(startTime.trim());
+        endTimeInputAppointment.setText(endTime.trim());
+    }
+
+    /**
+     * Validations for Blanks, Start And End Time logic, Between Working Hours, and during the Week
+     *
+     * @return boolean
+     */
+    private boolean isValidAppointmentForm() {
+        errorLblAppointments.setText("");
+        if (isBlankOrEmptyTextFields(titleOfAppt, description, location, typeInputAppointment, startTimeInputAppointment, endTimeInputAppointment, contactSelect, customerSelect, startDatePickerAppointment, endDatePickerAppointment)) {
+            getApplicationLogger().logWARN("Empty Fields must be filled in the Appointment Form");
+            errorLblAppointments.setText("All Fields in highlighted in RED cannot be empty");
+            return false;
+        }
+        if (!isStartTimeBeforeEndTime()) {
+            errorLblAppointments.setText("Start Time Must be Before the End Time");
+            getApplicationLogger().logWARN("Invalid Start and End Times");
+            return false;
+        }
+        if (!isWithinWorkingHours()) {
+            errorLblAppointments.setText("Meetings can between 08:00 and 22:00 (inclusive)");
+            getApplicationLogger().logWARN("Invalid Meeting Times: Not Within Time Frame (08-22)");
+            return false;
+        }
+
+        if (isDateNotDuringTheWeek()) {
+            errorLblAppointments.setText("Meeting Dates cannot be on a Saturday or Sunday");
+            getApplicationLogger().logWARN("Invalid Meeting Dates: Cannot be on Weekends");
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * Checks Both Start and End Times are between 0800 and 2200
+     *
+     * @return boolean
+     */
+    private boolean isWithinWorkingHours() {
+        LocalTime start = getCurrentTime(startTimeInputAppointment.getText().trim());
+        LocalTime end = getCurrentTime(endTimeInputAppointment.getText().trim());
+        return isBetweenEightAndTwentyTwoHundred(start) && isBetweenEightAndTwentyTwoHundred(end);
+    }
+
+    /**
+     * Checks both if Start Time is before the End time to the seconds
+     *
+     * @return
+     */
+    private boolean isStartTimeBeforeEndTime() {
+        LocalTime start = getCurrentTime(startTimeInputAppointment.getText().trim());
+        LocalTime end = getCurrentTime(endTimeInputAppointment.getText().trim());
+        return (start.getHour() == end.getHour()) ?
+                (start.getMinute() == end.getHour()) ? start.getSecond() < end.getSecond() : start.getMinute() < end.getMinute()
+                : start.getHour() < end.getHour();
+    }
+
+    /**
+     * Checks both Start and End Dates to see if either are land on a weekend
+     *
+     * @return boolean
+     */
+    private boolean isDateNotDuringTheWeek() {
+        LocalDate start = getCurrentDate(startDatePickerAppointment.getValue().toString());
+        LocalDate end = getCurrentDate(endDatePickerAppointment.getValue().toString());
+        return isSaturdayOrSunday(start) || isSaturdayOrSunday(end);
+    }
+
+    /**
+     * Helper method that to check if the DaysOfTheWeek lands on Saturday or Sunday
+     *
+     * @param date LocalDate
+     * @return boolean
+     */
+    private boolean isSaturdayOrSunday(LocalDate date) {
+        return (date.getDayOfWeek().equals(DayOfWeek.SATURDAY) || date.getDayOfWeek().equals(DayOfWeek.SUNDAY));
+    }
+
+    /**
+     * Helper method to check if the time is between 0800 and 2200
+     *
+     * @param time LocalTime
+     * @return boolean
+     */
+    private boolean isBetweenEightAndTwentyTwoHundred(LocalTime time) {
+        return (time.getHour() > 7 && time.getHour() < 23);
+    }
+
 
 }

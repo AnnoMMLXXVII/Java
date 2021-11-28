@@ -115,11 +115,6 @@ public class CustomerDAO implements DataAccessObject<Customer> {
     }
 
     @Override
-    public boolean remove(Customer object) {
-        return false;
-    }
-
-    @Override
     public boolean removeById(int id) {
         JDBC.openConnection();
         try {

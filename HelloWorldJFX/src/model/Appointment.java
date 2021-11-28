@@ -24,7 +24,7 @@ public class Appointment {
     }
 
     /**
-     * @param appointment_id int
+     * @param appointment_id  Integer
      * @param title           String
      * @param description     String
      * @param location        String
@@ -35,9 +35,9 @@ public class Appointment {
      * @param created_by      String
      * @param last_update     String
      * @param last_updated_by String
-     * @param customer_id     String
-     * @param user_id         String
-     * @param contact_id      String
+     * @param customer_id     Integer
+     * @param user_id         Integer
+     * @param contact_id      Integer
      */
     public Appointment(Integer appointment_id, String title, String description, String location, String type,
                        String start, String end, String create_date, String created_by, String last_update, String last_updated_by,

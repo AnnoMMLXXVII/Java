@@ -1,6 +1,6 @@
 package controller;
 
-import dao.LoginDAO;
+import dao.UserDAO;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -19,12 +19,13 @@ import java.util.ResourceBundle;
 import static shared.Common.*;
 import static shared.Constants.FXMLVIEW;
 import static shared.Constants.LANG_RB;
+
 /**
  *
  */
 public class LoginController implements Initializable {
 
-    private LoginDAO dao;
+    private UserDAO dao;
     private ObservableList<User> users = FXCollections.observableArrayList();
 
     @FXML
@@ -85,7 +86,9 @@ public class LoginController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         boolean flag = Locale.getDefault().getDefault().getLanguage() == Locale.FRENCH.getLanguage();
         updateLoginToLanguage(ResourceBundle.getBundle(flag ? LANG_RB : LANG_RB, Locale.getDefault()));
-        dao = new LoginDAO();
+        dao = new UserDAO();
+        userNameInputLogin.setText("admin");
+        passwordInputLogin.setText("admin");
     }
 
     private boolean validLogin(String clientName, String clientSecret) {
@@ -124,7 +127,5 @@ public class LoginController implements Initializable {
         alert.getDialogPane().setContentText(rb.getString("invalidLoginContentText"));
         return alert;
     }
-
-
 }
 

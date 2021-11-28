@@ -4,10 +4,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.ComboBox;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 import logs.ActivityLogger;
 import logs.ApplicationLogger;
@@ -22,6 +19,7 @@ import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.Optional;
 
+import static shared.Constants.DBCOLUMNS;
 import static shared.Constants.FXMLVIEW;
 
 public class Common {
@@ -35,60 +33,127 @@ public class Common {
      * @param fields String...
      * @return boolean
      */
-    public static boolean isBlankOrEmptyTextFields(String... fields) {
-        for (String s : fields) {
-            if (s.isBlank() || s.isEmpty()) {
-                return true;
+    public static boolean isBlankOrEmptyTextFields(Control... fields) {
+        boolean flag = false;
+        for (Control s : fields) {
+            if (s instanceof TextField) {
+                if (((TextField) s).getText().isBlank() || ((TextField) s).getText().isEmpty()) {
+                    s.setStyle("-fx-text-box-border: #FF0000; -fx-focus-color: #FF0000;");
+                    flag = true;
+                } else {
+                    s.setStyle("-fx-text-box-border: transparent; -fx-focus-color: transparent;");
+                }
+            } else if (s instanceof ComboBox) {
+                if (((ComboBox) s).getValue() == null) {
+                    s.setStyle("-fx-border-color: #FF0000; -fx-text-fill: #FF000;");
+                    flag = true;
+                } else {
+                    s.setStyle("-fx-border-color: transparent");
+                }
+            } else if (s instanceof DatePicker) {
+                if (((DatePicker) s).getEditor().getText().isEmpty() || ((DatePicker) s).getEditor().getText().isBlank()
+                        || ((DatePicker) s).getValue() == null) {
+                    s.setStyle("-fx-border-color: #FF0000; -fx-text-fill: #FF000;");
+                    flag = true;
+                } else {
+                    s.setStyle("-fx-border-color: transparent");
+                }
             }
         }
-        return false;
+        return flag;
     }
 
+    /**
+     * Undo all Styling from the Error Response
+     * @param fields Control
+     */
+    public static void unsetStyling(Control... fields) {
+        for (Control s : fields) {
+            s.setStyle("-fx-text-box-border: #transparent; -fx-focus-color: #tranparent;");
+        }
+    }
+
+    /**
+     * @param table String
+     * @return String
+     */
     public static String queryAll(String table) {
         String query = String.format("SELECT * FROM %s", table);
         getApplicationLogger().logINFO("QUERY: " + query);
         return query;
     }
 
+    /**
+     * @param table   String
+     * @param colName String
+     * @param value   String
+     * @return String
+     */
     public static String queryAllByCondition(String table, String colName, String value) {
         String query = String.format("SELECT * FROM %s WHERE %s = %s", table, colName, value);
         getApplicationLogger().logINFO("QUERY: " + query);
         return query;
     }
 
+    /**
+     * @param table   String
+     * @param rsCount Integer
+     * @return String
+     */
     public static String createInsertQuery(String table, int rsCount) {
         String query = String.format("INSERT INTO `%s` VALUES ( %s )", table, createQuestionMarksForQuery(rsCount));
         getApplicationLogger().logINFO("QUERY: " + query);
         return query;
     }
 
-    public static String createUpdateQuery(String table, String primaryKey, String value, Constants.DBCOLUMNS... dbcolumns) {
+    /**
+     * @param table      String
+     * @param primaryKey String
+     * @param value      String
+     * @param dbcolumns  DBCOLUMNS
+     * @return String
+     */
+    public static String createUpdateQuery(String table, String primaryKey, String value, DBCOLUMNS... dbcolumns) {
         String query = String.format("UPDATE `%s` SET %s WHERE %s = %s", table, createColumnQuestionMarkMapForUpdateQuery(dbcolumns), primaryKey, value);
         getApplicationLogger().logINFO("QUERY: " + query);
         return query;
     }
 
+    /**
+     * @param table  String
+     * @param colNum String
+     * @param value  String
+     * @return String
+     */
     public static String createDeleteQueryByCondition(String table, String colNum, String value) {
         String query = String.format("DELETE FROM `%s` WHERE %s = %s", table, colNum, value);
         getApplicationLogger().logINFO("QUERY: " + query);
         return query;
     }
 
-    private static String createColumnQuestionMarkMapForUpdateQuery(Constants.DBCOLUMNS[] dbColumns) {
+    /**
+     * @param dbColumns DBCOLUMNS
+     * @return String
+     */
+    private static String createColumnQuestionMarkMapForUpdateQuery(DBCOLUMNS[] dbColumns) {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < dbColumns.length; i++) {
             sb.append(String.format("%s=?,", dbColumns[i].getValue()));
         }
-        return sb.toString().substring(0, sb.length() - 1);
+        return sb.substring(0, sb.length() - 1);
     }
 
+    /**
+     * @param count int
+     * @return String
+     */
     private static String createQuestionMarksForQuery(int count) {
         StringBuilder sb = new StringBuilder();
         sb.append("NULL,");
         for (int i = 0; i < count; i++) {
             sb.append("?,");
         }
-        return sb.toString().substring(0, sb.length() - 1);
+        return sb.substring(0, sb.length() - 1);
     }
 
     /**
@@ -103,6 +168,7 @@ public class Common {
             loader.setLocation(Main.class.getResource(source.getValue()));
             Stage stage = new Stage();
             stage.setTitle(title);
+            stage.setResizable(false);
             stage.setScene(new Scene(loader.load()));
             stage.show();
         } catch (Exception e) {
@@ -126,6 +192,7 @@ public class Common {
 
     /**
      * Closing Connection only if it's not Null regardless if it's already closed.
+     * This is to avoid possible NULLPOINTEREEXCEPTION
      */
     public static void closeConnectionConditionally() {
         try {
@@ -145,12 +212,20 @@ public class Common {
     }
 
     /**
+     * Overload method for getCurrentDate
+     * Parse incoming state with the dash separators and return a LocalDate object
+     *
      * @param date String
      * @return LocalDate
      */
     public static LocalDate getCurrentDate(String date) {
+        String[] split = date.split("-");
+        return LocalDate.of(Integer.parseInt(split[0].trim()), Integer.parseInt(split[1].trim()), Integer.parseInt(split[2].trim()));
+    }
+
+    public static LocalDate truncateDate(String date) {
         String[] split = date.split("/");
-        return LocalDate.of(Integer.parseInt(split[0]), Integer.parseInt(split[1]), Integer.parseInt(split[2]));
+        return LocalDate.of(Integer.parseInt(split[2].trim()), Integer.parseInt(split[0].trim()), Integer.parseInt(split[1].trim()));
     }
 
     /**
@@ -161,6 +236,9 @@ public class Common {
     }
 
     /**
+     * Overload method for getCurrentTime
+     * Parse incoming state with the colon separators and return a LocalTime object
+     *
      * @param time String
      * @return LocalTime
      */
@@ -175,10 +253,18 @@ public class Common {
      * @return String.Format
      * @throws ParseException parseException
      */
-    public static String formatDateTimeUsingSDF(LocalDate date, LocalTime time) throws ParseException {
-        DateTimeFormatter dateDTF = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        DateTimeFormatter timeDTF = DateTimeFormatter.ofPattern("hh:mm:ss");
-        return String.format("%s %s", dateDTF.format(date), timeDTF.format(time));
+    public static String formatDateTimeForDB(LocalDate date, LocalTime time) throws ParseException {
+        return String.format("%s %s", formatUsingDTF(date, "yyyy-MM-dd"), formatUsingDTF(time, "hh:mm:ss"));
+    }
+
+    public static String formatUsingDTF(LocalDate date, String pattern) {
+        DateTimeFormatter dateDTF = DateTimeFormatter.ofPattern(pattern);
+        return String.format("%s", dateDTF.format(date));
+    }
+
+    public static String formatUsingDTF(LocalTime time, String pattern) {
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern(pattern);
+        return String.format("%s", dtf.format(time));
     }
 
     /**
@@ -224,12 +310,18 @@ public class Common {
         error.showAndWait();
     }
 
-    public static void setUserLoggedIn(String clientName) {
-        Common.clientName = clientName;
+    /**
+     * @param name String
+     */
+    public static void setUserLoggedIn(String name) {
+        clientName = name;
     }
 
+    /**
+     * @return cientName String
+     */
     public static String getUserLoggedIn() {
-        return Common.clientName;
+        return clientName;
     }
 
     /**
@@ -260,14 +352,14 @@ public class Common {
      * @param logger Logs
      */
     public static void setActivityLogger(Logs<?> logger) {
-        Common.activityLogger = (ActivityLogger) logger;
+        activityLogger = (ActivityLogger) logger;
     }
 
     /**
      * @param logger Logs
      */
     public static void setApplicationLogger(Logs<?> logger) {
-        Common.applicationLogger = (ApplicationLogger) logger;
+        applicationLogger = (ApplicationLogger) logger;
     }
 
     /**

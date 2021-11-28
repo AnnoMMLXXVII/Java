@@ -75,11 +75,6 @@ public class ContactDAO implements DataAccessObject<Contact> {
     }
 
     @Override
-    public boolean remove(Contact object) {
-        return false;
-    }
-
-    @Override
     public boolean removeById(int id) {
         return false;
     }
@@ -87,7 +82,7 @@ public class ContactDAO implements DataAccessObject<Contact> {
     @Override
     public Contact getAllColumnsUsingResultSet(ResultSet rs) throws SQLException {
         return new Contact(
-                rs.getString(DBCOLUMNS.CONTACT_ID.getValue()),
+                rs.getInt(DBCOLUMNS.CONTACT_ID.getValue()),
                 rs.getString(DBCOLUMNS.CONTACT_NAME.getValue()),
                 rs.getString(DBCOLUMNS.EMAIL.getValue())
         );

@@ -14,7 +14,7 @@ import static shared.Common.*;
 import static shared.Constants.DBCOLUMNS;
 import static shared.Constants.DB_TABLES;
 
-public class LoginDAO implements DataAccessObject<User> {
+public class UserDAO implements DataAccessObject<User> {
 
     private ObservableList<User> users;
     private ResultSet rs;
@@ -69,11 +69,6 @@ public class LoginDAO implements DataAccessObject<User> {
 
     @Override
     public boolean update(User object) {
-        return false;
-    }
-
-    @Override
-    public boolean remove(User object) {
         return false;
     }
 

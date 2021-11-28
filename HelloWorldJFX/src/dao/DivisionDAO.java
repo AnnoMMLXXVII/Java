@@ -73,11 +73,6 @@ public class DivisionDAO implements DataAccessObject<Division> {
     }
 
     @Override
-    public boolean remove(Division object) {
-        return false;
-    }
-
-    @Override
     public boolean removeById(int id) {
         return false;
     }
@@ -86,11 +81,16 @@ public class DivisionDAO implements DataAccessObject<Division> {
         if (divisions == null) {
             divisions = getAllDivision();
         }
+        // (e,v) -> (key, value)
+        // 1 (US) -> 50 states (List<States>)
+        // divList adds ALL the values (V)
+        // 2 (UK) -> 5 sections (List<Sections>)
+        // 3 (CA) -> 10 provinces (List<Provinces>)
         divisions.forEach((e, v) -> {
             divList.addAll(v);
-            v.stream().forEach(k -> {
-                System.out.println(k.toString());
-            });
+//            v.stream().forEach(k -> {
+//                System.out.println(k.toString());
+//            });
         });
         return divList;
     }

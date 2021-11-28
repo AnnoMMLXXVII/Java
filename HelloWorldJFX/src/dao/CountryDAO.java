@@ -73,11 +73,6 @@ public class CountryDAO implements DataAccessObject<Country> {
     }
 
     @Override
-    public boolean remove(Country object) {
-        return false;
-    }
-
-    @Override
     public boolean removeById(int id) {
         return false;
     }

@@ -1,13 +1,13 @@
 package logs;
 
-import shared.Common;
-
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
+
+import static shared.Common.*;
 
 public abstract class Logs<T> {
 
@@ -41,9 +41,9 @@ public abstract class Logs<T> {
     }
 
     protected String formatMessage(String message) {
-        String time = Common.getCurrentTime() + " " + Common.getCurrentTime();
+        String time = getCurrentTime() + " " + getCurrentTime();
         try {
-            time = Common.formatDateTimeUsingSDF(Common.getCurrentDate(), Common.getCurrentTime());
+            time = formatDateTimeForDB(getCurrentDate(), getCurrentTime());
         } catch (ParseException e) {
             log.log(Level.SEVERE, "**Unable to Parse Current Date and Time**");
         }

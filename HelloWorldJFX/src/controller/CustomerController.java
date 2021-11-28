@@ -1,5 +1,6 @@
 package controller;
 
+import dao.AppointmentDAO;
 import dao.CountryDAO;
 import dao.CustomerDAO;
 import dao.DivisionDAO;
@@ -8,13 +9,14 @@ import javafx.collections.ObservableList;
 import javafx.collections.ObservableMap;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import model.Appointment;
 import model.Country;
 import model.Customer;
 import model.Division;
+import shared.DataAccessObject;
 
 import java.net.URL;
 import java.text.ParseException;
@@ -25,11 +27,12 @@ import static shared.Common.*;
 import static shared.Constants.DBCOLUMNS;
 import static shared.Constants.FXMLVIEW;
 
-public class CustomerController implements Initializable {
+public class CustomerController implements Controller<Customer> {
 
-    private CustomerDAO dao;
-    private DivisionDAO divisionDAO;
-    private CountryDAO countryDAO;
+    private DataAccessObject<Customer> dao;
+    private DataAccessObject<Division> divisionDAO;
+    private DataAccessObject<Country> countryDAO;
+    private DataAccessObject<Appointment> appointmentDAO;
     private boolean isAddAction = false;
     private boolean tableViewHasBeenClicked = false;
     private Customer customerCopy;
@@ -104,6 +107,7 @@ public class CustomerController implements Initializable {
         dao = new CustomerDAO();
         countryDAO = new CountryDAO();
         divisionDAO = new DivisionDAO();
+        appointmentDAO = new AppointmentDAO();
         countries = FXCollections.observableArrayList();
         mappedDivision = FXCollections.observableHashMap();
         divisions = FXCollections.observableArrayList();
@@ -128,7 +132,7 @@ public class CustomerController implements Initializable {
      * @param event ActionEvent
      */
     @FXML
-    void cancelAction(ActionEvent event) {
+    public void cancelAction(ActionEvent event) {
         if (isAddAction) {
             if (confirmationPopup("Are you sure you want to cancel? Any unsaved data will be lost.")) {
                 resetAddActionPresets();
@@ -185,8 +189,9 @@ public class CustomerController implements Initializable {
      * @param event ActionEvent
      */
     @FXML
-    void createCustomerAction(ActionEvent event) {
+    public void addAction(ActionEvent event) {
         toggleForAdd();
+        // TODO: REMOVE LINE BELOW BEFORE SUBMISSION
 //        nameInputCustomer.setText("Iokaste the Steadfast");
 //        address1InputCustomer.setText("994 OneThousandMinusOne Rd");
 //        postCodeInputCustomer.setText("01594-450");
@@ -210,20 +215,28 @@ public class CustomerController implements Initializable {
      * @param event ActionEvent
      */
     @FXML
-    void removeCustomerAction(ActionEvent event) {
+    public void removeAction(ActionEvent event) {
         if (isTableViewHasBeenClicked() && confirmationPopup("Confirm Delete Action")) {
-            if (dao.removeById(Integer.parseInt(customerIdLblCustomer.getText()))) {
-                getActivityLogger().logINFO(String.format("%s Has Been Removed by %s", customerCopy.getCustomer_name(), getUserLoggedIn()));
-                tableViewCustomer.getSelectionModel().clearSelection();
-                tableViewCustomer.setItems(dao.getAll());
-                resetAfterRemoveOrModifyAction();
+            appointmentDAO.getAll().stream().forEach(e -> {
+                if (e.getCustomer_id().equals(customerCopy.getCustomer_id())) {
+                    appointmentDAO.removeById(e.getAppointment_id());
+                }
+            });
+            if (!appointmentDAO.getAll().stream().filter(e -> e.getCustomer_id().equals(customerCopy.getCustomer_id())).findFirst().isPresent()) {
+                if (dao.removeById(Integer.parseInt(customerIdLblCustomer.getText().trim()))) {
+                    getActivityLogger().logINFO(String.format("%s Has Been Removed by %s", customerCopy.getCustomer_name(), getUserLoggedIn()));
+                    tableViewCustomer.getSelectionModel().clearSelection();
+                    tableViewCustomer.setItems(dao.getAll());
+                    resetAfterRemoveOrModifyAction();
+                }
             }
+
         }
 
     }
 
     /**
-     * Save Action will be Disabled On Load
+     * Update Action will be Disabled On Load
      * The save Action will only be enabled under two conditions
      * 1. If The user has Selected an existing Item in the TableView
      * 2. If the User performs the add Action
@@ -239,7 +252,13 @@ public class CustomerController implements Initializable {
      * @param event ActionEvent
      */
     @FXML
-    void saveCustomerAction(ActionEvent event) {
+    public void updateAction(ActionEvent event) {
+
+        if (isBlankOrEmptyTextFields(nameInputCustomer, address1InputCustomer, postCodeInputCustomer, phoneInputCustomer, countryDropDownCustomer, divisionDropDownCustomer)) {
+            getApplicationLogger().logWARN("Validation Failed in Customer Form");
+            return;
+        }
+
         if (isTableViewHasBeenClicked() && confirmationPopup("Confirm Update Action")) {
             String originalCustomerName = customerCopy.getCustomer_name();
             if (dao.update(prepareUpdateCustomerRequest())) {
@@ -249,11 +268,12 @@ public class CustomerController implements Initializable {
             } else {
                 getApplicationLogger().logERROR("Unable to Perform the Modification Action");
             }
-        } else {
+        }
+        if (isAddAction) {
             if (confirmationPopup("Confirm Save Action")) {
                 if (dao.create(prepareCreateCustomerRequest())) {
                     getActivityLogger().logINFO(String.format("%s Has added a new Customer: %s",
-                            getUserLoggedIn(), nameInputCustomer.getText()));
+                            getUserLoggedIn(), nameInputCustomer.getText().trim()));
                     resetAddActionPresets();
                 } else {
                     getApplicationLogger().logERROR("Unable to Perform the Add Action");
@@ -305,6 +325,7 @@ public class CustomerController implements Initializable {
         isAddAction = true;
         divisionDropDownCustomer.setPromptText("Select Division");
         countryDropDownCustomer.setPromptText("Select Country");
+        unsetStyling(nameInputCustomer, address1InputCustomer, postCodeInputCustomer, phoneInputCustomer, countryDropDownCustomer, divisionDropDownCustomer);
     }
 
     /**
@@ -318,6 +339,7 @@ public class CustomerController implements Initializable {
         addBtnCustomer.setDisable(false);
         saveBtnCustomer.setDisable(true);
         isAddAction = false;
+        unsetStyling(nameInputCustomer, address1InputCustomer, postCodeInputCustomer, phoneInputCustomer, countryDropDownCustomer, divisionDropDownCustomer);
     }
 
     /**
@@ -331,6 +353,7 @@ public class CustomerController implements Initializable {
         saveBtnCustomer.setDisable(false);
         addBtnCustomer.setDisable(true);
         tableViewCustomer.setDisable(true);
+        unsetStyling(nameInputCustomer, address1InputCustomer, postCodeInputCustomer, phoneInputCustomer, countryDropDownCustomer, divisionDropDownCustomer);
     }
 
     /**
@@ -344,6 +367,7 @@ public class CustomerController implements Initializable {
         saveBtnCustomer.setDisable(true);
         addBtnCustomer.setDisable(false);
         tableViewCustomer.setDisable(false);
+        unsetStyling(nameInputCustomer, address1InputCustomer, postCodeInputCustomer, phoneInputCustomer, countryDropDownCustomer, divisionDropDownCustomer);
     }
 
     /**
@@ -393,7 +417,7 @@ public class CustomerController implements Initializable {
             countryNames.add(e.getCountry());
         });
         countryDropDownCustomer.setItems(countryNames);
-        mappedDivision = divisionDAO.getAllDivision();
+        mappedDivision = ((DivisionDAO) divisionDAO).getAllDivision();
         divisions = divisionDAO.getAll();
     }
 
@@ -402,8 +426,8 @@ public class CustomerController implements Initializable {
      */
     private void initializeDivisionDropDownBy(int id) {
         ObservableList<String> divisionNames = FXCollections.observableArrayList();
-        mappedDivision.get(id).forEach(e -> {
-            divisionNames.add(e.getDivision());
+        mappedDivision.get(id).forEach(i -> {
+            divisionNames.add(i.getDivision());
         });
         divisionDropDownCustomer.setItems(divisionNames);
     }
@@ -416,18 +440,19 @@ public class CustomerController implements Initializable {
         try {
             customer = new Customer(
                     -1,
-                    nameInputCustomer.getText(),
-                    address1InputCustomer.getText(),
-                    postCodeInputCustomer.getText(),
-                    phoneInputCustomer.getText(),
-                    formatDateTimeUsingSDF(getCurrentDate(), getCurrentTime()),
-                    getUserLoggedIn(),
-                    formatDateTimeUsingSDF(getCurrentDate(), getCurrentTime()),
-                    getUserLoggedIn(),
-                    convertDivisionNameToInt(divisionDropDownCustomer.getSelectionModel().getSelectedItem())
+                    nameInputCustomer.getText().trim(),
+                    address1InputCustomer.getText().trim(),
+                    postCodeInputCustomer.getText().trim(),
+                    phoneInputCustomer.getText().trim(),
+                    formatDateTimeForDB(getCurrentDate(), getCurrentTime()).trim(),
+                    getUserLoggedIn().trim(),
+                    formatDateTimeForDB(getCurrentDate(), getCurrentTime()).trim(),
+                    getUserLoggedIn().trim(),
+                    convertDivisionNameToInt(divisionDropDownCustomer.getSelectionModel().getSelectedItem().trim())
             );
         } catch (ParseException e) {
             getApplicationLogger().logERROR("Unable to Parse Date and Time: " + e.getMessage());
+            getActivityLogger().logINFO(String.format("%s failed to create a new Appointment", getUserLoggedIn()));
         }
         return customer;
     }
@@ -438,17 +463,19 @@ public class CustomerController implements Initializable {
     private Customer prepareUpdateCustomerRequest() {
         Customer customer = null;
         try {
+            int divId = convertDivisionNameToInt(divisionDropDownCustomer.getSelectionModel().getSelectedItem().trim());
+            System.out.println(divId);
             customer = new Customer(
-                    Integer.parseInt(customerIdLblCustomer.getText()),
-                    nameInputCustomer.getText(),
-                    address1InputCustomer.getText(),
-                    postCodeInputCustomer.getText(),
-                    phoneInputCustomer.getText(),
-                    customerCopy.getCreate_date(),
-                    customerCopy.getCreate_by(),
-                    formatDateTimeUsingSDF(getCurrentDate(), getCurrentTime()),
-                    getUserLoggedIn(),
-                    convertDivisionNameToInt(divisionDropDownCustomer.getSelectionModel().getSelectedItem())
+                    Integer.parseInt(customerIdLblCustomer.getText().trim()),
+                    nameInputCustomer.getText().trim(),
+                    address1InputCustomer.getText().trim(),
+                    postCodeInputCustomer.getText().trim(),
+                    phoneInputCustomer.getText().trim(),
+                    customerCopy.getCreate_date().trim(),
+                    customerCopy.getCreate_by().trim(),
+                    formatDateTimeForDB(getCurrentDate(), getCurrentTime()).trim(),
+                    getUserLoggedIn().trim(),
+                    divId
             );
         } catch (ParseException e) {
             getApplicationLogger().logERROR("Unable to Parse Date and Time: " + e.getMessage());
@@ -461,7 +488,7 @@ public class CustomerController implements Initializable {
      * @return Integer
      */
     private Integer convertDivisionNameToInt(String name) {
-        Optional<Division> opt = divisions.stream().filter(e -> e.getDivision().equalsIgnoreCase(name)).findFirst();
+        Optional<Division> opt = divisionDAO.getAll().stream().filter(e -> e.getDivision().equalsIgnoreCase(name)).findFirst();
         return (opt.isPresent()) ? opt.get().getDivision_id() : -1;
     }
 
@@ -469,15 +496,15 @@ public class CustomerController implements Initializable {
      * Helper method that
      */
     private void initializeInputsOnSelectedRow() {
-        customerIdLblCustomer.setText(customerCopy.getCustomer_id() + "");
-        nameInputCustomer.setText(customerCopy.getCustomer_name());
-        address1InputCustomer.setText(customerCopy.getAddress());
+        customerIdLblCustomer.setText(customerCopy.getCustomer_id() + "".trim());
+        nameInputCustomer.setText(customerCopy.getCustomer_name().trim());
+        address1InputCustomer.setText(customerCopy.getAddress().trim());
         Division division = divisionDAO.getById(customerCopy.getDivision_id());
         Country country = countryDAO.getById(division.getCountry_id());
-        countryDropDownCustomer.getSelectionModel().select(country.getCountry());
-        divisionDropDownCustomer.getSelectionModel().select(division.getDivision());
-        postCodeInputCustomer.setText(customerCopy.getPostal_code());
-        phoneInputCustomer.setText(customerCopy.getPhone());
+        countryDropDownCustomer.getSelectionModel().select(country.getCountry().trim());
+        divisionDropDownCustomer.getSelectionModel().select(division.getDivision().trim());
+        postCodeInputCustomer.setText(customerCopy.getPostal_code().trim());
+        phoneInputCustomer.setText(customerCopy.getPhone().trim());
     }
 
 }

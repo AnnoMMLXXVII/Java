@@ -20,7 +20,13 @@ public class AppointmentDAO implements DataAccessObject<Appointment> {
     private ObservableList<Appointment> appointments;
     private ResultSet rs;
     private PreparedStatement ps;
+    private boolean isAddAction = false;
 
+    /**
+     * Returns a List of Appointments
+     *
+     * @return ObservableList : Appointment
+     */
     @Override
     public ObservableList<Appointment> getAll() {
         JDBC.openConnection();
@@ -41,18 +47,24 @@ public class AppointmentDAO implements DataAccessObject<Appointment> {
         return appointments;
     }
 
+    /**
+     * returns an Appointment using the APPOINTMENT_ID
+     *
+     * @param id Integer
+     * @return Appointment
+     */
     @Override
     public Appointment getById(int id) {
         JDBC.openConnection();
         try {
             JDBC.makePreparedStatement(queryAllByCondition(DB_TABLES.appointments.name(),
-                    DBCOLUMNS.CUSTOMER_ID.getValue(), id + ""), JDBC.getConnection());
+                    DBCOLUMNS.APPOINTMENT_ID.getValue(), String.format("%s", id)), JDBC.getConnection());
             rs = JDBC.getPreparedStatement().executeQuery();
             while (rs.next()) {
                 appointment = getAllColumnsUsingResultSet(rs);
                 if (appointment == null) {
                     getApplicationLogger().logERROR("NULL EXCEPTION Using ID " + id);
-                    throw new NullPointerException("Could not retrieve Customer By ID : " + id);
+                    throw new NullPointerException("Could not retrieve Appointment By ID : " + id);
                 }
             }
         } catch (SQLException e) {
@@ -63,23 +75,99 @@ public class AppointmentDAO implements DataAccessObject<Appointment> {
         return appointment;
     }
 
+    /**
+     * Creates a new Appointment Row in the DB
+     *
+     * @param object Appointment
+     * @return boolean
+     */
     @Override
     public boolean create(Appointment object) {
+        JDBC.openConnection();
+        try {
+            JDBC.makePreparedStatement(createInsertQuery(DB_TABLES.appointments.name(), 13),
+                    JDBC.getConnection());
+            ps = JDBC.getPreparedStatement();
+            isAddAction = true;
+            executeModificationQuery(ps, object);
+            ps.execute();
+            if (ps.getUpdateCount() > 0) {
+                return true;
+            }
+        } catch (SQLException e) {
+            getApplicationLogger().logERROR("SQL EXCEPTION : " + e.getMessage());
+        } finally {
+            JDBC.closeConnection();
+        }
         return false;
     }
 
+    /**
+     * Update Appointment
+     *
+     * @param object Appointment
+     * @return boolean
+     */
     @Override
     public boolean update(Appointment object) {
+        JDBC.openConnection();
+        try {
+            isAddAction = false;
+            JDBC.makePreparedStatement(
+                    createUpdateQuery(DB_TABLES.appointments.name(),
+                            DBCOLUMNS.APPOINTMENT_ID.getValue(),
+                            object.getAppointment_id() + "",
+                            DBCOLUMNS.TITLE,
+                            DBCOLUMNS.DESCRIPTION,
+                            DBCOLUMNS.LOCATION,
+                            DBCOLUMNS.TYPE,
+                            DBCOLUMNS.START,
+                            DBCOLUMNS.END,
+//                            DBCOLUMNS.CREATE_DATE,
+//                            DBCOLUMNS.CREATED_BY,
+                            DBCOLUMNS.LAST_UPDATE,
+                            DBCOLUMNS.LAST_UPDATED_BY,
+                            DBCOLUMNS.CUSTOMER_ID,
+                            DBCOLUMNS.USER_ID,
+                            DBCOLUMNS.CONTACT_ID
+                    ),
+                    JDBC.getConnection());
+            ps = JDBC.getPreparedStatement();
+            executeModificationQuery(ps, object);
+            ps.execute();
+            if (ps.getUpdateCount() > 0) {
+                return true;
+            }
+        } catch (SQLException e) {
+            getApplicationLogger().logERROR("SQL EXCEPTION : " + e.getMessage());
+        } finally {
+            JDBC.closeConnection();
+        }
         return false;
     }
 
-    @Override
-    public boolean remove(Appointment object) {
-        return false;
-    }
-
+    /**
+     * Remove Appointment By Id
+     *
+     * @param id Integer
+     * @return boolean
+     */
     @Override
     public boolean removeById(int id) {
+        JDBC.openConnection();
+        try {
+            JDBC.makePreparedStatement(createDeleteQueryByCondition(DB_TABLES.appointments.name(),
+                    DBCOLUMNS.APPOINTMENT_ID.getValue(), id + ""), JDBC.getConnection());
+            ps = JDBC.getPreparedStatement();
+            ps.execute();
+            if (ps.getUpdateCount() > 0) {
+                return true;
+            }
+        } catch (SQLException e) {
+            getApplicationLogger().logERROR("SQL EXCEPTION : " + e.getMessage());
+        } finally {
+            JDBC.closeConnection();
+        }
         return false;
     }
 
@@ -104,6 +192,32 @@ public class AppointmentDAO implements DataAccessObject<Appointment> {
     }
 
     public void executeModificationQuery(PreparedStatement ps, Appointment object) throws SQLException {
-        return;
+//        ps.setInt(object.APPOINTMENT_ID.getValue());
+        try {
+            ps.setString(1, object.getTitle());
+            ps.setString(2, object.getDescription());
+            ps.setString(3, object.getLocation());
+            ps.setString(4, object.getType());
+            ps.setString(5, object.getStart());
+            ps.setString(6, object.getEnd());
+            if (isAddAction) {
+                ps.setString(7, object.getCreate_date());
+                ps.setString(8, object.getCreated_by());
+                ps.setString(9, object.getLast_update());
+                ps.setString(10, object.getLast_updated_by());
+                ps.setInt(11, object.getCustomer_id());
+                ps.setInt(12, object.getUser_id());
+                ps.setInt(13, object.getContact_id());
+            } else {
+                ps.setString(7, object.getLast_update());
+                ps.setString(8, object.getLast_updated_by());
+                ps.setInt(9, object.getCustomer_id());
+                ps.setInt(10, object.getUser_id());
+                ps.setInt(11, object.getContact_id());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            ;
+        }
     }
 }

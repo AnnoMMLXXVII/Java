@@ -1,7 +1,7 @@
 package model;
 
 public class Contact {
-    private String contact_id;
+    private Integer contact_id;
     private String contact_name;
     private String email;
 
@@ -13,11 +13,11 @@ public class Contact {
     }
 
     /**
-     * @param contact_id String
+     * @param contact_id   String
      * @param contact_name String
-     * @param email String
+     * @param email        String
      */
-    public Contact(String contact_id, String contact_name, String email) {
+    public Contact(Integer contact_id, String contact_name, String email) {
         super();
         this.contact_id = contact_id;
         this.contact_name = contact_name;
@@ -27,7 +27,7 @@ public class Contact {
     /**
      * @return the contact_id
      */
-    public String getContact_id() {
+    public Integer getContact_id() {
         return contact_id;
     }
 
@@ -48,7 +48,7 @@ public class Contact {
     /**
      * @param contact_id the contact_id to set
      */
-    public void setContact_id(String contact_id) {
+    public void setContact_id(Integer contact_id) {
         this.contact_id = contact_id;
     }
 

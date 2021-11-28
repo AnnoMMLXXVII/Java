@@ -1,20 +1,238 @@
-Nov 27, 2021 6:25:22 AM logs.Logs logINFO
-INFO: 2021-11-27 06:25:22 test Login Successful
-Nov 27, 2021 7:16:09 AM logs.Logs logINFO
-INFO: 2021-11-27 07:16:09 test Login Successful
-Nov 27, 2021 7:16:52 AM logs.Logs logINFO
-INFO: 2021-11-27 07:16:52 test Login Successful
-Nov 27, 2021 7:17:42 AM logs.Logs logINFO
-INFO: 2021-11-27 07:17:42 test Login Successful
-Nov 27, 2021 7:21:10 AM logs.Logs logINFO
-INFO: 2021-11-27 07:21:10 test Login Successful
-Nov 27, 2021 7:22:39 AM logs.Logs logINFO
-INFO: 2021-11-27 07:22:39 test Login Successful
-Nov 27, 2021 7:33:38 AM logs.Logs logINFO
-INFO: 2021-11-27 07:33:38 test Login Successful
-Nov 27, 2021 7:45:58 AM logs.Logs logINFO
-INFO: 2021-11-27 07:45:58 test Login Successful
-Nov 27, 2021 7:50:28 AM logs.Logs logINFO
-INFO: 2021-11-27 07:50:28 test Login Successful
-Nov 27, 2021 8:06:44 AM logs.Logs logINFO
-INFO: 2021-11-27 08:06:44 test Login Successful
+Nov 27, 2021 11:25:28 PM logs.Logs logINFO
+INFO: 2021-11-27 11:25:28 test Login Successful
+Nov 27, 2021 11:26:31 PM logs.Logs logINFO
+INFO: 2021-11-27 11:26:31 test Login Successful
+Nov 27, 2021 11:26:35 PM logs.Logs logINFO
+INFO: 2021-11-27 11:26:35  Agenor the Heretic Has Been Updated by test
+Nov 27, 2021 11:26:40 PM logs.Logs logINFO
+INFO: 2021-11-27 11:26:40  Hypsiple funny Resilient Has Been Updated by test
+Nov 27, 2021 11:26:53 PM logs.Logs logINFO
+INFO: 2021-11-27 11:26:53  Vasilis Has Been Updated by test
+Nov 27, 2021 11:27:40 PM logs.Logs logINFO
+INFO: 2021-11-27 11:27:40 test Has added a new Customer: Tiro the Benevolent
+Nov 27, 2021 11:41:26 PM logs.Logs logINFO
+INFO: 2021-11-27 11:41:26 test Login Successful
+Nov 27, 2021 11:42:10 PM logs.Logs logINFO
+INFO: 2021-11-27 11:42:10 test Login Successful
+Nov 27, 2021 11:46:28 PM logs.Logs logINFO
+INFO: 2021-11-27 11:46:28 test Login Successful
+Nov 27, 2021 11:46:34 PM logs.Logs logINFO
+INFO: 2021-11-27 11:46:34 test has added Appointment for 
+Nov 27, 2021 11:47:49 PM logs.Logs logINFO
+INFO: 2021-11-27 11:47:49 test has added Appointment for 
+Nov 27, 2021 11:48:49 PM logs.Logs logINFO
+INFO: 2021-11-27 11:48:49 test has added Appointment for 
+Nov 28, 2021 12:39:40 AM logs.Logs logINFO
+INFO: 2021-11-28 12:39:40 test Login Successful
+Nov 28, 2021 12:39:49 AM logs.Logs logINFO
+INFO: 2021-11-28 12:39:49  Daddy Warbucks Has Been Updated by test
+Nov 28, 2021 12:40:15 AM logs.Logs logINFO
+INFO: 2021-11-28 12:40:15  Tiro the Benevolent Has Been Updated by test
+Nov 28, 2021 12:41:16 AM logs.Logs logINFO
+INFO: 2021-11-28 12:41:16 test has added Appointment for 
+Nov 28, 2021 12:45:09 AM logs.Logs logINFO
+INFO: 2021-11-28 12:45:09 test Login Successful
+Nov 28, 2021 1:03:35 AM logs.Logs logINFO
+INFO: 2021-11-28 01:03:35 test Login Successful
+Nov 28, 2021 1:08:23 AM logs.Logs logINFO
+INFO: 2021-11-28 01:08:23 test Login Successful
+Nov 28, 2021 1:12:01 AM logs.Logs logINFO
+INFO: 2021-11-28 01:12:01 test Login Successful
+Nov 28, 2021 1:13:35 AM logs.Logs logINFO
+INFO: 2021-11-28 01:13:35 test Login Successful
+Nov 28, 2021 1:24:47 AM logs.Logs logINFO
+INFO: 2021-11-28 01:24:47 test Login Successful
+Nov 28, 2021 1:32:29 AM logs.Logs logINFO
+INFO: 2021-11-28 01:32:29 test Login Successful
+Nov 28, 2021 1:32:34 AM logs.Logs logINFO
+INFO: 2021-11-28 01:32:34 test has updated the Appointment 2
+Nov 28, 2021 1:36:22 AM logs.Logs logINFO
+INFO: 2021-11-28 01:36:22 test Login Successful
+Nov 28, 2021 1:38:22 AM logs.Logs logINFO
+INFO: 2021-11-28 01:38:22 test Login Successful
+Nov 28, 2021 1:41:04 AM logs.Logs logINFO
+INFO: 2021-11-28 01:41:04 test Login Successful
+Nov 28, 2021 1:47:26 AM logs.Logs logINFO
+INFO: 2021-11-28 01:47:26 test Login Successful
+Nov 28, 2021 1:48:20 AM logs.Logs logINFO
+INFO: 2021-11-28 01:48:20 test Login Successful
+Nov 28, 2021 2:04:29 AM logs.Logs logINFO
+INFO: 2021-11-28 02:04:29 admin Login Successful
+Nov 28, 2021 2:08:12 AM logs.Logs logINFO
+INFO: 2021-11-28 02:08:12 admin Login Successful
+Nov 28, 2021 2:09:37 AM logs.Logs logINFO
+INFO: 2021-11-28 02:09:37 admin has removed the Appointment for {NAME}
+Nov 28, 2021 2:09:40 AM logs.Logs logINFO
+INFO: 2021-11-28 02:09:40 admin has removed the Appointment for {NAME}
+Nov 28, 2021 2:11:22 AM logs.Logs logINFO
+INFO: 2021-11-28 02:11:22 admin Login Successful
+Nov 28, 2021 2:19:41 AM logs.Logs logINFO
+INFO: 2021-11-28 02:19:41 admin Login Successful
+Nov 28, 2021 2:19:51 AM logs.Logs logINFO
+INFO: 2021-11-28 02:19:51 admin has added Appointment for 2
+Nov 28, 2021 2:22:41 AM logs.Logs logINFO
+INFO: 2021-11-28 02:22:41 admin Login Successful
+Nov 28, 2021 2:23:13 AM logs.Logs logINFO
+INFO: 2021-11-28 02:23:13 admin has added Appointment for 
+Nov 28, 2021 2:30:46 AM logs.Logs logINFO
+INFO: 2021-11-28 02:30:46 admin has removed the Appointment for {NAME}
+Nov 28, 2021 2:30:57 AM logs.Logs logINFO
+INFO: 2021-11-28 02:30:57 admin has removed the Appointment for {NAME}
+Nov 28, 2021 2:31:07 AM logs.Logs logINFO
+INFO: 2021-11-28 02:31:07 admin has removed the Appointment for {NAME}
+Nov 28, 2021 2:34:07 AM logs.Logs logINFO
+INFO: 2021-11-28 02:34:07 admin Login Successful
+Nov 28, 2021 2:34:11 AM logs.Logs logINFO
+INFO: 2021-11-28 02:34:11 admin has removed the Appointment for 8
+Nov 28, 2021 2:35:32 AM logs.Logs logINFO
+INFO: 2021-11-28 02:35:32 admin Login Successful
+Nov 28, 2021 2:35:42 AM logs.Logs logINFO
+INFO: 2021-11-28 02:35:42 admin has added Appointment for 
+Nov 28, 2021 2:36:16 AM logs.Logs logINFO
+INFO: 2021-11-28 02:36:16 admin has added Appointment for 
+Nov 28, 2021 2:38:08 AM logs.Logs logINFO
+INFO: 2021-11-28 02:38:08 admin Login Successful
+Nov 28, 2021 2:39:32 AM logs.Logs logINFO
+INFO: 2021-11-28 02:39:32 admin has removed the Appointment Id 9
+Nov 28, 2021 2:43:03 AM logs.Logs logINFO
+INFO: 2021-11-28 02:43:03 admin Login Successful
+Nov 28, 2021 2:46:11 AM logs.Logs logINFO
+INFO: 2021-11-28 02:46:11 admin Login Successful
+Nov 28, 2021 2:49:08 AM logs.Logs logINFO
+INFO: 2021-11-28 02:49:08 admin Login Successful
+Nov 28, 2021 2:51:28 AM logs.Logs logINFO
+INFO: 2021-11-28 02:51:28 admin Login Successful
+Nov 28, 2021 2:52:06 AM logs.Logs logINFO
+INFO: 2021-11-28 02:52:06 admin has added Appointment for 
+Nov 28, 2021 3:08:42 AM logs.Logs logINFO
+INFO: 2021-11-28 03:08:42 admin Login Successful
+Nov 28, 2021 3:10:19 AM logs.Logs logINFO
+INFO: 2021-11-28 03:10:19 admin Login Successful
+Nov 28, 2021 3:12:04 AM logs.Logs logINFO
+INFO: 2021-11-28 03:12:04 admin Login Successful
+Nov 28, 2021 3:17:38 AM logs.Logs logINFO
+INFO: 2021-11-28 03:17:38 admin Login Successful
+Nov 28, 2021 3:19:12 AM logs.Logs logINFO
+INFO: 2021-11-28 03:19:12 admin Login Successful
+Nov 28, 2021 3:21:56 AM logs.Logs logINFO
+INFO: 2021-11-28 03:21:56 admin Login Successful
+Nov 28, 2021 3:22:00 AM logs.Logs logINFO
+INFO: 2021-11-28 03:22:00 admin has updated the Appointment 1
+Nov 28, 2021 3:24:54 AM logs.Logs logINFO
+INFO: 2021-11-28 03:24:54 admin Login Successful
+Nov 28, 2021 3:25:01 AM logs.Logs logINFO
+INFO: 2021-11-28 03:25:01 admin has updated the Appointment 11
+Nov 28, 2021 3:25:13 AM logs.Logs logINFO
+INFO: 2021-11-28 03:25:13 admin has updated the Appointment 11
+Nov 28, 2021 3:28:49 AM logs.Logs logINFO
+INFO: 2021-11-28 03:28:49 admin Login Successful
+Nov 28, 2021 3:28:54 AM logs.Logs logINFO
+INFO: 2021-11-28 03:28:54 admin has updated the Appointment 11
+Nov 28, 2021 3:29:13 AM logs.Logs logINFO
+INFO: 2021-11-28 03:29:13 admin has updated the Appointment 11
+Nov 28, 2021 3:29:59 AM logs.Logs logINFO
+INFO: 2021-11-28 03:29:59 admin Login Successful
+Nov 28, 2021 3:30:08 AM logs.Logs logINFO
+INFO: 2021-11-28 03:30:08 admin has updated the Appointment 10
+Nov 28, 2021 3:40:48 AM logs.Logs logINFO
+INFO: 2021-11-28 03:40:48 admin Login Successful
+Nov 28, 2021 3:57:24 AM logs.Logs logINFO
+INFO: 2021-11-28 03:57:24 admin Login Successful
+Nov 28, 2021 3:57:55 AM logs.Logs logINFO
+INFO: 2021-11-28 03:57:55 Agenor the Heretic Has Been Removed by admin
+Nov 28, 2021 4:08:30 AM logs.Logs logINFO
+INFO: 2021-11-28 04:08:30 admin Login Successful
+Nov 28, 2021 4:15:57 AM logs.Logs logINFO
+INFO: 2021-11-28 04:15:57 admin Login Successful
+Nov 28, 2021 4:20:58 AM logs.Logs logINFO
+INFO: 2021-11-28 04:20:58 admin Login Successful
+Nov 28, 2021 4:54:35 AM logs.Logs logINFO
+INFO: 2021-11-28 04:54:35 admin Login Successful
+Nov 28, 2021 4:58:44 AM logs.Logs logINFO
+INFO: 2021-11-28 04:58:44 admin Login Successful
+Nov 28, 2021 5:02:01 AM logs.Logs logINFO
+INFO: 2021-11-28 05:02:01 admin Login Successful
+Nov 28, 2021 5:06:28 AM logs.Logs logINFO
+INFO: 2021-11-28 05:06:28 admin has added Appointment for 
+Nov 28, 2021 5:16:05 AM logs.Logs logINFO
+INFO: 2021-11-28 05:16:05 admin Login Successful
+Nov 28, 2021 5:19:35 AM logs.Logs logINFO
+INFO: 2021-11-28 05:19:35 admin Login Successful
+Nov 28, 2021 5:21:54 AM logs.Logs logINFO
+INFO: 2021-11-28 05:21:54 admin has added Appointment for 
+Nov 28, 2021 5:24:11 AM logs.Logs logINFO
+INFO: 2021-11-28 05:24:11 admin Login Successful
+Nov 28, 2021 5:24:59 AM logs.Logs logINFO
+INFO: 2021-11-28 05:24:59 admin Login Successful
+Nov 28, 2021 5:26:36 AM logs.Logs logINFO
+INFO: 2021-11-28 05:26:36 admin Login Successful
+Nov 28, 2021 5:28:19 AM logs.Logs logINFO
+INFO: 2021-11-28 05:28:19 admin Login Successful
+Nov 28, 2021 5:29:12 AM logs.Logs logINFO
+INFO: 2021-11-28 05:29:12 admin Login Successful
+Nov 28, 2021 5:30:14 AM logs.Logs logINFO
+INFO: 2021-11-28 05:30:14 admin Login Successful
+Nov 28, 2021 5:30:47 AM logs.Logs logINFO
+INFO: 2021-11-28 05:30:47 admin Login Successful
+Nov 28, 2021 5:32:15 AM logs.Logs logINFO
+INFO: 2021-11-28 05:32:15 admin Login Successful
+Nov 28, 2021 5:33:53 AM logs.Logs logINFO
+INFO: 2021-11-28 05:33:53 admin has added Appointment for 
+Nov 28, 2021 5:35:08 AM logs.Logs logINFO
+INFO: 2021-11-28 05:35:08 admin Login Successful
+Nov 28, 2021 5:36:25 AM logs.Logs logINFO
+INFO: 2021-11-28 05:36:25 admin Login Successful
+Nov 28, 2021 5:40:21 AM logs.Logs logINFO
+INFO: 2021-11-28 05:40:21 admin Login Successful
+Nov 28, 2021 5:40:27 AM logs.Logs logINFO
+INFO: 2021-11-28 05:40:27 admin has added Appointment for 
+Nov 28, 2021 5:40:41 AM logs.Logs logINFO
+INFO: 2021-11-28 05:40:41 admin has added Appointment for 
+Nov 28, 2021 5:40:46 AM logs.Logs logINFO
+INFO: 2021-11-28 05:40:46 admin has added Appointment for 
+Nov 28, 2021 5:40:52 AM logs.Logs logINFO
+INFO: 2021-11-28 05:40:52 admin has added Appointment for 
+Nov 28, 2021 5:40:58 AM logs.Logs logINFO
+INFO: 2021-11-28 05:40:58 admin has added Appointment for 
+Nov 28, 2021 5:41:05 AM logs.Logs logINFO
+INFO: 2021-11-28 05:41:05 admin has added Appointment for 
+Nov 28, 2021 5:41:10 AM logs.Logs logINFO
+INFO: 2021-11-28 05:41:10 admin has added Appointment for 
+Nov 28, 2021 5:41:14 AM logs.Logs logINFO
+INFO: 2021-11-28 05:41:14 admin has added Appointment for 
+Nov 28, 2021 5:41:19 AM logs.Logs logINFO
+INFO: 2021-11-28 05:41:19 admin has added Appointment for 
+Nov 28, 2021 5:42:39 AM logs.Logs logINFO
+INFO: 2021-11-28 05:42:39 admin has added Appointment for 
+Nov 28, 2021 5:42:45 AM logs.Logs logINFO
+INFO: 2021-11-28 05:42:45 admin has added Appointment for 
+Nov 28, 2021 5:42:50 AM logs.Logs logINFO
+INFO: 2021-11-28 05:42:50 admin has added Appointment for 
+Nov 28, 2021 5:42:56 AM logs.Logs logINFO
+INFO: 2021-11-28 05:42:56 admin has added Appointment for 
+Nov 28, 2021 5:43:01 AM logs.Logs logINFO
+INFO: 2021-11-28 05:43:01 admin has added Appointment for 
+Nov 28, 2021 5:43:05 AM logs.Logs logINFO
+INFO: 2021-11-28 05:43:05 admin has added Appointment for 
+Nov 28, 2021 5:47:33 AM logs.Logs logINFO
+INFO: 2021-11-28 05:47:33 admin Login Successful
+Nov 28, 2021 5:48:10 AM logs.Logs logINFO
+INFO: 2021-11-28 05:48:10 admin Login Successful
+Nov 28, 2021 5:49:35 AM logs.Logs logINFO
+INFO: 2021-11-28 05:49:35 admin Login Successful
+Nov 28, 2021 5:52:43 AM logs.Logs logINFO
+INFO: 2021-11-28 05:52:43 admin Login Successful
+Nov 28, 2021 6:27:00 AM logs.Logs logINFO
+INFO: 2021-11-28 06:27:00 admin Login Successful
+Nov 28, 2021 6:28:04 AM logs.Logs logINFO
+INFO: 2021-11-28 06:28:04 admin Login Successful
+Nov 28, 2021 6:28:57 AM logs.Logs logINFO
+INFO: 2021-11-28 06:28:57 admin has added Appointment for 
+Nov 28, 2021 6:34:18 AM logs.Logs logINFO
+INFO: 2021-11-28 06:34:18 admin Login Successful
+Nov 28, 2021 6:36:26 AM logs.Logs logINFO
+INFO: 2021-11-28 06:36:26 admin Login Successful
+Nov 28, 2021 6:46:06 AM logs.Logs logINFO
+INFO: 2021-11-28 06:46:06 admin Login Successful
+Nov 28, 2021 6:48:19 AM logs.Logs logINFO
+INFO: 2021-11-28 06:48:19 admin Login Successful
