@@ -1,7 +1,6 @@
 package logs;
 
 import java.io.IOException;
-import java.text.ParseException;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -42,11 +41,7 @@ public abstract class Logs<T> {
 
     protected String formatMessage(String message) {
         String time = getCurrentTime() + " " + getCurrentTime();
-        try {
-            time = formatDateTimeForDB(getCurrentDate(), getCurrentTime());
-        } catch (ParseException e) {
-            log.log(Level.SEVERE, "**Unable to Parse Current Date and Time**");
-        }
+        time = formatDateTimeForDB(getCurrentDate(), getCurrentTime());
         return String.format("%s %s", time, message);
     }
 

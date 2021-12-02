@@ -22,23 +22,15 @@ public class HomeScreenController implements Initializable {
     private Button appointmentsBtn;
 
     @FXML
-    private Button monthWeekBtn;
-
-    @FXML
-    private Button appointmentsTypeBtn;
-
-    @FXML
-    private Button scheduleConsultantBtn;
-
-    @FXML
-    private Button customerScheduleBtn;
+    private Button reportsBtnHomeScreen;
 
     @FXML
     private Button databaseLogoutBtn;
 
     @FXML
-    void apptTypeBtn(ActionEvent event) {
-
+    void onReportsBtnAction(ActionEvent event) {
+        closePreviousWindow(reportsBtnHomeScreen);
+        navigateToWindow(FXMLVIEW.REPORT, "Reports Screen");
     }
 
     @FXML
@@ -48,30 +40,15 @@ public class HomeScreenController implements Initializable {
     }
 
     @FXML
-    void customerByScheduleBtn(ActionEvent event) {
-
-    }
-
-    @FXML
     void customerViewBtn(ActionEvent event) throws SQLException {
         closePreviousWindow(customerBtn);
         navigateToWindow(FXMLVIEW.CUSTOMER, "Customer Screen");
     }
 
     @FXML
-    void monthWeekBtn(ActionEvent event) {
-
-    }
-
-    @FXML
     void onDBLogoutBtn(ActionEvent event) throws SQLException {
         closePreviousWindow(databaseLogoutBtn);
         navigateToWindow(FXMLVIEW.LOGIN, "Login Screen");
-    }
-
-    @FXML
-    void scheduleByConsultantBtn(ActionEvent event) {
-
     }
 
     @Override

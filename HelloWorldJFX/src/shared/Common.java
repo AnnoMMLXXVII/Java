@@ -65,6 +65,7 @@ public class Common {
 
     /**
      * Undo all Styling from the Error Response
+     *
      * @param fields Control
      */
     public static void unsetStyling(Control... fields) {
@@ -154,6 +155,10 @@ public class Common {
             sb.append("?,");
         }
         return sb.substring(0, sb.length() - 1);
+    }
+
+    public String appendInnerJoin(String table, String joinTable, DBCOLUMNS tablePK, DBCOLUMNS joinPK) {
+        return String.format("INNER JOIN %s ON %s.%s = %s.%s", joinTable, table, tablePK, joinTable, joinPK);
     }
 
     /**
@@ -253,16 +258,22 @@ public class Common {
      * @return String.Format
      * @throws ParseException parseException
      */
-    public static String formatDateTimeForDB(LocalDate date, LocalTime time) throws ParseException {
-        return String.format("%s %s", formatUsingDTF(date, "yyyy-MM-dd"), formatUsingDTF(time, "hh:mm:ss"));
+    public static String formatDateTimeForDB(LocalDate date, LocalTime time) {
+        String format = null;
+        try {
+            format = String.format("%s %s", formatUsingDTF(date, "yyyy-MM-dd"), formatUsingDTF(time, "hh:mm:ss"));
+        } catch (ParseException e) {
+            getApplicationLogger().logERROR("Parse Exception : Unable to parse Date and Time ::  " + date.toString() + time.toString());
+        }
+        return format;
     }
 
-    public static String formatUsingDTF(LocalDate date, String pattern) {
+    public static String formatUsingDTF(LocalDate date, String pattern) throws ParseException {
         DateTimeFormatter dateDTF = DateTimeFormatter.ofPattern(pattern);
         return String.format("%s", dateDTF.format(date));
     }
 
-    public static String formatUsingDTF(LocalTime time, String pattern) {
+    public static String formatUsingDTF(LocalTime time, String pattern) throws ParseException {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern(pattern);
         return String.format("%s", dtf.format(time));
     }

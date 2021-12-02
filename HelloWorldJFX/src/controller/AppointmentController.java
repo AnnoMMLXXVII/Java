@@ -170,17 +170,6 @@ public class AppointmentController implements Controller<Appointment> {
     public void addAction(ActionEvent event) {
         toggleForAddAction();
         toggleRadioButtons(true);
-        // TODO: REMOVE LINE BELOW BEFORE SUBMISSION
-        titleOfAppt.setText("Team's Daily Stand Up");
-        description.setText("Revisit Unexplored Mount Pangeon");
-        location.setText("Zoom");
-        contactSelect.getSelectionModel().select(2);
-        typeInputAppointment.setText("BZP");
-        customerSelect.getSelectionModel().select("Tiro the Benevolent");
-        startDatePickerAppointment.setValue(LocalDate.of(2021, 12, 20));
-        startTimeInputAppointment.setText("13:30:00");
-        endDatePickerAppointment.setValue(LocalDate.of(2021, 12, 31));
-        endTimeInputAppointment.setText("14:00:00");
     }
 
     @FXML
@@ -282,8 +271,9 @@ public class AppointmentController implements Controller<Appointment> {
             }
             appointmentsTableView.getSelectionModel().clearSelection();
             appointmentsTableView.setItems(dao.getAll());
+            errorLblAppointments.setText("");
         }
-        errorLblAppointments.setText("");
+
     }
 
     /**
@@ -299,11 +289,15 @@ public class AppointmentController implements Controller<Appointment> {
             appointmentCopy = dao.getById(appointmentsTableView.getSelectionModel().getSelectedItem().getAppointment_id());
             String[] start = appointmentCopy.getStart().split(" ");
             String[] end = appointmentCopy.getEnd().split(" ");
-            initializeInputsOnTableViewClick(
-                    start[1], end[1],
-                    truncateDate(formatUsingDTF(getCurrentDate(start[0].trim()), "MM/dd/yyyy")),
-                    truncateDate(formatUsingDTF(getCurrentDate(end[0].trim()), "MM/dd/yyyy"))
-            );
+            try {
+                initializeInputsOnTableViewClick(
+                        start[1], end[1],
+                        truncateDate(formatUsingDTF(getCurrentDate(start[0].trim()), "MM/dd/yyyy")),
+                        truncateDate(formatUsingDTF(getCurrentDate(end[0].trim()), "MM/dd/yyyy"))
+                );
+            }catch(ParseException e) {
+                getApplicationLogger().logERROR("Unable to Parse Date: TableView Appointments Start and End Times");
+            }
         }
     }
 
@@ -467,29 +461,24 @@ public class AppointmentController implements Controller<Appointment> {
      */
     private Appointment prepareCreateRequest() {
         Appointment appointment = null;
-        try {
-            appointment = new Appointment(
-                    -1,
-                    titleOfAppt.getText().trim(),
-                    description.getText().trim(),
-                    location.getText().trim(),
-                    typeInputAppointment.getText().trim(),
-                    formatDateTimeForDB(truncateDate(startDatePickerAppointment.getEditor().getText().trim()),
-                            getCurrentTime(startTimeInputAppointment.getText().trim())),
-                    formatDateTimeForDB(truncateDate(endDatePickerAppointment.getEditor().getText().trim()),
-                            getCurrentTime(endTimeInputAppointment.getText().trim())),
-                    formatDateTimeForDB(getCurrentDate(), getCurrentTime()).trim(),
-                    getUserLoggedIn().trim(),
-                    formatDateTimeForDB(getCurrentDate(), getCurrentTime()).trim(),
-                    getUserLoggedIn().trim(),
-                    customerDAO.getIdFrom(customerSelect.getSelectionModel().getSelectedItem().trim()).getCustomer_id(),
-                    userDAO.getIdFrom(getUserLoggedIn().trim()).getUser_id(),
-                    contactDAO.getIdFrom(contactSelect.getSelectionModel().getSelectedItem().trim()).getContact_id()
-            );
-        } catch (ParseException e) {
-            getApplicationLogger().logERROR("Unable to Parse Date and Time : " + e.getMessage());
-            getActivityLogger().logINFO(String.format("%s failed to create a new Appointment", getUserLoggedIn()));
-        }
+        appointment = new Appointment(
+                -1,
+                titleOfAppt.getText().trim(),
+                description.getText().trim(),
+                location.getText().trim(),
+                typeInputAppointment.getText().trim(),
+                formatDateTimeForDB(truncateDate(startDatePickerAppointment.getEditor().getText().trim()),
+                        getCurrentTime(startTimeInputAppointment.getText().trim())),
+                formatDateTimeForDB(truncateDate(endDatePickerAppointment.getEditor().getText().trim()),
+                        getCurrentTime(endTimeInputAppointment.getText().trim())),
+                formatDateTimeForDB(getCurrentDate(), getCurrentTime()).trim(),
+                getUserLoggedIn().trim(),
+                formatDateTimeForDB(getCurrentDate(), getCurrentTime()).trim(),
+                getUserLoggedIn().trim(),
+                customerDAO.getIdFrom(customerSelect.getSelectionModel().getSelectedItem().trim()).getCustomer_id(),
+                userDAO.getIdFrom(getUserLoggedIn().trim()).getUser_id(),
+                contactDAO.getIdFrom(contactSelect.getSelectionModel().getSelectedItem().trim()).getContact_id()
+        );
         return appointment;
     }
 
@@ -500,29 +489,24 @@ public class AppointmentController implements Controller<Appointment> {
      */
     private Appointment prepareUpdateRequest() {
         Appointment appointment = null;
-        try {
-            appointment = new Appointment(
-                    Integer.parseInt(apptID.getText().trim()),
-                    titleOfAppt.getText().trim(),
-                    description.getText().trim(),
-                    location.getText().trim(),
-                    typeInputAppointment.getText().trim(),
-                    formatDateTimeForDB(truncateDate(startDatePickerAppointment.getEditor().getText().trim()),
-                            getCurrentTime(startTimeInputAppointment.getText().trim())),
-                    formatDateTimeForDB(truncateDate(endDatePickerAppointment.getEditor().getText().trim()),
-                            getCurrentTime(endTimeInputAppointment.getText().trim())),
-                    appointmentCopy.getCreate_date().trim(),
-                    appointmentCopy.getCreated_by().trim(),
-                    formatDateTimeForDB(getCurrentDate(), getCurrentTime()).trim(),
-                    getUserLoggedIn().trim(),
-                    customerDAO.getIdFrom(customerSelect.getSelectionModel().getSelectedItem().trim()).getCustomer_id(),
-                    userDAO.getIdFrom(getUserLoggedIn().trim()).getUser_id(),
-                    contactDAO.getIdFrom(contactSelect.getSelectionModel().getSelectedItem().trim()).getContact_id()
-            );
-        } catch (ParseException e) {
-            getApplicationLogger().logERROR("Unable to Parse Date and Time : " + e.getMessage());
-            getActivityLogger().logINFO(String.format("%s failed to update the Appointment: %s", getUserLoggedIn(), appointmentCopy.getAppointment_id()));
-        }
+        appointment = new Appointment(
+                Integer.parseInt(apptID.getText().trim()),
+                titleOfAppt.getText().trim(),
+                description.getText().trim(),
+                location.getText().trim(),
+                typeInputAppointment.getText().trim(),
+                formatDateTimeForDB(truncateDate(startDatePickerAppointment.getEditor().getText().trim()),
+                        getCurrentTime(startTimeInputAppointment.getText().trim())),
+                formatDateTimeForDB(truncateDate(endDatePickerAppointment.getEditor().getText().trim()),
+                        getCurrentTime(endTimeInputAppointment.getText().trim())),
+                appointmentCopy.getCreate_date().trim(),
+                appointmentCopy.getCreated_by().trim(),
+                formatDateTimeForDB(getCurrentDate(), getCurrentTime()).trim(),
+                getUserLoggedIn().trim(),
+                customerDAO.getIdFrom(customerSelect.getSelectionModel().getSelectedItem().trim()).getCustomer_id(),
+                userDAO.getIdFrom(getUserLoggedIn().trim()).getUser_id(),
+                contactDAO.getIdFrom(contactSelect.getSelectionModel().getSelectedItem().trim()).getContact_id()
+        );
         return appointment;
     }
 

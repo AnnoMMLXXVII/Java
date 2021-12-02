@@ -19,7 +19,6 @@ import model.Division;
 import shared.DataAccessObject;
 
 import java.net.URL;
-import java.text.ParseException;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
@@ -191,17 +190,6 @@ public class CustomerController implements Controller<Customer> {
     @FXML
     public void addAction(ActionEvent event) {
         toggleForAdd();
-        // TODO: REMOVE LINE BELOW BEFORE SUBMISSION
-//        nameInputCustomer.setText("Iokaste the Steadfast");
-//        address1InputCustomer.setText("994 OneThousandMinusOne Rd");
-//        postCodeInputCustomer.setText("01594-450");
-//        phoneInputCustomer.setText("999-999-9994");
-//        countryDropDownCustomer.getSelectionModel().select("U.S");
-//        divisionDropDownCustomer.getSelectionModel().select("New Hampshire");
-        // When Add is Successful -- setDisabled to false for Remove and TableViewCustomer, add to table, and clear fields
-        // If User cancels Add Action -- SetDisabled to false for Remove and TableViewCustomer, clear fields
-        //
-
     }
 
     /**
@@ -230,7 +218,6 @@ public class CustomerController implements Controller<Customer> {
                     resetAfterRemoveOrModifyAction();
                 }
             }
-
         }
 
     }
@@ -437,23 +424,18 @@ public class CustomerController implements Controller<Customer> {
      */
     private Customer prepareCreateCustomerRequest() {
         Customer customer = null;
-        try {
-            customer = new Customer(
-                    -1,
-                    nameInputCustomer.getText().trim(),
-                    address1InputCustomer.getText().trim(),
-                    postCodeInputCustomer.getText().trim(),
-                    phoneInputCustomer.getText().trim(),
-                    formatDateTimeForDB(getCurrentDate(), getCurrentTime()).trim(),
-                    getUserLoggedIn().trim(),
-                    formatDateTimeForDB(getCurrentDate(), getCurrentTime()).trim(),
-                    getUserLoggedIn().trim(),
-                    convertDivisionNameToInt(divisionDropDownCustomer.getSelectionModel().getSelectedItem().trim())
-            );
-        } catch (ParseException e) {
-            getApplicationLogger().logERROR("Unable to Parse Date and Time: " + e.getMessage());
-            getActivityLogger().logINFO(String.format("%s failed to create a new Appointment", getUserLoggedIn()));
-        }
+        customer = new Customer(
+                -1,
+                nameInputCustomer.getText().trim(),
+                address1InputCustomer.getText().trim(),
+                postCodeInputCustomer.getText().trim(),
+                phoneInputCustomer.getText().trim(),
+                formatDateTimeForDB(getCurrentDate(), getCurrentTime()).trim(),
+                getUserLoggedIn().trim(),
+                formatDateTimeForDB(getCurrentDate(), getCurrentTime()).trim(),
+                getUserLoggedIn().trim(),
+                convertDivisionNameToInt(divisionDropDownCustomer.getSelectionModel().getSelectedItem().trim())
+        );
         return customer;
     }
 
@@ -462,24 +444,20 @@ public class CustomerController implements Controller<Customer> {
      */
     private Customer prepareUpdateCustomerRequest() {
         Customer customer = null;
-        try {
-            int divId = convertDivisionNameToInt(divisionDropDownCustomer.getSelectionModel().getSelectedItem().trim());
-            System.out.println(divId);
-            customer = new Customer(
-                    Integer.parseInt(customerIdLblCustomer.getText().trim()),
-                    nameInputCustomer.getText().trim(),
-                    address1InputCustomer.getText().trim(),
-                    postCodeInputCustomer.getText().trim(),
-                    phoneInputCustomer.getText().trim(),
-                    customerCopy.getCreate_date().trim(),
-                    customerCopy.getCreate_by().trim(),
-                    formatDateTimeForDB(getCurrentDate(), getCurrentTime()).trim(),
-                    getUserLoggedIn().trim(),
-                    divId
-            );
-        } catch (ParseException e) {
-            getApplicationLogger().logERROR("Unable to Parse Date and Time: " + e.getMessage());
-        }
+        int divId = convertDivisionNameToInt(divisionDropDownCustomer.getSelectionModel().getSelectedItem().trim());
+        System.out.println(divId);
+        customer = new Customer(
+                Integer.parseInt(customerIdLblCustomer.getText().trim()),
+                nameInputCustomer.getText().trim(),
+                address1InputCustomer.getText().trim(),
+                postCodeInputCustomer.getText().trim(),
+                phoneInputCustomer.getText().trim(),
+                customerCopy.getCreate_date().trim(),
+                customerCopy.getCreate_by().trim(),
+                formatDateTimeForDB(getCurrentDate(), getCurrentTime()).trim(),
+                getUserLoggedIn().trim(),
+                divId
+        );
         return customer;
     }
 

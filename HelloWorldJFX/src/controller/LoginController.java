@@ -27,6 +27,7 @@ public class LoginController implements Initializable {
 
     private UserDAO dao;
     private ObservableList<User> users = FXCollections.observableArrayList();
+    private User user;
 
     @FXML
     private Button btnLogin;
@@ -87,8 +88,6 @@ public class LoginController implements Initializable {
         boolean flag = Locale.getDefault().getDefault().getLanguage() == Locale.FRENCH.getLanguage();
         updateLoginToLanguage(ResourceBundle.getBundle(flag ? LANG_RB : LANG_RB, Locale.getDefault()));
         dao = new UserDAO();
-        userNameInputLogin.setText("admin");
-        passwordInputLogin.setText("admin");
     }
 
     private boolean validLogin(String clientName, String clientSecret) {
@@ -96,12 +95,27 @@ public class LoginController implements Initializable {
         Optional<User> opt = users.stream().filter(e -> e.getUser_name().equals(clientName) && e.getPassword().equals(clientSecret)).findFirst();
         if (opt.isPresent()) {
             setUserLoggedIn(opt.get().getUser_name());
+            user = opt.get();
+            updateLogginTime();
             return true;
         } else {
             return false;
         }
     }
 
+    private void updateLogginTime() {
+        user.setLast_update(formatDateTimeForDB(getCurrentDate(), getCurrentTime()));
+        if (dao.update(user)) {
+            getActivityLogger().logINFO(String.format("%s has login time has updated : %s", user.getUser_name(), user.getLast_update()));
+        } else {
+            getActivityLogger().logERROR(String.format("Login time could not be updated %s", formatDateTimeForDB(getCurrentDate(), getCurrentTime())));
+        }
+
+    }
+
+    /**
+     * @param rb
+     */
     private void updateLoginToLanguage(ResourceBundle rb) {
         userNameInputLogin.promptTextProperty().set(rb.getString("userNameInputLogin"));
         passwordInputLogin.promptTextProperty().set(rb.getString("passwordInputLogin"));

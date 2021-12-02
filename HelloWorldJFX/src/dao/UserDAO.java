@@ -16,9 +16,10 @@ import static shared.Constants.DB_TABLES;
 
 public class UserDAO implements DataAccessObject<User> {
 
-    private ObservableList<User> users;
-    private ResultSet rs;
     private User user;
+    private ObservableList<User> users;
+    private PreparedStatement ps;
+    private ResultSet rs;
 
     @Override
     public ObservableList<User> getAll() {
@@ -69,6 +70,25 @@ public class UserDAO implements DataAccessObject<User> {
 
     @Override
     public boolean update(User object) {
+        JDBC.openConnection();
+        try {
+            JDBC.makePreparedStatement(
+                    createUpdateQuery(DB_TABLES.users.name(),
+                            DBCOLUMNS.USER_ID.getValue(),
+                            object.getUser_id() + "",
+                            DBCOLUMNS.LAST_UPDATE),
+                    JDBC.getConnection());
+            ps = JDBC.getPreparedStatement();
+            executeModificationQuery(ps, object);
+            ps.execute();
+            if (ps.getUpdateCount() > 0) {
+                return true;
+            }
+        } catch (SQLException e) {
+            getApplicationLogger().logERROR("SQL EXCEPTION : " + e.getMessage());
+        } finally {
+            JDBC.closeConnection();
+        }
         return false;
     }
 
@@ -91,6 +111,6 @@ public class UserDAO implements DataAccessObject<User> {
 
     @Override
     public void executeModificationQuery(PreparedStatement ps, User object) throws SQLException {
-        return;
+        ps.setString(1, object.getLast_update());
     }
 }

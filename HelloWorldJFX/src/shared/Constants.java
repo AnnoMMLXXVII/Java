@@ -9,7 +9,7 @@ public class Constants {
     }
 
     public static enum FXMLVIEW {
-        LOGIN("/view/Login.fxml"), CUSTOMER("/view/Customer.fxml"),
+        LOGIN("/view/Login.fxml"), CUSTOMER("/view/Customer.fxml"), REPORT("/view/Report.fxml"),
         HOMESCREEN("/view/HomeScreen.fxml"), APPOINTMENT("/view/Appointment.fxml");
         private String value;
 
