@@ -94,7 +94,7 @@ public class HomeScreenController implements Initializable {
 
         mappedAppt.forEach((e,v) -> {
             int diff = e.toLocalDateTime().toLocalTime().getMinute() - current.toLocalDateTime().toLocalTime().getMinute();
-            if (diff > 0 && diff < 15) {
+            if (diff > -1 && diff < 16) {
                 sb.append(String.format("Appointment: %s\nStart Time %s\n",v.getTitle(), e.toLocalDateTime().toLocalTime().toString()));
                 isMeetingsSoon = true;
             }

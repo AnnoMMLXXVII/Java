@@ -446,6 +446,7 @@ public class AppointmentController implements Controller<Appointment> {
      */
     private void initializeTableView() {
         appointmentsTableView.setItems(dao.getAll());
+        System.out.println("CURR ZONE: " + ZoneId.systemDefault() + " ");
         apptIDCol.setCellValueFactory(new PropertyValueFactory(DBCOLUMNS.APPOINTMENT_ID.getValue().toLowerCase()));
         titleCol.setCellValueFactory(new PropertyValueFactory(DBCOLUMNS.TITLE.getValue().toLowerCase()));
         descriptionCol.setCellValueFactory(new PropertyValueFactory(DBCOLUMNS.DESCRIPTION.getValue().toLowerCase()));
@@ -458,7 +459,12 @@ public class AppointmentController implements Controller<Appointment> {
                                 e.getValue().getStart().split(" ")[0],
                                 e.getValue().getStart().split(" ")[1], ZoneId.systemDefault().toString()))
         ));
-        endCol.setCellValueFactory(new PropertyValueFactory(DBCOLUMNS.END.getValue().toLowerCase()));
+        endCol.setCellValueFactory(e -> new ReadOnlyObjectWrapper<>(
+                String.format("%s",
+                        getTimestamp(
+                                e.getValue().getEnd().split(" ")[0],
+                                e.getValue().getEnd().split(" ")[1], ZoneId.systemDefault().toString()))
+        ));
         customerIDCol.setCellValueFactory(new PropertyValueFactory(DBCOLUMNS.CUSTOMER_ID.getValue().toLowerCase()));
         userIDCol.setCellValueFactory(new PropertyValueFactory(DBCOLUMNS.USER_ID.getValue().toLowerCase()));
     }
