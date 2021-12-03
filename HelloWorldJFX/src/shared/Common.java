@@ -12,12 +12,18 @@ import logs.Logs;
 import main.Main;
 
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.text.ParseException;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.Optional;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.function.Function;
+import java.util.function.Predicate;
 
 import static shared.Constants.DBCOLUMNS;
 import static shared.Constants.FXMLVIEW;
@@ -209,11 +215,35 @@ public class Common {
         }
     }
 
+    public static LocalDateTime convertToLocalDateTime(LocalDate date, LocalTime time) {
+        return LocalDateTime.of(date, time);
+    }
+
+    public static Timestamp getTimestampByZone(LocalDateTime ldt, String zone) {
+        return Timestamp.valueOf(ldt.atZone(getCurrentZone()).withZoneSameInstant(
+                ZoneId.of((zone == null || zone.isEmpty() || zone.isBlank()) ? "UTC" : zone)).toLocalDateTime());
+    }
+
+    /**
+     * Extracts Date and Time from UI and converts to UTC for Database
+     *
+     * @return Timestamp
+     */
+    public static Timestamp getTimestamp(String date, String time, String timeZone) {
+        return getTimestampByZone(convertToLocalDateTime(
+                getCurrentDate(date.trim()),
+                getCurrentTime(time.trim())), timeZone);
+    }
+
     /**
      * @return LocalDate
      */
     public static LocalDate getCurrentDate() {
-        return LocalDate.now(ZoneId.systemDefault());
+        return LocalDate.now(getCurrentZone());
+    }
+
+    public static ZoneId getCurrentZone() {
+        return ZoneId.systemDefault();
     }
 
     /**
@@ -228,16 +258,11 @@ public class Common {
         return LocalDate.of(Integer.parseInt(split[0].trim()), Integer.parseInt(split[1].trim()), Integer.parseInt(split[2].trim()));
     }
 
-    public static LocalDate truncateDate(String date) {
-        String[] split = date.split("/");
-        return LocalDate.of(Integer.parseInt(split[2].trim()), Integer.parseInt(split[0].trim()), Integer.parseInt(split[1].trim()));
-    }
-
     /**
      * @return LocalDate
      */
     public static LocalTime getCurrentTime() {
-        return LocalTime.now(ZoneId.systemDefault());
+        return LocalTime.now(getCurrentZone());
     }
 
     /**
@@ -249,7 +274,9 @@ public class Common {
      */
     public static LocalTime getCurrentTime(String time) {
         String[] split = time.split(":");
-        return LocalTime.of(Integer.parseInt(split[0]), Integer.parseInt(split[1]), Integer.parseInt(split[2]));
+        return LocalTime.of(Integer.parseInt(split[0]),
+                Integer.parseInt(split[1]),
+                (split.length < 3) ? 00 : Integer.parseInt(split[2]));
     }
 
     /**
@@ -357,6 +384,17 @@ public class Common {
         });
         comboBox.setItems(strings);
         return comboBox;
+    }
+
+    /**
+     * Lambda expression that will create a distinct result
+     * @param e Function ? super T, T
+     * @param <T> ?
+     * @return Predicate T
+     */
+    public static <T> Predicate<T> distinctUsingReference(Function<? super T, ?> e) {
+        Set<Object> seen = ConcurrentHashMap.newKeySet();
+        return t -> seen.add(e.apply(t));
     }
 
     /**

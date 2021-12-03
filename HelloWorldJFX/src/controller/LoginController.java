@@ -12,13 +12,11 @@ import shared.JDBC;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.Locale;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
 import static shared.Common.*;
 import static shared.Constants.FXMLVIEW;
-import static shared.Constants.LANG_RB;
 
 /**
  *
@@ -85,11 +83,20 @@ public class LoginController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        boolean flag = Locale.getDefault().getDefault().getLanguage() == Locale.FRENCH.getLanguage();
-        updateLoginToLanguage(ResourceBundle.getBundle(flag ? LANG_RB : LANG_RB, Locale.getDefault()));
+//        boolean flag = Locale.getDefault().getDefault().getLanguage() == Locale.FRENCH.getLanguage();
+//        updateLoginToLanguage(ResourceBundle.getBundle(flag ? LANG_RB : LANG_RB, Locale.getDefault()));
         dao = new UserDAO();
+        userNameInputLogin.setText("admin");
+        passwordInputLogin.setText("admin");
     }
 
+    /**
+     * Method call that will valida the login after making the DAO call
+     *
+     * @param clientName   String
+     * @param clientSecret String
+     * @return boolean
+     */
     private boolean validLogin(String clientName, String clientSecret) {
         users = dao.getAll();
         Optional<User> opt = users.stream().filter(e -> e.getUser_name().equals(clientName) && e.getPassword().equals(clientSecret)).findFirst();
@@ -103,6 +110,9 @@ public class LoginController implements Initializable {
         }
     }
 
+    /**
+     * Helper Method call that will update the userLogin timestamp
+     */
     private void updateLogginTime() {
         user.setLast_update(formatDateTimeForDB(getCurrentDate(), getCurrentTime()));
         if (dao.update(user)) {

@@ -4,6 +4,7 @@ import dao.AppointmentDAO;
 import dao.ContactDAO;
 import dao.CustomerDAO;
 import dao.UserDAO;
+import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -12,6 +13,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
+import javafx.util.StringConverter;
 import model.Appointment;
 import model.Contact;
 import model.Customer;
@@ -19,10 +21,12 @@ import model.User;
 import shared.DataAccessObject;
 
 import java.net.URL;
-import java.text.ParseException;
+import java.sql.Timestamp;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.ResourceBundle;
 
@@ -148,6 +152,8 @@ public class AppointmentController implements Controller<Appointment> {
         contactDAO = new ContactDAO();
         userDAO = new UserDAO();
         appointments = FXCollections.observableArrayList();
+        setDatePickerFormat(startDatePickerAppointment);
+        setDatePickerFormat(endDatePickerAppointment);
         initializeTableView();
         allRadioBtn.setSelected(true);
         customerSelect = initializeComboBox(customerDAO, customerSelect);
@@ -289,15 +295,15 @@ public class AppointmentController implements Controller<Appointment> {
             appointmentCopy = dao.getById(appointmentsTableView.getSelectionModel().getSelectedItem().getAppointment_id());
             String[] start = appointmentCopy.getStart().split(" ");
             String[] end = appointmentCopy.getEnd().split(" ");
-            try {
-                initializeInputsOnTableViewClick(
-                        start[1], end[1],
-                        truncateDate(formatUsingDTF(getCurrentDate(start[0].trim()), "MM/dd/yyyy")),
-                        truncateDate(formatUsingDTF(getCurrentDate(end[0].trim()), "MM/dd/yyyy"))
-                );
-            }catch(ParseException e) {
-                getApplicationLogger().logERROR("Unable to Parse Date: TableView Appointments Start and End Times");
-            }
+            Timestamp s = getTimestamp(getCurrentDate(start[0].trim()).toString(), getCurrentTime(start[1].trim()).toString(), ZoneId.systemDefault().toString());
+            Timestamp e = getTimestamp(getCurrentDate(end[0].trim()).toString(), getCurrentTime(end[1].trim()).toString(), ZoneId.systemDefault().toString());
+            System.out.printf("Start: %s\nEnd: %s\n", s.toString(), e.toString());
+            initializeInputsOnTableViewClick(
+                    LocalTime.of(s.toLocalDateTime().getHour(), s.toLocalDateTime().getMinute(), s.toLocalDateTime().getSecond()).toString(),
+                    LocalTime.of(e.toLocalDateTime().getHour(), e.toLocalDateTime().getMinute(), e.toLocalDateTime().getSecond()).toString(),
+                    LocalDate.of(s.toLocalDateTime().getYear(), s.toLocalDateTime().getMonth(), s.toLocalDateTime().getDayOfMonth()),
+                    LocalDate.of(e.toLocalDateTime().getYear(), e.toLocalDateTime().getMonth(), e.toLocalDateTime().getDayOfMonth())
+            );
         }
     }
 
@@ -311,8 +317,6 @@ public class AppointmentController implements Controller<Appointment> {
         dao.getAll().stream().forEach(e -> {
             LocalDate current = getCurrentDate();
             LocalDate date = getCurrentDate(e.getStart().split(" ")[0]);
-            System.out.printf("CURR DAY: %s\nDIFF --> %s\nAPPT DAY: %s\n",
-                    current.toString(), ChronoUnit.MONTHS.between(current, date), date.toString());
             if (ChronoUnit.MONTHS.between(current, date) == 0) {
                 appointments.add(e);
             }
@@ -448,7 +452,12 @@ public class AppointmentController implements Controller<Appointment> {
         locationCol.setCellValueFactory(new PropertyValueFactory(DBCOLUMNS.LOCATION.getValue().toLowerCase()));
         contactCol.setCellValueFactory(new PropertyValueFactory(DBCOLUMNS.CONTACT_ID.getValue().toLowerCase()));
         typeCol.setCellValueFactory(new PropertyValueFactory(DBCOLUMNS.TYPE.getValue().toLowerCase()));
-        startCol.setCellValueFactory(new PropertyValueFactory(DBCOLUMNS.START.getValue().toLowerCase()));
+        startCol.setCellValueFactory(e -> new ReadOnlyObjectWrapper<>(
+                String.format("%s",
+                        getTimestamp(
+                                e.getValue().getStart().split(" ")[0],
+                                e.getValue().getStart().split(" ")[1], ZoneId.systemDefault().toString()))
+        ));
         endCol.setCellValueFactory(new PropertyValueFactory(DBCOLUMNS.END.getValue().toLowerCase()));
         customerIDCol.setCellValueFactory(new PropertyValueFactory(DBCOLUMNS.CUSTOMER_ID.getValue().toLowerCase()));
         userIDCol.setCellValueFactory(new PropertyValueFactory(DBCOLUMNS.USER_ID.getValue().toLowerCase()));
@@ -461,19 +470,19 @@ public class AppointmentController implements Controller<Appointment> {
      */
     private Appointment prepareCreateRequest() {
         Appointment appointment = null;
+        Timestamp startDB = getTimestamp(startDatePickerAppointment.getEditor().getText().trim(), startTimeInputAppointment.getText().trim(), null);
+        Timestamp endDB = getTimestamp(endDatePickerAppointment.getEditor().getText().trim(), endTimeInputAppointment.getText().trim(), null);
         appointment = new Appointment(
                 -1,
                 titleOfAppt.getText().trim(),
                 description.getText().trim(),
                 location.getText().trim(),
                 typeInputAppointment.getText().trim(),
-                formatDateTimeForDB(truncateDate(startDatePickerAppointment.getEditor().getText().trim()),
-                        getCurrentTime(startTimeInputAppointment.getText().trim())),
-                formatDateTimeForDB(truncateDate(endDatePickerAppointment.getEditor().getText().trim()),
-                        getCurrentTime(endTimeInputAppointment.getText().trim())),
-                formatDateTimeForDB(getCurrentDate(), getCurrentTime()).trim(),
+                startDB.toString(),
+                endDB.toString(),
+                getTimestampByZone(convertToLocalDateTime(getCurrentDate(), getCurrentTime()), null).toString(),
                 getUserLoggedIn().trim(),
-                formatDateTimeForDB(getCurrentDate(), getCurrentTime()).trim(),
+                getTimestampByZone(convertToLocalDateTime(getCurrentDate(), getCurrentTime()), null).toString(),
                 getUserLoggedIn().trim(),
                 customerDAO.getIdFrom(customerSelect.getSelectionModel().getSelectedItem().trim()).getCustomer_id(),
                 userDAO.getIdFrom(getUserLoggedIn().trim()).getUser_id(),
@@ -488,26 +497,24 @@ public class AppointmentController implements Controller<Appointment> {
      * @return Appointment
      */
     private Appointment prepareUpdateRequest() {
-        Appointment appointment = null;
-        appointment = new Appointment(
+        Timestamp startDB = getTimestamp(startDatePickerAppointment.getEditor().getText().trim(), startTimeInputAppointment.getText().trim(), null);
+        Timestamp endDB = getTimestamp(endDatePickerAppointment.getEditor().getText().trim().toString(), endTimeInputAppointment.getText().trim(), null);
+        return new Appointment(
                 Integer.parseInt(apptID.getText().trim()),
                 titleOfAppt.getText().trim(),
                 description.getText().trim(),
                 location.getText().trim(),
                 typeInputAppointment.getText().trim(),
-                formatDateTimeForDB(truncateDate(startDatePickerAppointment.getEditor().getText().trim()),
-                        getCurrentTime(startTimeInputAppointment.getText().trim())),
-                formatDateTimeForDB(truncateDate(endDatePickerAppointment.getEditor().getText().trim()),
-                        getCurrentTime(endTimeInputAppointment.getText().trim())),
+                startDB.toString(),
+                endDB.toString(),
                 appointmentCopy.getCreate_date().trim(),
                 appointmentCopy.getCreated_by().trim(),
-                formatDateTimeForDB(getCurrentDate(), getCurrentTime()).trim(),
+                getTimestampByZone(convertToLocalDateTime(getCurrentDate(), getCurrentTime()), null).toString(),
                 getUserLoggedIn().trim(),
                 customerDAO.getIdFrom(customerSelect.getSelectionModel().getSelectedItem().trim()).getCustomer_id(),
                 userDAO.getIdFrom(getUserLoggedIn().trim()).getUser_id(),
                 contactDAO.getIdFrom(contactSelect.getSelectionModel().getSelectedItem().trim()).getContact_id()
         );
-        return appointment;
     }
 
     /**
@@ -520,14 +527,14 @@ public class AppointmentController implements Controller<Appointment> {
      */
     private void initializeInputsOnTableViewClick(String startTime, String endTime, LocalDate startDate, LocalDate endDate) {
         Customer customer = customerDAO.getById(appointmentCopy.getCustomer_id());
-        customerSelect.getSelectionModel().select(customer.getCustomer_name());
+        customerSelect.getSelectionModel().select(customer.getCustomer_name().trim());
         Contact contact = contactDAO.getById(appointmentCopy.getContact_id());
-        contactSelect.getSelectionModel().select(contact.getContact_name());
-        apptID.setText(appointmentCopy.getAppointment_id() + "");
-        titleOfAppt.setText(appointmentCopy.getTitle());
-        description.setText(appointmentCopy.getDescription());
-        location.setText(appointmentCopy.getLocation());
-        typeInputAppointment.setText(appointmentCopy.getType());
+        contactSelect.getSelectionModel().select(contact.getContact_name().trim());
+        apptID.setText(appointmentCopy.getAppointment_id() + "".trim());
+        titleOfAppt.setText(appointmentCopy.getTitle().trim());
+        description.setText(appointmentCopy.getDescription().trim());
+        location.setText(appointmentCopy.getLocation().trim());
+        typeInputAppointment.setText(appointmentCopy.getType().trim());
         startDatePickerAppointment.setValue(startDate);
         endDatePickerAppointment.setValue(endDate);
         startTimeInputAppointment.setText(startTime.trim());
@@ -585,7 +592,7 @@ public class AppointmentController implements Controller<Appointment> {
         LocalTime start = getCurrentTime(startTimeInputAppointment.getText().trim());
         LocalTime end = getCurrentTime(endTimeInputAppointment.getText().trim());
         return (start.getHour() == end.getHour()) ?
-                (start.getMinute() == end.getHour()) ? start.getSecond() < end.getSecond() : start.getMinute() < end.getMinute()
+                (start.getMinute() == end.getMinute()) ? start.getSecond() < end.getSecond() : start.getMinute() < end.getMinute()
                 : start.getHour() < end.getHour();
     }
 
@@ -617,8 +624,23 @@ public class AppointmentController implements Controller<Appointment> {
      * @return boolean
      */
     private boolean isBetweenEightAndTwentyTwoHundred(LocalTime time) {
+        System.out.println("HOUR: " + time.getHour());
         return (time.getHour() > 7 && time.getHour() < 23);
     }
 
+    private void setDatePickerFormat(DatePicker datePicker) {
+        datePicker.setConverter(new StringConverter<LocalDate>() {
+            @Override
+            public String toString(LocalDate localDate) {
+                return (localDate == null) ? "" : DateTimeFormatter.ofPattern("yyyy-MM-dd").format(localDate);
+            }
+
+            @Override
+            public LocalDate fromString(String s) {
+                return (s.isBlank() || s.isEmpty() || s == null) ?
+                        null : LocalDate.parse(s, DateTimeFormatter.ofPattern("MM-dd-yyyy"));
+            }
+        });
+    }
 
 }

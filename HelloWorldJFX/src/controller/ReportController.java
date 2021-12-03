@@ -20,10 +20,6 @@ import shared.DataAccessObject;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.Set;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.function.Function;
-import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import static shared.Common.*;
@@ -264,11 +260,6 @@ public class ReportController implements Initializable {
             Integer count = Math.toIntExact(finalAppts.stream().filter(z -> e.getValue().getUser_id() == (z.getUser_id())).count());
             return new ReadOnlyObjectWrapper<>(count);
         });
-    }
-
-    private static <T> Predicate<T> distinctUsingReference(Function<? super T, ?> keyExtractor) {
-        Set<Object> seen = ConcurrentHashMap.newKeySet();
-        return t -> seen.add(keyExtractor.apply(t));
     }
 
 }
