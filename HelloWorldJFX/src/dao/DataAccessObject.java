@@ -1,4 +1,4 @@
-package shared;
+package dao;
 
 import javafx.collections.ObservableList;
 
@@ -10,6 +10,7 @@ import java.util.Optional;
 import static shared.Common.getApplicationLogger;
 
 /**
+ * Generics DAO Interface that will be highlight the CRUD Operations
  * Interface that will layout the basic CRUD operations
  * C - Create, R - Review, U - Update, D - Delete
  *

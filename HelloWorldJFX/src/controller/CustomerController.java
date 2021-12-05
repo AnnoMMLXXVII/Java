@@ -16,7 +16,7 @@ import model.Appointment;
 import model.Country;
 import model.Customer;
 import model.Division;
-import shared.DataAccessObject;
+import dao.DataAccessObject;
 
 import java.net.URL;
 import java.util.Optional;
@@ -471,7 +471,7 @@ public class CustomerController implements Controller<Customer> {
     }
 
     /**
-     * Helper method that
+     * Helper method that initialize the inputs when the user selects a row on the TableView
      */
     private void initializeInputsOnSelectedRow() {
         customerIdLblCustomer.setText(customerCopy.getCustomer_id() + "".trim());

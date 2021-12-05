@@ -3,7 +3,6 @@ package dao;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import model.User;
-import shared.DataAccessObject;
 import shared.JDBC;
 
 import java.sql.PreparedStatement;
@@ -14,6 +13,10 @@ import static shared.Common.*;
 import static shared.Constants.DBCOLUMNS;
 import static shared.Constants.DB_TABLES;
 
+/**
+ * User Data Access Object that will make the Database calls
+ * Implements the DataAccessObject Interface
+ */
 public class UserDAO implements DataAccessObject<User> {
 
     private User user;
@@ -21,6 +24,11 @@ public class UserDAO implements DataAccessObject<User> {
     private PreparedStatement ps;
     private ResultSet rs;
 
+    /**
+     * Returns all Users
+     *
+     * @return ObservableList
+     */
     @Override
     public ObservableList<User> getAll() {
         JDBC.openConnection();
@@ -41,6 +49,12 @@ public class UserDAO implements DataAccessObject<User> {
         return users;
     }
 
+    /**
+     * returns User by Id
+     *
+     * @param id Integer
+     * @return User
+     */
     @Override
     public User getById(int id) {
         JDBC.openConnection();
@@ -63,11 +77,23 @@ public class UserDAO implements DataAccessObject<User> {
         return user;
     }
 
+    /**
+     * Empty Body
+     *
+     * @param object T
+     * @return User
+     */
     @Override
     public boolean create(User object) {
         return false;
     }
 
+    /**
+     * Updates the User Object
+     *
+     * @param object T
+     * @return boolean
+     */
     @Override
     public boolean update(User object) {
         JDBC.openConnection();
@@ -92,11 +118,24 @@ public class UserDAO implements DataAccessObject<User> {
         return false;
     }
 
+    /**
+     * Empty Body
+     *
+     * @param id Integer
+     * @return
+     */
     @Override
     public boolean removeById(int id) {
         return false;
     }
 
+    /**
+     * Returns new User by using all the ResultSets
+     *
+     * @param rs ResultSet
+     * @return User
+     * @throws SQLException SQLException
+     */
     @Override
     public User getAllColumnsUsingResultSet(ResultSet rs) throws SQLException {
         return new User(Integer.parseInt(rs.getString(DBCOLUMNS.USER_ID.getValue())),
@@ -109,6 +148,11 @@ public class UserDAO implements DataAccessObject<User> {
         );
     }
 
+    /**
+     * @param ps     PreparedStatement
+     * @param object T
+     * @throws SQLException
+     */
     @Override
     public void executeModificationQuery(PreparedStatement ps, User object) throws SQLException {
         ps.setString(1, object.getLast_update());

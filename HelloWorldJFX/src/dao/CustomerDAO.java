@@ -3,7 +3,6 @@ package dao;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import model.Customer;
-import shared.DataAccessObject;
 import shared.JDBC;
 
 import java.sql.PreparedStatement;
@@ -14,6 +13,10 @@ import static shared.Common.*;
 import static shared.Constants.DBCOLUMNS;
 import static shared.Constants.DB_TABLES;
 
+/**
+ * Customer Data Access Object that will make the Database calls
+ * Implements the DataAccessObject Interface
+ */
 public class CustomerDAO implements DataAccessObject<Customer> {
 
     private Customer customer;
@@ -21,6 +24,11 @@ public class CustomerDAO implements DataAccessObject<Customer> {
     private ResultSet rs;
     private PreparedStatement ps;
 
+    /**
+     * Returns all Customers
+     *
+     * @return ObservableList
+     */
     public ObservableList<Customer> getAll() {
         JDBC.openConnection();
         customers = FXCollections.observableArrayList();
@@ -40,6 +48,12 @@ public class CustomerDAO implements DataAccessObject<Customer> {
         return customers;
     }
 
+    /**
+     * returns Customer by Id
+     *
+     * @param id Integer
+     * @return Customer
+     */
     @Override
     public Customer getById(int id) {
         JDBC.openConnection();
@@ -62,6 +76,12 @@ public class CustomerDAO implements DataAccessObject<Customer> {
         return customer;
     }
 
+    /**
+     * Creates a New Customer Object
+     *
+     * @param object T
+     * @return boolean
+     */
     @Override
     public boolean create(Customer object) {
         JDBC.openConnection();
@@ -82,6 +102,12 @@ public class CustomerDAO implements DataAccessObject<Customer> {
         return false;
     }
 
+    /**
+     * Updates the Customer Object
+     *
+     * @param object T
+     * @return boolean
+     */
     @Override
     public boolean update(Customer object) {
         JDBC.openConnection();
@@ -114,6 +140,12 @@ public class CustomerDAO implements DataAccessObject<Customer> {
         return false;
     }
 
+    /**
+     * Removes Customer By Id
+     *
+     * @param id Integer
+     * @return boolean
+     */
     @Override
     public boolean removeById(int id) {
         JDBC.openConnection();
@@ -133,6 +165,13 @@ public class CustomerDAO implements DataAccessObject<Customer> {
         return false;
     }
 
+    /**
+     * Returns new Customer by using all the ResultSets
+     *
+     * @param rs ResultSet
+     * @return Customer
+     * @throws SQLException SQLException
+     */
     @Override
     public Customer getAllColumnsUsingResultSet(ResultSet rs) throws SQLException {
         return new Customer(
@@ -149,6 +188,12 @@ public class CustomerDAO implements DataAccessObject<Customer> {
         );
     }
 
+    /**
+     *
+     * @param ps     PreparedStatement
+     * @param object T
+     * @throws SQLException
+     */
     public void executeModificationQuery(PreparedStatement ps, Customer object) throws SQLException {
 //        ps.setString(1, "NULL");
         ps.setString(1, object.getCustomer_name());

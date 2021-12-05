@@ -16,7 +16,7 @@ import model.Appointment;
 import model.Contact;
 import model.User;
 import shared.Constants;
-import shared.DataAccessObject;
+import dao.DataAccessObject;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -24,6 +24,10 @@ import java.util.stream.Collectors;
 
 import static shared.Common.*;
 
+/**
+ * Reports Controller Screen that will mainly display data
+ * Users Data, By Customer Data, and Appointments Data
+ */
 public class ReportController implements Initializable {
 
     private DataAccessObject<Appointment> appointmentDAO;
@@ -56,31 +60,16 @@ public class ReportController implements Initializable {
     private TableView<User> createdByUesrsTableViewReports;
 
     @FXML
-    private ComboBox<?> customerDropDownReports;
-
-    @FXML
     private TableColumn<Appointment, Integer> customerIdContactTableCol;
-
-    @FXML
-    private TableView<?> customerTableViewReports;
 
     @FXML
     private TableColumn<Appointment, String> descriptionContactTableCol;
 
     @FXML
-    private TableColumn<?, ?> descriptionCustomerTableCol;
-
-    @FXML
     private TableColumn<Appointment, String> endDateContactTableCol;
 
     @FXML
-    private TableColumn<?, ?> endDateCustomerTableCol;
-
-    @FXML
     private TableColumn<Appointment, String> endTimeContactTableCol;
-
-    @FXML
-    private TableColumn<?, ?> endTimeCustomerTableCol;
 
     @FXML
     private TableColumn<User, String> lastLogUserLogTableCol;
@@ -95,28 +84,10 @@ public class ReportController implements Initializable {
     private TableColumn<Appointment, String> startDateContactTableCol;
 
     @FXML
-    private TableColumn<?, ?> startDateCustomerTableCol;
-
-    @FXML
     private TableColumn<Appointment, String> startTimeContactTableCol;
 
     @FXML
-    private TableColumn<?, ?> startTimeCustomerTableCol;
-
-    @FXML
-    private Tab tabByCustomerReports;
-
-    @FXML
-    private Tab tabByUserReports;
-
-    @FXML
-    private Tab tabContactTableViewReports;
-
-    @FXML
     private TableColumn<Appointment, String> titleContactTableCol;
-
-    @FXML
-    private TableColumn<?, ?> titleCustomerTableCol;
 
     @FXML
     private TableColumn<User, Integer> totalApptsCreatedByUserTableCol;
@@ -128,16 +99,10 @@ public class ReportController implements Initializable {
     private TableColumn<Appointment, String> typeContactTableCol;
 
     @FXML
-    private TableColumn<?, ?> typeCustomerTableCol;
-
-    @FXML
     private TableView<Appointment> typeTableViewReports;
 
     @FXML
     private TableColumn<Appointment, String> typeTypeTotalTableCol;
-
-    @FXML
-    private TableColumn<?, ?> userAssociationCustomerTableCol;
 
     @FXML
     private TableColumn<User, String> userCreatedByUserTableCol;
@@ -148,26 +113,47 @@ public class ReportController implements Initializable {
     @FXML
     private TableColumn<User, String> userUserLogTableCol;
 
-
+    /**
+     * Method that will return the user back to the HomeScreen when clicked
+     *
+     * @param event ActionEvent
+     */
     @FXML
     void cancelAction(ActionEvent event) {
-        if(confirmationPopup("Navigate back to the home screen?")) {
+        if (confirmationPopup("Navigate back to the home screen?")) {
             closePreviousWindow(backBtnReports);
             navigateToWindow(Constants.FXMLVIEW.HOMESCREEN, "Navigating To HomeScreen");
         }
     }
 
+    /**
+     * Method that will initialize the Contact TableView when the Customer is selected from the DropDown
+     *
+     * @param event Event
+     */
     @FXML
     void onContactDropDownAction(Event event) {
         initializeContactTableView();
     }
 
+    /**
+     * Method tied to the Contact Tab.
+     * Upon Click, a database call will be made thus updating the current contact's ObservableList
+     *
+     * @param event
+     */
     @FXML
     void onContactTabAction(Event event) {
         allContacts = contactDAO.getAll();
         initializeContactDropDown();
     }
 
+    /**
+     * Method tied to the Contact Tab.
+     * Upon Click, a database call will be made thus updating the current customer's ObservableList
+     *
+     * @param event Event
+     */
     @FXML
     void onCustmerTabAction(Event event) {
         allAppointments = appointmentDAO.getAll();
@@ -175,6 +161,12 @@ public class ReportController implements Initializable {
         initializeByMonthTableView();
     }
 
+    /**
+     * Method tied to the Contact Tab.
+     * Upon Click, a database call will be made thus updating the current User's ObservableList
+     *
+     * @param event Event
+     */
     @FXML
     void onUsersTabAction(Event event) {
         allUsers = userDAO.getAll();
@@ -182,6 +174,12 @@ public class ReportController implements Initializable {
         initializeUsersAppointmentTotals();
     }
 
+    /**
+     * On load, Appointments, Contacts, and Users DAO will be instantiated
+     * All Data in the tables will be initialized
+     * @param url
+     * @param resourceBundle
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         appointmentDAO = new AppointmentDAO();
@@ -197,6 +195,9 @@ public class ReportController implements Initializable {
         initializeUsersAppointmentTotals();
     }
 
+    /**
+     * Method that will update the Appointment By Type Table
+     */
     private void initializeTypeTableView() {
         ObservableList<Appointment> types = allAppointments.stream().filter(distinctUsingReference(Appointment::getType)).collect(Collectors.toCollection(FXCollections::observableArrayList));
         typeTableViewReports.setItems(types);
@@ -208,6 +209,9 @@ public class ReportController implements Initializable {
         });
     }
 
+    /**
+     * Method that will update the Appointments By Month Table
+     */
     private void initializeByMonthTableView() {
         ObservableList<Appointment> byMonth = allAppointments.stream().filter(distinctUsingReference(e -> getCurrentDate(e.getStart().split(" ")[0]).getMonth())).collect(Collectors.toCollection(FXCollections::observableArrayList));
         monthTableViewReports.setItems(byMonth);
@@ -224,11 +228,17 @@ public class ReportController implements Initializable {
 
     }
 
+    /**
+     * Method that will update the Contact Dropdown
+     */
     private void initializeContactDropDown() {
         ObservableList<Contact> contactsList = allContacts.stream().filter(distinctUsingReference(Contact::getContact_name)).collect(Collectors.toCollection(FXCollections::observableArrayList));
         contactDropDownReports.setItems(contactsList);
     }
 
+    /**
+     * Method that will update the Contact Table View
+     */
     private void initializeContactTableView() {
         Contact selectedContact = contactDAO.getIdFrom(contactDropDownReports.getSelectionModel().getSelectedItem().getContact_name());
         ObservableList<Appointment> contactTable = appointmentDAO.getAll().stream().filter(e -> e.getContact_id().equals(selectedContact.getContact_id())).collect(Collectors.toCollection(FXCollections::observableArrayList));
@@ -245,6 +255,9 @@ public class ReportController implements Initializable {
         endTimeContactTableCol.setCellValueFactory(e -> new ReadOnlyObjectWrapper<>(e.getValue().getEnd().split(" ")[1]));
     }
 
+    /**
+     * Method that will initialize the User's Last Logged In Table
+     */
     private void initializeLastLoggedInTable() {
         userLoggedInTableViewReports.setItems(allUsers);
         userUserLogTableCol.setCellValueFactory(e -> new ReadOnlyObjectWrapper<>(e.getValue().getUser_name()));
@@ -252,6 +265,9 @@ public class ReportController implements Initializable {
         createDateUserLogTableCol.setCellValueFactory(e -> new ReadOnlyObjectWrapper<>(e.getValue().getCreate_date()));
     }
 
+    /**
+     * Method that will initialize the Users table
+     */
     private void initializeUsersAppointmentTotals() {
         createdByUesrsTableViewReports.setItems(allUsers);
         userCreatedByUserTableCol.setCellValueFactory(e -> new ReadOnlyObjectWrapper<>(e.getValue().getUser_name()));

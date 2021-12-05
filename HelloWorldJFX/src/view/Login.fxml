@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.effect.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="434.0" prefWidth="1200.0" style="-fx-background-color: #57A0D3;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+<AnchorPane id="AnchorPane" prefHeight="475.0" prefWidth="1200.0" style="-fx-background-color: #57A0D3;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
    <children>
-      <VBox alignment="BASELINE_CENTER" prefHeight="500.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox alignment="BASELINE_CENTER" prefHeight="389.0" prefWidth="1200.0" AnchorPane.bottomAnchor="86.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Label fx:id="headerLblLogin" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="117.0" prefWidth="1200.0" style="-fx-background-color: BLACK;" text="SCHEDULER LOGIN" textFill="WHITE">
                <font>
@@ -24,7 +29,7 @@
                   <Insets top="-60.0" />
                </VBox.margin>
             </Label>
-            <HBox alignment="CENTER" prefHeight="125.0" prefWidth="1200.0" style="-fx-border-color: BLACK;">
+            <HBox alignment="CENTER" prefHeight="121.0" prefWidth="1200.0" style="-fx-border-color: BLACK;">
                <children>
                   <Label fx:id="userNameLblLogin" alignment="CENTER" prefHeight="75.0" prefWidth="350.0" text="Username:  " textFill="WHITE">
                      <font>
@@ -43,7 +48,7 @@
                   </TextField>
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="125.0" prefWidth="1200.0" style="-fx-border-color: BLACK;">
+            <HBox alignment="CENTER" prefHeight="103.0" prefWidth="1200.0" style="-fx-border-color: BLACK;">
                <children>
                   <Label fx:id="passwordLblLogin" alignment="CENTER" prefHeight="75.0" prefWidth="350.0" text="Password:  " textFill="WHITE">
                      <font>
@@ -62,7 +67,7 @@
                   </PasswordField>
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="125.0" prefWidth="1200.0" style="-fx-border-color: BLACK;">
+            <HBox alignment="CENTER" prefHeight="105.0" prefWidth="1200.0" style="-fx-border-color: BLACK;">
                <children>
                   <Button fx:id="cxlBtnLogin" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#cancelBtnLogin" prefHeight="75.0" prefWidth="250.0" style="-fx-background-color: #EBECF0;" text="Cancel" textFill="RED">
                      <HBox.margin>
@@ -87,5 +92,15 @@
             <SepiaTone level="0.35" />
          </effect>
       </VBox>
+      <Label alignment="CENTER" layoutX="635.0" layoutY="405.0" prefHeight="50.0" prefWidth="170.0" text="Zone: ">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="timeZoneLoginLbl" alignment="CENTER" layoutX="805.0" layoutY="405.0" prefHeight="50.0" prefWidth="375.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

@@ -3,7 +3,6 @@ package dao;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import model.Contact;
-import shared.DataAccessObject;
 import shared.JDBC;
 
 import java.sql.PreparedStatement;
@@ -14,7 +13,10 @@ import static shared.Common.*;
 import static shared.Constants.DBCOLUMNS;
 import static shared.Constants.DB_TABLES;
 
-
+/**
+ * Contact Data Access Object that will make the Database calls
+ * Implements the DataAccessObject Interface
+ */
 public class ContactDAO implements DataAccessObject<Contact> {
 
     private Contact contact;
@@ -22,6 +24,11 @@ public class ContactDAO implements DataAccessObject<Contact> {
     private ResultSet rs;
     private PreparedStatement ps;
 
+    /**
+     * Returns a List of Contacts
+     *
+     * @return ObservableList : Contact
+     */
     @Override
     public ObservableList<Contact> getAll() {
         JDBC.openConnection();
@@ -42,6 +49,12 @@ public class ContactDAO implements DataAccessObject<Contact> {
         return contacts;
     }
 
+    /**
+     * returns the Contact by Id
+     *
+     * @param id Integer
+     * @return Contact
+     */
     @Override
     public Contact getById(int id) {
         JDBC.openConnection();
@@ -64,21 +77,46 @@ public class ContactDAO implements DataAccessObject<Contact> {
         return contact;
     }
 
+    /**
+     * Empty Body
+     *
+     * @param object T
+     * @return boolean
+     */
     @Override
     public boolean create(Contact object) {
         return false;
     }
 
+    /**
+     * Empty Body
+     *
+     * @param object T
+     * @return boolean
+     */
     @Override
     public boolean update(Contact object) {
         return false;
     }
 
+    /**
+     * Empty Body
+     *
+     * @param id Integer
+     * @return boolean
+     */
     @Override
     public boolean removeById(int id) {
         return false;
     }
 
+    /**
+     * Returns new Contact using ResultSet
+     *
+     * @param rs ResultSet
+     * @return
+     * @throws SQLException SQLException
+     */
     @Override
     public Contact getAllColumnsUsingResultSet(ResultSet rs) throws SQLException {
         return new Contact(
@@ -88,6 +126,13 @@ public class ContactDAO implements DataAccessObject<Contact> {
         );
     }
 
+    /**
+     * Empty Body
+     *
+     * @param ps     PreparedStatement
+     * @param object T
+     * @throws SQLException SQLException
+     */
     public void executeModificationQuery(PreparedStatement ps, Contact object) throws SQLException {
         return;
     }

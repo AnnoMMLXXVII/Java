@@ -3,7 +3,6 @@ package dao;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import model.Country;
-import shared.DataAccessObject;
 import shared.JDBC;
 
 import java.sql.PreparedStatement;
@@ -14,12 +13,21 @@ import static shared.Common.*;
 import static shared.Constants.DBCOLUMNS;
 import static shared.Constants.DB_TABLES;
 
+/**
+ * Country Data Access Object that will make the Database calls
+ * Implements the DataAccessObject Interface
+ */
 public class CountryDAO implements DataAccessObject<Country> {
 
     private Country country;
     private ObservableList<Country> countries;
     private ResultSet rs;
 
+    /**
+     * Returns a List of Country
+     *
+     * @return ObservableList : Country
+     */
     @Override
     public ObservableList<Country> getAll() {
         JDBC.openConnection();
@@ -40,6 +48,12 @@ public class CountryDAO implements DataAccessObject<Country> {
         return countries;
     }
 
+    /**
+     * Returns the Country by Id
+     *
+     * @param id Integer
+     * @return Country
+     */
     @Override
     public Country getById(int id) {
         JDBC.openConnection();
@@ -62,21 +76,46 @@ public class CountryDAO implements DataAccessObject<Country> {
         return country;
     }
 
+    /**
+     * Empty Body
+     *
+     * @param object T
+     * @return boolean
+     */
     @Override
     public boolean create(Country object) {
         return false;
     }
 
+    /**
+     * Empty Body
+     *
+     * @param object T
+     * @return boolean
+     */
     @Override
     public boolean update(Country object) {
         return false;
     }
 
+    /**
+     * Empty Body
+     *
+     * @param id Integer
+     * @return boolean
+     */
     @Override
     public boolean removeById(int id) {
         return false;
     }
 
+    /**
+     * returns new Country using the ResultSet
+     *
+     * @param rs ResultSet
+     * @return Country
+     * @throws SQLException SQLException
+     */
     @Override
     public Country getAllColumnsUsingResultSet(ResultSet rs) throws SQLException {
         return new Country(
@@ -89,8 +128,13 @@ public class CountryDAO implements DataAccessObject<Country> {
         );
     }
 
+    /**
+     * @param ps     PreparedStatement
+     * @param object T
+     * @throws SQLException SQLException
+     */
     @Override
     public void executeModificationQuery(PreparedStatement ps, Country object) throws SQLException {
-
+        return;
     }
 }

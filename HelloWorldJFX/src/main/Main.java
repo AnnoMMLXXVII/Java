@@ -10,44 +10,47 @@ import logs.ApplicationLogger;
 import logs.Logs;
 import shared.JDBC;
 
-import java.util.Locale;
-
 import static shared.Common.*;
-import static shared.Constants.LOG_FILE;
 import static shared.Constants.FXMLVIEW;
+import static shared.Constants.LOG_FILE;
 
+/**
+ * Entry point class that has the main method
+ */
 public class Main extends Application {
+
     private Logs<ActivityLogger> activityLogger;
     private Logs<ApplicationLogger> applicationLogger;
 
+    /**
+     * @param primaryStage
+     * @throws Exception
+     */
     @Override
     public void start(Stage primaryStage) throws Exception {
         initializeLoggers();
         Parent root = FXMLLoader.load(getClass().getResource(FXMLVIEW.LOGIN.getValue()));
         Scene scene = new Scene(root);
-        primaryStage.setTitle("Appointment Scheduler V.1");
+        primaryStage.setTitle("Appointment Scheduler");
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
         primaryStage.show();
     }
 
-
+    /**
+     * Entry Point for the Application
+     *
+     * @param args
+     */
     public static void main(String[] args) {
-        setSystemToFrench();
         launch(args);
         JDBC.closeConnection();
     }
 
     /**
-     * Optional Method that can be used to test French
+     * Creates Activity Logger and Application Looger
      */
-    private static void setSystemToFrench() {
-        Locale french = new Locale("fr", "fr");
-        Locale.setDefault(french);
-    }
-
     private void initializeLoggers() {
-//        setSystemToFrench();
         activityLogger = new ActivityLogger(LOG_FILE.activity_log.toString());
         applicationLogger = new ApplicationLogger(LOG_FILE.application_log.toString());
         setActivityLogger(activityLogger);

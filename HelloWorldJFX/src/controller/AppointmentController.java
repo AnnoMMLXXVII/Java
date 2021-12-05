@@ -1,9 +1,6 @@
 package controller;
 
-import dao.AppointmentDAO;
-import dao.ContactDAO;
-import dao.CustomerDAO;
-import dao.UserDAO;
+import dao.*;
 import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -18,7 +15,6 @@ import model.Appointment;
 import model.Contact;
 import model.Customer;
 import model.User;
-import shared.DataAccessObject;
 
 import java.net.URL;
 import java.sql.Timestamp;
@@ -31,13 +27,18 @@ import java.time.temporal.ChronoUnit;
 import java.util.ResourceBundle;
 
 import static shared.Common.*;
-import static shared.Constants.DBCOLUMNS;
-import static shared.Constants.FXMLVIEW;
+import static shared.Constants.*;
 
+/**
+ * Appointment Controller that controls all appointments related actions
+ * Create, Delete, Update, and Review (CRUD) Operations
+ * The bulk of the code and the purpose of the application will run through this Appointments Screen
+ */
 public class AppointmentController implements Controller<Appointment> {
 
     private boolean isAddAction = false;
     private boolean isTableViewClicked = false;
+    private boolean isOverlapped = false;
     private DataAccessObject<Appointment> dao;
     private DataAccessObject<Customer> customerDAO;
     private DataAccessObject<Contact> contactDAO;
@@ -279,7 +280,6 @@ public class AppointmentController implements Controller<Appointment> {
             appointmentsTableView.setItems(dao.getAll());
             errorLblAppointments.setText("");
         }
-
     }
 
     /**
@@ -295,9 +295,8 @@ public class AppointmentController implements Controller<Appointment> {
             appointmentCopy = dao.getById(appointmentsTableView.getSelectionModel().getSelectedItem().getAppointment_id());
             String[] start = appointmentCopy.getStart().split(" ");
             String[] end = appointmentCopy.getEnd().split(" ");
-            Timestamp s = getTimestamp(getCurrentDate(start[0].trim()).toString(), getCurrentTime(start[1].trim()).toString(), ZoneId.systemDefault().toString());
-            Timestamp e = getTimestamp(getCurrentDate(end[0].trim()).toString(), getCurrentTime(end[1].trim()).toString(), ZoneId.systemDefault().toString());
-            System.out.printf("Start: %s\nEnd: %s\n", s.toString(), e.toString());
+            Timestamp s = getTimestamp(getCurrentDate(start[0].trim()).toString(), getCurrentTime(start[1].trim()).toString(), getCurrentZone().toString());
+            Timestamp e = getTimestamp(getCurrentDate(end[0].trim()).toString(), getCurrentTime(end[1].trim()).toString(), getCurrentZone().toString());
             initializeInputsOnTableViewClick(
                     LocalTime.of(s.toLocalDateTime().getHour(), s.toLocalDateTime().getMinute(), s.toLocalDateTime().getSecond()).toString(),
                     LocalTime.of(e.toLocalDateTime().getHour(), e.toLocalDateTime().getMinute(), e.toLocalDateTime().getSecond()).toString(),
@@ -308,6 +307,9 @@ public class AppointmentController implements Controller<Appointment> {
     }
 
     /**
+     * Method that is tied to the ByMonth Radio button
+     * On Action, the Appointments Table will update by this month
+     *
      * @param event ActionEvent
      */
     @FXML
@@ -325,6 +327,9 @@ public class AppointmentController implements Controller<Appointment> {
     }
 
     /**
+     * Method is tied to the OnWeek Radio Button
+     * On Action, the appointments table will update by appointments within the next 7 days
+     *
      * @param event ActionEvent
      */
     @FXML
@@ -457,13 +462,13 @@ public class AppointmentController implements Controller<Appointment> {
                 String.format("%s",
                         getTimestamp(
                                 e.getValue().getStart().split(" ")[0],
-                                e.getValue().getStart().split(" ")[1], ZoneId.systemDefault().toString()))
+                                e.getValue().getStart().split(" ")[1], getCurrentZone().toString()))
         ));
         endCol.setCellValueFactory(e -> new ReadOnlyObjectWrapper<>(
                 String.format("%s",
                         getTimestamp(
                                 e.getValue().getEnd().split(" ")[0],
-                                e.getValue().getEnd().split(" ")[1], ZoneId.systemDefault().toString()))
+                                e.getValue().getEnd().split(" ")[1], getCurrentZone().toString()))
         ));
         customerIDCol.setCellValueFactory(new PropertyValueFactory(DBCOLUMNS.CUSTOMER_ID.getValue().toLowerCase()));
         userIDCol.setCellValueFactory(new PropertyValueFactory(DBCOLUMNS.USER_ID.getValue().toLowerCase()));
@@ -504,7 +509,7 @@ public class AppointmentController implements Controller<Appointment> {
      */
     private Appointment prepareUpdateRequest() {
         Timestamp startDB = getTimestamp(startDatePickerAppointment.getEditor().getText().trim(), startTimeInputAppointment.getText().trim(), null);
-        Timestamp endDB = getTimestamp(endDatePickerAppointment.getEditor().getText().trim().toString(), endTimeInputAppointment.getText().trim(), null);
+        Timestamp endDB = getTimestamp(endDatePickerAppointment.getEditor().getText().trim(), endTimeInputAppointment.getText().trim(), null);
         return new Appointment(
                 Integer.parseInt(apptID.getText().trim()),
                 titleOfAppt.getText().trim(),
@@ -554,27 +559,40 @@ public class AppointmentController implements Controller<Appointment> {
      */
     private boolean isValidAppointmentForm() {
         errorLblAppointments.setText("");
-        if (isBlankOrEmptyTextFields(titleOfAppt, description, location, typeInputAppointment, startTimeInputAppointment, endTimeInputAppointment, contactSelect, customerSelect, startDatePickerAppointment, endDatePickerAppointment)) {
+        if (isBlankOrEmptyTextFields(titleOfAppt, description, location, typeInputAppointment, startTimeInputAppointment, endTimeInputAppointment,
+                contactSelect, customerSelect, startDatePickerAppointment, endDatePickerAppointment)) {
             getApplicationLogger().logWARN("Empty Fields must be filled in the Appointment Form");
             errorLblAppointments.setText("All Fields in highlighted in RED cannot be empty");
             return false;
         }
+
+        Timestamp startDB = getTimestamp(startDatePickerAppointment.getEditor().getText().trim(), startTimeInputAppointment.getText().trim(), EST_ZONE);
+        Timestamp endDB = getTimestamp(endDatePickerAppointment.getEditor().getText().trim(), endTimeInputAppointment.getText().trim(), EST_ZONE);
         if (!isStartTimeBeforeEndTime()) {
-            errorLblAppointments.setText("Start Time Must be Before the End Time");
+            errorLblAppointments.setText("Start Time Must be Before the End Time (Use 24-Hour Format)");
             getApplicationLogger().logWARN("Invalid Start and End Times");
             return false;
         }
-        if (!isWithinWorkingHours()) {
-            errorLblAppointments.setText("Meetings can between 08:00 and 22:00 (inclusive)");
-            getApplicationLogger().logWARN("Invalid Meeting Times: Not Within Time Frame (08-22)");
+        if (!isWithinWorkingHours(startDB.toLocalDateTime().toLocalTime(), endDB.toLocalDateTime().toLocalTime())) {
+            errorLblAppointments.setText("Meetings can between 08:00 and 22:00 (inclusive)\n" +
+                    String.format("Entered EST Time :: %s - %s\n", startDB.toLocalDateTime().toLocalTime(), endDB.toLocalDateTime().toLocalTime()));
+            getApplicationLogger().logWARN("Invalid Meeting Times: Not Within Time Frame (08-22)\n" +
+                    String.format("Entered EST Time :: %s - %s\n", startDB.toLocalDateTime().toLocalTime(), endDB.toLocalDateTime().toLocalTime()));
             return false;
         }
-
-        if (isDateNotDuringTheWeek()) {
+        if (isDateNotDuringTheWeek(startDB.toLocalDateTime().toLocalDate(), endDB.toLocalDateTime().toLocalDate())) {
             errorLblAppointments.setText("Meeting Dates cannot be on a Saturday or Sunday");
             getApplicationLogger().logWARN("Invalid Meeting Dates: Cannot be on Weekends");
             return false;
         }
+        if (isOverlappingAppointment(startDB.toLocalDateTime().toLocalDate(), startDB.toLocalDateTime().toLocalTime(),
+                endDB.toLocalDateTime().toLocalDate(), endDB.toLocalDateTime().toLocalTime())) {
+            errorLblAppointments.setText("Scheduling Conflict: " + customerSelect.getSelectionModel().getSelectedItem().trim() + " has a meeting at that time");
+            getApplicationLogger().logWARN("Scheduling Conflict: " + customerSelect.getSelectionModel().getSelectedItem().trim());
+            isOverlapped = false;
+            return false;
+        }
+
         return true;
     }
 
@@ -583,16 +601,14 @@ public class AppointmentController implements Controller<Appointment> {
      *
      * @return boolean
      */
-    private boolean isWithinWorkingHours() {
-        LocalTime start = getCurrentTime(startTimeInputAppointment.getText().trim());
-        LocalTime end = getCurrentTime(endTimeInputAppointment.getText().trim());
+    private boolean isWithinWorkingHours(LocalTime start, LocalTime end) {
         return isBetweenEightAndTwentyTwoHundred(start) && isBetweenEightAndTwentyTwoHundred(end);
     }
 
     /**
      * Checks both if Start Time is before the End time to the seconds
      *
-     * @return
+     * @return boolean
      */
     private boolean isStartTimeBeforeEndTime() {
         LocalTime start = getCurrentTime(startTimeInputAppointment.getText().trim());
@@ -607,9 +623,7 @@ public class AppointmentController implements Controller<Appointment> {
      *
      * @return boolean
      */
-    private boolean isDateNotDuringTheWeek() {
-        LocalDate start = getCurrentDate(startDatePickerAppointment.getValue().toString());
-        LocalDate end = getCurrentDate(endDatePickerAppointment.getValue().toString());
+    private boolean isDateNotDuringTheWeek(LocalDate start, LocalDate end) {
         return isSaturdayOrSunday(start) || isSaturdayOrSunday(end);
     }
 
@@ -630,10 +644,14 @@ public class AppointmentController implements Controller<Appointment> {
      * @return boolean
      */
     private boolean isBetweenEightAndTwentyTwoHundred(LocalTime time) {
-        System.out.println("HOUR: " + time.getHour());
         return (time.getHour() > 7 && time.getHour() < 23);
     }
 
+    /**
+     * A Mutator method that will display the DatePicker to a specified format
+     *
+     * @param datePicker DatePicker
+     */
     private void setDatePickerFormat(DatePicker datePicker) {
         datePicker.setConverter(new StringConverter<LocalDate>() {
             @Override
@@ -648,5 +666,32 @@ public class AppointmentController implements Controller<Appointment> {
             }
         });
     }
+
+    private boolean isOverlappingAppointment(LocalDate date, LocalTime time, LocalDate endDate, LocalTime endTime) {
+        Integer selectedID = customerDAO.getIdFrom(customerSelect.getSelectionModel().getSelectedItem().trim()).getCustomer_id();
+        ObservableList<Appointment> appointments = ((AppointmentDAO) dao).getAllWithInnerJoin(DB_TABLES.customers, DBCOLUMNS.CUSTOMER_ID, selectedID + "");
+        System.out.printf("Date-Time : %s = %s\n", date.toString(), time.toString());
+        for (Appointment e : appointments) {
+            LocalDate eDate = getCurrentDate(e.getStart().split(" ")[0]);
+            LocalTime eTime = getCurrentTime(e.getStart().split(" ")[1]);
+            LocalDate eEndDate = getCurrentDate(e.getEnd().split(" ")[0]);
+            LocalTime eEndTime = getCurrentTime(e.getEnd().split(" ")[1]);
+            Timestamp start = getTimestamp(eDate.toString(), eTime.toString(), getCurrentZone().toString());
+            Timestamp end = getTimestamp(eEndDate.toString(), eEndTime.toString(), getCurrentZone().toString());
+            if (isDatesSame(start.toLocalDateTime().toLocalDate(), date) || isDatesSame(start.toLocalDateTime().toLocalDate(), endDate)) {
+                if ((eTime.isAfter(time) && eTime.isBefore(endTime))) {
+                    isOverlapped = true;
+                }
+            }
+        }
+        ;
+        return isOverlapped;
+
+    }
+
+    private boolean isDatesSame(LocalDate s, LocalDate e) {
+        return ((s.getMonthValue() == e.getMonthValue()) && (s.getDayOfMonth() == e.getDayOfMonth()) && (s.getYear() == e.getYear()));
+    }
+
 
 }

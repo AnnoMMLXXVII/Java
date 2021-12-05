@@ -1,5 +1,6 @@
 package shared;
 
+import dao.DataAccessObject;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
@@ -26,8 +27,12 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 
 import static shared.Constants.DBCOLUMNS;
+import static shared.Constants.DB_TABLES;
 import static shared.Constants.FXMLVIEW;
 
+/**
+ * Common Class that will have reusable Methods if applicable
+ */
 public class Common {
 
     private static Alert conf, error;
@@ -36,7 +41,9 @@ public class Common {
     private static String clientName;
 
     /**
-     * @param fields String...
+     * Method that will check all Control Fields if empty or null upon submission
+     *
+     * @param fields String
      * @return boolean
      */
     public static boolean isBlankOrEmptyTextFields(Control... fields) {
@@ -87,6 +94,20 @@ public class Common {
     public static String queryAll(String table) {
         String query = String.format("SELECT * FROM %s", table);
         getApplicationLogger().logINFO("QUERY: " + query);
+        return query;
+    }
+
+    /**
+     * @param table
+     * @param innerJoinTable
+     * @param joinPK
+     * @return String
+     */
+    public static String queryAllWithInnerJoin(DB_TABLES table, DB_TABLES innerJoinTable, DBCOLUMNS joinPK, String joinPKValue) {
+        String query = String.format("%s %s %s", String.format("SELECT * FROM %s", table), appendInnerJoin(table.name(), innerJoinTable.name(), joinPK.getValue()),
+                !(joinPKValue.isBlank() || joinPKValue == null || joinPKValue.isEmpty()) ?
+                        String.format("WHERE %s.%s = %s", innerJoinTable, joinPK.getValue(), joinPKValue) : "");
+        getApplicationLogger().logINFO("Query: " + query);
         return query;
     }
 
@@ -163,11 +184,20 @@ public class Common {
         return sb.substring(0, sb.length() - 1);
     }
 
-    public String appendInnerJoin(String table, String joinTable, DBCOLUMNS tablePK, DBCOLUMNS joinPK) {
-        return String.format("INNER JOIN %s ON %s.%s = %s.%s", joinTable, table, tablePK, joinTable, joinPK);
+    /**
+     * @param table
+     * @param joinTable
+     * @param joinPK
+     * @return String
+     */
+    public static String appendInnerJoin(String table, String joinTable, String joinPK) {
+        return String.format("INNER JOIN %s ON %s.%s = %s.%s", joinTable, table, joinPK, joinTable, joinPK);
     }
 
     /**
+     * Method that will work in tandem w/ the closePreviousWindow
+     * Create the idea of navigating to the selected window
+     *
      * @param source FXML
      * @param title  String
      */
@@ -215,6 +245,13 @@ public class Common {
         }
     }
 
+    /**
+     * Converts LocalDate and LocalTime to LocalDateTime
+     *
+     * @param date LocalDate
+     * @param time LocalTime
+     * @return LocalDateTime
+     */
     public static LocalDateTime convertToLocalDateTime(LocalDate date, LocalTime time) {
         return LocalDateTime.of(date, time);
     }
@@ -227,7 +264,10 @@ public class Common {
     /**
      * Extracts Date and Time from UI and converts to UTC for Database
      *
-     * @return Timestamp
+     * @param date
+     * @param time
+     * @param timeZone
+     * @return
      */
     public static Timestamp getTimestamp(String date, String time, String timeZone) {
         return getTimestampByZone(convertToLocalDateTime(
@@ -236,12 +276,19 @@ public class Common {
     }
 
     /**
+     * Getter method that returns LocalDate by the current time zone
+     *
      * @return LocalDate
      */
     public static LocalDate getCurrentDate() {
         return LocalDate.now(getCurrentZone());
     }
 
+    /**
+     * Getter Methdo that will return the current Time Zone using ZoneId
+     *
+     * @return
+     */
     public static ZoneId getCurrentZone() {
         return ZoneId.systemDefault();
     }
@@ -259,6 +306,8 @@ public class Common {
     }
 
     /**
+     * Getter Method that will return LocalTime by the current Time zone
+     *
      * @return LocalDate
      */
     public static LocalTime getCurrentTime() {
@@ -295,11 +344,27 @@ public class Common {
         return format;
     }
 
+    /**
+     * Getter Method that returns a specifically formatted Date
+     *
+     * @param date    LocalDate
+     * @param pattern String
+     * @return String
+     * @throws ParseException parseException
+     */
     public static String formatUsingDTF(LocalDate date, String pattern) throws ParseException {
         DateTimeFormatter dateDTF = DateTimeFormatter.ofPattern(pattern);
         return String.format("%s", dateDTF.format(date));
     }
 
+    /**
+     * Overload method that returns a specifically formatted Time
+     *
+     * @param time    LocalTime
+     * @param pattern String
+     * @return String
+     * @throws ParseException parseException
+     */
     public static String formatUsingDTF(LocalTime time, String pattern) throws ParseException {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern(pattern);
         return String.format("%s", dtf.format(time));
@@ -388,7 +453,8 @@ public class Common {
 
     /**
      * Lambda expression that will create a distinct result
-     * @param e Function ? super T, T
+     *
+     * @param e   Function ? super T, T
      * @param <T> ?
      * @return Predicate T
      */

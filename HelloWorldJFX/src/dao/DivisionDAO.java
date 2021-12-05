@@ -4,7 +4,6 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.ObservableMap;
 import model.Division;
-import shared.DataAccessObject;
 import shared.JDBC;
 
 import java.sql.PreparedStatement;
@@ -15,6 +14,10 @@ import static shared.Common.*;
 import static shared.Constants.DBCOLUMNS;
 import static shared.Constants.DB_TABLES;
 
+/**
+ * Division Data Access Object that will make the Database calls
+ * Implements the DataAccessObject Interface
+ */
 public class DivisionDAO implements DataAccessObject<Division> {
 
     private Division division;
@@ -22,6 +25,11 @@ public class DivisionDAO implements DataAccessObject<Division> {
     private ObservableList<Division> divList = FXCollections.observableArrayList();
     private ResultSet rs;
 
+    /**
+     * Returns all Divisions
+     *
+     * @return ObservableMap
+     */
     public ObservableMap<Integer, ObservableList<Division>> getAllDivision() {
         JDBC.openConnection();
         divisions = FXCollections.observableHashMap();
@@ -41,6 +49,12 @@ public class DivisionDAO implements DataAccessObject<Division> {
         return divisions;
     }
 
+    /**
+     * return Division by Id
+     *
+     * @param id Integer
+     * @return Division
+     */
     @Override
     public Division getById(int id) {
         JDBC.openConnection();
@@ -62,21 +76,45 @@ public class DivisionDAO implements DataAccessObject<Division> {
         return division;
     }
 
+    /**
+     * Empty Body
+     *
+     * @param object T
+     * @return Division
+     */
     @Override
     public boolean create(Division object) {
         return false;
     }
 
+    /**
+     * Empty Body
+     *
+     * @param object T
+     * @return boolean
+     */
     @Override
     public boolean update(Division object) {
         return false;
     }
 
+    /**
+     * Empty Body
+     *
+     * @param id Integer
+     * @return boolean
+     */
     @Override
     public boolean removeById(int id) {
         return false;
     }
 
+    /**
+     * returns all divisions in a Observable List
+     *
+     * @return ObservableList
+     */
+    @Override
     public ObservableList<Division> getAll() {
         if (divisions == null) {
             divisions = getAllDivision();
@@ -95,6 +133,13 @@ public class DivisionDAO implements DataAccessObject<Division> {
         return divList;
     }
 
+    /**
+     * Returns new Division Object using all columns in the Result Set
+     *
+     * @param rs ResultSet
+     * @return Division
+     * @throws SQLException
+     */
     @Override
     public Division getAllColumnsUsingResultSet(ResultSet rs) throws SQLException {
         return new Division(
@@ -108,11 +153,23 @@ public class DivisionDAO implements DataAccessObject<Division> {
         );
     }
 
+    /**
+     * Empty Body
+     *
+     * @param ps     PreparedStatement
+     * @param object T
+     */
     @Override
-    public void executeModificationQuery(PreparedStatement ps, Division object) throws SQLException {
+    public void executeModificationQuery(PreparedStatement ps, Division object) {
         return;
     }
 
+    /**
+     * Helper method that will add the Found Division to the List in the Map Object
+     *
+     * @param division
+     * @return ObservableMap
+     */
     private ObservableMap<Integer, ObservableList<Division>> addToMap(Division division) {
         ObservableList<Division> divList = FXCollections.observableArrayList();
         if (divisions.containsKey(division.getCountry_id())) {

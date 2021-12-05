@@ -5,7 +5,7 @@ import shared.Constants;
 import java.util.logging.Logger;
 
 /**
- *
+ * Subclass to of the Logs class
  */
 public class ApplicationLogger extends Logs<ApplicationLogger> {
 

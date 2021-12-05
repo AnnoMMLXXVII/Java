@@ -3,7 +3,6 @@ package dao;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import model.Appointment;
-import shared.DataAccessObject;
 import shared.JDBC;
 
 import java.sql.PreparedStatement;
@@ -14,6 +13,10 @@ import static shared.Common.*;
 import static shared.Constants.DBCOLUMNS;
 import static shared.Constants.DB_TABLES;
 
+/**
+ * User Data Access Object that will make the Database calls
+ * Implements the DataAccessObject Interface
+ */
 public class AppointmentDAO implements DataAccessObject<Appointment> {
 
     private Appointment appointment;
@@ -47,8 +50,27 @@ public class AppointmentDAO implements DataAccessObject<Appointment> {
         return appointments;
     }
 
+    public ObservableList<Appointment> getAllWithInnerJoin(DB_TABLES joinTable, DBCOLUMNS joinTablePK, String joinPK) {
+        JDBC.openConnection();
+        appointments = FXCollections.observableArrayList();
+        try {
+            JDBC.makePreparedStatement(queryAllWithInnerJoin(DB_TABLES.appointments, joinTable, joinTablePK, joinPK), JDBC.getConnection());
+            rs = JDBC.getPreparedStatement().executeQuery();
+            while (rs.next()) {
+                appointments.add(getAllColumnsUsingResultSet(rs));
+            }
+        } catch (SQLException e) {
+            getApplicationLogger().logERROR("SQL EXCEPTION : " + e.getMessage());
+        } catch (NullPointerException e) {
+            getApplicationLogger().logERROR("NULL EXCEPTION" + e.getMessage());
+        } finally {
+            JDBC.closeConnection();
+        }
+        return appointments;
+    }
+
     /**
-     * returns an Appointment using the APPOINTMENT_ID
+     * returns the Appointment by Id
      *
      * @param id Integer
      * @return Appointment
@@ -171,6 +193,13 @@ public class AppointmentDAO implements DataAccessObject<Appointment> {
         return false;
     }
 
+    /**
+     * Returns new Appointments object using the ResultSet
+     *
+     * @param rs ResultSet
+     * @return Appointment
+     * @throws SQLException SQLException
+     */
     @Override
     public Appointment getAllColumnsUsingResultSet(ResultSet rs) throws SQLException {
         return new Appointment(
@@ -191,6 +220,11 @@ public class AppointmentDAO implements DataAccessObject<Appointment> {
         );
     }
 
+    /**
+     * @param ps     PreparedStatement
+     * @param object T
+     * @throws SQLException
+     */
     public void executeModificationQuery(PreparedStatement ps, Appointment object) throws SQLException {
 //        ps.setInt(object.APPOINTMENT_ID.getValue());
         try {

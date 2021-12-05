@@ -8,24 +8,50 @@ import java.util.logging.SimpleFormatter;
 
 import static shared.Common.*;
 
+/**
+ * Generics Abstract Class for the two Loggers
+ * Activity and Application Logger
+ *
+ * @param <T>
+ */
 public abstract class Logs<T> {
 
     protected Logger log;
     protected FileHandler fh;
     protected SimpleFormatter sf;
 
+    /**
+     * Logs the INFO related Level Messages
+     *
+     * @param message
+     */
     public synchronized void logINFO(String message) {
         log.log(Level.INFO, formatMessage(message));
     }
 
+    /**
+     * Logs the WARN related Level Messages
+     *
+     * @param message
+     */
     public synchronized void logWARN(String message) {
         log.log(Level.WARNING, formatMessage(message));
     }
 
+    /**
+     * Logs the ERROR related Level Messages
+     *
+     * @param message
+     */
     public synchronized void logERROR(String message) {
         log.log(Level.SEVERE, formatMessage(message));
     }
 
+    /**
+     * initializes the Loggers
+     *
+     * @param file
+     */
     public void initLoggerConfigs(String file) {
         try {
             fh = new FileHandler(file, true);
@@ -39,6 +65,12 @@ public abstract class Logs<T> {
         }
     }
 
+    /**
+     * Protected method that will format the message
+     *
+     * @param message
+     * @return String
+     */
     protected String formatMessage(String message) {
         String time = getCurrentTime() + " " + getCurrentTime();
         time = formatDateTimeForDB(getCurrentDate(), getCurrentTime());
