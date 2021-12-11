@@ -12,8 +12,8 @@ import static shared.Common.getApplicationLogger;
  */
 public class JDBC {
 
-    private static final String schema = "client_schedule";
-    private static final String jdbcUrl = "jdbc:mysql://localhost/" + schema + "?connectionTimeZone = SERVER"; // LOCAL
+    private static final String schema = "client_schema";
+    private static final String jdbcUrl = "jdbc:mysql://localhost/" + schema + "?serverTimezone=UTC"; // LOCAL
     private static final String driver = "com.mysql.cj.jdbc.Driver"; // Driver reference
     private static Connection connection = null;  // Connection Interface
     private static PreparedStatement preparedStatement;

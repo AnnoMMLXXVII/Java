@@ -4,6 +4,7 @@ import dao.AppointmentDAO;
 import dao.CountryDAO;
 import dao.CustomerDAO;
 import dao.DivisionDAO;
+import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.ObservableMap;
@@ -19,6 +20,7 @@ import model.Division;
 import dao.DataAccessObject;
 
 import java.net.URL;
+import java.sql.Timestamp;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
@@ -67,10 +69,10 @@ public class CustomerController implements Controller<Customer> {
     private TableColumn<Customer, String> divisionColumnCustomer;
 
     @FXML
-    private TableColumn<Customer, String> createDateColumnCustomer;
+    private TableColumn<Customer, Timestamp> createDateColumnCustomer;
 
     @FXML
-    private TableColumn<Customer, String> updateDateColumnCustomer;
+    private TableColumn<Customer, Timestamp> updateDateColumnCustomer;
 
     @FXML
     private TableColumn<Customer, String> addressColumnCustomer;
@@ -151,6 +153,10 @@ public class CustomerController implements Controller<Customer> {
 
     /**
      * Method for the Country Drop Down
+     * Lambda Expression that will filter and find the first country object that is selected
+     * This will update the division dropdown under the corresponding selected country
+     * Examples : If U.S were selected, a list of all the U.S states
+     * and only U.S. states would appear in the division drop down
      *
      * @param event ActionEvent
      */
@@ -199,6 +205,12 @@ public class CustomerController implements Controller<Customer> {
      * Approving the Confirmation will raise an alert indicating the removal result of the action
      * On success, the customer will be removed, the Table View will be updated, and an Informational Alert will be prompted
      * On failure, the customer will not be removed, the table will not be updated, and an Error Alert will be prompted
+     * Two Lambda Expressions
+     * First Lambda will be run to resolve the Foreign Key  Constraint
+     * The process will get all Appointments and Find the matching Customer_Id and Remove that Customer in the Appointments Table
+     * Second will try to find customer using the Customer_Id in the appointments List
+     * If the customer in the appointments table is NOT present, then the remove action proceeds
+     * Not being Present ensures the ForeignKey Constraint has been lifted
      *
      * @param event ActionEvent
      */
@@ -380,6 +392,7 @@ public class CustomerController implements Controller<Customer> {
     }
 
     /**
+     * Two Lambda Expressions that will convert the Created and Last Updated Columns to the current Zone (from UTC)
      * Helper Method that is called by the initializeOnStartup
      * Initializes the Table View
      */
@@ -388,14 +401,23 @@ public class CustomerController implements Controller<Customer> {
         idColumnCustomer.setCellValueFactory(new PropertyValueFactory(DBCOLUMNS.CUSTOMER_ID.getValue().toLowerCase()));
         nameColumnCustomer.setCellValueFactory(new PropertyValueFactory(DBCOLUMNS.CUSTOMER_NAME.getValue().toLowerCase()));
         divisionColumnCustomer.setCellValueFactory(new PropertyValueFactory(DBCOLUMNS.DIVISION_ID.getValue().toLowerCase()));
-        updateDateColumnCustomer.setCellValueFactory(new PropertyValueFactory(DBCOLUMNS.LAST_UPDATE.getValue().toLowerCase()));
-        createDateColumnCustomer.setCellValueFactory(new PropertyValueFactory(DBCOLUMNS.CREATE_DATE.getValue().toLowerCase()));
+        updateDateColumnCustomer.setCellValueFactory(e -> {
+            Timestamp ts = getTimestamp(e.getValue().getLast_update().toLocalDateTime().toLocalDate().toString(),
+                    e.getValue().getLast_update().toLocalDateTime().toLocalTime().toString(), getCurrentZone().toString());
+            return new ReadOnlyObjectWrapper(String.format("%s %s", ts.toLocalDateTime().toLocalDate(), ts.toLocalDateTime().toLocalTime()));
+        });
+        createDateColumnCustomer.setCellValueFactory(e -> {
+            Timestamp ts = getTimestamp(e.getValue().getCreate_date().toLocalDateTime().toLocalDate().toString(),
+                    e.getValue().getCreate_date().toLocalDateTime().toLocalTime().toString(), getCurrentZone().toString());
+            return new ReadOnlyObjectWrapper(String.format("%s %s", ts.toLocalDateTime().toLocalDate(), ts.toLocalDateTime().toLocalTime()));
+        });
         addressColumnCustomer.setCellValueFactory(new PropertyValueFactory(DBCOLUMNS.ADDRESS.getValue().toLowerCase()));
     }
 
     /**
      * Helper Method that is called by the initializeOnStartup
-     * Initializes the ComboBoxes
+     * Initializes the ComboBoxe Division
+     * Lambda Expression to add each country's Names from each Country Object (coming from the Database)
      */
     private void initializeComboBoxes() {
         ObservableList<String> countryNames = FXCollections.observableArrayList();
@@ -409,6 +431,10 @@ public class CustomerController implements Controller<Customer> {
     }
 
     /**
+     * Lambda Expression
+     * Using an ObservableMap object the Lambda expression will find the matching Key and assign the Value
+     * to the ObsersvableList of Divisions. This this will be for the division Drop Down menu.
+     *
      * @param id int
      */
     private void initializeDivisionDropDownBy(int id) {
@@ -423,51 +449,38 @@ public class CustomerController implements Controller<Customer> {
      * @return Customer
      */
     private Customer prepareCreateCustomerRequest() {
-        Customer customer = null;
-        customer = new Customer(
+        int divId = divisionDAO.getIdFrom(divisionDropDownCustomer.getSelectionModel().getSelectedItem().trim()).getDivision_id();
+        return new Customer(
                 -1,
                 nameInputCustomer.getText().trim(),
                 address1InputCustomer.getText().trim(),
                 postCodeInputCustomer.getText().trim(),
                 phoneInputCustomer.getText().trim(),
-                formatDateTimeForDB(getCurrentDate(), getCurrentTime()).trim(),
+                getTimestamp(getCurrentDate().toString(), getCurrentTime().toString(), getCurrentZone().toString()),
                 getUserLoggedIn().trim(),
-                formatDateTimeForDB(getCurrentDate(), getCurrentTime()).trim(),
+                getTimestamp(getCurrentDate().toString(), getCurrentTime().toString(), getCurrentZone().toString()),
                 getUserLoggedIn().trim(),
-                convertDivisionNameToInt(divisionDropDownCustomer.getSelectionModel().getSelectedItem().trim())
+                divId
         );
-        return customer;
     }
 
     /**
      * @return Customer
      */
     private Customer prepareUpdateCustomerRequest() {
-        Customer customer = null;
-        int divId = convertDivisionNameToInt(divisionDropDownCustomer.getSelectionModel().getSelectedItem().trim());
-        System.out.println(divId);
-        customer = new Customer(
+        int divId = divisionDAO.getIdFrom(divisionDropDownCustomer.getSelectionModel().getSelectedItem().trim()).getDivision_id();
+        return new Customer(
                 Integer.parseInt(customerIdLblCustomer.getText().trim()),
                 nameInputCustomer.getText().trim(),
                 address1InputCustomer.getText().trim(),
                 postCodeInputCustomer.getText().trim(),
                 phoneInputCustomer.getText().trim(),
-                customerCopy.getCreate_date().trim(),
+                customerCopy.getCreate_date(),
                 customerCopy.getCreate_by().trim(),
-                formatDateTimeForDB(getCurrentDate(), getCurrentTime()).trim(),
+                getTimestamp(getCurrentDate().toString(), getCurrentTime().toString(), getCurrentZone().toString()),
                 getUserLoggedIn().trim(),
                 divId
         );
-        return customer;
-    }
-
-    /**
-     * @param name String
-     * @return Integer
-     */
-    private Integer convertDivisionNameToInt(String name) {
-        Optional<Division> opt = divisionDAO.getAll().stream().filter(e -> e.getDivision().equalsIgnoreCase(name)).findFirst();
-        return (opt.isPresent()) ? opt.get().getDivision_id() : -1;
     }
 
     /**

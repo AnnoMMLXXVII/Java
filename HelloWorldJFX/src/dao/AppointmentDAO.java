@@ -208,11 +208,11 @@ public class AppointmentDAO implements DataAccessObject<Appointment> {
                 rs.getString(DBCOLUMNS.DESCRIPTION.getValue()),
                 rs.getString(DBCOLUMNS.LOCATION.getValue()),
                 rs.getString(DBCOLUMNS.TYPE.getValue()),
-                rs.getString(DBCOLUMNS.START.getValue()),
-                rs.getString(DBCOLUMNS.END.getValue()),
-                rs.getString(DBCOLUMNS.CREATE_DATE.getValue()),
+                rs.getTimestamp(DBCOLUMNS.START.getValue()),
+                rs.getTimestamp(DBCOLUMNS.END.getValue()),
+                rs.getTimestamp(DBCOLUMNS.CREATE_DATE.getValue()),
                 rs.getString(DBCOLUMNS.CREATED_BY.getValue()),
-                rs.getString(DBCOLUMNS.LAST_UPDATE.getValue()),
+                rs.getTimestamp(DBCOLUMNS.LAST_UPDATE.getValue()),
                 rs.getString(DBCOLUMNS.LAST_UPDATED_BY.getValue()),
                 rs.getInt(DBCOLUMNS.CUSTOMER_ID.getValue()),
                 rs.getInt(DBCOLUMNS.USER_ID.getValue()),
@@ -232,18 +232,18 @@ public class AppointmentDAO implements DataAccessObject<Appointment> {
             ps.setString(2, object.getDescription());
             ps.setString(3, object.getLocation());
             ps.setString(4, object.getType());
-            ps.setString(5, object.getStart());
-            ps.setString(6, object.getEnd());
+            ps.setTimestamp(5, object.getStart());
+            ps.setTimestamp(6, object.getEnd());
             if (isAddAction) {
-                ps.setString(7, object.getCreate_date());
+                ps.setTimestamp(7, object.getCreate_date());
                 ps.setString(8, object.getCreated_by());
-                ps.setString(9, object.getLast_update());
+                ps.setTimestamp(9, object.getLast_update());
                 ps.setString(10, object.getLast_updated_by());
                 ps.setInt(11, object.getCustomer_id());
                 ps.setInt(12, object.getUser_id());
                 ps.setInt(13, object.getContact_id());
             } else {
-                ps.setString(7, object.getLast_update());
+                ps.setTimestamp(7, object.getLast_update());
                 ps.setString(8, object.getLast_updated_by());
                 ps.setInt(9, object.getCustomer_id());
                 ps.setInt(10, object.getUser_id());

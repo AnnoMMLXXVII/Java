@@ -72,7 +72,7 @@ public abstract class Logs<T> {
      * @return String
      */
     protected String formatMessage(String message) {
-        String time = getCurrentTime() + " " + getCurrentTime();
+        String time = getCurrentDate() + " " + getCurrentTime();
         time = formatDateTimeForDB(getCurrentDate(), getCurrentTime());
         return String.format("%s %s", time, message);
     }

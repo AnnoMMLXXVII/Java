@@ -180,9 +180,9 @@ public class CustomerDAO implements DataAccessObject<Customer> {
                 rs.getString(DBCOLUMNS.ADDRESS.getValue()),
                 rs.getString(DBCOLUMNS.POSTAL_CODE.getValue()),
                 rs.getString(DBCOLUMNS.PHONE.getValue()),
-                rs.getString(DBCOLUMNS.CREATE_DATE.getValue()),
+                rs.getTimestamp(DBCOLUMNS.CREATE_DATE.getValue()),
                 rs.getString(DBCOLUMNS.CREATED_BY.getValue()),
-                rs.getString(DBCOLUMNS.LAST_UPDATE.getValue()),
+                rs.getTimestamp(DBCOLUMNS.LAST_UPDATE.getValue()),
                 rs.getString(DBCOLUMNS.LAST_UPDATED_BY.getValue()),
                 rs.getInt(DBCOLUMNS.DIVISION_ID.getValue())
         );
@@ -200,9 +200,9 @@ public class CustomerDAO implements DataAccessObject<Customer> {
         ps.setString(2, object.getAddress());
         ps.setString(3, object.getPostal_code());
         ps.setString(4, object.getPhone());
-        ps.setString(5, object.getCreate_date());
+        ps.setTimestamp(5, object.getCreate_date());
         ps.setString(6, object.getCreate_by());
-        ps.setString(7, object.getLast_update());
+        ps.setTimestamp(7, object.getLast_update());
         ps.setString(8, object.getLast_updated_by());
         ps.setInt(9, object.getDivision_id());
     }

@@ -3778,3 +3778,2325 @@ Dec 05, 2021 10:22:34 AM logs.Logs logWARN
 WARNING: 2021-12-05 10:22:34 Scheduling Conflict: Tiro the Benevolent
 Dec 05, 2021 10:22:42 AM logs.Logs logINFO
 INFO: 2021-12-05 10:22:42 Closed Database Connection
+Dec 11, 2021 4:58:25 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:25 
+--------Program initialized---------
+
+Dec 11, 2021 4:58:26 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:26 Error Alert initialized
+Dec 11, 2021 4:58:26 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:26 Confirmation Alert initialized
+Dec 11, 2021 4:58:32 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:32 Database Connection was Successful
+Dec 11, 2021 4:58:32 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:32 QUERY: SELECT * FROM users
+Dec 11, 2021 4:58:32 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:32 Prepared Statement created successfully
+Dec 11, 2021 4:58:32 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:32 Retrieving Prepared Statement
+Dec 11, 2021 4:58:32 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:32 Closed Database Connection
+Dec 11, 2021 4:58:32 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:32 Database Connection was Successful
+Dec 11, 2021 4:58:32 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:32 QUERY: UPDATE `users` SET Last_Update=? WHERE User_ID = 2
+Dec 11, 2021 4:58:32 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:32 Prepared Statement created successfully
+Dec 11, 2021 4:58:32 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:32 Retrieving Prepared Statement
+Dec 11, 2021 4:58:32 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:32 Closed Database Connection
+Dec 11, 2021 4:58:32 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:32 Database Connection was Successful
+Dec 11, 2021 4:58:32 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:32 QUERY: SELECT * FROM appointments
+Dec 11, 2021 4:58:32 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:32 Prepared Statement created successfully
+Dec 11, 2021 4:58:32 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:32 Retrieving Prepared Statement
+Dec 11, 2021 4:58:32 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:32 Closed Database Connection
+Dec 11, 2021 4:58:33 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:33 Closing window Appointment Scheduler
+Dec 11, 2021 4:58:33 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:33 Closed Database Connection
+Dec 11, 2021 4:58:33 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:33 Closed Database Connection
+Dec 11, 2021 4:58:33 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:33 Navigating to Home Screen Directory
+Dec 11, 2021 4:58:34 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:34 Closing window Home Screen Directory
+Dec 11, 2021 4:58:34 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:34 Closed Database Connection
+Dec 11, 2021 4:58:34 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:34 Closed Database Connection
+Dec 11, 2021 4:58:34 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:34 Navigating to Reports Screen
+Dec 11, 2021 4:58:34 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:34 Database Connection was Successful
+Dec 11, 2021 4:58:34 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:34 QUERY: SELECT * FROM appointments
+Dec 11, 2021 4:58:34 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:34 Prepared Statement created successfully
+Dec 11, 2021 4:58:34 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:34 Retrieving Prepared Statement
+Dec 11, 2021 4:58:34 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:34 Closed Database Connection
+Dec 11, 2021 4:58:34 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:34 Database Connection was Successful
+Dec 11, 2021 4:58:34 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:34 QUERY: SELECT * FROM contacts
+Dec 11, 2021 4:58:34 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:34 Prepared Statement created successfully
+Dec 11, 2021 4:58:34 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:34 Retrieving Prepared Statement
+Dec 11, 2021 4:58:34 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:34 Closed Database Connection
+Dec 11, 2021 4:58:34 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:34 Database Connection was Successful
+Dec 11, 2021 4:58:34 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:34 QUERY: SELECT * FROM users
+Dec 11, 2021 4:58:34 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:34 Prepared Statement created successfully
+Dec 11, 2021 4:58:34 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:34 Retrieving Prepared Statement
+Dec 11, 2021 4:58:34 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:34 Closed Database Connection
+Dec 11, 2021 4:58:34 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:34 Database Connection was Successful
+Dec 11, 2021 4:58:34 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:34 QUERY: SELECT * FROM appointments
+Dec 11, 2021 4:58:34 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:34 Prepared Statement created successfully
+Dec 11, 2021 4:58:34 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:34 Retrieving Prepared Statement
+Dec 11, 2021 4:58:34 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:34 Closed Database Connection
+Dec 11, 2021 4:58:37 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:37 Closing window Reports Screen
+Dec 11, 2021 4:58:37 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:37 Closed Database Connection
+Dec 11, 2021 4:58:37 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:37 Closed Database Connection
+Dec 11, 2021 4:58:37 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:37 Navigating to Navigating To HomeScreen
+Dec 11, 2021 4:58:38 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:38 Closing window Navigating To HomeScreen
+Dec 11, 2021 4:58:38 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:38 Closed Database Connection
+Dec 11, 2021 4:58:38 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:38 Closed Database Connection
+Dec 11, 2021 4:58:38 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:38 Navigating to Appointments Screen
+Dec 11, 2021 4:58:38 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:38 Database Connection was Successful
+Dec 11, 2021 4:58:38 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:38 QUERY: SELECT * FROM appointments
+Dec 11, 2021 4:58:38 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:38 Prepared Statement created successfully
+Dec 11, 2021 4:58:38 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:38 Retrieving Prepared Statement
+Dec 11, 2021 4:58:38 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:38 Closed Database Connection
+Dec 11, 2021 4:58:38 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:38 Database Connection was Successful
+Dec 11, 2021 4:58:38 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:38 QUERY: SELECT * FROM customers
+Dec 11, 2021 4:58:38 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:38 Prepared Statement created successfully
+Dec 11, 2021 4:58:38 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:38 Retrieving Prepared Statement
+Dec 11, 2021 4:58:38 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:38 Closed Database Connection
+Dec 11, 2021 4:58:38 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:38 Database Connection was Successful
+Dec 11, 2021 4:58:38 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:38 QUERY: SELECT * FROM contacts
+Dec 11, 2021 4:58:38 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:38 Prepared Statement created successfully
+Dec 11, 2021 4:58:38 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:38 Retrieving Prepared Statement
+Dec 11, 2021 4:58:38 AM logs.Logs logINFO
+INFO: 2021-12-11 04:58:38 Closed Database Connection
+Dec 11, 2021 4:59:00 AM logs.Logs logINFO
+INFO: 2021-12-11 04:59:00 [TablePosition [ row: 0, column: javafx.scene.control.TableColumn@d3c99ff, tableView: TableView[id=appointmentsTableView, styleClass=table-view] ]]
+Dec 11, 2021 4:59:00 AM logs.Logs logINFO
+INFO: 2021-12-11 04:59:00 Database Connection was Successful
+Dec 11, 2021 4:59:00 AM logs.Logs logINFO
+INFO: 2021-12-11 04:59:00 QUERY: SELECT * FROM appointments WHERE Appointment_ID = 1
+Dec 11, 2021 4:59:00 AM logs.Logs logINFO
+INFO: 2021-12-11 04:59:00 Prepared Statement created successfully
+Dec 11, 2021 4:59:00 AM logs.Logs logINFO
+INFO: 2021-12-11 04:59:00 Retrieving Prepared Statement
+Dec 11, 2021 4:59:00 AM logs.Logs logINFO
+INFO: 2021-12-11 04:59:00 Closed Database Connection
+Dec 11, 2021 4:59:00 AM logs.Logs logINFO
+INFO: 2021-12-11 04:59:00 Database Connection was Successful
+Dec 11, 2021 4:59:00 AM logs.Logs logINFO
+INFO: 2021-12-11 04:59:00 QUERY: SELECT * FROM customers WHERE Customer_ID = 1
+Dec 11, 2021 4:59:00 AM logs.Logs logINFO
+INFO: 2021-12-11 04:59:00 Prepared Statement created successfully
+Dec 11, 2021 4:59:00 AM logs.Logs logINFO
+INFO: 2021-12-11 04:59:00 Retrieving Prepared Statement
+Dec 11, 2021 4:59:00 AM logs.Logs logINFO
+INFO: 2021-12-11 04:59:00 Closed Database Connection
+Dec 11, 2021 4:59:00 AM logs.Logs logINFO
+INFO: 2021-12-11 04:59:00 Database Connection was Successful
+Dec 11, 2021 4:59:00 AM logs.Logs logINFO
+INFO: 2021-12-11 04:59:00 QUERY: SELECT * FROM contacts WHERE Contact_ID = 3
+Dec 11, 2021 4:59:00 AM logs.Logs logINFO
+INFO: 2021-12-11 04:59:00 Prepared Statement created successfully
+Dec 11, 2021 4:59:00 AM logs.Logs logINFO
+INFO: 2021-12-11 04:59:00 Retrieving Prepared Statement
+Dec 11, 2021 4:59:00 AM logs.Logs logINFO
+INFO: 2021-12-11 04:59:00 Closed Database Connection
+Dec 11, 2021 4:59:46 AM logs.Logs logINFO
+INFO: 2021-12-11 04:59:46 Retrieving all Appointments for this week and next week
+Dec 11, 2021 4:59:46 AM logs.Logs logINFO
+INFO: 2021-12-11 04:59:46 Database Connection was Successful
+Dec 11, 2021 4:59:46 AM logs.Logs logINFO
+INFO: 2021-12-11 04:59:46 QUERY: SELECT * FROM appointments
+Dec 11, 2021 4:59:46 AM logs.Logs logINFO
+INFO: 2021-12-11 04:59:46 Prepared Statement created successfully
+Dec 11, 2021 4:59:46 AM logs.Logs logINFO
+INFO: 2021-12-11 04:59:46 Retrieving Prepared Statement
+Dec 11, 2021 4:59:46 AM logs.Logs logINFO
+INFO: 2021-12-11 04:59:46 Closed Database Connection
+Dec 11, 2021 4:59:49 AM logs.Logs logINFO
+INFO: 2021-12-11 04:59:49 Retrieving all Appointments for Next Month
+Dec 11, 2021 4:59:49 AM logs.Logs logINFO
+INFO: 2021-12-11 04:59:49 Database Connection was Successful
+Dec 11, 2021 4:59:49 AM logs.Logs logINFO
+INFO: 2021-12-11 04:59:49 QUERY: SELECT * FROM appointments
+Dec 11, 2021 4:59:49 AM logs.Logs logINFO
+INFO: 2021-12-11 04:59:49 Prepared Statement created successfully
+Dec 11, 2021 4:59:49 AM logs.Logs logINFO
+INFO: 2021-12-11 04:59:49 Retrieving Prepared Statement
+Dec 11, 2021 4:59:49 AM logs.Logs logINFO
+INFO: 2021-12-11 04:59:49 Closed Database Connection
+Dec 11, 2021 5:00:07 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:07 [TablePosition [ row: 0, column: javafx.scene.control.TableColumn@15b297ec, tableView: TableView[id=appointmentsTableView, styleClass=table-view] ]]
+Dec 11, 2021 5:00:07 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:07 Database Connection was Successful
+Dec 11, 2021 5:00:07 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:07 QUERY: SELECT * FROM appointments WHERE Appointment_ID = 13
+Dec 11, 2021 5:00:07 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:07 Prepared Statement created successfully
+Dec 11, 2021 5:00:07 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:07 Retrieving Prepared Statement
+Dec 11, 2021 5:00:07 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:07 Closed Database Connection
+Dec 11, 2021 5:00:07 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:07 Database Connection was Successful
+Dec 11, 2021 5:00:07 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:07 QUERY: SELECT * FROM customers WHERE Customer_ID = 26
+Dec 11, 2021 5:00:07 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:07 Prepared Statement created successfully
+Dec 11, 2021 5:00:07 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:07 Retrieving Prepared Statement
+Dec 11, 2021 5:00:07 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:07 Closed Database Connection
+Dec 11, 2021 5:00:07 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:07 Database Connection was Successful
+Dec 11, 2021 5:00:07 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:07 QUERY: SELECT * FROM contacts WHERE Contact_ID = 2
+Dec 11, 2021 5:00:07 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:07 Prepared Statement created successfully
+Dec 11, 2021 5:00:07 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:07 Retrieving Prepared Statement
+Dec 11, 2021 5:00:07 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:07 Closed Database Connection
+Dec 11, 2021 5:00:25 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:25 [TablePosition [ row: 5, column: javafx.scene.control.TableColumn@3a100846, tableView: TableView[id=appointmentsTableView, styleClass=table-view] ]]
+Dec 11, 2021 5:00:25 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:25 Database Connection was Successful
+Dec 11, 2021 5:00:25 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:25 QUERY: SELECT * FROM appointments WHERE Appointment_ID = 18
+Dec 11, 2021 5:00:25 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:25 Prepared Statement created successfully
+Dec 11, 2021 5:00:25 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:25 Retrieving Prepared Statement
+Dec 11, 2021 5:00:25 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:25 Closed Database Connection
+Dec 11, 2021 5:00:25 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:25 Database Connection was Successful
+Dec 11, 2021 5:00:25 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:25 QUERY: SELECT * FROM customers WHERE Customer_ID = 26
+Dec 11, 2021 5:00:25 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:25 Prepared Statement created successfully
+Dec 11, 2021 5:00:25 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:25 Retrieving Prepared Statement
+Dec 11, 2021 5:00:25 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:25 Closed Database Connection
+Dec 11, 2021 5:00:25 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:25 Database Connection was Successful
+Dec 11, 2021 5:00:25 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:25 QUERY: SELECT * FROM contacts WHERE Contact_ID = 3
+Dec 11, 2021 5:00:25 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:25 Prepared Statement created successfully
+Dec 11, 2021 5:00:25 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:25 Retrieving Prepared Statement
+Dec 11, 2021 5:00:25 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:25 Closed Database Connection
+Dec 11, 2021 5:00:35 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:35 Closing window Appointments Screen
+Dec 11, 2021 5:00:35 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:35 Closed Database Connection
+Dec 11, 2021 5:00:35 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:35 Closed Database Connection
+Dec 11, 2021 5:00:35 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:35 Navigating to Home Screen
+Dec 11, 2021 5:00:36 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:36 Closing window Home Screen
+Dec 11, 2021 5:00:36 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:36 Closed Database Connection
+Dec 11, 2021 5:00:36 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:36 Closed Database Connection
+Dec 11, 2021 5:00:36 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:36 Navigating to Appointments Screen
+Dec 11, 2021 5:00:36 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:36 Database Connection was Successful
+Dec 11, 2021 5:00:36 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:36 QUERY: SELECT * FROM appointments
+Dec 11, 2021 5:00:36 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:36 Prepared Statement created successfully
+Dec 11, 2021 5:00:36 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:36 Retrieving Prepared Statement
+Dec 11, 2021 5:00:36 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:36 Closed Database Connection
+Dec 11, 2021 5:00:36 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:36 Database Connection was Successful
+Dec 11, 2021 5:00:36 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:36 QUERY: SELECT * FROM customers
+Dec 11, 2021 5:00:36 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:36 Prepared Statement created successfully
+Dec 11, 2021 5:00:36 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:36 Retrieving Prepared Statement
+Dec 11, 2021 5:00:36 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:36 Closed Database Connection
+Dec 11, 2021 5:00:36 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:36 Database Connection was Successful
+Dec 11, 2021 5:00:36 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:36 QUERY: SELECT * FROM contacts
+Dec 11, 2021 5:00:36 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:36 Prepared Statement created successfully
+Dec 11, 2021 5:00:36 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:36 Retrieving Prepared Statement
+Dec 11, 2021 5:00:36 AM logs.Logs logINFO
+INFO: 2021-12-11 05:00:36 Closed Database Connection
+Dec 11, 2021 5:01:12 AM logs.Logs logINFO
+INFO: 2021-12-11 05:01:12 Closing window Appointments Screen
+Dec 11, 2021 5:01:12 AM logs.Logs logINFO
+INFO: 2021-12-11 05:01:12 Closed Database Connection
+Dec 11, 2021 5:01:12 AM logs.Logs logINFO
+INFO: 2021-12-11 05:01:12 Closed Database Connection
+Dec 11, 2021 5:01:12 AM logs.Logs logINFO
+INFO: 2021-12-11 05:01:12 Navigating to Home Screen
+Dec 11, 2021 5:01:14 AM logs.Logs logINFO
+INFO: 2021-12-11 05:01:14 Closed Database Connection
+Dec 11, 2021 5:03:52 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:52 
+--------Program initialized---------
+
+Dec 11, 2021 5:03:52 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:52 Error Alert initialized
+Dec 11, 2021 5:03:52 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:52 Confirmation Alert initialized
+Dec 11, 2021 5:03:54 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:54 Database Connection was Successful
+Dec 11, 2021 5:03:54 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:54 QUERY: SELECT * FROM users
+Dec 11, 2021 5:03:54 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:54 Prepared Statement created successfully
+Dec 11, 2021 5:03:54 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:54 Retrieving Prepared Statement
+Dec 11, 2021 5:03:54 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:54 Closed Database Connection
+Dec 11, 2021 5:03:54 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:54 Database Connection was Successful
+Dec 11, 2021 5:03:54 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:54 QUERY: UPDATE `users` SET Last_Update=? WHERE User_ID = 2
+Dec 11, 2021 5:03:54 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:54 Prepared Statement created successfully
+Dec 11, 2021 5:03:54 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:54 Retrieving Prepared Statement
+Dec 11, 2021 5:03:54 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:54 Closed Database Connection
+Dec 11, 2021 5:03:54 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:54 Database Connection was Successful
+Dec 11, 2021 5:03:54 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:54 QUERY: SELECT * FROM appointments
+Dec 11, 2021 5:03:54 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:54 Prepared Statement created successfully
+Dec 11, 2021 5:03:54 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:54 Retrieving Prepared Statement
+Dec 11, 2021 5:03:54 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:54 Closed Database Connection
+Dec 11, 2021 5:03:54 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:54 Closing window Appointment Scheduler
+Dec 11, 2021 5:03:54 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:54 Closed Database Connection
+Dec 11, 2021 5:03:54 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:54 Closed Database Connection
+Dec 11, 2021 5:03:54 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:54 Navigating to Home Screen Directory
+Dec 11, 2021 5:03:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:55 Closing window Home Screen Directory
+Dec 11, 2021 5:03:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:55 Closed Database Connection
+Dec 11, 2021 5:03:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:55 Closed Database Connection
+Dec 11, 2021 5:03:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:55 Navigating to Reports Screen
+Dec 11, 2021 5:03:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:55 Database Connection was Successful
+Dec 11, 2021 5:03:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:55 QUERY: SELECT * FROM appointments
+Dec 11, 2021 5:03:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:55 Prepared Statement created successfully
+Dec 11, 2021 5:03:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:55 Retrieving Prepared Statement
+Dec 11, 2021 5:03:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:55 Closed Database Connection
+Dec 11, 2021 5:03:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:55 Database Connection was Successful
+Dec 11, 2021 5:03:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:55 QUERY: SELECT * FROM contacts
+Dec 11, 2021 5:03:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:55 Prepared Statement created successfully
+Dec 11, 2021 5:03:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:55 Retrieving Prepared Statement
+Dec 11, 2021 5:03:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:55 Closed Database Connection
+Dec 11, 2021 5:03:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:55 Database Connection was Successful
+Dec 11, 2021 5:03:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:55 QUERY: SELECT * FROM users
+Dec 11, 2021 5:03:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:55 Prepared Statement created successfully
+Dec 11, 2021 5:03:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:55 Retrieving Prepared Statement
+Dec 11, 2021 5:03:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:55 Closed Database Connection
+Dec 11, 2021 5:03:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:55 Database Connection was Successful
+Dec 11, 2021 5:03:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:55 QUERY: SELECT * FROM appointments
+Dec 11, 2021 5:03:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:55 Prepared Statement created successfully
+Dec 11, 2021 5:03:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:55 Retrieving Prepared Statement
+Dec 11, 2021 5:03:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:55 Closed Database Connection
+Dec 11, 2021 5:03:59 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:59 Closing window Reports Screen
+Dec 11, 2021 5:03:59 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:59 Closed Database Connection
+Dec 11, 2021 5:03:59 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:59 Closed Database Connection
+Dec 11, 2021 5:03:59 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:59 Navigating to Navigating To HomeScreen
+Dec 11, 2021 5:03:59 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:59 Closing window Navigating To HomeScreen
+Dec 11, 2021 5:03:59 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:59 Closed Database Connection
+Dec 11, 2021 5:03:59 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:59 Closed Database Connection
+Dec 11, 2021 5:03:59 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:59 Navigating to Appointments Screen
+Dec 11, 2021 5:03:59 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:59 Database Connection was Successful
+Dec 11, 2021 5:03:59 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:59 QUERY: SELECT * FROM appointments
+Dec 11, 2021 5:03:59 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:59 Prepared Statement created successfully
+Dec 11, 2021 5:03:59 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:59 Retrieving Prepared Statement
+Dec 11, 2021 5:03:59 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:59 Closed Database Connection
+Dec 11, 2021 5:03:59 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:59 Database Connection was Successful
+Dec 11, 2021 5:03:59 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:59 QUERY: SELECT * FROM customers
+Dec 11, 2021 5:03:59 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:59 Prepared Statement created successfully
+Dec 11, 2021 5:03:59 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:59 Retrieving Prepared Statement
+Dec 11, 2021 5:03:59 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:59 Closed Database Connection
+Dec 11, 2021 5:03:59 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:59 Database Connection was Successful
+Dec 11, 2021 5:03:59 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:59 QUERY: SELECT * FROM contacts
+Dec 11, 2021 5:03:59 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:59 Prepared Statement created successfully
+Dec 11, 2021 5:03:59 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:59 Retrieving Prepared Statement
+Dec 11, 2021 5:03:59 AM logs.Logs logINFO
+INFO: 2021-12-11 05:03:59 Closed Database Connection
+Dec 11, 2021 5:04:50 AM logs.Logs logWARN
+WARNING: 2021-12-11 05:04:50 Empty Fields must be filled in the Appointment Form
+Dec 11, 2021 5:04:54 AM logs.Logs logINFO
+INFO: 2021-12-11 05:04:54 Database Connection was Successful
+Dec 11, 2021 5:04:54 AM logs.Logs logINFO
+INFO: 2021-12-11 05:04:54 QUERY: SELECT * FROM customers
+Dec 11, 2021 5:04:54 AM logs.Logs logINFO
+INFO: 2021-12-11 05:04:54 Prepared Statement created successfully
+Dec 11, 2021 5:04:54 AM logs.Logs logINFO
+INFO: 2021-12-11 05:04:54 Retrieving Prepared Statement
+Dec 11, 2021 5:04:54 AM logs.Logs logINFO
+INFO: 2021-12-11 05:04:54 Closed Database Connection
+Dec 11, 2021 5:04:54 AM logs.Logs logINFO
+INFO: 2021-12-11 05:04:54 Database Connection was Successful
+Dec 11, 2021 5:04:54 AM logs.Logs logINFO
+INFO: 2021-12-11 05:04:54 Query: SELECT * FROM appointments INNER JOIN customers ON appointments.Customer_ID = customers.Customer_ID WHERE customers.Customer_ID = 3
+Dec 11, 2021 5:04:54 AM logs.Logs logINFO
+INFO: 2021-12-11 05:04:54 Prepared Statement created successfully
+Dec 11, 2021 5:04:54 AM logs.Logs logINFO
+INFO: 2021-12-11 05:04:54 Retrieving Prepared Statement
+Dec 11, 2021 5:04:54 AM logs.Logs logINFO
+INFO: 2021-12-11 05:04:54 Closed Database Connection
+Dec 11, 2021 5:04:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:04:55 Database Connection was Successful
+Dec 11, 2021 5:04:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:04:55 QUERY: SELECT * FROM customers
+Dec 11, 2021 5:04:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:04:55 Prepared Statement created successfully
+Dec 11, 2021 5:04:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:04:55 Retrieving Prepared Statement
+Dec 11, 2021 5:04:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:04:55 Closed Database Connection
+Dec 11, 2021 5:04:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:04:55 Database Connection was Successful
+Dec 11, 2021 5:04:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:04:55 QUERY: SELECT * FROM users
+Dec 11, 2021 5:04:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:04:55 Prepared Statement created successfully
+Dec 11, 2021 5:04:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:04:55 Retrieving Prepared Statement
+Dec 11, 2021 5:04:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:04:55 Closed Database Connection
+Dec 11, 2021 5:04:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:04:55 Database Connection was Successful
+Dec 11, 2021 5:04:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:04:55 QUERY: SELECT * FROM contacts
+Dec 11, 2021 5:04:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:04:55 Prepared Statement created successfully
+Dec 11, 2021 5:04:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:04:55 Retrieving Prepared Statement
+Dec 11, 2021 5:04:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:04:55 Closed Database Connection
+Dec 11, 2021 5:04:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:04:55 Database Connection was Successful
+Dec 11, 2021 5:04:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:04:55 QUERY: INSERT INTO `appointments` VALUES ( NULL,?,?,?,?,?,?,?,?,?,?,?,?,? )
+Dec 11, 2021 5:04:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:04:55 Prepared Statement created successfully
+Dec 11, 2021 5:04:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:04:55 Retrieving Prepared Statement
+Dec 11, 2021 5:04:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:04:55 Closed Database Connection
+Dec 11, 2021 5:04:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:04:55 Database Connection was Successful
+Dec 11, 2021 5:04:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:04:55 QUERY: SELECT * FROM appointments
+Dec 11, 2021 5:04:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:04:55 Prepared Statement created successfully
+Dec 11, 2021 5:04:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:04:55 Retrieving Prepared Statement
+Dec 11, 2021 5:04:55 AM logs.Logs logINFO
+INFO: 2021-12-11 05:04:55 Closed Database Connection
+Dec 11, 2021 5:06:01 AM logs.Logs logINFO
+INFO: 2021-12-11 05:06:01 [TablePosition [ row: 31, column: javafx.scene.control.TableColumn@137e887e, tableView: TableView[id=appointmentsTableView, styleClass=table-view] ]]
+Dec 11, 2021 5:06:01 AM logs.Logs logINFO
+INFO: 2021-12-11 05:06:01 Database Connection was Successful
+Dec 11, 2021 5:06:01 AM logs.Logs logINFO
+INFO: 2021-12-11 05:06:01 QUERY: SELECT * FROM appointments WHERE Appointment_ID = 37
+Dec 11, 2021 5:06:01 AM logs.Logs logINFO
+INFO: 2021-12-11 05:06:01 Prepared Statement created successfully
+Dec 11, 2021 5:06:01 AM logs.Logs logINFO
+INFO: 2021-12-11 05:06:01 Retrieving Prepared Statement
+Dec 11, 2021 5:06:01 AM logs.Logs logINFO
+INFO: 2021-12-11 05:06:01 Closed Database Connection
+Dec 11, 2021 5:06:01 AM logs.Logs logINFO
+INFO: 2021-12-11 05:06:01 Database Connection was Successful
+Dec 11, 2021 5:06:01 AM logs.Logs logINFO
+INFO: 2021-12-11 05:06:01 QUERY: SELECT * FROM customers WHERE Customer_ID = 3
+Dec 11, 2021 5:06:01 AM logs.Logs logINFO
+INFO: 2021-12-11 05:06:01 Prepared Statement created successfully
+Dec 11, 2021 5:06:01 AM logs.Logs logINFO
+INFO: 2021-12-11 05:06:01 Retrieving Prepared Statement
+Dec 11, 2021 5:06:01 AM logs.Logs logINFO
+INFO: 2021-12-11 05:06:01 Closed Database Connection
+Dec 11, 2021 5:06:02 AM logs.Logs logINFO
+INFO: 2021-12-11 05:06:02 Database Connection was Successful
+Dec 11, 2021 5:06:02 AM logs.Logs logINFO
+INFO: 2021-12-11 05:06:02 QUERY: SELECT * FROM contacts WHERE Contact_ID = 2
+Dec 11, 2021 5:06:02 AM logs.Logs logINFO
+INFO: 2021-12-11 05:06:02 Prepared Statement created successfully
+Dec 11, 2021 5:06:02 AM logs.Logs logINFO
+INFO: 2021-12-11 05:06:02 Retrieving Prepared Statement
+Dec 11, 2021 5:06:02 AM logs.Logs logINFO
+INFO: 2021-12-11 05:06:02 Closed Database Connection
+Dec 11, 2021 5:21:32 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:32 
+--------Program initialized---------
+
+Dec 11, 2021 5:21:33 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:33 Error Alert initialized
+Dec 11, 2021 5:21:33 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:33 Confirmation Alert initialized
+Dec 11, 2021 5:21:35 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:35 Database Connection was Successful
+Dec 11, 2021 5:21:35 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:35 QUERY: SELECT * FROM users
+Dec 11, 2021 5:21:35 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:35 Prepared Statement created successfully
+Dec 11, 2021 5:21:35 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:35 Retrieving Prepared Statement
+Dec 11, 2021 5:21:35 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:35 Closed Database Connection
+Dec 11, 2021 5:21:35 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:35 Database Connection was Successful
+Dec 11, 2021 5:21:35 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:35 QUERY: UPDATE `users` SET Last_Update=? WHERE User_ID = 2
+Dec 11, 2021 5:21:35 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:35 Prepared Statement created successfully
+Dec 11, 2021 5:21:35 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:35 Retrieving Prepared Statement
+Dec 11, 2021 5:21:35 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:35 Closed Database Connection
+Dec 11, 2021 5:21:35 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:35 Database Connection was Successful
+Dec 11, 2021 5:21:35 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:35 QUERY: SELECT * FROM appointments
+Dec 11, 2021 5:21:35 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:35 Prepared Statement created successfully
+Dec 11, 2021 5:21:35 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:35 Retrieving Prepared Statement
+Dec 11, 2021 5:21:35 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:35 Closed Database Connection
+Dec 11, 2021 5:21:35 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:35 Closing window Appointment Scheduler
+Dec 11, 2021 5:21:35 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:35 Closed Database Connection
+Dec 11, 2021 5:21:35 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:35 Closed Database Connection
+Dec 11, 2021 5:21:35 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:35 Navigating to Home Screen Directory
+Dec 11, 2021 5:21:36 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:36 Closing window Home Screen Directory
+Dec 11, 2021 5:21:36 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:36 Closed Database Connection
+Dec 11, 2021 5:21:36 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:36 Closed Database Connection
+Dec 11, 2021 5:21:36 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:36 Navigating to Appointments Screen
+Dec 11, 2021 5:21:36 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:36 Database Connection was Successful
+Dec 11, 2021 5:21:36 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:36 QUERY: SELECT * FROM appointments
+Dec 11, 2021 5:21:36 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:36 Prepared Statement created successfully
+Dec 11, 2021 5:21:36 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:36 Retrieving Prepared Statement
+Dec 11, 2021 5:21:36 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:36 Closed Database Connection
+Dec 11, 2021 5:21:36 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:36 Database Connection was Successful
+Dec 11, 2021 5:21:36 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:36 QUERY: SELECT * FROM customers
+Dec 11, 2021 5:21:36 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:36 Prepared Statement created successfully
+Dec 11, 2021 5:21:36 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:36 Retrieving Prepared Statement
+Dec 11, 2021 5:21:36 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:36 Closed Database Connection
+Dec 11, 2021 5:21:36 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:36 Database Connection was Successful
+Dec 11, 2021 5:21:36 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:36 QUERY: SELECT * FROM contacts
+Dec 11, 2021 5:21:36 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:36 Prepared Statement created successfully
+Dec 11, 2021 5:21:36 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:36 Retrieving Prepared Statement
+Dec 11, 2021 5:21:36 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:36 Closed Database Connection
+Dec 11, 2021 5:21:44 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:44 [TablePosition [ row: 31, column: javafx.scene.control.TableColumn@779328cd, tableView: TableView[id=appointmentsTableView, styleClass=table-view] ]]
+Dec 11, 2021 5:21:44 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:44 Database Connection was Successful
+Dec 11, 2021 5:21:44 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:44 QUERY: SELECT * FROM appointments WHERE Appointment_ID = 37
+Dec 11, 2021 5:21:44 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:44 Prepared Statement created successfully
+Dec 11, 2021 5:21:44 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:44 Retrieving Prepared Statement
+Dec 11, 2021 5:21:44 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:44 Closed Database Connection
+Dec 11, 2021 5:21:44 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:44 Database Connection was Successful
+Dec 11, 2021 5:21:44 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:44 QUERY: SELECT * FROM customers WHERE Customer_ID = 3
+Dec 11, 2021 5:21:44 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:44 Prepared Statement created successfully
+Dec 11, 2021 5:21:44 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:44 Retrieving Prepared Statement
+Dec 11, 2021 5:21:44 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:44 Closed Database Connection
+Dec 11, 2021 5:21:44 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:44 Database Connection was Successful
+Dec 11, 2021 5:21:44 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:44 QUERY: SELECT * FROM contacts WHERE Contact_ID = 2
+Dec 11, 2021 5:21:44 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:44 Prepared Statement created successfully
+Dec 11, 2021 5:21:44 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:44 Retrieving Prepared Statement
+Dec 11, 2021 5:21:44 AM logs.Logs logINFO
+INFO: 2021-12-11 05:21:44 Closed Database Connection
+Dec 11, 2021 5:38:20 AM logs.Logs logINFO
+INFO: 2021-12-11 05:38:20 
+--------Program initialized---------
+
+Dec 11, 2021 5:38:20 AM logs.Logs logINFO
+INFO: 2021-12-11 05:38:20 Error Alert initialized
+Dec 11, 2021 5:38:20 AM logs.Logs logINFO
+INFO: 2021-12-11 05:38:20 Confirmation Alert initialized
+Dec 11, 2021 5:38:24 AM logs.Logs logINFO
+INFO: 2021-12-11 05:38:24 Database Connection was Successful
+Dec 11, 2021 5:38:24 AM logs.Logs logINFO
+INFO: 2021-12-11 05:38:24 QUERY: SELECT * FROM users
+Dec 11, 2021 5:38:24 AM logs.Logs logINFO
+INFO: 2021-12-11 05:38:24 Prepared Statement created successfully
+Dec 11, 2021 5:38:24 AM logs.Logs logINFO
+INFO: 2021-12-11 05:38:24 Retrieving Prepared Statement
+Dec 11, 2021 5:38:24 AM logs.Logs logINFO
+INFO: 2021-12-11 05:38:24 Closed Database Connection
+Dec 11, 2021 5:38:24 AM logs.Logs logINFO
+INFO: 2021-12-11 05:38:24 Database Connection was Successful
+Dec 11, 2021 5:38:24 AM logs.Logs logINFO
+INFO: 2021-12-11 05:38:24 QUERY: UPDATE `users` SET Last_Update=? WHERE User_ID = 2
+Dec 11, 2021 5:38:24 AM logs.Logs logINFO
+INFO: 2021-12-11 05:38:24 Prepared Statement created successfully
+Dec 11, 2021 5:38:24 AM logs.Logs logINFO
+INFO: 2021-12-11 05:38:24 Retrieving Prepared Statement
+Dec 11, 2021 5:38:24 AM logs.Logs logINFO
+INFO: 2021-12-11 05:38:24 Closed Database Connection
+Dec 11, 2021 5:38:24 AM logs.Logs logINFO
+INFO: 2021-12-11 05:38:24 Database Connection was Successful
+Dec 11, 2021 5:38:24 AM logs.Logs logINFO
+INFO: 2021-12-11 05:38:24 QUERY: SELECT * FROM appointments
+Dec 11, 2021 5:38:24 AM logs.Logs logINFO
+INFO: 2021-12-11 05:38:24 Prepared Statement created successfully
+Dec 11, 2021 5:38:24 AM logs.Logs logINFO
+INFO: 2021-12-11 05:38:24 Retrieving Prepared Statement
+Dec 11, 2021 5:38:24 AM logs.Logs logINFO
+INFO: 2021-12-11 05:38:24 Closed Database Connection
+Dec 11, 2021 5:38:24 AM logs.Logs logINFO
+INFO: 2021-12-11 05:38:24 Closing window Appointment Scheduler
+Dec 11, 2021 5:38:24 AM logs.Logs logINFO
+INFO: 2021-12-11 05:38:24 Closed Database Connection
+Dec 11, 2021 5:38:24 AM logs.Logs logINFO
+INFO: 2021-12-11 05:38:24 Closed Database Connection
+Dec 11, 2021 5:38:24 AM logs.Logs logINFO
+INFO: 2021-12-11 05:38:24 Navigating to Home Screen Directory
+Dec 11, 2021 5:38:26 AM logs.Logs logINFO
+INFO: 2021-12-11 05:38:26 Closing window Home Screen Directory
+Dec 11, 2021 5:38:26 AM logs.Logs logINFO
+INFO: 2021-12-11 05:38:26 Closed Database Connection
+Dec 11, 2021 5:38:26 AM logs.Logs logINFO
+INFO: 2021-12-11 05:38:26 Closed Database Connection
+Dec 11, 2021 5:38:26 AM logs.Logs logINFO
+INFO: 2021-12-11 05:38:26 Navigating to Appointments Screen
+Dec 11, 2021 5:38:26 AM logs.Logs logINFO
+INFO: 2021-12-11 05:38:26 Database Connection was Successful
+Dec 11, 2021 5:38:26 AM logs.Logs logINFO
+INFO: 2021-12-11 05:38:26 QUERY: SELECT * FROM appointments
+Dec 11, 2021 5:38:26 AM logs.Logs logINFO
+INFO: 2021-12-11 05:38:26 Prepared Statement created successfully
+Dec 11, 2021 5:38:26 AM logs.Logs logINFO
+INFO: 2021-12-11 05:38:26 Retrieving Prepared Statement
+Dec 11, 2021 5:38:26 AM logs.Logs logINFO
+INFO: 2021-12-11 05:38:26 Closed Database Connection
+Dec 11, 2021 5:38:26 AM logs.Logs logINFO
+INFO: 2021-12-11 05:38:26 Database Connection was Successful
+Dec 11, 2021 5:38:26 AM logs.Logs logINFO
+INFO: 2021-12-11 05:38:26 QUERY: SELECT * FROM customers
+Dec 11, 2021 5:38:26 AM logs.Logs logINFO
+INFO: 2021-12-11 05:38:26 Prepared Statement created successfully
+Dec 11, 2021 5:38:26 AM logs.Logs logINFO
+INFO: 2021-12-11 05:38:26 Retrieving Prepared Statement
+Dec 11, 2021 5:38:26 AM logs.Logs logINFO
+INFO: 2021-12-11 05:38:26 Closed Database Connection
+Dec 11, 2021 5:38:26 AM logs.Logs logINFO
+INFO: 2021-12-11 05:38:26 Database Connection was Successful
+Dec 11, 2021 5:38:26 AM logs.Logs logINFO
+INFO: 2021-12-11 05:38:26 QUERY: SELECT * FROM contacts
+Dec 11, 2021 5:38:26 AM logs.Logs logINFO
+INFO: 2021-12-11 05:38:26 Prepared Statement created successfully
+Dec 11, 2021 5:38:26 AM logs.Logs logINFO
+INFO: 2021-12-11 05:38:26 Retrieving Prepared Statement
+Dec 11, 2021 5:38:26 AM logs.Logs logINFO
+INFO: 2021-12-11 05:38:26 Closed Database Connection
+Dec 11, 2021 5:39:02 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:02 Database Connection was Successful
+Dec 11, 2021 5:39:02 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:02 QUERY: SELECT * FROM customers
+Dec 11, 2021 5:39:02 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:02 Prepared Statement created successfully
+Dec 11, 2021 5:39:02 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:02 Retrieving Prepared Statement
+Dec 11, 2021 5:39:02 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:02 Closed Database Connection
+Dec 11, 2021 5:39:02 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:02 Database Connection was Successful
+Dec 11, 2021 5:39:02 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:02 Query: SELECT * FROM appointments INNER JOIN customers ON appointments.Customer_ID = customers.Customer_ID WHERE customers.Customer_ID = 3
+Dec 11, 2021 5:39:02 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:02 Prepared Statement created successfully
+Dec 11, 2021 5:39:02 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:02 Retrieving Prepared Statement
+Dec 11, 2021 5:39:02 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:02 Closed Database Connection
+Dec 11, 2021 5:39:03 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:03 Database Connection was Successful
+Dec 11, 2021 5:39:03 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:03 QUERY: SELECT * FROM customers
+Dec 11, 2021 5:39:03 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:03 Prepared Statement created successfully
+Dec 11, 2021 5:39:03 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:03 Retrieving Prepared Statement
+Dec 11, 2021 5:39:03 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:03 Closed Database Connection
+Dec 11, 2021 5:39:03 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:03 Database Connection was Successful
+Dec 11, 2021 5:39:03 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:03 QUERY: SELECT * FROM users
+Dec 11, 2021 5:39:03 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:03 Prepared Statement created successfully
+Dec 11, 2021 5:39:03 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:03 Retrieving Prepared Statement
+Dec 11, 2021 5:39:03 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:03 Closed Database Connection
+Dec 11, 2021 5:39:04 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:04 Database Connection was Successful
+Dec 11, 2021 5:39:04 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:04 QUERY: SELECT * FROM contacts
+Dec 11, 2021 5:39:04 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:04 Prepared Statement created successfully
+Dec 11, 2021 5:39:04 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:04 Retrieving Prepared Statement
+Dec 11, 2021 5:39:04 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:04 Closed Database Connection
+Dec 11, 2021 5:39:04 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:04 Database Connection was Successful
+Dec 11, 2021 5:39:04 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:04 QUERY: INSERT INTO `appointments` VALUES ( NULL,?,?,?,?,?,?,?,?,?,?,?,?,? )
+Dec 11, 2021 5:39:04 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:04 Prepared Statement created successfully
+Dec 11, 2021 5:39:04 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:04 Retrieving Prepared Statement
+Dec 11, 2021 5:39:04 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:04 Closed Database Connection
+Dec 11, 2021 5:39:04 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:04 Database Connection was Successful
+Dec 11, 2021 5:39:04 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:04 QUERY: SELECT * FROM appointments
+Dec 11, 2021 5:39:04 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:04 Prepared Statement created successfully
+Dec 11, 2021 5:39:04 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:04 Retrieving Prepared Statement
+Dec 11, 2021 5:39:04 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:04 Closed Database Connection
+Dec 11, 2021 5:39:06 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:06 [TablePosition [ row: 32, column: javafx.scene.control.TableColumn@3d002b5a, tableView: TableView[id=appointmentsTableView, styleClass=table-view] ]]
+Dec 11, 2021 5:39:06 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:06 Database Connection was Successful
+Dec 11, 2021 5:39:06 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:06 QUERY: SELECT * FROM appointments WHERE Appointment_ID = 38
+Dec 11, 2021 5:39:06 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:06 Prepared Statement created successfully
+Dec 11, 2021 5:39:06 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:06 Retrieving Prepared Statement
+Dec 11, 2021 5:39:06 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:06 Closed Database Connection
+Dec 11, 2021 5:39:06 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:06 Database Connection was Successful
+Dec 11, 2021 5:39:06 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:06 QUERY: SELECT * FROM customers WHERE Customer_ID = 3
+Dec 11, 2021 5:39:06 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:06 Prepared Statement created successfully
+Dec 11, 2021 5:39:06 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:06 Retrieving Prepared Statement
+Dec 11, 2021 5:39:06 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:06 Closed Database Connection
+Dec 11, 2021 5:39:06 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:06 Database Connection was Successful
+Dec 11, 2021 5:39:06 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:06 QUERY: SELECT * FROM contacts WHERE Contact_ID = 2
+Dec 11, 2021 5:39:06 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:06 Prepared Statement created successfully
+Dec 11, 2021 5:39:06 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:06 Retrieving Prepared Statement
+Dec 11, 2021 5:39:06 AM logs.Logs logINFO
+INFO: 2021-12-11 05:39:06 Closed Database Connection
+Dec 11, 2021 5:40:03 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:03 
+--------Program initialized---------
+
+Dec 11, 2021 5:40:03 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:03 Error Alert initialized
+Dec 11, 2021 5:40:03 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:03 Confirmation Alert initialized
+Dec 11, 2021 5:40:04 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:04 Database Connection was Successful
+Dec 11, 2021 5:40:04 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:04 QUERY: SELECT * FROM users
+Dec 11, 2021 5:40:04 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:04 Prepared Statement created successfully
+Dec 11, 2021 5:40:04 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:04 Retrieving Prepared Statement
+Dec 11, 2021 5:40:04 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:04 Closed Database Connection
+Dec 11, 2021 5:40:04 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:04 Database Connection was Successful
+Dec 11, 2021 5:40:04 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:04 QUERY: UPDATE `users` SET Last_Update=? WHERE User_ID = 2
+Dec 11, 2021 5:40:04 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:04 Prepared Statement created successfully
+Dec 11, 2021 5:40:04 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:04 Retrieving Prepared Statement
+Dec 11, 2021 5:40:04 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:04 Closed Database Connection
+Dec 11, 2021 5:40:04 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:04 Database Connection was Successful
+Dec 11, 2021 5:40:04 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:04 QUERY: SELECT * FROM appointments
+Dec 11, 2021 5:40:04 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:04 Prepared Statement created successfully
+Dec 11, 2021 5:40:04 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:04 Retrieving Prepared Statement
+Dec 11, 2021 5:40:04 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:04 Closed Database Connection
+Dec 11, 2021 5:40:04 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:04 Closing window Appointment Scheduler
+Dec 11, 2021 5:40:04 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:04 Closed Database Connection
+Dec 11, 2021 5:40:04 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:04 Closed Database Connection
+Dec 11, 2021 5:40:04 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:04 Navigating to Home Screen Directory
+Dec 11, 2021 5:40:05 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:05 Closing window Home Screen Directory
+Dec 11, 2021 5:40:05 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:05 Closed Database Connection
+Dec 11, 2021 5:40:05 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:05 Closed Database Connection
+Dec 11, 2021 5:40:05 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:05 Navigating to Appointments Screen
+Dec 11, 2021 5:40:05 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:05 Database Connection was Successful
+Dec 11, 2021 5:40:05 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:05 QUERY: SELECT * FROM appointments
+Dec 11, 2021 5:40:05 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:05 Prepared Statement created successfully
+Dec 11, 2021 5:40:05 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:05 Retrieving Prepared Statement
+Dec 11, 2021 5:40:05 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:05 Closed Database Connection
+Dec 11, 2021 5:40:05 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:05 Database Connection was Successful
+Dec 11, 2021 5:40:05 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:05 QUERY: SELECT * FROM customers
+Dec 11, 2021 5:40:05 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:05 Prepared Statement created successfully
+Dec 11, 2021 5:40:05 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:05 Retrieving Prepared Statement
+Dec 11, 2021 5:40:05 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:05 Closed Database Connection
+Dec 11, 2021 5:40:05 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:05 Database Connection was Successful
+Dec 11, 2021 5:40:05 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:05 QUERY: SELECT * FROM contacts
+Dec 11, 2021 5:40:05 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:05 Prepared Statement created successfully
+Dec 11, 2021 5:40:05 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:05 Retrieving Prepared Statement
+Dec 11, 2021 5:40:05 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:05 Closed Database Connection
+Dec 11, 2021 5:40:45 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:45 
+--------Program initialized---------
+
+Dec 11, 2021 5:40:45 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:45 Error Alert initialized
+Dec 11, 2021 5:40:45 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:45 Confirmation Alert initialized
+Dec 11, 2021 5:40:46 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:46 Database Connection was Successful
+Dec 11, 2021 5:40:46 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:46 QUERY: SELECT * FROM users
+Dec 11, 2021 5:40:46 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:46 Prepared Statement created successfully
+Dec 11, 2021 5:40:46 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:46 Retrieving Prepared Statement
+Dec 11, 2021 5:40:46 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:46 Closed Database Connection
+Dec 11, 2021 5:40:46 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:46 Database Connection was Successful
+Dec 11, 2021 5:40:46 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:46 QUERY: UPDATE `users` SET Last_Update=? WHERE User_ID = 2
+Dec 11, 2021 5:40:46 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:46 Prepared Statement created successfully
+Dec 11, 2021 5:40:46 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:46 Retrieving Prepared Statement
+Dec 11, 2021 5:40:46 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:46 Closed Database Connection
+Dec 11, 2021 5:40:46 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:46 Database Connection was Successful
+Dec 11, 2021 5:40:46 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:46 QUERY: SELECT * FROM appointments
+Dec 11, 2021 5:40:46 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:46 Prepared Statement created successfully
+Dec 11, 2021 5:40:46 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:46 Retrieving Prepared Statement
+Dec 11, 2021 5:40:46 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:46 Closed Database Connection
+Dec 11, 2021 5:40:46 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:46 Closing window Appointment Scheduler
+Dec 11, 2021 5:40:46 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:46 Closed Database Connection
+Dec 11, 2021 5:40:46 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:46 Closed Database Connection
+Dec 11, 2021 5:40:46 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:46 Navigating to Home Screen Directory
+Dec 11, 2021 5:40:47 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:47 Closing window Home Screen Directory
+Dec 11, 2021 5:40:47 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:47 Closed Database Connection
+Dec 11, 2021 5:40:47 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:47 Closed Database Connection
+Dec 11, 2021 5:40:47 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:47 Navigating to Appointments Screen
+Dec 11, 2021 5:40:47 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:47 Database Connection was Successful
+Dec 11, 2021 5:40:47 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:47 QUERY: SELECT * FROM appointments
+Dec 11, 2021 5:40:47 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:47 Prepared Statement created successfully
+Dec 11, 2021 5:40:47 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:47 Retrieving Prepared Statement
+Dec 11, 2021 5:40:47 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:47 Closed Database Connection
+Dec 11, 2021 5:40:47 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:47 Database Connection was Successful
+Dec 11, 2021 5:40:47 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:47 QUERY: SELECT * FROM customers
+Dec 11, 2021 5:40:47 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:47 Prepared Statement created successfully
+Dec 11, 2021 5:40:47 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:47 Retrieving Prepared Statement
+Dec 11, 2021 5:40:47 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:47 Closed Database Connection
+Dec 11, 2021 5:40:47 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:47 Database Connection was Successful
+Dec 11, 2021 5:40:47 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:47 QUERY: SELECT * FROM contacts
+Dec 11, 2021 5:40:47 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:47 Prepared Statement created successfully
+Dec 11, 2021 5:40:47 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:47 Retrieving Prepared Statement
+Dec 11, 2021 5:40:47 AM logs.Logs logINFO
+INFO: 2021-12-11 05:40:47 Closed Database Connection
+Dec 11, 2021 5:57:08 AM logs.Logs logINFO
+INFO: 2021-12-11 05:57:08 
+--------Program initialized---------
+
+Dec 11, 2021 5:57:08 AM logs.Logs logINFO
+INFO: 2021-12-11 05:57:08 Error Alert initialized
+Dec 11, 2021 5:57:08 AM logs.Logs logINFO
+INFO: 2021-12-11 05:57:08 Confirmation Alert initialized
+Dec 11, 2021 5:57:10 AM logs.Logs logINFO
+INFO: 2021-12-11 05:57:10 Database Connection was Successful
+Dec 11, 2021 5:57:10 AM logs.Logs logINFO
+INFO: 2021-12-11 05:57:10 QUERY: SELECT * FROM users
+Dec 11, 2021 5:57:10 AM logs.Logs logINFO
+INFO: 2021-12-11 05:57:10 Prepared Statement created successfully
+Dec 11, 2021 5:57:10 AM logs.Logs logINFO
+INFO: 2021-12-11 05:57:10 Retrieving Prepared Statement
+Dec 11, 2021 5:57:10 AM logs.Logs logINFO
+INFO: 2021-12-11 05:57:10 Closed Database Connection
+Dec 11, 2021 5:57:10 AM logs.Logs logINFO
+INFO: 2021-12-11 05:57:10 Database Connection was Successful
+Dec 11, 2021 5:57:10 AM logs.Logs logINFO
+INFO: 2021-12-11 05:57:10 QUERY: UPDATE `users` SET Last_Update=? WHERE User_ID = 2
+Dec 11, 2021 5:57:10 AM logs.Logs logINFO
+INFO: 2021-12-11 05:57:10 Prepared Statement created successfully
+Dec 11, 2021 5:57:10 AM logs.Logs logINFO
+INFO: 2021-12-11 05:57:10 Retrieving Prepared Statement
+Dec 11, 2021 5:57:10 AM logs.Logs logINFO
+INFO: 2021-12-11 05:57:10 Closed Database Connection
+Dec 11, 2021 5:57:10 AM logs.Logs logINFO
+INFO: 2021-12-11 05:57:10 Database Connection was Successful
+Dec 11, 2021 5:57:10 AM logs.Logs logINFO
+INFO: 2021-12-11 05:57:10 QUERY: SELECT * FROM appointments
+Dec 11, 2021 5:57:10 AM logs.Logs logINFO
+INFO: 2021-12-11 05:57:10 Prepared Statement created successfully
+Dec 11, 2021 5:57:10 AM logs.Logs logINFO
+INFO: 2021-12-11 05:57:10 Retrieving Prepared Statement
+Dec 11, 2021 5:57:10 AM logs.Logs logINFO
+INFO: 2021-12-11 05:57:10 Closed Database Connection
+Dec 11, 2021 5:58:24 AM logs.Logs logINFO
+INFO: 2021-12-11 05:58:24 
+--------Program initialized---------
+
+Dec 11, 2021 5:58:25 AM logs.Logs logINFO
+INFO: 2021-12-11 05:58:25 Error Alert initialized
+Dec 11, 2021 5:58:25 AM logs.Logs logINFO
+INFO: 2021-12-11 05:58:25 Confirmation Alert initialized
+Dec 11, 2021 5:58:26 AM logs.Logs logINFO
+INFO: 2021-12-11 05:58:26 Database Connection was Successful
+Dec 11, 2021 5:58:26 AM logs.Logs logINFO
+INFO: 2021-12-11 05:58:26 QUERY: SELECT * FROM users
+Dec 11, 2021 5:58:26 AM logs.Logs logINFO
+INFO: 2021-12-11 05:58:26 Prepared Statement created successfully
+Dec 11, 2021 5:58:26 AM logs.Logs logINFO
+INFO: 2021-12-11 05:58:26 Retrieving Prepared Statement
+Dec 11, 2021 5:58:26 AM logs.Logs logINFO
+INFO: 2021-12-11 05:58:26 Closed Database Connection
+Dec 11, 2021 5:58:26 AM logs.Logs logINFO
+INFO: 2021-12-11 05:58:26 Database Connection was Successful
+Dec 11, 2021 5:58:26 AM logs.Logs logINFO
+INFO: 2021-12-11 05:58:26 QUERY: UPDATE `users` SET Last_Update=? WHERE User_ID = 2
+Dec 11, 2021 5:58:26 AM logs.Logs logINFO
+INFO: 2021-12-11 05:58:26 Prepared Statement created successfully
+Dec 11, 2021 5:58:26 AM logs.Logs logINFO
+INFO: 2021-12-11 05:58:26 Retrieving Prepared Statement
+Dec 11, 2021 5:58:26 AM logs.Logs logINFO
+INFO: 2021-12-11 05:58:26 Closed Database Connection
+Dec 11, 2021 5:58:26 AM logs.Logs logINFO
+INFO: 2021-12-11 05:58:26 Database Connection was Successful
+Dec 11, 2021 5:58:26 AM logs.Logs logINFO
+INFO: 2021-12-11 05:58:26 QUERY: SELECT * FROM appointments
+Dec 11, 2021 5:58:26 AM logs.Logs logINFO
+INFO: 2021-12-11 05:58:26 Prepared Statement created successfully
+Dec 11, 2021 5:58:26 AM logs.Logs logINFO
+INFO: 2021-12-11 05:58:26 Retrieving Prepared Statement
+Dec 11, 2021 5:58:26 AM logs.Logs logINFO
+INFO: 2021-12-11 05:58:26 Closed Database Connection
+Dec 11, 2021 6:01:26 AM logs.Logs logINFO
+INFO: 2021-12-11 06:01:26 
+--------Program initialized---------
+
+Dec 11, 2021 6:01:26 AM logs.Logs logINFO
+INFO: 2021-12-11 06:01:26 Error Alert initialized
+Dec 11, 2021 6:01:26 AM logs.Logs logINFO
+INFO: 2021-12-11 06:01:26 Confirmation Alert initialized
+Dec 11, 2021 6:01:28 AM logs.Logs logINFO
+INFO: 2021-12-11 06:01:28 Database Connection was Successful
+Dec 11, 2021 6:01:28 AM logs.Logs logINFO
+INFO: 2021-12-11 06:01:28 QUERY: SELECT * FROM users
+Dec 11, 2021 6:01:28 AM logs.Logs logINFO
+INFO: 2021-12-11 06:01:28 Prepared Statement created successfully
+Dec 11, 2021 6:01:28 AM logs.Logs logINFO
+INFO: 2021-12-11 06:01:28 Retrieving Prepared Statement
+Dec 11, 2021 6:01:28 AM logs.Logs logINFO
+INFO: 2021-12-11 06:01:28 Closed Database Connection
+Dec 11, 2021 6:01:28 AM logs.Logs logINFO
+INFO: 2021-12-11 06:01:28 Database Connection was Successful
+Dec 11, 2021 6:01:28 AM logs.Logs logINFO
+INFO: 2021-12-11 06:01:28 QUERY: UPDATE `users` SET Last_Update=? WHERE User_ID = 2
+Dec 11, 2021 6:01:28 AM logs.Logs logINFO
+INFO: 2021-12-11 06:01:28 Prepared Statement created successfully
+Dec 11, 2021 6:01:28 AM logs.Logs logINFO
+INFO: 2021-12-11 06:01:28 Retrieving Prepared Statement
+Dec 11, 2021 6:01:28 AM logs.Logs logINFO
+INFO: 2021-12-11 06:01:28 Closed Database Connection
+Dec 11, 2021 6:01:28 AM logs.Logs logINFO
+INFO: 2021-12-11 06:01:28 Database Connection was Successful
+Dec 11, 2021 6:01:28 AM logs.Logs logINFO
+INFO: 2021-12-11 06:01:28 QUERY: SELECT * FROM appointments
+Dec 11, 2021 6:01:28 AM logs.Logs logINFO
+INFO: 2021-12-11 06:01:28 Prepared Statement created successfully
+Dec 11, 2021 6:01:28 AM logs.Logs logINFO
+INFO: 2021-12-11 06:01:28 Retrieving Prepared Statement
+Dec 11, 2021 6:01:28 AM logs.Logs logINFO
+INFO: 2021-12-11 06:01:28 Closed Database Connection
+Dec 11, 2021 6:01:30 AM logs.Logs logINFO
+INFO: 2021-12-11 06:01:30 Closing window Appointment Scheduler
+Dec 11, 2021 6:01:30 AM logs.Logs logINFO
+INFO: 2021-12-11 06:01:30 Closed Database Connection
+Dec 11, 2021 6:01:30 AM logs.Logs logINFO
+INFO: 2021-12-11 06:01:30 Closed Database Connection
+Dec 11, 2021 6:01:30 AM logs.Logs logINFO
+INFO: 2021-12-11 06:01:30 Navigating to Home Screen Directory
+Dec 11, 2021 6:01:32 AM logs.Logs logINFO
+INFO: 2021-12-11 06:01:32 Closing window Home Screen Directory
+Dec 11, 2021 6:01:32 AM logs.Logs logINFO
+INFO: 2021-12-11 06:01:32 Closed Database Connection
+Dec 11, 2021 6:01:32 AM logs.Logs logINFO
+INFO: 2021-12-11 06:01:32 Closed Database Connection
+Dec 11, 2021 6:01:32 AM logs.Logs logINFO
+INFO: 2021-12-11 06:01:32 Navigating to Appointments Screen
+Dec 11, 2021 6:01:32 AM logs.Logs logINFO
+INFO: 2021-12-11 06:01:32 Database Connection was Successful
+Dec 11, 2021 6:01:32 AM logs.Logs logINFO
+INFO: 2021-12-11 06:01:32 QUERY: SELECT * FROM appointments
+Dec 11, 2021 6:01:32 AM logs.Logs logINFO
+INFO: 2021-12-11 06:01:32 Prepared Statement created successfully
+Dec 11, 2021 6:01:32 AM logs.Logs logINFO
+INFO: 2021-12-11 06:01:32 Retrieving Prepared Statement
+Dec 11, 2021 6:01:32 AM logs.Logs logINFO
+INFO: 2021-12-11 06:01:32 Closed Database Connection
+Dec 11, 2021 6:01:32 AM logs.Logs logINFO
+INFO: 2021-12-11 06:01:32 Database Connection was Successful
+Dec 11, 2021 6:01:32 AM logs.Logs logINFO
+INFO: 2021-12-11 06:01:32 QUERY: SELECT * FROM customers
+Dec 11, 2021 6:01:32 AM logs.Logs logINFO
+INFO: 2021-12-11 06:01:32 Prepared Statement created successfully
+Dec 11, 2021 6:01:32 AM logs.Logs logINFO
+INFO: 2021-12-11 06:01:32 Retrieving Prepared Statement
+Dec 11, 2021 6:01:32 AM logs.Logs logINFO
+INFO: 2021-12-11 06:01:32 Closed Database Connection
+Dec 11, 2021 6:01:32 AM logs.Logs logINFO
+INFO: 2021-12-11 06:01:32 Database Connection was Successful
+Dec 11, 2021 6:01:32 AM logs.Logs logINFO
+INFO: 2021-12-11 06:01:32 QUERY: SELECT * FROM contacts
+Dec 11, 2021 6:01:32 AM logs.Logs logINFO
+INFO: 2021-12-11 06:01:32 Prepared Statement created successfully
+Dec 11, 2021 6:01:32 AM logs.Logs logINFO
+INFO: 2021-12-11 06:01:32 Retrieving Prepared Statement
+Dec 11, 2021 6:01:32 AM logs.Logs logINFO
+INFO: 2021-12-11 06:01:32 Closed Database Connection
+Dec 11, 2021 6:02:05 AM logs.Logs logWARN
+WARNING: 2021-12-11 06:02:05 Empty Fields must be filled in the Appointment Form
+Dec 11, 2021 6:02:09 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:09 Database Connection was Successful
+Dec 11, 2021 6:02:09 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:09 QUERY: SELECT * FROM customers
+Dec 11, 2021 6:02:09 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:09 Prepared Statement created successfully
+Dec 11, 2021 6:02:09 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:09 Retrieving Prepared Statement
+Dec 11, 2021 6:02:09 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:09 Closed Database Connection
+Dec 11, 2021 6:02:09 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:09 Database Connection was Successful
+Dec 11, 2021 6:02:09 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:09 Query: SELECT * FROM appointments INNER JOIN customers ON appointments.Customer_ID = customers.Customer_ID WHERE customers.Customer_ID = 26
+Dec 11, 2021 6:02:09 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:09 Prepared Statement created successfully
+Dec 11, 2021 6:02:09 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:09 Retrieving Prepared Statement
+Dec 11, 2021 6:02:09 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:09 Closed Database Connection
+Dec 11, 2021 6:02:10 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:10 Database Connection was Successful
+Dec 11, 2021 6:02:10 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:10 QUERY: SELECT * FROM customers
+Dec 11, 2021 6:02:10 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:10 Prepared Statement created successfully
+Dec 11, 2021 6:02:10 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:10 Retrieving Prepared Statement
+Dec 11, 2021 6:02:10 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:10 Closed Database Connection
+Dec 11, 2021 6:02:10 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:10 Database Connection was Successful
+Dec 11, 2021 6:02:10 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:10 QUERY: SELECT * FROM users
+Dec 11, 2021 6:02:10 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:10 Prepared Statement created successfully
+Dec 11, 2021 6:02:10 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:10 Retrieving Prepared Statement
+Dec 11, 2021 6:02:10 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:10 Closed Database Connection
+Dec 11, 2021 6:02:10 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:10 Database Connection was Successful
+Dec 11, 2021 6:02:10 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:10 QUERY: SELECT * FROM contacts
+Dec 11, 2021 6:02:10 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:10 Prepared Statement created successfully
+Dec 11, 2021 6:02:10 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:10 Retrieving Prepared Statement
+Dec 11, 2021 6:02:10 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:10 Closed Database Connection
+Dec 11, 2021 6:02:10 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:10 Database Connection was Successful
+Dec 11, 2021 6:02:10 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:10 QUERY: INSERT INTO `appointments` VALUES ( NULL,?,?,?,?,?,?,?,?,?,?,?,?,? )
+Dec 11, 2021 6:02:10 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:10 Prepared Statement created successfully
+Dec 11, 2021 6:02:10 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:10 Retrieving Prepared Statement
+Dec 11, 2021 6:02:10 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:10 Closed Database Connection
+Dec 11, 2021 6:02:10 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:10 Database Connection was Successful
+Dec 11, 2021 6:02:10 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:10 QUERY: SELECT * FROM appointments
+Dec 11, 2021 6:02:10 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:10 Prepared Statement created successfully
+Dec 11, 2021 6:02:10 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:10 Retrieving Prepared Statement
+Dec 11, 2021 6:02:10 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:10 Closed Database Connection
+Dec 11, 2021 6:02:14 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:14 [TablePosition [ row: 33, column: javafx.scene.control.TableColumn@3fb11a7c, tableView: TableView[id=appointmentsTableView, styleClass=table-view] ]]
+Dec 11, 2021 6:02:14 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:14 Database Connection was Successful
+Dec 11, 2021 6:02:14 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:14 QUERY: SELECT * FROM appointments WHERE Appointment_ID = 39
+Dec 11, 2021 6:02:14 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:14 Prepared Statement created successfully
+Dec 11, 2021 6:02:14 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:14 Retrieving Prepared Statement
+Dec 11, 2021 6:02:14 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:14 Closed Database Connection
+Dec 11, 2021 6:02:14 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:14 Database Connection was Successful
+Dec 11, 2021 6:02:14 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:14 QUERY: SELECT * FROM customers WHERE Customer_ID = 26
+Dec 11, 2021 6:02:14 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:14 Prepared Statement created successfully
+Dec 11, 2021 6:02:14 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:14 Retrieving Prepared Statement
+Dec 11, 2021 6:02:14 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:14 Closed Database Connection
+Dec 11, 2021 6:02:14 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:14 Database Connection was Successful
+Dec 11, 2021 6:02:14 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:14 QUERY: SELECT * FROM contacts WHERE Contact_ID = 2
+Dec 11, 2021 6:02:14 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:14 Prepared Statement created successfully
+Dec 11, 2021 6:02:14 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:14 Retrieving Prepared Statement
+Dec 11, 2021 6:02:14 AM logs.Logs logINFO
+INFO: 2021-12-11 06:02:14 Closed Database Connection
+Dec 11, 2021 6:07:04 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:04 
+--------Program initialized---------
+
+Dec 11, 2021 6:07:04 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:04 Error Alert initialized
+Dec 11, 2021 6:07:04 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:04 Confirmation Alert initialized
+Dec 11, 2021 6:07:06 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:06 Database Connection was Successful
+Dec 11, 2021 6:07:06 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:06 QUERY: SELECT * FROM users
+Dec 11, 2021 6:07:06 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:06 Prepared Statement created successfully
+Dec 11, 2021 6:07:06 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:06 Retrieving Prepared Statement
+Dec 11, 2021 6:07:06 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:06 Closed Database Connection
+Dec 11, 2021 6:07:06 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:06 Database Connection was Successful
+Dec 11, 2021 6:07:06 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:06 QUERY: UPDATE `users` SET Last_Update=? WHERE User_ID = 2
+Dec 11, 2021 6:07:06 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:06 Prepared Statement created successfully
+Dec 11, 2021 6:07:06 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:06 Retrieving Prepared Statement
+Dec 11, 2021 6:07:06 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:06 Closed Database Connection
+Dec 11, 2021 6:07:06 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:06 Database Connection was Successful
+Dec 11, 2021 6:07:06 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:06 QUERY: SELECT * FROM appointments
+Dec 11, 2021 6:07:06 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:06 Prepared Statement created successfully
+Dec 11, 2021 6:07:06 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:06 Retrieving Prepared Statement
+Dec 11, 2021 6:07:06 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:06 Closed Database Connection
+Dec 11, 2021 6:07:07 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:07 Closing window Appointment Scheduler
+Dec 11, 2021 6:07:07 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:07 Closed Database Connection
+Dec 11, 2021 6:07:07 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:07 Closed Database Connection
+Dec 11, 2021 6:07:07 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:07 Navigating to Home Screen Directory
+Dec 11, 2021 6:07:08 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:08 Closing window Home Screen Directory
+Dec 11, 2021 6:07:08 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:08 Closed Database Connection
+Dec 11, 2021 6:07:08 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:08 Closed Database Connection
+Dec 11, 2021 6:07:08 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:08 Navigating to Appointments Screen
+Dec 11, 2021 6:07:08 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:08 Database Connection was Successful
+Dec 11, 2021 6:07:08 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:08 QUERY: SELECT * FROM appointments
+Dec 11, 2021 6:07:08 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:08 Prepared Statement created successfully
+Dec 11, 2021 6:07:08 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:08 Retrieving Prepared Statement
+Dec 11, 2021 6:07:08 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:08 Closed Database Connection
+Dec 11, 2021 6:07:08 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:08 Database Connection was Successful
+Dec 11, 2021 6:07:08 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:08 QUERY: SELECT * FROM customers
+Dec 11, 2021 6:07:08 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:08 Prepared Statement created successfully
+Dec 11, 2021 6:07:08 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:08 Retrieving Prepared Statement
+Dec 11, 2021 6:07:08 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:08 Closed Database Connection
+Dec 11, 2021 6:07:08 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:08 Database Connection was Successful
+Dec 11, 2021 6:07:08 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:08 QUERY: SELECT * FROM contacts
+Dec 11, 2021 6:07:08 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:08 Prepared Statement created successfully
+Dec 11, 2021 6:07:08 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:08 Retrieving Prepared Statement
+Dec 11, 2021 6:07:08 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:08 Closed Database Connection
+Dec 11, 2021 6:07:41 AM logs.Logs logWARN
+WARNING: 2021-12-11 06:07:41 Empty Fields must be filled in the Appointment Form
+Dec 11, 2021 6:07:44 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:44 Database Connection was Successful
+Dec 11, 2021 6:07:44 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:44 QUERY: SELECT * FROM customers
+Dec 11, 2021 6:07:44 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:44 Prepared Statement created successfully
+Dec 11, 2021 6:07:44 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:44 Retrieving Prepared Statement
+Dec 11, 2021 6:07:44 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:44 Closed Database Connection
+Dec 11, 2021 6:07:44 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:44 Database Connection was Successful
+Dec 11, 2021 6:07:44 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:44 Query: SELECT * FROM appointments INNER JOIN customers ON appointments.Customer_ID = customers.Customer_ID WHERE customers.Customer_ID = 21
+Dec 11, 2021 6:07:44 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:44 Prepared Statement created successfully
+Dec 11, 2021 6:07:44 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:44 Retrieving Prepared Statement
+Dec 11, 2021 6:07:44 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:44 Closed Database Connection
+Dec 11, 2021 6:07:45 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:45 Database Connection was Successful
+Dec 11, 2021 6:07:45 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:45 QUERY: SELECT * FROM customers
+Dec 11, 2021 6:07:45 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:45 Prepared Statement created successfully
+Dec 11, 2021 6:07:45 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:45 Retrieving Prepared Statement
+Dec 11, 2021 6:07:45 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:45 Closed Database Connection
+Dec 11, 2021 6:07:45 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:45 Database Connection was Successful
+Dec 11, 2021 6:07:45 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:45 QUERY: SELECT * FROM users
+Dec 11, 2021 6:07:45 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:45 Prepared Statement created successfully
+Dec 11, 2021 6:07:45 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:45 Retrieving Prepared Statement
+Dec 11, 2021 6:07:45 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:45 Closed Database Connection
+Dec 11, 2021 6:07:45 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:45 Database Connection was Successful
+Dec 11, 2021 6:07:45 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:45 QUERY: SELECT * FROM contacts
+Dec 11, 2021 6:07:45 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:45 Prepared Statement created successfully
+Dec 11, 2021 6:07:45 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:45 Retrieving Prepared Statement
+Dec 11, 2021 6:07:45 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:45 Closed Database Connection
+Dec 11, 2021 6:07:45 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:45 Database Connection was Successful
+Dec 11, 2021 6:07:45 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:45 QUERY: INSERT INTO `appointments` VALUES ( NULL,?,?,?,?,?,?,?,?,?,?,?,?,? )
+Dec 11, 2021 6:07:45 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:45 Prepared Statement created successfully
+Dec 11, 2021 6:07:45 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:45 Retrieving Prepared Statement
+Dec 11, 2021 6:07:45 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:45 Closed Database Connection
+Dec 11, 2021 6:07:45 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:45 Database Connection was Successful
+Dec 11, 2021 6:07:45 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:45 QUERY: SELECT * FROM appointments
+Dec 11, 2021 6:07:45 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:45 Prepared Statement created successfully
+Dec 11, 2021 6:07:45 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:45 Retrieving Prepared Statement
+Dec 11, 2021 6:07:45 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:45 Closed Database Connection
+Dec 11, 2021 6:07:49 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:49 [TablePosition [ row: 34, column: javafx.scene.control.TableColumn@579328f2, tableView: TableView[id=appointmentsTableView, styleClass=table-view] ]]
+Dec 11, 2021 6:07:49 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:49 Database Connection was Successful
+Dec 11, 2021 6:07:49 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:49 QUERY: SELECT * FROM appointments WHERE Appointment_ID = 40
+Dec 11, 2021 6:07:49 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:49 Prepared Statement created successfully
+Dec 11, 2021 6:07:49 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:49 Retrieving Prepared Statement
+Dec 11, 2021 6:07:49 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:49 Closed Database Connection
+Dec 11, 2021 6:07:49 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:49 Database Connection was Successful
+Dec 11, 2021 6:07:49 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:49 QUERY: SELECT * FROM customers WHERE Customer_ID = 21
+Dec 11, 2021 6:07:49 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:49 Prepared Statement created successfully
+Dec 11, 2021 6:07:49 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:49 Retrieving Prepared Statement
+Dec 11, 2021 6:07:49 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:49 Closed Database Connection
+Dec 11, 2021 6:07:49 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:49 Database Connection was Successful
+Dec 11, 2021 6:07:49 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:49 QUERY: SELECT * FROM contacts WHERE Contact_ID = 2
+Dec 11, 2021 6:07:49 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:49 Prepared Statement created successfully
+Dec 11, 2021 6:07:49 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:49 Retrieving Prepared Statement
+Dec 11, 2021 6:07:49 AM logs.Logs logINFO
+INFO: 2021-12-11 06:07:49 Closed Database Connection
+Dec 11, 2021 6:08:54 AM logs.Logs logINFO
+INFO: 2021-12-11 06:08:54 Database Connection was Successful
+Dec 11, 2021 6:08:54 AM logs.Logs logINFO
+INFO: 2021-12-11 06:08:54 QUERY: SELECT * FROM customers
+Dec 11, 2021 6:08:54 AM logs.Logs logINFO
+INFO: 2021-12-11 06:08:54 Prepared Statement created successfully
+Dec 11, 2021 6:08:54 AM logs.Logs logINFO
+INFO: 2021-12-11 06:08:54 Retrieving Prepared Statement
+Dec 11, 2021 6:08:54 AM logs.Logs logINFO
+INFO: 2021-12-11 06:08:54 Closed Database Connection
+Dec 11, 2021 6:08:54 AM logs.Logs logINFO
+INFO: 2021-12-11 06:08:54 Database Connection was Successful
+Dec 11, 2021 6:08:54 AM logs.Logs logINFO
+INFO: 2021-12-11 06:08:54 Query: SELECT * FROM appointments INNER JOIN customers ON appointments.Customer_ID = customers.Customer_ID WHERE customers.Customer_ID = 21
+Dec 11, 2021 6:08:54 AM logs.Logs logINFO
+INFO: 2021-12-11 06:08:54 Prepared Statement created successfully
+Dec 11, 2021 6:08:54 AM logs.Logs logINFO
+INFO: 2021-12-11 06:08:54 Retrieving Prepared Statement
+Dec 11, 2021 6:08:54 AM logs.Logs logINFO
+INFO: 2021-12-11 06:08:54 Closed Database Connection
+Dec 11, 2021 6:08:54 AM logs.Logs logINFO
+INFO: 2021-12-11 06:08:54 Database Connection was Successful
+Dec 11, 2021 6:08:54 AM logs.Logs logINFO
+INFO: 2021-12-11 06:08:54 QUERY: SELECT * FROM customers
+Dec 11, 2021 6:08:54 AM logs.Logs logINFO
+INFO: 2021-12-11 06:08:54 Prepared Statement created successfully
+Dec 11, 2021 6:08:54 AM logs.Logs logINFO
+INFO: 2021-12-11 06:08:54 Retrieving Prepared Statement
+Dec 11, 2021 6:08:54 AM logs.Logs logINFO
+INFO: 2021-12-11 06:08:54 Closed Database Connection
+Dec 11, 2021 6:08:54 AM logs.Logs logINFO
+INFO: 2021-12-11 06:08:54 Database Connection was Successful
+Dec 11, 2021 6:08:54 AM logs.Logs logINFO
+INFO: 2021-12-11 06:08:54 QUERY: SELECT * FROM users
+Dec 11, 2021 6:08:54 AM logs.Logs logINFO
+INFO: 2021-12-11 06:08:54 Prepared Statement created successfully
+Dec 11, 2021 6:08:54 AM logs.Logs logINFO
+INFO: 2021-12-11 06:08:54 Retrieving Prepared Statement
+Dec 11, 2021 6:08:54 AM logs.Logs logINFO
+INFO: 2021-12-11 06:08:54 Closed Database Connection
+Dec 11, 2021 6:08:54 AM logs.Logs logINFO
+INFO: 2021-12-11 06:08:54 Database Connection was Successful
+Dec 11, 2021 6:08:54 AM logs.Logs logINFO
+INFO: 2021-12-11 06:08:54 QUERY: SELECT * FROM contacts
+Dec 11, 2021 6:08:54 AM logs.Logs logINFO
+INFO: 2021-12-11 06:08:54 Prepared Statement created successfully
+Dec 11, 2021 6:08:54 AM logs.Logs logINFO
+INFO: 2021-12-11 06:08:54 Retrieving Prepared Statement
+Dec 11, 2021 6:08:54 AM logs.Logs logINFO
+INFO: 2021-12-11 06:08:54 Closed Database Connection
+Dec 11, 2021 6:08:54 AM logs.Logs logINFO
+INFO: 2021-12-11 06:08:54 Database Connection was Successful
+Dec 11, 2021 6:08:54 AM logs.Logs logINFO
+INFO: 2021-12-11 06:08:54 QUERY: UPDATE `appointments` SET Title=?,Description=?,Location=?,Type=?,Start=?,End=?,Last_Update=?,Last_Updated_By=?,Customer_ID=?,User_ID=?,Contact_ID=? WHERE Appointment_ID = 40
+Dec 11, 2021 6:08:54 AM logs.Logs logINFO
+INFO: 2021-12-11 06:08:54 Prepared Statement created successfully
+Dec 11, 2021 6:08:54 AM logs.Logs logINFO
+INFO: 2021-12-11 06:08:54 Retrieving Prepared Statement
+Dec 11, 2021 6:08:55 AM logs.Logs logINFO
+INFO: 2021-12-11 06:08:55 Closed Database Connection
+Dec 11, 2021 6:08:55 AM logs.Logs logINFO
+INFO: 2021-12-11 06:08:55 Database Connection was Successful
+Dec 11, 2021 6:08:55 AM logs.Logs logINFO
+INFO: 2021-12-11 06:08:55 QUERY: SELECT * FROM appointments
+Dec 11, 2021 6:08:55 AM logs.Logs logINFO
+INFO: 2021-12-11 06:08:55 Prepared Statement created successfully
+Dec 11, 2021 6:08:55 AM logs.Logs logINFO
+INFO: 2021-12-11 06:08:55 Retrieving Prepared Statement
+Dec 11, 2021 6:08:55 AM logs.Logs logINFO
+INFO: 2021-12-11 06:08:55 Closed Database Connection
+Dec 11, 2021 6:09:26 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:26 
+--------Program initialized---------
+
+Dec 11, 2021 6:09:27 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:27 Error Alert initialized
+Dec 11, 2021 6:09:27 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:27 Confirmation Alert initialized
+Dec 11, 2021 6:09:28 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:28 Database Connection was Successful
+Dec 11, 2021 6:09:28 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:28 QUERY: SELECT * FROM users
+Dec 11, 2021 6:09:28 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:28 Prepared Statement created successfully
+Dec 11, 2021 6:09:28 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:28 Retrieving Prepared Statement
+Dec 11, 2021 6:09:28 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:28 Closed Database Connection
+Dec 11, 2021 6:09:28 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:28 Database Connection was Successful
+Dec 11, 2021 6:09:28 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:28 QUERY: UPDATE `users` SET Last_Update=? WHERE User_ID = 2
+Dec 11, 2021 6:09:28 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:28 Prepared Statement created successfully
+Dec 11, 2021 6:09:28 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:28 Retrieving Prepared Statement
+Dec 11, 2021 6:09:28 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:28 Closed Database Connection
+Dec 11, 2021 6:09:28 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:28 Database Connection was Successful
+Dec 11, 2021 6:09:28 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:28 QUERY: SELECT * FROM appointments
+Dec 11, 2021 6:09:28 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:28 Prepared Statement created successfully
+Dec 11, 2021 6:09:28 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:28 Retrieving Prepared Statement
+Dec 11, 2021 6:09:28 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:28 Closed Database Connection
+Dec 11, 2021 6:09:29 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:29 Closing window Appointment Scheduler
+Dec 11, 2021 6:09:29 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:29 Closed Database Connection
+Dec 11, 2021 6:09:29 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:29 Closed Database Connection
+Dec 11, 2021 6:09:29 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:29 Navigating to Home Screen Directory
+Dec 11, 2021 6:09:30 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:30 Closing window Home Screen Directory
+Dec 11, 2021 6:09:30 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:30 Closed Database Connection
+Dec 11, 2021 6:09:30 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:30 Closed Database Connection
+Dec 11, 2021 6:09:30 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:30 Navigating to Appointments Screen
+Dec 11, 2021 6:09:30 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:30 Database Connection was Successful
+Dec 11, 2021 6:09:30 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:30 QUERY: SELECT * FROM appointments
+Dec 11, 2021 6:09:30 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:30 Prepared Statement created successfully
+Dec 11, 2021 6:09:30 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:30 Retrieving Prepared Statement
+Dec 11, 2021 6:09:30 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:30 Closed Database Connection
+Dec 11, 2021 6:09:30 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:30 Database Connection was Successful
+Dec 11, 2021 6:09:30 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:30 QUERY: SELECT * FROM customers
+Dec 11, 2021 6:09:30 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:30 Prepared Statement created successfully
+Dec 11, 2021 6:09:30 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:30 Retrieving Prepared Statement
+Dec 11, 2021 6:09:30 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:30 Closed Database Connection
+Dec 11, 2021 6:09:30 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:30 Database Connection was Successful
+Dec 11, 2021 6:09:30 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:30 QUERY: SELECT * FROM contacts
+Dec 11, 2021 6:09:30 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:30 Prepared Statement created successfully
+Dec 11, 2021 6:09:30 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:30 Retrieving Prepared Statement
+Dec 11, 2021 6:09:30 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:30 Closed Database Connection
+Dec 11, 2021 6:09:37 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:37 [TablePosition [ row: 34, column: javafx.scene.control.TableColumn@579328f2, tableView: TableView[id=appointmentsTableView, styleClass=table-view] ]]
+Dec 11, 2021 6:09:37 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:37 Database Connection was Successful
+Dec 11, 2021 6:09:37 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:37 QUERY: SELECT * FROM appointments WHERE Appointment_ID = 40
+Dec 11, 2021 6:09:37 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:37 Prepared Statement created successfully
+Dec 11, 2021 6:09:37 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:37 Retrieving Prepared Statement
+Dec 11, 2021 6:09:37 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:37 Closed Database Connection
+Dec 11, 2021 6:09:37 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:37 Database Connection was Successful
+Dec 11, 2021 6:09:37 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:37 QUERY: SELECT * FROM customers WHERE Customer_ID = 21
+Dec 11, 2021 6:09:37 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:37 Prepared Statement created successfully
+Dec 11, 2021 6:09:37 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:37 Retrieving Prepared Statement
+Dec 11, 2021 6:09:37 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:37 Closed Database Connection
+Dec 11, 2021 6:09:37 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:37 Database Connection was Successful
+Dec 11, 2021 6:09:37 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:37 QUERY: SELECT * FROM contacts WHERE Contact_ID = 2
+Dec 11, 2021 6:09:37 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:37 Prepared Statement created successfully
+Dec 11, 2021 6:09:37 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:37 Retrieving Prepared Statement
+Dec 11, 2021 6:09:37 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:37 Closed Database Connection
+Dec 11, 2021 6:09:49 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:49 Database Connection was Successful
+Dec 11, 2021 6:09:49 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:49 QUERY: SELECT * FROM customers
+Dec 11, 2021 6:09:49 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:49 Prepared Statement created successfully
+Dec 11, 2021 6:09:49 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:49 Retrieving Prepared Statement
+Dec 11, 2021 6:09:49 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:49 Closed Database Connection
+Dec 11, 2021 6:09:49 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:49 Database Connection was Successful
+Dec 11, 2021 6:09:49 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:49 Query: SELECT * FROM appointments INNER JOIN customers ON appointments.Customer_ID = customers.Customer_ID WHERE customers.Customer_ID = 21
+Dec 11, 2021 6:09:49 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:49 Prepared Statement created successfully
+Dec 11, 2021 6:09:49 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:49 Retrieving Prepared Statement
+Dec 11, 2021 6:09:49 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:49 Closed Database Connection
+Dec 11, 2021 6:09:50 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:50 Database Connection was Successful
+Dec 11, 2021 6:09:50 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:50 QUERY: SELECT * FROM customers
+Dec 11, 2021 6:09:50 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:50 Prepared Statement created successfully
+Dec 11, 2021 6:09:50 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:50 Retrieving Prepared Statement
+Dec 11, 2021 6:09:50 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:50 Closed Database Connection
+Dec 11, 2021 6:09:50 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:50 Database Connection was Successful
+Dec 11, 2021 6:09:50 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:50 QUERY: SELECT * FROM users
+Dec 11, 2021 6:09:50 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:50 Prepared Statement created successfully
+Dec 11, 2021 6:09:50 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:50 Retrieving Prepared Statement
+Dec 11, 2021 6:09:50 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:50 Closed Database Connection
+Dec 11, 2021 6:09:50 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:50 Database Connection was Successful
+Dec 11, 2021 6:09:50 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:50 QUERY: SELECT * FROM contacts
+Dec 11, 2021 6:09:50 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:50 Prepared Statement created successfully
+Dec 11, 2021 6:09:50 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:50 Retrieving Prepared Statement
+Dec 11, 2021 6:09:50 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:50 Closed Database Connection
+Dec 11, 2021 6:09:50 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:50 Database Connection was Successful
+Dec 11, 2021 6:09:50 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:50 QUERY: UPDATE `appointments` SET Title=?,Description=?,Location=?,Type=?,Start=?,End=?,Last_Update=?,Last_Updated_By=?,Customer_ID=?,User_ID=?,Contact_ID=? WHERE Appointment_ID = 40
+Dec 11, 2021 6:09:50 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:50 Prepared Statement created successfully
+Dec 11, 2021 6:09:50 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:50 Retrieving Prepared Statement
+Dec 11, 2021 6:09:50 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:50 Closed Database Connection
+Dec 11, 2021 6:09:50 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:50 Database Connection was Successful
+Dec 11, 2021 6:09:50 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:50 QUERY: SELECT * FROM appointments
+Dec 11, 2021 6:09:50 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:50 Prepared Statement created successfully
+Dec 11, 2021 6:09:50 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:50 Retrieving Prepared Statement
+Dec 11, 2021 6:09:50 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:50 Closed Database Connection
+Dec 11, 2021 6:09:53 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:53 [TablePosition [ row: 34, column: javafx.scene.control.TableColumn@579328f2, tableView: TableView[id=appointmentsTableView, styleClass=table-view] ]]
+Dec 11, 2021 6:09:53 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:53 Database Connection was Successful
+Dec 11, 2021 6:09:53 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:53 QUERY: SELECT * FROM appointments WHERE Appointment_ID = 40
+Dec 11, 2021 6:09:53 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:53 Prepared Statement created successfully
+Dec 11, 2021 6:09:53 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:53 Retrieving Prepared Statement
+Dec 11, 2021 6:09:53 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:53 Closed Database Connection
+Dec 11, 2021 6:09:53 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:53 Database Connection was Successful
+Dec 11, 2021 6:09:53 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:53 QUERY: SELECT * FROM customers WHERE Customer_ID = 21
+Dec 11, 2021 6:09:53 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:53 Prepared Statement created successfully
+Dec 11, 2021 6:09:53 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:53 Retrieving Prepared Statement
+Dec 11, 2021 6:09:53 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:53 Closed Database Connection
+Dec 11, 2021 6:09:53 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:53 Database Connection was Successful
+Dec 11, 2021 6:09:53 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:53 QUERY: SELECT * FROM contacts WHERE Contact_ID = 2
+Dec 11, 2021 6:09:53 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:53 Prepared Statement created successfully
+Dec 11, 2021 6:09:53 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:53 Retrieving Prepared Statement
+Dec 11, 2021 6:09:53 AM logs.Logs logINFO
+INFO: 2021-12-11 06:09:53 Closed Database Connection
+Dec 11, 2021 6:15:12 AM logs.Logs logWARN
+WARNING: 2021-12-11 06:15:12 Invalid Start and End Times
+Dec 11, 2021 6:15:21 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:21 Database Connection was Successful
+Dec 11, 2021 6:15:21 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:21 QUERY: SELECT * FROM customers
+Dec 11, 2021 6:15:21 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:21 Prepared Statement created successfully
+Dec 11, 2021 6:15:21 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:21 Retrieving Prepared Statement
+Dec 11, 2021 6:15:21 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:21 Closed Database Connection
+Dec 11, 2021 6:15:21 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:21 Database Connection was Successful
+Dec 11, 2021 6:15:21 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:21 Query: SELECT * FROM appointments INNER JOIN customers ON appointments.Customer_ID = customers.Customer_ID WHERE customers.Customer_ID = 21
+Dec 11, 2021 6:15:21 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:21 Prepared Statement created successfully
+Dec 11, 2021 6:15:21 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:21 Retrieving Prepared Statement
+Dec 11, 2021 6:15:21 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:21 Closed Database Connection
+Dec 11, 2021 6:15:21 AM logs.Logs logWARN
+WARNING: 2021-12-11 06:15:21 Scheduling Conflict: Iokaste the Steadfast
+Dec 11, 2021 6:15:34 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:34 Database Connection was Successful
+Dec 11, 2021 6:15:34 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:34 QUERY: SELECT * FROM customers
+Dec 11, 2021 6:15:34 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:34 Prepared Statement created successfully
+Dec 11, 2021 6:15:34 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:34 Retrieving Prepared Statement
+Dec 11, 2021 6:15:34 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:34 Closed Database Connection
+Dec 11, 2021 6:15:34 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:34 Database Connection was Successful
+Dec 11, 2021 6:15:34 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:34 Query: SELECT * FROM appointments INNER JOIN customers ON appointments.Customer_ID = customers.Customer_ID WHERE customers.Customer_ID = 3
+Dec 11, 2021 6:15:34 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:34 Prepared Statement created successfully
+Dec 11, 2021 6:15:34 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:34 Retrieving Prepared Statement
+Dec 11, 2021 6:15:34 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:34 Closed Database Connection
+Dec 11, 2021 6:15:35 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:35 Database Connection was Successful
+Dec 11, 2021 6:15:35 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:35 QUERY: SELECT * FROM customers
+Dec 11, 2021 6:15:35 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:35 Prepared Statement created successfully
+Dec 11, 2021 6:15:35 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:35 Retrieving Prepared Statement
+Dec 11, 2021 6:15:35 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:35 Closed Database Connection
+Dec 11, 2021 6:15:35 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:35 Database Connection was Successful
+Dec 11, 2021 6:15:35 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:35 QUERY: SELECT * FROM users
+Dec 11, 2021 6:15:35 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:35 Prepared Statement created successfully
+Dec 11, 2021 6:15:35 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:35 Retrieving Prepared Statement
+Dec 11, 2021 6:15:35 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:35 Closed Database Connection
+Dec 11, 2021 6:15:35 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:35 Database Connection was Successful
+Dec 11, 2021 6:15:35 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:35 QUERY: SELECT * FROM contacts
+Dec 11, 2021 6:15:35 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:35 Prepared Statement created successfully
+Dec 11, 2021 6:15:35 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:35 Retrieving Prepared Statement
+Dec 11, 2021 6:15:35 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:35 Closed Database Connection
+Dec 11, 2021 6:15:35 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:35 Database Connection was Successful
+Dec 11, 2021 6:15:35 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:35 QUERY: UPDATE `appointments` SET Title=?,Description=?,Location=?,Type=?,Start=?,End=?,Last_Update=?,Last_Updated_By=?,Customer_ID=?,User_ID=?,Contact_ID=? WHERE Appointment_ID = 40
+Dec 11, 2021 6:15:35 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:35 Prepared Statement created successfully
+Dec 11, 2021 6:15:35 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:35 Retrieving Prepared Statement
+Dec 11, 2021 6:15:35 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:35 Closed Database Connection
+Dec 11, 2021 6:15:35 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:35 Database Connection was Successful
+Dec 11, 2021 6:15:35 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:35 QUERY: SELECT * FROM appointments
+Dec 11, 2021 6:15:35 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:35 Prepared Statement created successfully
+Dec 11, 2021 6:15:35 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:35 Retrieving Prepared Statement
+Dec 11, 2021 6:15:35 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:35 Closed Database Connection
+Dec 11, 2021 6:15:37 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:37 [TablePosition [ row: 34, column: javafx.scene.control.TableColumn@579328f2, tableView: TableView[id=appointmentsTableView, styleClass=table-view] ]]
+Dec 11, 2021 6:15:37 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:37 Database Connection was Successful
+Dec 11, 2021 6:15:37 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:37 QUERY: SELECT * FROM appointments WHERE Appointment_ID = 40
+Dec 11, 2021 6:15:37 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:37 Prepared Statement created successfully
+Dec 11, 2021 6:15:37 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:37 Retrieving Prepared Statement
+Dec 11, 2021 6:15:37 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:37 Closed Database Connection
+Dec 11, 2021 6:15:37 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:37 Database Connection was Successful
+Dec 11, 2021 6:15:37 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:37 QUERY: SELECT * FROM customers WHERE Customer_ID = 3
+Dec 11, 2021 6:15:37 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:37 Prepared Statement created successfully
+Dec 11, 2021 6:15:37 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:37 Retrieving Prepared Statement
+Dec 11, 2021 6:15:37 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:37 Closed Database Connection
+Dec 11, 2021 6:15:37 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:37 Database Connection was Successful
+Dec 11, 2021 6:15:37 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:37 QUERY: SELECT * FROM contacts WHERE Contact_ID = 2
+Dec 11, 2021 6:15:37 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:37 Prepared Statement created successfully
+Dec 11, 2021 6:15:37 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:37 Retrieving Prepared Statement
+Dec 11, 2021 6:15:37 AM logs.Logs logINFO
+INFO: 2021-12-11 06:15:37 Closed Database Connection
+Dec 11, 2021 6:20:10 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:10 
+--------Program initialized---------
+
+Dec 11, 2021 6:20:10 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:10 Error Alert initialized
+Dec 11, 2021 6:20:10 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:10 Confirmation Alert initialized
+Dec 11, 2021 6:20:13 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:13 Database Connection was Successful
+Dec 11, 2021 6:20:13 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:13 QUERY: SELECT * FROM users
+Dec 11, 2021 6:20:13 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:13 Prepared Statement created successfully
+Dec 11, 2021 6:20:13 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:13 Retrieving Prepared Statement
+Dec 11, 2021 6:20:13 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:13 Closed Database Connection
+Dec 11, 2021 6:20:13 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:13 Database Connection was Successful
+Dec 11, 2021 6:20:13 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:13 QUERY: UPDATE `users` SET Last_Update=? WHERE User_ID = 2
+Dec 11, 2021 6:20:13 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:13 Prepared Statement created successfully
+Dec 11, 2021 6:20:13 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:13 Retrieving Prepared Statement
+Dec 11, 2021 6:20:13 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:13 Closed Database Connection
+Dec 11, 2021 6:20:13 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:13 Database Connection was Successful
+Dec 11, 2021 6:20:13 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:13 QUERY: SELECT * FROM appointments
+Dec 11, 2021 6:20:13 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:13 Prepared Statement created successfully
+Dec 11, 2021 6:20:13 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:13 Retrieving Prepared Statement
+Dec 11, 2021 6:20:13 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:13 Closed Database Connection
+Dec 11, 2021 6:20:14 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:14 Closing window Appointment Scheduler
+Dec 11, 2021 6:20:14 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:14 Closed Database Connection
+Dec 11, 2021 6:20:14 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:14 Closed Database Connection
+Dec 11, 2021 6:20:14 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:14 Navigating to Home Screen Directory
+Dec 11, 2021 6:20:15 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:15 Closing window Home Screen Directory
+Dec 11, 2021 6:20:15 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:15 Closed Database Connection
+Dec 11, 2021 6:20:15 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:15 Closed Database Connection
+Dec 11, 2021 6:20:15 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:15 Navigating to Appointments Screen
+Dec 11, 2021 6:20:15 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:15 Database Connection was Successful
+Dec 11, 2021 6:20:15 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:15 QUERY: SELECT * FROM appointments
+Dec 11, 2021 6:20:15 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:15 Prepared Statement created successfully
+Dec 11, 2021 6:20:15 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:15 Retrieving Prepared Statement
+Dec 11, 2021 6:20:15 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:15 Closed Database Connection
+Dec 11, 2021 6:20:15 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:15 Database Connection was Successful
+Dec 11, 2021 6:20:15 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:15 QUERY: SELECT * FROM customers
+Dec 11, 2021 6:20:15 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:15 Prepared Statement created successfully
+Dec 11, 2021 6:20:15 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:15 Retrieving Prepared Statement
+Dec 11, 2021 6:20:15 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:15 Closed Database Connection
+Dec 11, 2021 6:20:15 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:15 Database Connection was Successful
+Dec 11, 2021 6:20:15 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:15 QUERY: SELECT * FROM contacts
+Dec 11, 2021 6:20:15 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:15 Prepared Statement created successfully
+Dec 11, 2021 6:20:15 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:15 Retrieving Prepared Statement
+Dec 11, 2021 6:20:15 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:15 Closed Database Connection
+Dec 11, 2021 6:20:19 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:19 [TablePosition [ row: 28, column: javafx.scene.control.TableColumn@30b724a5, tableView: TableView[id=appointmentsTableView, styleClass=table-view] ]]
+Dec 11, 2021 6:20:19 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:19 Database Connection was Successful
+Dec 11, 2021 6:20:19 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:19 QUERY: SELECT * FROM appointments WHERE Appointment_ID = 34
+Dec 11, 2021 6:20:19 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:19 Prepared Statement created successfully
+Dec 11, 2021 6:20:19 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:19 Retrieving Prepared Statement
+Dec 11, 2021 6:20:19 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:19 Closed Database Connection
+Dec 11, 2021 6:20:19 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:19 Database Connection was Successful
+Dec 11, 2021 6:20:19 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:19 QUERY: SELECT * FROM customers WHERE Customer_ID = 26
+Dec 11, 2021 6:20:19 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:19 Prepared Statement created successfully
+Dec 11, 2021 6:20:19 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:19 Retrieving Prepared Statement
+Dec 11, 2021 6:20:19 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:19 Closed Database Connection
+Dec 11, 2021 6:20:19 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:19 Database Connection was Successful
+Dec 11, 2021 6:20:19 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:19 QUERY: SELECT * FROM contacts WHERE Contact_ID = 1
+Dec 11, 2021 6:20:19 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:19 Prepared Statement created successfully
+Dec 11, 2021 6:20:19 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:19 Retrieving Prepared Statement
+Dec 11, 2021 6:20:19 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:19 Closed Database Connection
+Dec 11, 2021 6:20:25 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:25 Database Connection was Successful
+Dec 11, 2021 6:20:25 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:25 QUERY: SELECT * FROM customers
+Dec 11, 2021 6:20:25 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:25 Prepared Statement created successfully
+Dec 11, 2021 6:20:25 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:25 Retrieving Prepared Statement
+Dec 11, 2021 6:20:25 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:25 Closed Database Connection
+Dec 11, 2021 6:20:25 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:25 Database Connection was Successful
+Dec 11, 2021 6:20:25 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:25 Query: SELECT * FROM appointments INNER JOIN customers ON appointments.Customer_ID = customers.Customer_ID WHERE customers.Customer_ID = 26
+Dec 11, 2021 6:20:25 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:25 Prepared Statement created successfully
+Dec 11, 2021 6:20:25 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:25 Retrieving Prepared Statement
+Dec 11, 2021 6:20:25 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:25 Closed Database Connection
+Dec 11, 2021 6:20:25 AM logs.Logs logWARN
+WARNING: 2021-12-11 06:20:25 Scheduling Conflict: Tiro the Benevolent
+Dec 11, 2021 6:20:29 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:29 Database Connection was Successful
+Dec 11, 2021 6:20:29 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:29 QUERY: SELECT * FROM customers
+Dec 11, 2021 6:20:29 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:29 Prepared Statement created successfully
+Dec 11, 2021 6:20:29 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:29 Retrieving Prepared Statement
+Dec 11, 2021 6:20:29 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:29 Closed Database Connection
+Dec 11, 2021 6:20:29 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:29 Database Connection was Successful
+Dec 11, 2021 6:20:29 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:29 Query: SELECT * FROM appointments INNER JOIN customers ON appointments.Customer_ID = customers.Customer_ID WHERE customers.Customer_ID = 2
+Dec 11, 2021 6:20:29 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:29 Prepared Statement created successfully
+Dec 11, 2021 6:20:29 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:29 Retrieving Prepared Statement
+Dec 11, 2021 6:20:29 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:29 Closed Database Connection
+Dec 11, 2021 6:20:32 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:32 Database Connection was Successful
+Dec 11, 2021 6:20:32 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:32 QUERY: SELECT * FROM customers
+Dec 11, 2021 6:20:32 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:32 Prepared Statement created successfully
+Dec 11, 2021 6:20:32 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:32 Retrieving Prepared Statement
+Dec 11, 2021 6:20:32 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:32 Closed Database Connection
+Dec 11, 2021 6:20:32 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:32 Database Connection was Successful
+Dec 11, 2021 6:20:32 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:32 QUERY: SELECT * FROM users
+Dec 11, 2021 6:20:32 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:32 Prepared Statement created successfully
+Dec 11, 2021 6:20:32 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:32 Retrieving Prepared Statement
+Dec 11, 2021 6:20:32 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:32 Closed Database Connection
+Dec 11, 2021 6:20:32 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:32 Database Connection was Successful
+Dec 11, 2021 6:20:32 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:32 QUERY: SELECT * FROM contacts
+Dec 11, 2021 6:20:32 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:32 Prepared Statement created successfully
+Dec 11, 2021 6:20:32 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:32 Retrieving Prepared Statement
+Dec 11, 2021 6:20:32 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:32 Closed Database Connection
+Dec 11, 2021 6:20:32 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:32 Database Connection was Successful
+Dec 11, 2021 6:20:32 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:32 QUERY: UPDATE `appointments` SET Title=?,Description=?,Location=?,Type=?,Start=?,End=?,Last_Update=?,Last_Updated_By=?,Customer_ID=?,User_ID=?,Contact_ID=? WHERE Appointment_ID = 34
+Dec 11, 2021 6:20:32 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:32 Prepared Statement created successfully
+Dec 11, 2021 6:20:32 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:32 Retrieving Prepared Statement
+Dec 11, 2021 6:20:32 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:32 Closed Database Connection
+Dec 11, 2021 6:20:32 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:32 Database Connection was Successful
+Dec 11, 2021 6:20:32 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:32 QUERY: SELECT * FROM appointments
+Dec 11, 2021 6:20:32 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:32 Prepared Statement created successfully
+Dec 11, 2021 6:20:32 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:32 Retrieving Prepared Statement
+Dec 11, 2021 6:20:32 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:32 Closed Database Connection
+Dec 11, 2021 6:20:35 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:35 [TablePosition [ row: 28, column: javafx.scene.control.TableColumn@1596e4f0, tableView: TableView[id=appointmentsTableView, styleClass=table-view] ]]
+Dec 11, 2021 6:20:35 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:35 Database Connection was Successful
+Dec 11, 2021 6:20:35 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:35 QUERY: SELECT * FROM appointments WHERE Appointment_ID = 34
+Dec 11, 2021 6:20:35 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:35 Prepared Statement created successfully
+Dec 11, 2021 6:20:35 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:35 Retrieving Prepared Statement
+Dec 11, 2021 6:20:35 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:35 Closed Database Connection
+Dec 11, 2021 6:20:35 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:35 Database Connection was Successful
+Dec 11, 2021 6:20:35 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:35 QUERY: SELECT * FROM customers WHERE Customer_ID = 2
+Dec 11, 2021 6:20:35 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:35 Prepared Statement created successfully
+Dec 11, 2021 6:20:35 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:35 Retrieving Prepared Statement
+Dec 11, 2021 6:20:35 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:35 Closed Database Connection
+Dec 11, 2021 6:20:35 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:35 Database Connection was Successful
+Dec 11, 2021 6:20:35 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:35 QUERY: SELECT * FROM contacts WHERE Contact_ID = 1
+Dec 11, 2021 6:20:35 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:35 Prepared Statement created successfully
+Dec 11, 2021 6:20:35 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:35 Retrieving Prepared Statement
+Dec 11, 2021 6:20:35 AM logs.Logs logINFO
+INFO: 2021-12-11 06:20:35 Closed Database Connection
+Dec 11, 2021 6:21:56 AM logs.Logs logINFO
+INFO: 2021-12-11 06:21:56 Database Connection was Successful
+Dec 11, 2021 6:21:56 AM logs.Logs logINFO
+INFO: 2021-12-11 06:21:56 QUERY: SELECT * FROM customers
+Dec 11, 2021 6:21:56 AM logs.Logs logINFO
+INFO: 2021-12-11 06:21:56 Prepared Statement created successfully
+Dec 11, 2021 6:21:56 AM logs.Logs logINFO
+INFO: 2021-12-11 06:21:56 Retrieving Prepared Statement
+Dec 11, 2021 6:21:56 AM logs.Logs logINFO
+INFO: 2021-12-11 06:21:56 Closed Database Connection
+Dec 11, 2021 6:21:56 AM logs.Logs logINFO
+INFO: 2021-12-11 06:21:56 Database Connection was Successful
+Dec 11, 2021 6:21:56 AM logs.Logs logINFO
+INFO: 2021-12-11 06:21:56 Query: SELECT * FROM appointments INNER JOIN customers ON appointments.Customer_ID = customers.Customer_ID WHERE customers.Customer_ID = 22
+Dec 11, 2021 6:21:56 AM logs.Logs logINFO
+INFO: 2021-12-11 06:21:56 Prepared Statement created successfully
+Dec 11, 2021 6:21:56 AM logs.Logs logINFO
+INFO: 2021-12-11 06:21:56 Retrieving Prepared Statement
+Dec 11, 2021 6:21:56 AM logs.Logs logINFO
+INFO: 2021-12-11 06:21:56 Closed Database Connection
+Dec 11, 2021 6:21:58 AM logs.Logs logINFO
+INFO: 2021-12-11 06:21:58 Database Connection was Successful
+Dec 11, 2021 6:21:58 AM logs.Logs logINFO
+INFO: 2021-12-11 06:21:58 QUERY: SELECT * FROM customers
+Dec 11, 2021 6:21:58 AM logs.Logs logINFO
+INFO: 2021-12-11 06:21:58 Prepared Statement created successfully
+Dec 11, 2021 6:21:58 AM logs.Logs logINFO
+INFO: 2021-12-11 06:21:58 Retrieving Prepared Statement
+Dec 11, 2021 6:21:58 AM logs.Logs logINFO
+INFO: 2021-12-11 06:21:58 Closed Database Connection
+Dec 11, 2021 6:21:58 AM logs.Logs logINFO
+INFO: 2021-12-11 06:21:58 Database Connection was Successful
+Dec 11, 2021 6:21:58 AM logs.Logs logINFO
+INFO: 2021-12-11 06:21:58 QUERY: SELECT * FROM users
+Dec 11, 2021 6:21:58 AM logs.Logs logINFO
+INFO: 2021-12-11 06:21:58 Prepared Statement created successfully
+Dec 11, 2021 6:21:58 AM logs.Logs logINFO
+INFO: 2021-12-11 06:21:58 Retrieving Prepared Statement
+Dec 11, 2021 6:21:58 AM logs.Logs logINFO
+INFO: 2021-12-11 06:21:58 Closed Database Connection
+Dec 11, 2021 6:21:58 AM logs.Logs logINFO
+INFO: 2021-12-11 06:21:58 Database Connection was Successful
+Dec 11, 2021 6:21:58 AM logs.Logs logINFO
+INFO: 2021-12-11 06:21:58 QUERY: SELECT * FROM contacts
+Dec 11, 2021 6:21:58 AM logs.Logs logINFO
+INFO: 2021-12-11 06:21:58 Prepared Statement created successfully
+Dec 11, 2021 6:21:58 AM logs.Logs logINFO
+INFO: 2021-12-11 06:21:58 Retrieving Prepared Statement
+Dec 11, 2021 6:21:58 AM logs.Logs logINFO
+INFO: 2021-12-11 06:21:58 Closed Database Connection
+Dec 11, 2021 6:21:58 AM logs.Logs logINFO
+INFO: 2021-12-11 06:21:58 Database Connection was Successful
+Dec 11, 2021 6:21:58 AM logs.Logs logINFO
+INFO: 2021-12-11 06:21:58 QUERY: INSERT INTO `appointments` VALUES ( NULL,?,?,?,?,?,?,?,?,?,?,?,?,? )
+Dec 11, 2021 6:21:58 AM logs.Logs logINFO
+INFO: 2021-12-11 06:21:58 Prepared Statement created successfully
+Dec 11, 2021 6:21:58 AM logs.Logs logINFO
+INFO: 2021-12-11 06:21:58 Retrieving Prepared Statement
+Dec 11, 2021 6:21:58 AM logs.Logs logINFO
+INFO: 2021-12-11 06:21:58 Closed Database Connection
+Dec 11, 2021 6:21:58 AM logs.Logs logINFO
+INFO: 2021-12-11 06:21:58 Database Connection was Successful
+Dec 11, 2021 6:21:58 AM logs.Logs logINFO
+INFO: 2021-12-11 06:21:58 QUERY: SELECT * FROM appointments
+Dec 11, 2021 6:21:58 AM logs.Logs logINFO
+INFO: 2021-12-11 06:21:58 Prepared Statement created successfully
+Dec 11, 2021 6:21:58 AM logs.Logs logINFO
+INFO: 2021-12-11 06:21:58 Retrieving Prepared Statement
+Dec 11, 2021 6:21:58 AM logs.Logs logINFO
+INFO: 2021-12-11 06:21:58 Closed Database Connection
+Dec 11, 2021 6:39:07 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:07 
+--------Program initialized---------
+
+Dec 11, 2021 6:39:07 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:07 Error Alert initialized
+Dec 11, 2021 6:39:07 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:07 Confirmation Alert initialized
+Dec 11, 2021 6:39:09 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:09 Database Connection was Successful
+Dec 11, 2021 6:39:09 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:09 QUERY: SELECT * FROM users
+Dec 11, 2021 6:39:09 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:09 Prepared Statement created successfully
+Dec 11, 2021 6:39:09 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:09 Retrieving Prepared Statement
+Dec 11, 2021 6:39:09 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:09 Closed Database Connection
+Dec 11, 2021 6:39:09 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:09 Database Connection was Successful
+Dec 11, 2021 6:39:09 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:09 QUERY: UPDATE `users` SET Last_Update=? WHERE User_ID = 2
+Dec 11, 2021 6:39:09 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:09 Prepared Statement created successfully
+Dec 11, 2021 6:39:09 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:09 Retrieving Prepared Statement
+Dec 11, 2021 6:39:09 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:09 Closed Database Connection
+Dec 11, 2021 6:39:09 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:09 Database Connection was Successful
+Dec 11, 2021 6:39:09 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:09 QUERY: SELECT * FROM appointments
+Dec 11, 2021 6:39:09 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:09 Prepared Statement created successfully
+Dec 11, 2021 6:39:09 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:09 Retrieving Prepared Statement
+Dec 11, 2021 6:39:09 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:09 Closed Database Connection
+Dec 11, 2021 6:39:10 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:10 Closing window Appointment Scheduler
+Dec 11, 2021 6:39:10 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:10 Closed Database Connection
+Dec 11, 2021 6:39:10 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:10 Closed Database Connection
+Dec 11, 2021 6:39:10 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:10 Navigating to Home Screen Directory
+Dec 11, 2021 6:39:11 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:11 Closing window Home Screen Directory
+Dec 11, 2021 6:39:11 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:11 Closed Database Connection
+Dec 11, 2021 6:39:11 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:11 Closed Database Connection
+Dec 11, 2021 6:39:11 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:11 Navigating to Customer Screen
+Dec 11, 2021 6:39:11 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:11 Database Connection was Successful
+Dec 11, 2021 6:39:11 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:11 QUERY: SELECT * FROM customers
+Dec 11, 2021 6:39:11 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:11 Prepared Statement created successfully
+Dec 11, 2021 6:39:11 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:11 Retrieving Prepared Statement
+Dec 11, 2021 6:39:11 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:11 Closed Database Connection
+Dec 11, 2021 6:39:11 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:11 Database Connection was Successful
+Dec 11, 2021 6:39:11 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:11 QUERY: SELECT * FROM countries
+Dec 11, 2021 6:39:11 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:11 Prepared Statement created successfully
+Dec 11, 2021 6:39:11 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:11 Retrieving Prepared Statement
+Dec 11, 2021 6:39:11 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:11 Closed Database Connection
+Dec 11, 2021 6:39:11 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:11 Database Connection was Successful
+Dec 11, 2021 6:39:11 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:11 QUERY: SELECT * FROM first_level_divisions
+Dec 11, 2021 6:39:11 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:11 Prepared Statement created successfully
+Dec 11, 2021 6:39:11 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:11 Retrieving Prepared Statement
+Dec 11, 2021 6:39:11 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:11 Closed Database Connection
+Dec 11, 2021 6:39:20 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:20 [TablePosition [ row: 6, column: javafx.scene.control.TableColumn@1886e680, tableView: TableView[id=tableViewCustomer, styleClass=table-view] ]]
+Dec 11, 2021 6:39:20 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:20 Database Connection was Successful
+Dec 11, 2021 6:39:20 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:20 QUERY: SELECT * FROM customers WHERE Customer_ID = 26
+Dec 11, 2021 6:39:20 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:20 Prepared Statement created successfully
+Dec 11, 2021 6:39:20 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:20 Retrieving Prepared Statement
+Dec 11, 2021 6:39:20 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:20 Closed Database Connection
+Dec 11, 2021 6:39:20 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:20 Database Connection was Successful
+Dec 11, 2021 6:39:20 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:20 QUERY: SELECT * FROM first_level_divisions WHERE Division_ID = 64
+Dec 11, 2021 6:39:20 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:20 Prepared Statement created successfully
+Dec 11, 2021 6:39:20 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:20 Retrieving Prepared Statement
+Dec 11, 2021 6:39:20 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:20 Closed Database Connection
+Dec 11, 2021 6:39:20 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:20 Database Connection was Successful
+Dec 11, 2021 6:39:20 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:20 QUERY: SELECT * FROM countries WHERE Country_ID = 3
+Dec 11, 2021 6:39:20 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:20 Prepared Statement created successfully
+Dec 11, 2021 6:39:20 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:20 Retrieving Prepared Statement
+Dec 11, 2021 6:39:20 AM logs.Logs logINFO
+INFO: 2021-12-11 06:39:20 Closed Database Connection

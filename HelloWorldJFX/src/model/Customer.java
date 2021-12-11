@@ -1,14 +1,16 @@
 package model;
 
+import java.sql.Timestamp;
+
 public class Customer {
     private Integer customer_id;
     private String customer_name;
     private String address;
     private String postal_code;
     private String phone;
-    private String create_date;
+    private Timestamp create_date;
     private String create_by;
-    private String last_update;
+    private Timestamp last_update;
     private String last_updated_by;
     private Integer division_id;
 
@@ -25,14 +27,14 @@ public class Customer {
      * @param address      String
      * @param postal_code  String
      * @param phone        String
-     * @param create_date  String
+     * @param create_date  Timestamp
      * @param create_by    String
-     * @param last_update  String
+     * @param last_update  Timestamp
      * @param last_updated_by String
      * @param division_id  String
      */
     public Customer(Integer customer_id, String customer_name, String address, String postal_code, String phone,
-                    String create_date, String create_by, String last_update, String last_updated_by, Integer division_id) {
+                    Timestamp create_date, String create_by, Timestamp last_update, String last_updated_by, Integer division_id) {
         super();
         this.customer_id = customer_id;
         this.customer_name = customer_name;
@@ -84,7 +86,7 @@ public class Customer {
     /**
      * @return the create_date
      */
-    public String getCreate_date() {
+    public Timestamp getCreate_date() {
         return create_date;
     }
 
@@ -98,7 +100,7 @@ public class Customer {
     /**
      * @return the last_update
      */
-    public String getLast_update() {
+    public Timestamp getLast_update() {
         return last_update;
     }
 
@@ -154,7 +156,7 @@ public class Customer {
     /**
      * @param create_date the create_date to set
      */
-    public void setCreate_date(String create_date) {
+    public void setCreate_date(Timestamp create_date) {
         this.create_date = create_date;
     }
 
@@ -168,7 +170,7 @@ public class Customer {
     /**
      * @param last_update the last_update to set
      */
-    public void setLast_update_by(String last_update) {
+    public void setLast_update_by(Timestamp last_update) {
         this.last_update = last_update;
     }
 

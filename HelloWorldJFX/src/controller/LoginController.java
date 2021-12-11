@@ -1,6 +1,7 @@
 package controller;
 
 import dao.AppointmentDAO;
+import dao.DataAccessObject;
 import dao.UserDAO;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -11,20 +12,19 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import model.Appointment;
 import model.User;
-import dao.DataAccessObject;
 import shared.JDBC;
 
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Timestamp;
 import java.text.ParseException;
-import java.time.ZoneId;
 import java.util.Locale;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
 import static shared.Common.*;
-import static shared.Constants.*;
+import static shared.Constants.FXMLVIEW;
+import static shared.Constants.LANG_RB;
 
 /**
  * Login Controller that will handle all Login Related actions
@@ -109,7 +109,7 @@ public class LoginController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        System.out.println(getCurrentZone().toString());
+
         boolean flag = getCurrentZone().toString().equals("Europe/Paris");
         if(flag) {
             setSystemToFrench();
@@ -123,6 +123,7 @@ public class LoginController implements Initializable {
 
     /**
      * Method call that will valida the login after making the DAO call
+     *  Lambda Expression that will filter out and Find the Presence of th matched Credentials
      *
      * @param clientName   String
      * @param clientSecret String
@@ -140,6 +141,9 @@ public class LoginController implements Initializable {
                 confirmationPopup(sb.toString());
                 isMeetingsSoon = false;
             }
+            else {
+                confirmationPopup("There are No upcoming Appointments");
+            }
             return true;
         } else {
             return false;
@@ -150,11 +154,13 @@ public class LoginController implements Initializable {
      * Helper Method call that will update the userLogin timestamp
      */
     private void updateLogginTime() {
-        user.setLast_update(formatDateTimeForDB(getCurrentDate(), getCurrentTime()));
+        user.setLast_update(getTimestamp(getCurrentDate().toString(), getCurrentTime().toString(), getCurrentZone().toString()));
         if (dao.update(user)) {
-            getActivityLogger().logINFO(String.format("%s has login time has updated : %s", user.getUser_name(), user.getLast_update()));
+            getActivityLogger().logINFO(String.format("%s has login time has updated : %s",
+                    user.getUser_name(), user.getLast_update()));
         } else {
-            getActivityLogger().logERROR(String.format("Login time could not be updated %s", formatDateTimeForDB(getCurrentDate(), getCurrentTime())));
+            getActivityLogger().logERROR(String.format("Login time could not be updated %s",
+                    formatDateTimeForDB(getCurrentDate(), getCurrentTime())));
         }
 
     }
@@ -210,7 +216,9 @@ public class LoginController implements Initializable {
         appointmentDAO = new AppointmentDAO();
         sb = new StringBuilder();
         try {
-            current = getTimestamp(getCurrentDate().toString(), getCurrentTime(formatUsingDTF(getCurrentTime(), "HH:mm:ss")).toString(), getCurrentZone().toString());
+            current = getTimestamp(getCurrentDate().toString(),
+                    getCurrentTime(formatUsingDTF(getCurrentTime(), "HH:mm:ss")).toString(),
+                    getCurrentZone().toString());
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -218,25 +226,37 @@ public class LoginController implements Initializable {
 
     /**
      * Method that performs the searching of the upcoming appointments within the next 15 minutes
+     * Two Lambda Expressions
+     * First Lambda Expression that will run through each row of the appointments table
+     * and Check the Month and Day to see if it matches the current date and will put it in an ObservableMap
+     * Second Lambda Expression will Check the appointments in the ObservableMap and find the nearest
+     * appointment within 15 minutes and append it to the StringBuilder
+     *
      */
     private void searchForUpcomingAppointments() {
         instantiateAppointmentDAO();
         ObservableList<Appointment> appointments = appointmentDAO.getAll();
         ObservableMap<Timestamp, Appointment> mappedAppt = FXCollections.observableHashMap();
         appointments.stream().forEach(e -> {
-            Timestamp ts = getTimestamp(e.getStart().split(" ")[0], e.getStart().split(" ")[1],
-                    ZoneId.systemDefault().toString());
+            Timestamp ts = getTimestamp(e.getStart().toLocalDateTime().toLocalDate().toString(),
+                    e.getStart().toLocalDateTime().toLocalTime().toString(),
+                    getCurrentZone().toString());
             int month = ts.toLocalDateTime().toLocalDate().getMonth().getValue();
             int day = ts.toLocalDateTime().toLocalDate().getDayOfMonth();
-            if ((month == current.toLocalDateTime().toLocalDate().getMonth().getValue()) && day == current.toLocalDateTime().toLocalDate().getDayOfMonth()) {
+            if ((month == current.toLocalDateTime().toLocalDate().getMonth().getValue())
+                    && day == current.toLocalDateTime().toLocalDate().getDayOfMonth()) {
                 mappedAppt.put(ts, e);
             }
         });
-
+        if(mappedAppt.size() == 0) {
+            return;
+        }
         mappedAppt.forEach((e, v) -> {
-            int diff = e.toLocalDateTime().toLocalTime().getMinute() - current.toLocalDateTime().toLocalTime().getMinute();
+            int diff = e.toLocalDateTime().toLocalTime().getMinute()
+                    - current.toLocalDateTime().toLocalTime().getMinute();
             if (diff > -1 && diff < 16) {
-                sb.append(String.format("Appointment: %s\nStart Time %s\n", v.getTitle(), e.toLocalDateTime().toLocalTime().toString()));
+                sb.append(String.format("Appointment: %s\nStart Time %s\n", v.getTitle(),
+                        e.toLocalDateTime().toLocalTime().toString()));
                 isMeetingsSoon = true;
             }
         });

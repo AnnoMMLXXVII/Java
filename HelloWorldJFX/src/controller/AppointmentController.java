@@ -99,7 +99,7 @@ public class AppointmentController implements Controller<Appointment> {
     private Button updateBtnAppointment;
 
     @FXML
-    private TableColumn<Appointment, String> endCol;
+    private TableColumn<Appointment, Timestamp> endCol;
 
     @FXML
     private TextField endTimeInputAppointment;
@@ -114,7 +114,7 @@ public class AppointmentController implements Controller<Appointment> {
     private RadioButton monthRadioBtn;
 
     @FXML
-    private TableColumn<Appointment, String> startCol;
+    private TableColumn<Appointment, Timestamp> startCol;
 
     @FXML
     private TextField startTimeInputAppointment;
@@ -293,10 +293,8 @@ public class AppointmentController implements Controller<Appointment> {
             getApplicationLogger().logINFO(appointmentsTableView.getSelectionModel().getSelectedCells() + "");
             toggleForRemoveOrModify();
             appointmentCopy = dao.getById(appointmentsTableView.getSelectionModel().getSelectedItem().getAppointment_id());
-            String[] start = appointmentCopy.getStart().split(" ");
-            String[] end = appointmentCopy.getEnd().split(" ");
-            Timestamp s = getTimestamp(getCurrentDate(start[0].trim()).toString(), getCurrentTime(start[1].trim()).toString(), getCurrentZone().toString());
-            Timestamp e = getTimestamp(getCurrentDate(end[0].trim()).toString(), getCurrentTime(end[1].trim()).toString(), getCurrentZone().toString());
+            Timestamp s = appointmentCopy.getStart();
+            Timestamp e = appointmentCopy.getEnd();
             initializeInputsOnTableViewClick(
                     LocalTime.of(s.toLocalDateTime().getHour(), s.toLocalDateTime().getMinute(), s.toLocalDateTime().getSecond()).toString(),
                     LocalTime.of(e.toLocalDateTime().getHour(), e.toLocalDateTime().getMinute(), e.toLocalDateTime().getSecond()).toString(),
@@ -309,7 +307,7 @@ public class AppointmentController implements Controller<Appointment> {
     /**
      * Method that is tied to the ByMonth Radio button
      * On Action, the Appointments Table will update by this month
-     *
+     * Lambda Expression that will find the current appointments within the Current Month
      * @param event ActionEvent
      */
     @FXML
@@ -318,7 +316,7 @@ public class AppointmentController implements Controller<Appointment> {
         appointments.clear();
         dao.getAll().stream().forEach(e -> {
             LocalDate current = getCurrentDate();
-            LocalDate date = getCurrentDate(e.getStart().split(" ")[0]);
+            LocalDate date = e.getStart().toLocalDateTime().toLocalDate();
             if (ChronoUnit.MONTHS.between(current, date) == 0) {
                 appointments.add(e);
             }
@@ -329,7 +327,8 @@ public class AppointmentController implements Controller<Appointment> {
     /**
      * Method is tied to the OnWeek Radio Button
      * On Action, the appointments table will update by appointments within the next 7 days
-     *
+     * Lambda expression that will append appointments that meet the condition
+     * of appointments within the next 7 days
      * @param event ActionEvent
      */
     @FXML
@@ -338,7 +337,7 @@ public class AppointmentController implements Controller<Appointment> {
         appointments.clear();
         dao.getAll().stream().forEach(e -> {
             LocalDate current = getCurrentDate();
-            LocalDate date = getCurrentDate(e.getStart().split(" ")[0]);
+            LocalDate date = e.getStart().toLocalDateTime().toLocalDate();
             if (ChronoUnit.DAYS.between(current, date) < 8 && ChronoUnit.DAYS.between(current, date) >= 0) {
                 appointments.add(e);
             }
@@ -448,6 +447,7 @@ public class AppointmentController implements Controller<Appointment> {
 
     /**
      * Helper method that will initialize the table view values and column headers
+     * Two Lambda Expressions that will convert the Start and End Columns to the current Zone (from UTC)
      */
     private void initializeTableView() {
         appointmentsTableView.setItems(dao.getAll());
@@ -458,18 +458,16 @@ public class AppointmentController implements Controller<Appointment> {
         locationCol.setCellValueFactory(new PropertyValueFactory(DBCOLUMNS.LOCATION.getValue().toLowerCase()));
         contactCol.setCellValueFactory(new PropertyValueFactory(DBCOLUMNS.CONTACT_ID.getValue().toLowerCase()));
         typeCol.setCellValueFactory(new PropertyValueFactory(DBCOLUMNS.TYPE.getValue().toLowerCase()));
-        startCol.setCellValueFactory(e -> new ReadOnlyObjectWrapper<>(
-                String.format("%s",
-                        getTimestamp(
-                                e.getValue().getStart().split(" ")[0],
-                                e.getValue().getStart().split(" ")[1], getCurrentZone().toString()))
-        ));
-        endCol.setCellValueFactory(e -> new ReadOnlyObjectWrapper<>(
-                String.format("%s",
-                        getTimestamp(
-                                e.getValue().getEnd().split(" ")[0],
-                                e.getValue().getEnd().split(" ")[1], getCurrentZone().toString()))
-        ));
+        startCol.setCellValueFactory(e -> {
+            Timestamp ts = getTimestamp(e.getValue().getStart().toLocalDateTime().toLocalDate().toString(),
+                    e.getValue().getStart().toLocalDateTime().toLocalTime().toString(), getCurrentZone().toString());
+            return new ReadOnlyObjectWrapper(String.format("%s %s", ts.toLocalDateTime().toLocalDate(), ts.toLocalDateTime().toLocalTime()));
+        });
+        endCol.setCellValueFactory(e -> {
+            Timestamp ts = getTimestamp(e.getValue().getEnd().toLocalDateTime().toLocalDate().toString(),
+                    e.getValue().getEnd().toLocalDateTime().toLocalTime().toString(), getCurrentZone().toString());
+            return new ReadOnlyObjectWrapper(String.format("%s %s", ts.toLocalDateTime().toLocalDate(), ts.toLocalDateTime().toLocalTime()));
+        });
         customerIDCol.setCellValueFactory(new PropertyValueFactory(DBCOLUMNS.CUSTOMER_ID.getValue().toLowerCase()));
         userIDCol.setCellValueFactory(new PropertyValueFactory(DBCOLUMNS.USER_ID.getValue().toLowerCase()));
     }
@@ -480,26 +478,24 @@ public class AppointmentController implements Controller<Appointment> {
      * @return Appointment
      */
     private Appointment prepareCreateRequest() {
-        Appointment appointment = null;
-        Timestamp startDB = getTimestamp(startDatePickerAppointment.getEditor().getText().trim(), startTimeInputAppointment.getText().trim(), null);
-        Timestamp endDB = getTimestamp(endDatePickerAppointment.getEditor().getText().trim(), endTimeInputAppointment.getText().trim(), null);
-        appointment = new Appointment(
+        Timestamp startDB = getTimestamp(startDatePickerAppointment.getEditor().getText().trim(), startTimeInputAppointment.getText().trim(), getCurrentZone().toString());
+        Timestamp endDB = getTimestamp(endDatePickerAppointment.getEditor().getText().trim(), endTimeInputAppointment.getText().trim(), getCurrentZone().toString());
+        return new Appointment(
                 -1,
                 titleOfAppt.getText().trim(),
                 description.getText().trim(),
                 location.getText().trim(),
                 typeInputAppointment.getText().trim(),
-                startDB.toString(),
-                endDB.toString(),
-                getTimestampByZone(convertToLocalDateTime(getCurrentDate(), getCurrentTime()), null).toString(),
+                startDB,
+                endDB,
+                getTimestampByZone(convertToLocalDateTime(getCurrentDate(), getCurrentTime()), getCurrentZone().toString()),
                 getUserLoggedIn().trim(),
-                getTimestampByZone(convertToLocalDateTime(getCurrentDate(), getCurrentTime()), null).toString(),
+                getTimestampByZone(convertToLocalDateTime(getCurrentDate(), getCurrentTime()), getCurrentZone().toString()),
                 getUserLoggedIn().trim(),
                 customerDAO.getIdFrom(customerSelect.getSelectionModel().getSelectedItem().trim()).getCustomer_id(),
                 userDAO.getIdFrom(getUserLoggedIn().trim()).getUser_id(),
                 contactDAO.getIdFrom(contactSelect.getSelectionModel().getSelectedItem().trim()).getContact_id()
         );
-        return appointment;
     }
 
     /**
@@ -508,19 +504,19 @@ public class AppointmentController implements Controller<Appointment> {
      * @return Appointment
      */
     private Appointment prepareUpdateRequest() {
-        Timestamp startDB = getTimestamp(startDatePickerAppointment.getEditor().getText().trim(), startTimeInputAppointment.getText().trim(), null);
-        Timestamp endDB = getTimestamp(endDatePickerAppointment.getEditor().getText().trim(), endTimeInputAppointment.getText().trim(), null);
+        Timestamp startDB = getTimestamp(startDatePickerAppointment.getEditor().getText().trim(), startTimeInputAppointment.getText().trim(), getCurrentZone().toString());
+        Timestamp endDB = getTimestamp(endDatePickerAppointment.getEditor().getText().trim(), endTimeInputAppointment.getText().trim(), getCurrentZone().toString());
         return new Appointment(
                 Integer.parseInt(apptID.getText().trim()),
                 titleOfAppt.getText().trim(),
                 description.getText().trim(),
                 location.getText().trim(),
                 typeInputAppointment.getText().trim(),
-                startDB.toString(),
-                endDB.toString(),
-                appointmentCopy.getCreate_date().trim(),
+                startDB,
+                endDB,
+                appointmentCopy.getCreate_date(),
                 appointmentCopy.getCreated_by().trim(),
-                getTimestampByZone(convertToLocalDateTime(getCurrentDate(), getCurrentTime()), null).toString(),
+                getTimestampByZone(convertToLocalDateTime(getCurrentDate(), getCurrentTime()), getCurrentZone().toString()),
                 getUserLoggedIn().trim(),
                 customerDAO.getIdFrom(customerSelect.getSelectionModel().getSelectedItem().trim()).getCustomer_id(),
                 userDAO.getIdFrom(getUserLoggedIn().trim()).getUser_id(),
@@ -553,7 +549,7 @@ public class AppointmentController implements Controller<Appointment> {
     }
 
     /**
-     * Validations for Blanks, Start And End Time logic, Between Working Hours, and during the Week
+     * Validations for Blanks, Start And End Time logic, Between Working Hours of EST_ZONE, and During the Week
      *
      * @return boolean
      */
@@ -607,6 +603,7 @@ public class AppointmentController implements Controller<Appointment> {
 
     /**
      * Checks both if Start Time is before the End time to the seconds
+     * Ternery condition to check if the start and time times meet the condition
      *
      * @return boolean
      */
@@ -670,23 +667,18 @@ public class AppointmentController implements Controller<Appointment> {
     private boolean isOverlappingAppointment(LocalDate date, LocalTime time, LocalDate endDate, LocalTime endTime) {
         Integer selectedID = customerDAO.getIdFrom(customerSelect.getSelectionModel().getSelectedItem().trim()).getCustomer_id();
         ObservableList<Appointment> appointments = ((AppointmentDAO) dao).getAllWithInnerJoin(DB_TABLES.customers, DBCOLUMNS.CUSTOMER_ID, selectedID + "");
-        System.out.printf("Date-Time : %s = %s\n", date.toString(), time.toString());
+        System.out.printf("Date-Time : %s - %s\n", date.toString(), time.toString());
         for (Appointment e : appointments) {
-            LocalDate eDate = getCurrentDate(e.getStart().split(" ")[0]);
-            LocalTime eTime = getCurrentTime(e.getStart().split(" ")[1]);
-            LocalDate eEndDate = getCurrentDate(e.getEnd().split(" ")[0]);
-            LocalTime eEndTime = getCurrentTime(e.getEnd().split(" ")[1]);
+            LocalDate eDate = e.getStart().toLocalDateTime().toLocalDate();
+            LocalTime eTime = e.getStart().toLocalDateTime().toLocalTime();
             Timestamp start = getTimestamp(eDate.toString(), eTime.toString(), getCurrentZone().toString());
-            Timestamp end = getTimestamp(eEndDate.toString(), eEndTime.toString(), getCurrentZone().toString());
             if (isDatesSame(start.toLocalDateTime().toLocalDate(), date) || isDatesSame(start.toLocalDateTime().toLocalDate(), endDate)) {
                 if ((eTime.isAfter(time) && eTime.isBefore(endTime))) {
                     isOverlapped = true;
                 }
             }
         }
-        ;
         return isOverlapped;
-
     }
 
     private boolean isDatesSame(LocalDate s, LocalDate e) {

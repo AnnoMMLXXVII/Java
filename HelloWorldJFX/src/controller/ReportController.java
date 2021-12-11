@@ -2,6 +2,7 @@ package controller;
 
 import dao.AppointmentDAO;
 import dao.ContactDAO;
+import dao.DataAccessObject;
 import dao.UserDAO;
 import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.collections.FXCollections;
@@ -10,15 +11,18 @@ import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import model.Appointment;
 import model.Contact;
 import model.User;
 import shared.Constants;
-import dao.DataAccessObject;
 
 import java.net.URL;
+import java.sql.Timestamp;
 import java.util.ResourceBundle;
 import java.util.stream.Collectors;
 
@@ -54,7 +58,7 @@ public class ReportController implements Initializable {
     private TableView<Appointment> contactTableViewReports;
 
     @FXML
-    private TableColumn<User, String> createDateUserLogTableCol;
+    private TableColumn<User, Timestamp> createDateUserLogTableCol;
 
     @FXML
     private TableView<User> createdByUesrsTableViewReports;
@@ -66,13 +70,13 @@ public class ReportController implements Initializable {
     private TableColumn<Appointment, String> descriptionContactTableCol;
 
     @FXML
-    private TableColumn<Appointment, String> endDateContactTableCol;
+    private TableColumn<Appointment, Timestamp> endDateContactTableCol;
 
     @FXML
-    private TableColumn<Appointment, String> endTimeContactTableCol;
+    private TableColumn<Appointment, Timestamp> endTimeContactTableCol;
 
     @FXML
-    private TableColumn<User, String> lastLogUserLogTableCol;
+    private TableColumn<User, Timestamp> lastLogUserLogTableCol;
 
     @FXML
     private TableView<Appointment> monthTableViewReports;
@@ -81,10 +85,10 @@ public class ReportController implements Initializable {
     private TableColumn<Appointment, Integer> totalMonthTableCol;
 
     @FXML
-    private TableColumn<Appointment, String> startDateContactTableCol;
+    private TableColumn<Appointment, Timestamp> startDateContactTableCol;
 
     @FXML
-    private TableColumn<Appointment, String> startTimeContactTableCol;
+    private TableColumn<Appointment, Timestamp> startTimeContactTableCol;
 
     @FXML
     private TableColumn<Appointment, String> titleContactTableCol;
@@ -177,6 +181,7 @@ public class ReportController implements Initializable {
     /**
      * On load, Appointments, Contacts, and Users DAO will be instantiated
      * All Data in the tables will be initialized
+     *
      * @param url
      * @param resourceBundle
      */
@@ -196,6 +201,11 @@ public class ReportController implements Initializable {
     }
 
     /**
+     * Two Lambda Expressions
+     * First Lambda Expression will be by Method Reference that will create a unique or Distinct List of Appointments By Types
+     * and Return an ObservableList
+     * Second Lambda Expression that will distinctly total the number of matched appointments
+     * <p>
      * Method that will update the Appointment By Type Table
      */
     private void initializeTypeTableView() {
@@ -210,62 +220,101 @@ public class ReportController implements Initializable {
     }
 
     /**
+     * Two Lambda Expressions
+     * First Lambda Expression that will distinctly create a row for the months
+     * Second Lambda Expression that will distinctly total the number of matched appointments
      * Method that will update the Appointments By Month Table
      */
     private void initializeByMonthTableView() {
-        ObservableList<Appointment> byMonth = allAppointments.stream().filter(distinctUsingReference(e -> getCurrentDate(e.getStart().split(" ")[0]).getMonth())).collect(Collectors.toCollection(FXCollections::observableArrayList));
+        ObservableList<Appointment> byMonth = allAppointments.stream().filter(
+                distinctUsingReference(e -> e.getStart().toLocalDateTime().toLocalDate().getMonth())).collect(Collectors.toCollection(FXCollections::observableArrayList));
         monthTableViewReports.setItems(byMonth);
         monthMonthTableCol.setCellValueFactory(e -> {
-            String month = getCurrentDate(e.getValue().getStart().split(" ")[0]).getMonth().name();
+            String month = e.getValue().getStart().toLocalDateTime().toLocalDate().getMonth().name();
             return new ReadOnlyObjectWrapper<>(month);
         });
         final ObservableList<Appointment> finalAppt = allAppointments;
         totalMonthTableCol.setCellValueFactory(e -> {
             Integer count = Math.toIntExact(finalAppt.stream().filter(a ->
-                    getCurrentDate(a.getStart().split(" ")[0]).getMonth().equals(getCurrentDate(e.getValue().getStart().split(" ")[0]).getMonth())).count());
+                    a.getStart().toLocalDateTime().toLocalDate().getMonth().equals(e.getValue().getStart().toLocalDateTime().toLocalDate().getMonth())).count());
             return new ReadOnlyObjectWrapper(count);
         });
 
     }
 
     /**
+     * Lambda Expression by Method Reference that will create a unique or distinct Observable List for the ComboDropDown
      * Method that will update the Contact Dropdown
      */
     private void initializeContactDropDown() {
-        ObservableList<Contact> contactsList = allContacts.stream().filter(distinctUsingReference(Contact::getContact_name)).collect(Collectors.toCollection(FXCollections::observableArrayList));
+        ObservableList<Contact> contactsList = allContacts.stream().
+                filter(distinctUsingReference(Contact::getContact_name)).collect(Collectors.toCollection(FXCollections::observableArrayList));
         contactDropDownReports.setItems(contactsList);
     }
 
     /**
      * Method that will update the Contact Table View
+     * Five Lambda Expressions
+     * First Lambda Expression will return an ObservableList based on the matching contact_id and from the selected dropdown
+     * Last Four Lambda Expressions that will convert the Start Date and Time and End Date and Time Columns to the current Zone (from UTC)
      */
     private void initializeContactTableView() {
         Contact selectedContact = contactDAO.getIdFrom(contactDropDownReports.getSelectionModel().getSelectedItem().getContact_name());
         ObservableList<Appointment> contactTable = appointmentDAO.getAll().stream().filter(e -> e.getContact_id().equals(selectedContact.getContact_id())).collect(Collectors.toCollection(FXCollections::observableArrayList));
         contactTableViewReports.setItems(contactTable);
-        final ObservableList<Appointment> finalAppt = contactTable;
         customerIdContactTableCol.setCellValueFactory(new PropertyValueFactory<>(Constants.DBCOLUMNS.CUSTOMER_ID.getValue().toLowerCase()));
         appointmentIdContactTableCol.setCellValueFactory(new PropertyValueFactory<>(Constants.DBCOLUMNS.APPOINTMENT_ID.getValue().toLowerCase()));
         titleContactTableCol.setCellValueFactory(new PropertyValueFactory<>(Constants.DBCOLUMNS.TITLE.getValue().toLowerCase()));
         descriptionContactTableCol.setCellValueFactory(new PropertyValueFactory<>(Constants.DBCOLUMNS.DESCRIPTION.getValue().toLowerCase()));
         typeContactTableCol.setCellValueFactory(new PropertyValueFactory<>(Constants.DBCOLUMNS.TYPE.getValue().toLowerCase()));
-        startDateContactTableCol.setCellValueFactory(e -> new ReadOnlyObjectWrapper<>(e.getValue().getStart().split(" ")[0]));
-        endDateContactTableCol.setCellValueFactory(e -> new ReadOnlyObjectWrapper<>(e.getValue().getEnd().split(" ")[0]));
-        startTimeContactTableCol.setCellValueFactory(e -> new ReadOnlyObjectWrapper<>(e.getValue().getStart().split(" ")[1]));
-        endTimeContactTableCol.setCellValueFactory(e -> new ReadOnlyObjectWrapper<>(e.getValue().getEnd().split(" ")[1]));
+        startDateContactTableCol.setCellValueFactory(e -> {
+            Timestamp ts = getTimestamp(e.getValue().getStart().toLocalDateTime().toLocalDate().toString(),
+                    e.getValue().getStart().toLocalDateTime().toLocalTime().toString(), getCurrentZone().toString());
+            return new ReadOnlyObjectWrapper(String.format("%s", ts.toLocalDateTime().toLocalDate()));
+        });
+        endDateContactTableCol.setCellValueFactory(e -> {
+            Timestamp ts = getTimestamp(e.getValue().getEnd().toLocalDateTime().toLocalDate().toString(),
+                    e.getValue().getEnd().toLocalDateTime().toLocalTime().toString(), getCurrentZone().toString());
+            return new ReadOnlyObjectWrapper(String.format("%s", ts.toLocalDateTime().toLocalDate()));
+        });
+        startTimeContactTableCol.setCellValueFactory(e -> {
+            Timestamp ts = getTimestamp(e.getValue().getStart().toLocalDateTime().toLocalDate().toString(),
+                    e.getValue().getStart().toLocalDateTime().toLocalTime().toString(), getCurrentZone().toString());
+            return new ReadOnlyObjectWrapper(String.format("%s", ts.toLocalDateTime().toLocalTime()));
+        });
+        endTimeContactTableCol.setCellValueFactory(e -> {
+            Timestamp ts = getTimestamp(e.getValue().getEnd().toLocalDateTime().toLocalDate().toString(),
+                    e.getValue().getEnd().toLocalDateTime().toLocalTime().toString(), getCurrentZone().toString());
+            return new ReadOnlyObjectWrapper(String.format("%s", ts.toLocalDateTime().toLocalTime()));
+        });
     }
 
     /**
+     * Three Lambda Expressions
+     * First Will extract the userNames from the User's Object
+     * Last Two will properly format and convert the Last_Update and Create_Date Dates and Times to
+     * the Current Time zone from UTC
      * Method that will initialize the User's Last Logged In Table
      */
     private void initializeLastLoggedInTable() {
         userLoggedInTableViewReports.setItems(allUsers);
         userUserLogTableCol.setCellValueFactory(e -> new ReadOnlyObjectWrapper<>(e.getValue().getUser_name()));
-        lastLogUserLogTableCol.setCellValueFactory(e -> new ReadOnlyObjectWrapper<>(e.getValue().getLast_update()));
-        createDateUserLogTableCol.setCellValueFactory(e -> new ReadOnlyObjectWrapper<>(e.getValue().getCreate_date()));
+        lastLogUserLogTableCol.setCellValueFactory(e -> {
+            Timestamp ts = getTimestamp(e.getValue().getLast_update().toLocalDateTime().toLocalDate().toString(),
+                    e.getValue().getLast_update().toLocalDateTime().toLocalTime().toString(), getCurrentZone().toString());
+            return new ReadOnlyObjectWrapper(String.format("%s %s", ts.toLocalDateTime().toLocalDate(), ts.toLocalDateTime().toLocalTime()));
+        });
+        createDateUserLogTableCol.setCellValueFactory(e -> {
+            Timestamp ts = getTimestamp(e.getValue().getCreate_date().toLocalDateTime().toLocalDate().toString(),
+                    e.getValue().getCreate_date().toLocalDateTime().toLocalTime().toString(), getCurrentZone().toString());
+            return new ReadOnlyObjectWrapper(String.format("%s %s", ts.toLocalDateTime().toLocalDate(), ts.toLocalDateTime().toLocalTime()));
+        });
     }
 
     /**
+     * Two Lambda Expressions
+     * First Lambda Expression that will extract and format the User_Name from the User's object and Assign it to the Column
+     * Second Lambda Expression that will count and Count the matching User_Id that are from the Appointments table
      * Method that will initialize the Users table
      */
     private void initializeUsersAppointmentTotals() {

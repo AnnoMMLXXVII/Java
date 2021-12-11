@@ -1,16 +1,18 @@
 package model;
 
+import java.sql.Timestamp;
+
 public class Appointment {
     private Integer appointment_id;
     private String title;
     private String description;
     private String location;
     private String type;
-    private String start;
-    private String end;
-    private String create_date;
+    private Timestamp start;
+    private Timestamp end;
+    private Timestamp create_date;
     private String created_by;
-    private String last_update;
+    private Timestamp last_update;
     private String last_updated_by;
     private Integer customer_id;
     private Integer user_id;
@@ -29,18 +31,18 @@ public class Appointment {
      * @param description     String
      * @param location        String
      * @param type            String
-     * @param start           String
-     * @param end             String
-     * @param create_date     String
+     * @param start           Timestamp
+     * @param end             Timestamp
+     * @param create_date     Timestamp
      * @param created_by      String
-     * @param last_update     String
+     * @param last_update     Timestamp
      * @param last_updated_by String
      * @param customer_id     Integer
      * @param user_id         Integer
      * @param contact_id      Integer
      */
     public Appointment(Integer appointment_id, String title, String description, String location, String type,
-                       String start, String end, String create_date, String created_by, String last_update, String last_updated_by,
+                       Timestamp start, Timestamp end, Timestamp create_date, String created_by, Timestamp last_update, String last_updated_by,
                        Integer customer_id, Integer user_id, Integer contact_id) {
         super();
         this.appointment_id = appointment_id;
@@ -97,21 +99,21 @@ public class Appointment {
     /**
      * @return the start
      */
-    public String getStart() {
+    public Timestamp getStart() {
         return start;
     }
 
     /**
      * @return the end
      */
-    public String getEnd() {
+    public Timestamp getEnd() {
         return end;
     }
 
     /**
      * @return the create_date
      */
-    public String getCreate_date() {
+    public Timestamp getCreate_date() {
         return create_date;
     }
 
@@ -125,7 +127,7 @@ public class Appointment {
     /**
      * @return the last_update
      */
-    public String getLast_update() {
+    public Timestamp getLast_update() {
         return last_update;
     }
 
@@ -195,21 +197,21 @@ public class Appointment {
     /**
      * @param start the start to set
      */
-    public void setStart(String start) {
+    public void setStart(Timestamp start) {
         this.start = start;
     }
 
     /**
      * @param end the end to set
      */
-    public void setEnd(String end) {
+    public void setEnd(Timestamp end) {
         this.end = end;
     }
 
     /**
      * @param create_date the create_date to set
      */
-    public void setCreate_date(String create_date) {
+    public void setCreate_date(Timestamp create_date) {
         this.create_date = create_date;
     }
 
@@ -223,7 +225,7 @@ public class Appointment {
     /**
      * @param last_update the last_update to set
      */
-    public void setLast_update(String last_update) {
+    public void setLast_update(Timestamp last_update) {
         this.last_update = last_update;
     }
 

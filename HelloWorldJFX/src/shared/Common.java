@@ -39,6 +39,7 @@ public class Common {
     private static ActivityLogger activityLogger;
     private static ApplicationLogger applicationLogger;
     private static String clientName;
+    private static ZoneId zoneId;
 
     /**
      * Method that will check all Control Fields if empty or null upon submission
@@ -104,8 +105,9 @@ public class Common {
      * @return String
      */
     public static String queryAllWithInnerJoin(DB_TABLES table, DB_TABLES innerJoinTable, DBCOLUMNS joinPK, String joinPKValue) {
-        String query = String.format("%s %s %s", String.format("SELECT * FROM %s", table), appendInnerJoin(table.name(), innerJoinTable.name(), joinPK.getValue()),
-                !(joinPKValue.isBlank() || joinPKValue == null || joinPKValue.isEmpty()) ?
+        String join = appendInnerJoin(table.name(), innerJoinTable.name(), joinPK.getValue());
+        String query = String.format("%s %s %s", String.format("SELECT * FROM %s", table), join,
+                !(joinPKValue.isBlank() || joinPKValue == null || joinPKValue.isEmpty() || join.equals("")) ?
                         String.format("WHERE %s.%s = %s", innerJoinTable, joinPK.getValue(), joinPKValue) : "");
         getApplicationLogger().logINFO("Query: " + query);
         return query;
@@ -191,7 +193,8 @@ public class Common {
      * @return String
      */
     public static String appendInnerJoin(String table, String joinTable, String joinPK) {
-        return String.format("INNER JOIN %s ON %s.%s = %s.%s", joinTable, table, joinPK, joinTable, joinPK);
+        return (table.isEmpty() || joinTable.isEmpty() || joinPK.isEmpty()) ? ""
+                : String.format("INNER JOIN %s ON %s.%s = %s.%s", joinTable, table, joinPK, joinTable, joinPK);
     }
 
     /**
@@ -290,7 +293,11 @@ public class Common {
      * @return
      */
     public static ZoneId getCurrentZone() {
-        return ZoneId.systemDefault();
+        return zoneId;
+    }
+
+    public static void setCurrentZone(ZoneId zoneId) {
+        Common.zoneId = zoneId;
     }
 
     /**
@@ -438,6 +445,8 @@ public class Common {
     }
 
     /**
+     * Lambda Expression that will add the values of the DAO Object to the Strings ComboBox
+     *
      * @param dao      DataAccessObject : ?
      * @param comboBox ComboBox : String
      * @return ComboBox : String
@@ -452,7 +461,7 @@ public class Common {
     }
 
     /**
-     * Lambda expression that will create a distinct result
+     * Predicate Lambda expression that will create a distinct result
      *
      * @param e   Function ? super T, T
      * @param <T> ?

@@ -141,9 +141,9 @@ public class UserDAO implements DataAccessObject<User> {
         return new User(Integer.parseInt(rs.getString(DBCOLUMNS.USER_ID.getValue())),
                 rs.getString(DBCOLUMNS.USER_NAME.getValue()),
                 rs.getString(DBCOLUMNS.PASSWORD.getValue()),
-                rs.getString(DBCOLUMNS.CREATE_DATE.getValue()),
+                rs.getTimestamp(DBCOLUMNS.CREATE_DATE.getValue()),
                 rs.getString(DBCOLUMNS.CREATED_BY.getValue()),
-                rs.getString(DBCOLUMNS.LAST_UPDATE.getValue()),
+                rs.getTimestamp(DBCOLUMNS.LAST_UPDATE.getValue()),
                 rs.getString(DBCOLUMNS.LAST_UPDATED_BY.getValue())
         );
     }
@@ -155,6 +155,6 @@ public class UserDAO implements DataAccessObject<User> {
      */
     @Override
     public void executeModificationQuery(PreparedStatement ps, User object) throws SQLException {
-        ps.setString(1, object.getLast_update());
+        ps.setTimestamp(1, object.getLast_update());
     }
 }

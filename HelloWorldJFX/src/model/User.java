@@ -1,5 +1,7 @@
 package model;
 
+import java.sql.Timestamp;
+
 /**
  *
  */
@@ -8,9 +10,9 @@ public class User {
     public int user_id;
     public String user_name;
     public String password;
-    public String create_date;
+    public Timestamp create_date;
     public String created_by;
-    public String last_update;
+    public Timestamp last_update;
     public String last_update_by;
 
     /**
@@ -22,8 +24,8 @@ public class User {
      * @param last_update String
      * @param last_update_by String
      */
-    public User(int user_id, String user_name, String password, String create_date, String created_by,
-                String last_update, String last_update_by) {
+    public User(int user_id, String user_name, String password, Timestamp create_date, String created_by,
+                Timestamp last_update, String last_update_by) {
         super();
         this.user_id = user_id;
         this.user_name = user_name;
@@ -54,7 +56,7 @@ public class User {
     /**
      * @return the create_date
      */
-    public String getCreate_date() {
+    public Timestamp getCreate_date() {
         return create_date;
     }
     /**
@@ -66,7 +68,7 @@ public class User {
     /**
      * @return the last_update
      */
-    public String getLast_update() {
+    public Timestamp getLast_update() {
         return last_update;
     }
     /**
@@ -96,7 +98,7 @@ public class User {
     /**
      * @param create_date the create_date to set
      */
-    public void setCreate_date(String create_date) {
+    public void setCreate_date(Timestamp create_date) {
         this.create_date = create_date;
     }
     /**
@@ -108,7 +110,7 @@ public class User {
     /**
      * @param last_update the last_update to set
      */
-    public void setLast_update(String last_update) {
+    public void setLast_update(Timestamp last_update) {
         this.last_update = last_update;
     }
     /**

@@ -10,6 +10,8 @@ import logs.ApplicationLogger;
 import logs.Logs;
 import shared.JDBC;
 
+import java.time.ZoneId;
+
 import static shared.Common.*;
 import static shared.Constants.FXMLVIEW;
 import static shared.Constants.LOG_FILE;
@@ -43,6 +45,7 @@ public class Main extends Application {
      * @param args
      */
     public static void main(String[] args) {
+        setCurrentZone(ZoneId.systemDefault());
         launch(args);
         JDBC.closeConnection();
     }

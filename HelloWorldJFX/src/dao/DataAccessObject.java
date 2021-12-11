@@ -64,7 +64,7 @@ public interface DataAccessObject<T> {
     /**
      * Helper method that will reverse look up the T Id by the @param Name
      * Override toString() method in the Model classes such only the names get returned
-     *
+     *  Lambda Expression that will find the first Optional T object and return T if found
      * @param name String
      * @return T DAO
      */
