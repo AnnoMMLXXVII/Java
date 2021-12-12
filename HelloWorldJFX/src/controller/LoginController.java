@@ -38,6 +38,7 @@ public class LoginController implements Initializable {
     private StringBuilder sb;
     private Timestamp current;
     private boolean isMeetingsSoon = false;
+    private ResourceBundle rb;
 
     @FXML
     private Button btnLogin;
@@ -83,7 +84,7 @@ public class LoginController implements Initializable {
             navigateToWindow(FXMLVIEW.HOMESCREEN, "Home Screen Directory");
         } else {
             getApplicationLogger().logWARN("Failed to Login");
-            errorPopup();
+            errorPopup(this.rb.getString("invalidLoginHeaderText"), this.rb.getString("invalidLoginContentText"));
             if (!JDBC.getConnection().isClosed()) {
                 JDBC.closeConnection();
             }
@@ -92,7 +93,8 @@ public class LoginController implements Initializable {
 
     @FXML
     void cancelBtnLogin(ActionEvent event) {
-        if (confirmationPopup()) {
+        if (confirmationPopup(this.rb.getString("exitConfirmExitHeaderText"),
+                this.rb.getString("exitConfirmExitContentText"))) {
             closeConnectionConditionally();
             closePreviousWindow(cxlBtnLogin);
             getApplicationLogger().logINFO("Program Terminated");
@@ -111,9 +113,9 @@ public class LoginController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
 
         boolean flag = getCurrentZone().toString().equals("Europe/Paris");
-        if(flag) {
+//        if (flag) {
             setSystemToFrench();
-        }
+//        }
         updateLoginToLanguage(ResourceBundle.getBundle(LANG_RB, Locale.getDefault()));
         timeZoneLoginLbl.setText(getCurrentZone().toString());
         dao = new UserDAO();
@@ -123,13 +125,13 @@ public class LoginController implements Initializable {
 
     /**
      * Method call that will valida the login after making the DAO call
-     *  Lambda Expression that will filter out and Find the Presence of th matched Credentials
+     * Lambda Expression that will filter out and Find the Presence of th matched Credentials
      *
      * @param clientName   String
      * @param clientSecret String
      * @return boolean
      */
-    private boolean validLogin(String clientName, String clientSecret) {
+    private boolean validLogin(String clientName, String clientSecret) throws ParseException {
         users = dao.getAll();
         Optional<User> opt = users.stream().filter(e -> e.getUser_name().equals(clientName) && e.getPassword().equals(clientSecret)).findFirst();
         if (opt.isPresent()) {
@@ -138,11 +140,10 @@ public class LoginController implements Initializable {
             updateLogginTime();
             searchForUpcomingAppointments();
             if (isMeetingsSoon) {
-                confirmationPopup(sb.toString());
+                confirmationPopup(this.rb.getString("upcomingMeetingsHeaderText"), sb.toString());
                 isMeetingsSoon = false;
-            }
-            else {
-                confirmationPopup("There are No upcoming Appointments");
+            } else {
+                confirmationPopup(this.rb.getString("upcomingMeetingsHeaderText"), this.rb.getString("noUpcomingMeetingsContentText"));
             }
             return true;
         } else {
@@ -153,8 +154,9 @@ public class LoginController implements Initializable {
     /**
      * Helper Method call that will update the userLogin timestamp
      */
-    private void updateLogginTime() {
-        user.setLast_update(getTimestamp(getCurrentDate().toString(), getCurrentTime().toString(), getCurrentZone().toString()));
+    private void updateLogginTime() throws ParseException {
+        System.out.println(getCurrentTime().toString());
+        user.setLast_update(getTimestamp(getCurrentDate().toString(), formatUsingDTF(getCurrentTime(), "HH:mm:ss"), getCurrentZone().toString()));
         if (dao.update(user)) {
             getActivityLogger().logINFO(String.format("%s has login time has updated : %s",
                     user.getUser_name(), user.getLast_update()));
@@ -168,9 +170,10 @@ public class LoginController implements Initializable {
     /**
      * Mehod that will be mainly for
      *
-     * @param rb
+     * @param resourceBundle ResourceBundle
      */
-    private void updateLoginToLanguage(ResourceBundle rb) {
+    private void updateLoginToLanguage(ResourceBundle resourceBundle) {
+        this.rb = resourceBundle;
         userNameInputLogin.promptTextProperty().set(rb.getString("userNameInputLogin"));
         passwordInputLogin.promptTextProperty().set(rb.getString("passwordInputLogin"));
         headerLblLogin.setText(rb.getString("headerLblLogin"));
@@ -231,9 +234,9 @@ public class LoginController implements Initializable {
      * and Check the Month and Day to see if it matches the current date and will put it in an ObservableMap
      * Second Lambda Expression will Check the appointments in the ObservableMap and find the nearest
      * appointment within 15 minutes and append it to the StringBuilder
-     *
      */
     private void searchForUpcomingAppointments() {
+        getApplicationLogger().logINFO("Searching for meetings...");
         instantiateAppointmentDAO();
         ObservableList<Appointment> appointments = appointmentDAO.getAll();
         ObservableMap<Timestamp, Appointment> mappedAppt = FXCollections.observableHashMap();
@@ -248,7 +251,7 @@ public class LoginController implements Initializable {
                 mappedAppt.put(ts, e);
             }
         });
-        if(mappedAppt.size() == 0) {
+        if (mappedAppt.size() == 0) {
             return;
         }
         mappedAppt.forEach((e, v) -> {

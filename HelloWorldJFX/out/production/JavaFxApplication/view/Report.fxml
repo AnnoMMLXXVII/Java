@@ -24,7 +24,8 @@
                     <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="340.0" prefWidth="1200.0">
                             <children>
-                                <Label contentDisplay="CENTER" layoutX="605.0" layoutY="50.0" prefHeight="35.0" prefWidth="595.0" style="-fx-background-color: #EBECF0;" text="Customer Totals By Month">
+                        <ComboBox fx:id="customerComboBoxReports" layoutX="10.0" layoutY="50.0" onAction="#onCustomerReportsAction" prefHeight="35.0" prefWidth="200.0" promptText="Select Customer" style="-fx-background-color: #EBECF0;" />
+                                <Label contentDisplay="CENTER" layoutX="605.0" layoutY="90.0" prefHeight="35.0" prefWidth="595.0" style="-fx-background-color: #EBECF0;" text="Customer Totals By Month">
                                     <font>
                                         <Font name="System Bold" size="18.0" />
                                     </font>
@@ -32,13 +33,13 @@
                                         <Insets left="50.0" />
                                     </padding>
                                 </Label>
-                                <TableView fx:id="monthTableViewReports" layoutX="615.0" layoutY="95.0" prefHeight="285.0" prefWidth="575.0" style="-fx-background-color: #EBECF0; -fx-border-color: #111111;">
+                                <TableView fx:id="monthTableViewReports" layoutX="615.0" layoutY="130.0" prefHeight="285.0" prefWidth="575.0" style="-fx-background-color: #EBECF0; -fx-border-color: #111111;">
                                     <columns>
-                                        <TableColumn fx:id="monthMonthTableCol" prefWidth="286.0" text="Months" />
-                                        <TableColumn fx:id="totalMonthTableCol" prefWidth="286.0" text="Totals" />
+                              <TableColumn fx:id="monthMonthTableCol" prefWidth="287.0" text="Months" />
+                                        <TableColumn fx:id="totalMonthTableCol" prefWidth="287.0" text="Totals" />
                                     </columns>
                                 </TableView>
-                                <Label layoutY="50.0" prefHeight="35.0" prefWidth="595.0" style="-fx-background-color: #EBECF0;" text="Appointment Totals By Type">
+                                <Label layoutY="90.0" prefHeight="35.0" prefWidth="595.0" style="-fx-background-color: #EBECF0;" text="Appointment Totals By Type">
                                     <font>
                                         <Font name="System Bold" size="18.0" />
                                     </font>
@@ -46,10 +47,10 @@
                                         <Insets left="50.0" />
                                     </padding>
                                 </Label>
-                                <TableView fx:id="typeTableViewReports" layoutX="10.0" layoutY="95.0" prefHeight="285.0" prefWidth="575.0" style="-fx-background-color: #EBECF0; -fx-border-color: #111111;">
+                                <TableView fx:id="typeTableViewReports" layoutX="10.0" layoutY="130.0" prefHeight="285.0" prefWidth="575.0" style="-fx-background-color: #EBECF0; -fx-border-color: #111111;">
                                     <columns>
-                                        <TableColumn fx:id="typeTypeTotalTableCol" prefWidth="286.0" text="Type" />
-                                        <TableColumn fx:id="totalsTypeTotalTableCol" prefWidth="286.0" text="Totals" />
+                                        <TableColumn fx:id="typeTypeTotalTableCol" prefWidth="287.0" text="Type" />
+                                        <TableColumn fx:id="totalsTypeTotalTableCol" prefWidth="287.0" text="Totals" />
                                     </columns>
                                 </TableView>
                                 <Label alignment="CENTER" prefHeight="50.0" prefWidth="1200.0" text="Customer Reports" textAlignment="CENTER">

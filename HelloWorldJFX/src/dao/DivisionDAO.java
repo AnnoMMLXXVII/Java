@@ -111,7 +111,8 @@ public class DivisionDAO implements DataAccessObject<Division> {
 
     /**
      * returns all divisions in a Observable List
-     *
+     * Lambda Expression that uses the ObservableMap to add
+     * all the divisions into the values of the DivisionList
      * @return ObservableList
      */
     @Override
@@ -119,16 +120,8 @@ public class DivisionDAO implements DataAccessObject<Division> {
         if (divisions == null) {
             divisions = getAllDivision();
         }
-        // (e,v) -> (key, value)
-        // 1 (US) -> 50 states (List<States>)
-        // divList adds ALL the values (V)
-        // 2 (UK) -> 5 sections (List<Sections>)
-        // 3 (CA) -> 10 provinces (List<Provinces>)
         divisions.forEach((e, v) -> {
             divList.addAll(v);
-//            v.stream().forEach(k -> {
-//                System.out.println(k.toString());
-//            });
         });
         return divList;
     }

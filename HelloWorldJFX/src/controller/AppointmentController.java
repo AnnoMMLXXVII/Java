@@ -227,7 +227,9 @@ public class AppointmentController implements Controller<Appointment> {
      */
     @FXML
     public void removeAction(ActionEvent event) {
-        if (isTableViewClicked && confirmationPopup("Confirm Delete Action")) {
+        String content = String.format("Confirmation To Delete\nAppointment ID : %s\nAppointment Type : %s",appointmentsTableView.getSelectionModel().getSelectedItem().getAppointment_id(),
+                appointmentsTableView.getSelectionModel().getSelectedItem().getType());
+        if (isTableViewClicked && confirmationPopup(content)) {
             if (dao.removeById(appointmentsTableView.getSelectionModel().getSelectedItem().getAppointment_id())) {
                 getActivityLogger().logINFO(String.format("%s has removed the Appointment Id %s", getUserLoggedIn(), appointmentCopy.getAppointment_id()));
                 appointmentsTableView.getSelectionModel().clearSelection();
@@ -257,7 +259,7 @@ public class AppointmentController implements Controller<Appointment> {
     @FXML
     public void updateAction(ActionEvent event) {
         if (isValidAppointmentForm()) {
-            if (isTableViewClicked && confirmationPopup("Confirm Update Action")) {
+            if (isTableViewClicked && confirmationPopup(String.format("Confirmation To Update\nAppointment ID : %s",appointmentCopy.getAppointment_id()))) {
                 Integer originalAppointment = appointmentCopy.getAppointment_id();
                 if (dao.update(prepareUpdateRequest())) {
                     getActivityLogger().logINFO(String.format("%s has updated the Appointment %s", getUserLoggedIn(), originalAppointment));

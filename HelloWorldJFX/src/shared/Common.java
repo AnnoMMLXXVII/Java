@@ -330,9 +330,17 @@ public class Common {
      */
     public static LocalTime getCurrentTime(String time) {
         String[] split = time.split(":");
+        if (split.length < 3) {
+            return LocalTime.of(Integer.parseInt(split[0]),
+                    Integer.parseInt(split[1]), 00);
+        }
+        String seconds = "00";
+        if (split[2].contains("\\.")) {
+            seconds = split[2].split("\\.")[0];
+        }
         return LocalTime.of(Integer.parseInt(split[0]),
                 Integer.parseInt(split[1]),
-                (split.length < 3) ? 00 : Integer.parseInt(split[2]));
+                Integer.parseInt(seconds));
     }
 
     /**
@@ -403,11 +411,24 @@ public class Common {
     }
 
     /**
-     * @param string String
+     * @param content String
      * @return boolean
      */
-    public static boolean confirmationPopup(String string) {
-        conf = new Alert(Alert.AlertType.CONFIRMATION, string);
+    public static boolean confirmationPopup(String content) {
+        conf = new Alert(Alert.AlertType.CONFIRMATION, content);
+        Optional<ButtonType> confirmation = conf.showAndWait();
+        return (confirmation.isPresent() && confirmation.get() == ButtonType.OK) ? true : false;
+    }
+
+    /**
+     * @param header String
+     * @param content String
+     * @return boolean
+     */
+    public static boolean confirmationPopup(String header, String content) {
+        conf = new Alert(Alert.AlertType.CONFIRMATION);
+        conf.setHeaderText(header);
+        conf.setContentText(content);
         Optional<ButtonType> confirmation = conf.showAndWait();
         return (confirmation.isPresent() && confirmation.get() == ButtonType.OK) ? true : false;
     }
@@ -435,12 +456,14 @@ public class Common {
     }
 
     /**
-     * Reuseable ErrorPopup
-     *
-     * @param string String
+     * Reuseable ErrorPopup with Header and Content params
+     * @param header String
+     * @param content String
      */
-    public static void errorPopup(String string) {
-        error = new Alert(Alert.AlertType.ERROR, string);
+    public static void errorPopup(String header, String content) {
+        error = new Alert(Alert.AlertType.ERROR);
+        error.setHeaderText(header);
+        error.setContentText(content);
         error.showAndWait();
     }
 

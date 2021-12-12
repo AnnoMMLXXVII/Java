@@ -1,9 +1,6 @@
 package controller;
 
-import dao.AppointmentDAO;
-import dao.ContactDAO;
-import dao.DataAccessObject;
-import dao.UserDAO;
+import dao.*;
 import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -18,8 +15,8 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import model.Appointment;
 import model.Contact;
+import model.Customer;
 import model.User;
-import shared.Constants;
 
 import java.net.URL;
 import java.sql.Timestamp;
@@ -27,6 +24,8 @@ import java.util.ResourceBundle;
 import java.util.stream.Collectors;
 
 import static shared.Common.*;
+import static shared.Constants.DBCOLUMNS;
+import static shared.Constants.FXMLVIEW;
 
 /**
  * Reports Controller Screen that will mainly display data
@@ -37,16 +36,20 @@ public class ReportController implements Initializable {
     private DataAccessObject<Appointment> appointmentDAO;
     private DataAccessObject<Contact> contactDAO;
     private DataAccessObject<User> userDAO;
+    private DataAccessObject<Customer> customerDAO;
     private ObservableList<Appointment> allAppointments;
     private ObservableList<Contact> allContacts;
     private ObservableList<User> allUsers;
-
+    private ObservableList<Customer> allCustomers;
 
     @FXML
     private TableColumn<Appointment, Integer> appointmentIdContactTableCol;
 
     @FXML
     private TableColumn<Appointment, String> monthMonthTableCol;
+
+    @FXML
+    private ComboBox<String> customerComboBoxReports;
 
     @FXML
     private Button backBtnReports;
@@ -126,7 +129,7 @@ public class ReportController implements Initializable {
     void cancelAction(ActionEvent event) {
         if (confirmationPopup("Navigate back to the home screen?")) {
             closePreviousWindow(backBtnReports);
-            navigateToWindow(Constants.FXMLVIEW.HOMESCREEN, "Navigating To HomeScreen");
+            navigateToWindow(FXMLVIEW.HOMESCREEN, "Navigating To HomeScreen");
         }
     }
 
@@ -138,6 +141,12 @@ public class ReportController implements Initializable {
     @FXML
     void onContactDropDownAction(Event event) {
         initializeContactTableView();
+    }
+
+    @FXML
+    void onCustomerReportsAction(Event event) {
+        Customer customer = customerDAO.getIdFrom(customerComboBoxReports.getSelectionModel().getSelectedItem());
+        initializeCustomerReports(customer.getCustomer_id());
     }
 
     /**
@@ -161,8 +170,8 @@ public class ReportController implements Initializable {
     @FXML
     void onCustmerTabAction(Event event) {
         allAppointments = appointmentDAO.getAll();
-        initializeTypeTableView();
-        initializeByMonthTableView();
+        allCustomers = customerDAO.getAll();
+        customerComboBoxReports = initializeComboBox(customerDAO, customerComboBoxReports);
     }
 
     /**
@@ -190,14 +199,19 @@ public class ReportController implements Initializable {
         appointmentDAO = new AppointmentDAO();
         contactDAO = new ContactDAO();
         userDAO = new UserDAO();
+        customerDAO = new CustomerDAO();
         allAppointments = appointmentDAO.getAll();
         allContacts = contactDAO.getAll();
         allUsers = userDAO.getAll();
-        initializeTypeTableView();
-        initializeByMonthTableView();
+        allCustomers = customerDAO.getAll();
+        customerComboBoxReports = initializeComboBox(customerDAO, customerComboBoxReports);
         initializeContactDropDown();
         initializeLastLoggedInTable();
         initializeUsersAppointmentTotals();
+    }
+
+    private void initializeCustomerReports(Integer customer_Id) {
+        initializeTypeTableView(customer_Id);
     }
 
     /**
@@ -208,11 +222,18 @@ public class ReportController implements Initializable {
      * <p>
      * Method that will update the Appointment By Type Table
      */
-    private void initializeTypeTableView() {
-        ObservableList<Appointment> types = allAppointments.stream().filter(distinctUsingReference(Appointment::getType)).collect(Collectors.toCollection(FXCollections::observableArrayList));
-        typeTableViewReports.setItems(types);
-        typeTypeTotalTableCol.setCellValueFactory(new PropertyValueFactory<>(Constants.DBCOLUMNS.TYPE.getValue().toLowerCase()));
-        final ObservableList<Appointment> finalTypes = allAppointments;
+    private void initializeTypeTableView(Integer customer_Id) {
+        allAppointments = appointmentDAO.getAll();
+        ObservableList<Appointment> types = allAppointments.stream()
+                .filter(e -> e.getCustomer_id() == customer_Id)
+                .collect(Collectors.toCollection(FXCollections::observableArrayList));
+        initializeByMonthTableView(types);
+        types.forEach(System.out::println);
+        typeTableViewReports.setItems(types.stream()
+                .filter(distinctUsingReference(Appointment::getType))
+                .collect(Collectors.toCollection(FXCollections::observableArrayList)));
+        typeTypeTotalTableCol.setCellValueFactory(new PropertyValueFactory<>(DBCOLUMNS.TYPE.getValue().toLowerCase()));
+        final ObservableList<Appointment> finalTypes = types;
         totalsTypeTotalTableCol.setCellValueFactory(e -> {
             Integer count = Math.toIntExact(finalTypes.stream().filter(a -> a.getType().equalsIgnoreCase(e.getValue().getType())).count());
             return new ReadOnlyObjectWrapper(count);
@@ -225,15 +246,16 @@ public class ReportController implements Initializable {
      * Second Lambda Expression that will distinctly total the number of matched appointments
      * Method that will update the Appointments By Month Table
      */
-    private void initializeByMonthTableView() {
-        ObservableList<Appointment> byMonth = allAppointments.stream().filter(
-                distinctUsingReference(e -> e.getStart().toLocalDateTime().toLocalDate().getMonth())).collect(Collectors.toCollection(FXCollections::observableArrayList));
-        monthTableViewReports.setItems(byMonth);
+    private void initializeByMonthTableView(ObservableList<Appointment> filtered) {
+        allAppointments = appointmentDAO.getAll();
+        monthTableViewReports.setItems(filtered.stream()
+                .filter(distinctUsingReference(e-> e.getStart().toLocalDateTime().toLocalDate().getMonth()))
+                .collect(Collectors.toCollection(FXCollections::observableArrayList)));
         monthMonthTableCol.setCellValueFactory(e -> {
-            String month = e.getValue().getStart().toLocalDateTime().toLocalDate().getMonth().name();
+            String month = e.getValue().getStart().toLocalDateTime().getMonth().name();
             return new ReadOnlyObjectWrapper<>(month);
         });
-        final ObservableList<Appointment> finalAppt = allAppointments;
+        final ObservableList<Appointment> finalAppt = filtered;
         totalMonthTableCol.setCellValueFactory(e -> {
             Integer count = Math.toIntExact(finalAppt.stream().filter(a ->
                     a.getStart().toLocalDateTime().toLocalDate().getMonth().equals(e.getValue().getStart().toLocalDateTime().toLocalDate().getMonth())).count());
@@ -262,11 +284,11 @@ public class ReportController implements Initializable {
         Contact selectedContact = contactDAO.getIdFrom(contactDropDownReports.getSelectionModel().getSelectedItem().getContact_name());
         ObservableList<Appointment> contactTable = appointmentDAO.getAll().stream().filter(e -> e.getContact_id().equals(selectedContact.getContact_id())).collect(Collectors.toCollection(FXCollections::observableArrayList));
         contactTableViewReports.setItems(contactTable);
-        customerIdContactTableCol.setCellValueFactory(new PropertyValueFactory<>(Constants.DBCOLUMNS.CUSTOMER_ID.getValue().toLowerCase()));
-        appointmentIdContactTableCol.setCellValueFactory(new PropertyValueFactory<>(Constants.DBCOLUMNS.APPOINTMENT_ID.getValue().toLowerCase()));
-        titleContactTableCol.setCellValueFactory(new PropertyValueFactory<>(Constants.DBCOLUMNS.TITLE.getValue().toLowerCase()));
-        descriptionContactTableCol.setCellValueFactory(new PropertyValueFactory<>(Constants.DBCOLUMNS.DESCRIPTION.getValue().toLowerCase()));
-        typeContactTableCol.setCellValueFactory(new PropertyValueFactory<>(Constants.DBCOLUMNS.TYPE.getValue().toLowerCase()));
+        customerIdContactTableCol.setCellValueFactory(new PropertyValueFactory<>(DBCOLUMNS.CUSTOMER_ID.getValue().toLowerCase()));
+        appointmentIdContactTableCol.setCellValueFactory(new PropertyValueFactory<>(DBCOLUMNS.APPOINTMENT_ID.getValue().toLowerCase()));
+        titleContactTableCol.setCellValueFactory(new PropertyValueFactory<>(DBCOLUMNS.TITLE.getValue().toLowerCase()));
+        descriptionContactTableCol.setCellValueFactory(new PropertyValueFactory<>(DBCOLUMNS.DESCRIPTION.getValue().toLowerCase()));
+        typeContactTableCol.setCellValueFactory(new PropertyValueFactory<>(DBCOLUMNS.TYPE.getValue().toLowerCase()));
         startDateContactTableCol.setCellValueFactory(e -> {
             Timestamp ts = getTimestamp(e.getValue().getStart().toLocalDateTime().toLocalDate().toString(),
                     e.getValue().getStart().toLocalDateTime().toLocalTime().toString(), getCurrentZone().toString());

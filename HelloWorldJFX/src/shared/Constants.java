@@ -13,7 +13,7 @@ public class Constants {
      * Log File enumeration
      */
     public enum LOG_FILE {
-        activity_log, application_log;
+        login_activity, application_log;
     }
 
     /**

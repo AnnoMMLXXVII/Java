@@ -54,7 +54,7 @@ public class Main extends Application {
      * Creates Activity Logger and Application Looger
      */
     private void initializeLoggers() {
-        activityLogger = new ActivityLogger(LOG_FILE.activity_log.toString());
+        activityLogger = new ActivityLogger(LOG_FILE.login_activity.toString()+".txt");
         applicationLogger = new ApplicationLogger(LOG_FILE.application_log.toString());
         setActivityLogger(activityLogger);
         setApplicationLogger(applicationLogger);
