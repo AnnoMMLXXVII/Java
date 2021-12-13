@@ -118,9 +118,9 @@ public class LoginController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
 
         boolean flag = getCurrentZone().toString().equals("Europe/Paris");
-//        if (flag) {
-        setSystemToFrench();
-//        }
+        if (flag) {
+            setSystemToFrench();
+        }
         updateLoginToLanguage(ResourceBundle.getBundle(LANG_RB, Locale.getDefault()));
         timeZoneLoginLbl.setText(getCurrentZone().toString());
         dao = new UserDAO();

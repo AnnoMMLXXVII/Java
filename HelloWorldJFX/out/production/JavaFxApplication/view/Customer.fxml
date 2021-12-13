@@ -126,7 +126,7 @@
                                                         <Insets />
                                                     </GridPane.margin>
                                                 </ComboBox>
-                                                <ComboBox fx:id="divisionDropDownCustomer" prefHeight="35.0" prefWidth="275.0" promptText="SELECT DIVISION" style="-fx-border-color: #000000; -fx-background-color: #EBECF0;" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                                <ComboBox fx:id="divisionDropDownCustomer" onAction="#clickOnDivisionDropDown" prefHeight="35.0" prefWidth="275.0" promptText="SELECT DIVISION" style="-fx-border-color: #000000; -fx-background-color: #EBECF0;" GridPane.columnIndex="1" GridPane.rowIndex="4">
                                                     <GridPane.margin>
                                                         <Insets />
                                                     </GridPane.margin>

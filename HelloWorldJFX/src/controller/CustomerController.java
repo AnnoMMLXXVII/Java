@@ -40,6 +40,7 @@ public class CustomerController implements Controller<Customer> {
     private ObservableList<Country> countries;
     private ObservableMap<Integer, ObservableList<Division>> mappedDivision;
     private ObservableList<Division> divisions;
+    private Integer division_Id;
 
     @FXML
     private Button addBtnCustomer;
@@ -168,7 +169,15 @@ public class CustomerController implements Controller<Customer> {
             Country country = opt.get();
             initializeDivisionDropDownBy(country.getCountry_id());
         }
+    }
 
+    @FXML
+    void clickOnDivisionDropDown(ActionEvent event) {
+        String selection = divisionDropDownCustomer.getSelectionModel().getSelectedItem();
+        Optional<Division> opt = divisions.stream().filter(e -> e.getDivision().equalsIgnoreCase(selection)).findFirst();
+        if (opt.isPresent()) {
+            setDivisionSelection(opt.get().getDivision_id());
+        }
     }
 
     /**
@@ -450,7 +459,6 @@ public class CustomerController implements Controller<Customer> {
      * @return Customer
      */
     private Customer prepareCreateCustomerRequest() {
-        int divId = divisionDAO.getIdFrom(divisionDropDownCustomer.getSelectionModel().getSelectedItem().trim()).getDivision_id();
         return new Customer(
                 -1,
                 nameInputCustomer.getText().trim(),
@@ -461,7 +469,7 @@ public class CustomerController implements Controller<Customer> {
                 getUserLoggedIn().trim(),
                 getTimestamp(getCurrentDate().toString(), getCurrentTime().toString(), getCurrentZone().toString()),
                 getUserLoggedIn().trim(),
-                divId
+                getDivisionSelection()
         );
     }
 
@@ -471,7 +479,6 @@ public class CustomerController implements Controller<Customer> {
      * @return Customer
      */
     private Customer prepareUpdateCustomerRequest() {
-        int divId = divisionDAO.getIdFrom(divisionDropDownCustomer.getSelectionModel().getSelectedItem().trim()).getDivision_id();
         return new Customer(
                 Integer.parseInt(customerIdLblCustomer.getText().trim()),
                 nameInputCustomer.getText().trim(),
@@ -482,7 +489,7 @@ public class CustomerController implements Controller<Customer> {
                 customerCopy.getCreate_by().trim(),
                 getTimestamp(getCurrentDate().toString(), getCurrentTime().toString(), getCurrentZone().toString()),
                 getUserLoggedIn().trim(),
-                divId
+                getDivisionSelection()
         );
     }
 
@@ -499,6 +506,14 @@ public class CustomerController implements Controller<Customer> {
         divisionDropDownCustomer.getSelectionModel().select(division.getDivision().trim());
         postCodeInputCustomer.setText(customerCopy.getPostal_code().trim());
         phoneInputCustomer.setText(customerCopy.getPhone().trim());
+    }
+
+    private void setDivisionSelection(Integer division_Id) {
+        this.division_Id = division_Id;
+    }
+
+    private Integer getDivisionSelection() {
+        return this.division_Id;
     }
 
 }

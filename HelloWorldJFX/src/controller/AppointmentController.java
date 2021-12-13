@@ -24,6 +24,7 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.ResourceBundle;
+import java.util.stream.Collectors;
 
 import static shared.Common.*;
 import static shared.Constants.*;
@@ -226,7 +227,7 @@ public class AppointmentController implements Controller<Appointment> {
      */
     @FXML
     public void removeAction(ActionEvent event) {
-        String content = String.format("Confirmation To Delete\nAppointment ID : %s\nAppointment Type : %s",appointmentsTableView.getSelectionModel().getSelectedItem().getAppointment_id(),
+        String content = String.format("Confirmation To Delete\nAppointment ID : %s\nAppointment Type : %s", appointmentsTableView.getSelectionModel().getSelectedItem().getAppointment_id(),
                 appointmentsTableView.getSelectionModel().getSelectedItem().getType());
         if (isTableViewClicked && confirmationPopup(content)) {
             if (dao.removeById(appointmentsTableView.getSelectionModel().getSelectedItem().getAppointment_id())) {
@@ -258,7 +259,7 @@ public class AppointmentController implements Controller<Appointment> {
     @FXML
     public void updateAction(ActionEvent event) {
         if (isValidAppointmentForm()) {
-            if (isTableViewClicked && confirmationPopup(String.format("Confirmation To Update\nAppointment ID : %s",appointmentCopy.getAppointment_id()))) {
+            if (isTableViewClicked && confirmationPopup(String.format("Confirmation To Update\nAppointment ID : %s", appointmentCopy.getAppointment_id()))) {
                 Integer originalAppointment = appointmentCopy.getAppointment_id();
                 if (dao.update(prepareUpdateRequest())) {
                     getActivityLogger().logINFO(String.format("%s has updated the Appointment %s", getUserLoggedIn(), originalAppointment));
@@ -309,6 +310,7 @@ public class AppointmentController implements Controller<Appointment> {
      * Method that is tied to the ByMonth Radio button
      * On Action, the Appointments Table will update by this month
      * Lambda Expression that will find the current appointments within the Current Month
+     *
      * @param event ActionEvent
      */
     @FXML
@@ -330,6 +332,7 @@ public class AppointmentController implements Controller<Appointment> {
      * On Action, the appointments table will update by appointments within the next 7 days
      * Lambda expression that will append appointments that meet the condition
      * of appointments within the next 7 days
+     *
      * @param event ActionEvent
      */
     @FXML
@@ -561,9 +564,14 @@ public class AppointmentController implements Controller<Appointment> {
             errorLblAppointments.setText("All Fields in highlighted in RED cannot be empty");
             return false;
         }
-
+        if (!isTimeFormatted(endTimeInputAppointment.getText().trim()) || !isTimeFormatted(startTimeInputAppointment.getText().trim())) {
+            errorLblAppointments.setText("Use the HH:mm time format (24-hour : 59-Minutes)");
+            getApplicationLogger().logWARN("Improper Time format");
+            return false;
+        }
         Timestamp startDB = getTimestamp(startDatePickerAppointment.getEditor().getText().trim(), startTimeInputAppointment.getText().trim(), EST_ZONE);
         Timestamp endDB = getTimestamp(endDatePickerAppointment.getEditor().getText().trim(), endTimeInputAppointment.getText().trim(), EST_ZONE);
+
         if (!isStartTimeBeforeEndTime()) {
             errorLblAppointments.setText("Start Time Must be Before the End Time (Use 24-Hour Format)");
             getApplicationLogger().logWARN("Invalid Start and End Times");
@@ -581,15 +589,61 @@ public class AppointmentController implements Controller<Appointment> {
             getApplicationLogger().logWARN("Invalid Meeting Dates: Cannot be on Weekends");
             return false;
         }
-        if (isOverlappingAppointment(startDB.toLocalDateTime().toLocalDate(), startDB.toLocalDateTime().toLocalTime(),
-                endDB.toLocalDateTime().toLocalDate(), endDB.toLocalDateTime().toLocalTime())) {
+        if (isOverlappingAppointment(startDB.toLocalDateTime().toLocalDate(), startDB.toLocalDateTime().toLocalTime())) {
             errorLblAppointments.setText("Scheduling Conflict: " + customerSelect.getSelectionModel().getSelectedItem().trim() + " has a meeting at that time");
             getApplicationLogger().logWARN("Scheduling Conflict: " + customerSelect.getSelectionModel().getSelectedItem().trim());
+            confirmationPopup("Further Information", "Please check the application_log.txt file for further scheduling issues");
             isOverlapped = false;
             return false;
         }
 
         return true;
+    }
+
+    /**
+     * Validates if the Time is properly Formatted in either HH:mm:ss or HH:mm
+     * Also validates if the Hour and Minute values are accurate for the 24 hour format
+     *
+     * @param time
+     * @return
+     */
+    private boolean isTimeFormatted(String time) {
+        if (time.contains(":")) {
+            String[] split = time.split(":");
+            if (split.length == 3) {
+                if (!time.matches("([0-9][0-9]):([0-9][0-9]):([0-9][0-9])")) {
+                    return false;
+                } else {
+                    return isValidHour(Integer.parseInt(split[0])) && isValidMinute(Integer.parseInt(split[1]));
+                }
+            } else {
+                if (!time.matches("([0-9][0-9]):([0-9][0-9])")) {
+                    return false;
+                }
+                return isValidHour(Integer.parseInt(split[0])) && isValidMinute(Integer.parseInt(split[1]));
+            }
+        }
+        return false;
+    }
+
+    /**
+     * Validates if minute is between 0 and 59
+     *
+     * @param minute Integer
+     * @return boolean
+     */
+    private boolean isValidMinute(Integer minute) {
+        return minute > -1 && minute < 60;
+    }
+
+    /**
+     * Validates if hour is between 0 - 24
+     *
+     * @param minute Integer
+     * @return boolean
+     */
+    private boolean isValidHour(Integer minute) {
+        return minute > -1 && minute < 25;
     }
 
     /**
@@ -664,15 +718,32 @@ public class AppointmentController implements Controller<Appointment> {
         });
     }
 
-    private boolean isOverlappingAppointment(LocalDate date, LocalTime time, LocalDate endDate, LocalTime endTime) {
+    /**
+     * Checks to see if the current Appointment's start date and time
+     * from the Database are within another appointment of that customer
+     * Lambda Expression that excludes the currently selected appointment from the appointment view
+     * @param date LocalDate
+     * @param time LocalTime
+     * @return boolean
+     */
+    private boolean isOverlappingAppointment(LocalDate date, LocalTime time) {
         Integer selectedID = customerDAO.getIdFrom(customerSelect.getSelectionModel().getSelectedItem().trim()).getCustomer_id();
         ObservableList<Appointment> appointments = ((AppointmentDAO) dao).getAllWithInnerJoin(DB_TABLES.customers, DBCOLUMNS.CUSTOMER_ID, selectedID + "");
-        for (Appointment e : appointments) {
-            LocalDate eDate = e.getStart().toLocalDateTime().toLocalDate();
-            LocalTime eTime = e.getStart().toLocalDateTime().toLocalTime();
-            Timestamp start = getTimestamp(eDate.toString(), eTime.toString(), getCurrentZone().toString());
-            if (isDatesSame(start.toLocalDateTime().toLocalDate(), date) || isDatesSame(start.toLocalDateTime().toLocalDate(), endDate)) {
-                if ((eTime.isAfter(time) && eTime.isBefore(endTime))) {
+        for (Appointment a : appointments.stream().filter(e -> e.getAppointment_id() != appointmentCopy.getAppointment_id()).collect(Collectors.toCollection(FXCollections::observableArrayList))) {
+            Timestamp s = getTimestamp(a.getStart().toLocalDateTime().toLocalDate().toString(),
+                    a.getStart().toLocalDateTime().toLocalTime().toString(), getCurrentZone().toString());
+            Timestamp e = getTimestamp(a.getEnd().toLocalDateTime().toLocalDate().toString(),
+                    a.getEnd().toLocalDateTime().toLocalTime().toString(), getCurrentZone().toString());
+            LocalDate sDate = s.toLocalDateTime().toLocalDate();
+            LocalTime sTime = s.toLocalDateTime().toLocalTime();
+            LocalDate eDate = e.toLocalDateTime().toLocalDate();
+            LocalTime eTime = e.toLocalDateTime().toLocalTime();
+            if (isBetween(sDate, eDate, date)) {
+                if (isBetween(sTime, eTime, time)) {
+                    getApplicationLogger().logWARN(String.format("------ CONFLICTING SCHEDULE ------\n")
+                            + String.format("Customer -> DATE: %s - %s - %s\n", sDate, date, eDate)
+                            + String.format("Customer -> TIME: %s - %s - %s\n", sTime, time, eTime)
+                            + String.format("Conflicts with Appointment -> %s - %s", a.getAppointment_id(), a.getTitle()));
                     isOverlapped = true;
                 }
             }
@@ -680,8 +751,29 @@ public class AppointmentController implements Controller<Appointment> {
         return isOverlapped;
     }
 
-    private boolean isDatesSame(LocalDate s, LocalDate e) {
-        return ((s.getMonthValue() == e.getMonthValue()) && (s.getDayOfMonth() == e.getDayOfMonth()) && (s.getYear() == e.getYear()));
+    /**
+     * Helper method that utilizes the bounds and values to see if the date is between the upper and lower
+     *
+     * @param lower LocalDate
+     * @param upper LocalDate
+     * @param value LocalDate
+     * @return boolean
+     */
+    private boolean isBetween(LocalDate lower, LocalDate upper, LocalDate value) {
+
+        return value.equals(lower) || (value.isAfter(lower) && value.isBefore(upper) || value.isBefore(upper));
+    }
+
+    /**
+     * Helper method that utilizes the bounds and values to see if the date is between the upper and lower
+     *
+     * @param lower LocalTime
+     * @param upper LocalTime
+     * @param value LocalTime
+     * @return boolean
+     */
+    private boolean isBetween(LocalTime lower, LocalTime upper, LocalTime value) {
+        return value.equals(lower) || (value.isAfter(lower) && value.isBefore(upper) || value.isBefore(upper));
     }
 
 
