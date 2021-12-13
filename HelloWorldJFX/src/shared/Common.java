@@ -217,7 +217,6 @@ public class Common {
             stage.show();
         } catch (Exception e) {
             getApplicationLogger().logERROR("Unable to Navigate to " + title);
-            e.printStackTrace();
         }
     }
 
@@ -344,13 +343,17 @@ public class Common {
     }
 
     /**
+     * Method that will return a formatted LocalDate and LocalTime
+     * LocalDate format - yyyy-MM-dd
+     * LocalTime format - HH:mm:ss
+     *
      * @param date LocalDate
      * @param time LocalTime
      * @return String.Format
      * @throws ParseException parseException
      */
     public static String formatDateTimeForDB(LocalDate date, LocalTime time) {
-        String format = null;
+        String format = "";
         try {
             format = String.format("%s %s", formatUsingDTF(date, "yyyy-MM-dd"), formatUsingDTF(time, "hh:mm:ss"));
         } catch (ParseException e) {
@@ -402,15 +405,8 @@ public class Common {
     }
 
     /**
-     * @return boolean
-     */
-    public static boolean confirmationPopup() {
-        conf = new Alert(Alert.AlertType.CONFIRMATION);
-        Optional<ButtonType> confirmation = conf.showAndWait();
-        return (confirmation.isPresent() && confirmation.get() == ButtonType.OK) ? true : false;
-    }
-
-    /**
+     * Method with initialize the content for the Alert
+     *
      * @param content String
      * @return boolean
      */
@@ -421,7 +417,9 @@ public class Common {
     }
 
     /**
-     * @param header String
+     * Method for confirmation that will initialize header and Content of the Alert
+     *
+     * @param header  String
      * @param content String
      * @return boolean
      */
@@ -431,14 +429,6 @@ public class Common {
         conf.setContentText(content);
         Optional<ButtonType> confirmation = conf.showAndWait();
         return (confirmation.isPresent() && confirmation.get() == ButtonType.OK) ? true : false;
-    }
-
-    /**
-     * Reuseable ErrorPopup
-     */
-    public static void errorPopup() {
-        error = new Alert(Alert.AlertType.ERROR);
-        error.showAndWait();
     }
 
     /**
@@ -457,7 +447,8 @@ public class Common {
 
     /**
      * Reuseable ErrorPopup with Header and Content params
-     * @param header String
+     *
+     * @param header  String
      * @param content String
      */
     public static void errorPopup(String header, String content) {
@@ -485,6 +476,8 @@ public class Common {
 
     /**
      * Predicate Lambda expression that will create a distinct result
+     * Example: If there are N rows with the same non-primary Key values,
+     * there will be one new Key-Value pair for those N rows
      *
      * @param e   Function ? super T, T
      * @param <T> ?

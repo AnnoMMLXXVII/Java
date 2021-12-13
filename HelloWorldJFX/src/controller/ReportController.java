@@ -210,32 +210,38 @@ public class ReportController implements Initializable {
         initializeUsersAppointmentTotals();
     }
 
+    /**
+     * Method that will initialize the by Type Table View based on the Customer_Id
+     *
+     * @param customer_Id
+     */
     private void initializeCustomerReports(Integer customer_Id) {
         initializeTypeTableView(customer_Id);
     }
 
     /**
-     * Two Lambda Expressions
-     * First Lambda Expression will be by Method Reference that will create a unique or Distinct List of Appointments By Types
+     * Three Lambda Expressions
+     * First will filter all values by the matching Customer_Id and return an Observable List
+     * Second Lambda Expression will be by Method Reference that will create a unique or Distinct List of Appointments By Types
      * and Return an ObservableList
      * Second Lambda Expression that will distinctly total the number of matched appointments
      * <p>
      * Method that will update the Appointment By Type Table
      */
     private void initializeTypeTableView(Integer customer_Id) {
-        allAppointments = appointmentDAO.getAll();
         ObservableList<Appointment> types = allAppointments.stream()
                 .filter(e -> e.getCustomer_id() == customer_Id)
                 .collect(Collectors.toCollection(FXCollections::observableArrayList));
         initializeByMonthTableView(types);
-        types.forEach(System.out::println);
         typeTableViewReports.setItems(types.stream()
                 .filter(distinctUsingReference(Appointment::getType))
                 .collect(Collectors.toCollection(FXCollections::observableArrayList)));
         typeTypeTotalTableCol.setCellValueFactory(new PropertyValueFactory<>(DBCOLUMNS.TYPE.getValue().toLowerCase()));
         final ObservableList<Appointment> finalTypes = types;
         totalsTypeTotalTableCol.setCellValueFactory(e -> {
-            Integer count = Math.toIntExact(finalTypes.stream().filter(a -> a.getType().equalsIgnoreCase(e.getValue().getType())).count());
+            Integer count = Math.toIntExact(finalTypes.stream()
+                    .filter(a -> a.getType().equalsIgnoreCase(e.getValue().getType()))
+                    .count());
             return new ReadOnlyObjectWrapper(count);
         });
     }
@@ -247,7 +253,6 @@ public class ReportController implements Initializable {
      * Method that will update the Appointments By Month Table
      */
     private void initializeByMonthTableView(ObservableList<Appointment> filtered) {
-        allAppointments = appointmentDAO.getAll();
         monthTableViewReports.setItems(filtered.stream()
                 .filter(distinctUsingReference(e-> e.getStart().toLocalDateTime().toLocalDate().getMonth()))
                 .collect(Collectors.toCollection(FXCollections::observableArrayList)));
@@ -257,8 +262,10 @@ public class ReportController implements Initializable {
         });
         final ObservableList<Appointment> finalAppt = filtered;
         totalMonthTableCol.setCellValueFactory(e -> {
-            Integer count = Math.toIntExact(finalAppt.stream().filter(a ->
-                    a.getStart().toLocalDateTime().toLocalDate().getMonth().equals(e.getValue().getStart().toLocalDateTime().toLocalDate().getMonth())).count());
+            Integer count = Math.toIntExact(finalAppt.stream()
+                    .filter(a -> a.getStart().toLocalDateTime().toLocalDate().getMonth()
+                            .equals(e.getValue().getStart().toLocalDateTime().toLocalDate().getMonth()))
+                    .count());
             return new ReadOnlyObjectWrapper(count);
         });
 

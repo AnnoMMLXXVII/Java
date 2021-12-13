@@ -250,8 +250,7 @@ public class AppointmentDAO implements DataAccessObject<Appointment> {
                 ps.setInt(11, object.getContact_id());
             }
         } catch (Exception e) {
-            e.printStackTrace();
-            ;
+            getApplicationLogger().logERROR("Unable to execute the query: " + e.getMessage());
         }
     }
 }

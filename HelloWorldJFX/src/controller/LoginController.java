@@ -91,6 +91,11 @@ public class LoginController implements Initializable {
         }
     }
 
+    /**
+     * Cancel Action or Logout action on the Login Page
+     *
+     * @param event
+     */
     @FXML
     void cancelBtnLogin(ActionEvent event) {
         if (confirmationPopup(this.rb.getString("exitConfirmExitHeaderText"),
@@ -114,7 +119,7 @@ public class LoginController implements Initializable {
 
         boolean flag = getCurrentZone().toString().equals("Europe/Paris");
 //        if (flag) {
-            setSystemToFrench();
+        setSystemToFrench();
 //        }
         updateLoginToLanguage(ResourceBundle.getBundle(LANG_RB, Locale.getDefault()));
         timeZoneLoginLbl.setText(getCurrentZone().toString());
@@ -155,7 +160,6 @@ public class LoginController implements Initializable {
      * Helper Method call that will update the userLogin timestamp
      */
     private void updateLogginTime() throws ParseException {
-        System.out.println(getCurrentTime().toString());
         user.setLast_update(getTimestamp(getCurrentDate().toString(), formatUsingDTF(getCurrentTime(), "HH:mm:ss"), getCurrentZone().toString()));
         if (dao.update(user)) {
             getActivityLogger().logINFO(String.format("%s has login time has updated : %s",
@@ -223,7 +227,7 @@ public class LoginController implements Initializable {
                     getCurrentTime(formatUsingDTF(getCurrentTime(), "HH:mm:ss")).toString(),
                     getCurrentZone().toString());
         } catch (ParseException e) {
-            e.printStackTrace();
+            getApplicationLogger().logERROR("Unable to parse the String: " + e.getMessage());
         }
     }
 

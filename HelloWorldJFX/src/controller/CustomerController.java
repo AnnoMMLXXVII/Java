@@ -166,13 +166,14 @@ public class CustomerController implements Controller<Customer> {
         Optional<Country> opt = countries.stream().filter(e -> e.getCountry().equalsIgnoreCase(selection)).findFirst();
         if (opt.isPresent()) {
             Country country = opt.get();
-            System.out.println(country);
             initializeDivisionDropDownBy(country.getCountry_id());
         }
 
     }
 
     /**
+     * Method for the Dropdown on the Customer Reports Screen
+     *
      * @param event MouseEvent
      */
     @FXML
@@ -465,6 +466,8 @@ public class CustomerController implements Controller<Customer> {
     }
 
     /**
+     * A method that will help create a new Customer for the Update Action
+     *
      * @return Customer
      */
     private Customer prepareUpdateCustomerRequest() {

@@ -21,7 +21,6 @@ import java.sql.Timestamp;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.ResourceBundle;
@@ -453,7 +452,6 @@ public class AppointmentController implements Controller<Appointment> {
      */
     private void initializeTableView() {
         appointmentsTableView.setItems(dao.getAll());
-        System.out.println("CURR ZONE: " + ZoneId.systemDefault() + " ");
         apptIDCol.setCellValueFactory(new PropertyValueFactory(DBCOLUMNS.APPOINTMENT_ID.getValue().toLowerCase()));
         titleCol.setCellValueFactory(new PropertyValueFactory(DBCOLUMNS.TITLE.getValue().toLowerCase()));
         descriptionCol.setCellValueFactory(new PropertyValueFactory(DBCOLUMNS.DESCRIPTION.getValue().toLowerCase()));
@@ -669,7 +667,6 @@ public class AppointmentController implements Controller<Appointment> {
     private boolean isOverlappingAppointment(LocalDate date, LocalTime time, LocalDate endDate, LocalTime endTime) {
         Integer selectedID = customerDAO.getIdFrom(customerSelect.getSelectionModel().getSelectedItem().trim()).getCustomer_id();
         ObservableList<Appointment> appointments = ((AppointmentDAO) dao).getAllWithInnerJoin(DB_TABLES.customers, DBCOLUMNS.CUSTOMER_ID, selectedID + "");
-        System.out.printf("Date-Time : %s - %s\n", date.toString(), time.toString());
         for (Appointment e : appointments) {
             LocalDate eDate = e.getStart().toLocalDateTime().toLocalDate();
             LocalTime eTime = e.getStart().toLocalDateTime().toLocalTime();
