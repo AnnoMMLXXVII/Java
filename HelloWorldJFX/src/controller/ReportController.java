@@ -41,15 +41,22 @@ public class ReportController implements Initializable {
     private ObservableList<Contact> allContacts;
     private ObservableList<User> allUsers;
     private ObservableList<Customer> allCustomers;
+    private ObservableList<String> typeComboBoxList;
+    private ObservableList<String> monthComboBoxList;
+    private String monthSelected;
+    private String typeSelected;
 
     @FXML
     private TableColumn<Appointment, Integer> appointmentIdContactTableCol;
 
     @FXML
-    private TableColumn<Appointment, String> monthMonthTableCol;
+    private TableColumn<Appointment, String> monthTotalTableCol;
 
     @FXML
-    private ComboBox<String> customerComboBoxReports;
+    private ComboBox<String> monthComboBoxReports;
+
+    @FXML
+    private ComboBox<String> typeComboBoxReports;
 
     @FXML
     private Button backBtnReports;
@@ -82,10 +89,10 @@ public class ReportController implements Initializable {
     private TableColumn<User, Timestamp> lastLogUserLogTableCol;
 
     @FXML
-    private TableView<Appointment> monthTableViewReports;
+    private TableView<Appointment> monthTypeTotalViewReports;
 
     @FXML
-    private TableColumn<Appointment, Integer> totalMonthTableCol;
+    private TableColumn<Appointment, Integer> totalsMonthTypeTotalTableCol;
 
     @FXML
     private TableColumn<Appointment, Timestamp> startDateContactTableCol;
@@ -100,13 +107,7 @@ public class ReportController implements Initializable {
     private TableColumn<User, Integer> totalApptsCreatedByUserTableCol;
 
     @FXML
-    private TableColumn<Appointment, Integer> totalsTypeTotalTableCol;
-
-    @FXML
     private TableColumn<Appointment, String> typeContactTableCol;
-
-    @FXML
-    private TableView<Appointment> typeTableViewReports;
 
     @FXML
     private TableColumn<Appointment, String> typeTypeTotalTableCol;
@@ -144,9 +145,123 @@ public class ReportController implements Initializable {
     }
 
     @FXML
-    void onCustomerReportsAction(Event event) {
-        Customer customer = customerDAO.getIdFrom(customerComboBoxReports.getSelectionModel().getSelectedItem());
-        initializeCustomerReports(customer.getCustomer_id());
+    void onMonthReportsAction(Event event) {
+        initializeMonthComboBox();
+        monthSelected = monthComboBoxReports.getSelectionModel().getSelectedItem();
+        initializeMonthTypeTableViewReport();
+    }
+
+    @FXML
+    void onTypeReportsAction(Event event) {
+        initializeTypeComboBox();
+        typeSelected = typeComboBoxReports.getSelectionModel().getSelectedItem();
+        initializeMonthTypeTableViewReport();
+    }
+
+    /**
+     * Method using conditionals to initialize the By Month/Type table. Will call a helper method
+     */
+    @FXML
+    void initializeMonthTypeTableViewReport() {
+        monthSelected = monthComboBoxReports.getSelectionModel().getSelectedItem();
+        typeSelected = typeComboBoxReports.getSelectionModel().getSelectedItem();
+        if (monthSelected != null) {
+            populateTheMonthTypeReport("true", monthSelected);
+        } else if (typeSelected != null) {
+            populateTheMonthTypeReport("false", typeSelected);
+        } else if (monthSelected != null && typeSelected != null) {
+            populateTheMonthTypeReport("null", monthSelected, typeSelected);
+        }
+//        final ObservableList<Appointment> finalTypes = types;
+
+//        totalsTypeTotalTableCol.setCellValueFactory(e -> {
+//            Integer count = Math.toIntExact(finalTypes.stream()
+//                    .filter(a -> {
+//                        a.getType().equalsIgnoreCase(e.getValue().getType());})
+//                    .count());
+//            return new ReadOnlyObjectWrapper(count);
+//        });
+    }
+
+    /**
+     * Method that is called by the InitializeMonthTypeTableViewReport that will initialize the TableView
+     */
+    private void populateTheMonthTypeReport(String isMonthSelected, String... values) {
+        for (String s : values) {
+            if (s == null) {
+                return;
+            }
+        }
+        ObservableList<Appointment> filtered = getFilteredMonthTypeReports(isMonthSelected, values);
+        filtered.forEach(e -> System.out.printf("%s - %s - %s\n", e.getAppointment_id(), e.getStart(), e.getType()));
+        if (isMonthSelected.equalsIgnoreCase("true")) {
+            monthTypeTotalViewReports.setItems(filtered.stream()
+                    .filter(distinctUsingReference(Appointment::getType))
+                    .collect(Collectors.toCollection(FXCollections::observableArrayList)));
+        } else if (isMonthSelected.equalsIgnoreCase("false")) {
+            monthTypeTotalViewReports.setItems(filtered.stream()
+                    .filter(distinctUsingReference(e -> e.getStart().toLocalDateTime().toLocalDate().getMonth()))
+                    .collect(Collectors.toCollection(FXCollections::observableArrayList)));
+        } else if(isMonthSelected.equalsIgnoreCase("null")) {
+            monthTypeTotalViewReports.setItems(filtered.stream()
+                    .filter((e -> e.getStart().toLocalDateTime().toLocalDate().getMonth()
+                            .equals(values[0]) && e.getType().equals(values[1])))
+                    .collect(Collectors.toCollection(FXCollections::observableArrayList)));
+        }
+        monthTotalTableCol.setCellValueFactory(e -> {
+            String month = e.getValue().getStart().toLocalDateTime().getMonth().name();
+            return new ReadOnlyObjectWrapper<>(month);
+        });
+        typeTypeTotalTableCol.setCellValueFactory(new PropertyValueFactory<>(DBCOLUMNS.TYPE.getValue().toLowerCase()));
+        final ObservableList<Appointment> finalTypes = filtered;
+        totalsMonthTypeTotalTableCol.setCellValueFactory(e -> {
+            Integer count = Math.toIntExact(finalTypes.stream()
+                    .filter(a -> a.getType().equalsIgnoreCase(e.getValue().getType())
+                            && a.getStart().toLocalDateTime().toLocalDate().getMonth()
+                            .equals((e.getValue().getStart().toLocalDateTime().getMonth())))
+                    .count());
+            return new ReadOnlyObjectWrapper(count);
+        });
+    }
+
+    /**
+     * Helper Method for the populating of the byMonth/Type Table View.
+     * Specifically the logic that checks if Month or Type Dropdown has been selected
+     */
+    private boolean performConditionalCheck(Timestamp ts, String type, String isMonthSelected, String... values) {
+        if (isMonthSelected.equalsIgnoreCase("true")) {
+            return values[0].equals(ts.toLocalDateTime().getMonth().toString());
+        } else if (isMonthSelected.equalsIgnoreCase("false")) {
+            return values[0].equals(type);
+        } else{
+            System.out.printf("%s - %s \n", values[0], values[1]);
+            return values[0].equals(ts.toLocalDateTime().getMonth().toString()) && values[1].equals(type);
+        }
+    }
+
+    private ObservableList<Appointment> getFilteredMonthTypeReports(String isMonthSelected, String...values) {
+        ObservableList<Appointment> temp = allAppointments.stream()
+                .filter(e -> {
+                    Timestamp ts = null;
+                    String type = null;
+                    boolean matched = false;
+                    if(isMonthSelected.equalsIgnoreCase("true") || isMonthSelected.equalsIgnoreCase("null")) {
+                        ts = getTimestamp(e.getStart().toLocalDateTime().toLocalDate().toString(),
+                                e.getStart().toLocalDateTime().toLocalTime().toString(), getCurrentZone().toString());
+                    }
+                    if(isMonthSelected.equalsIgnoreCase("false") || isMonthSelected.equalsIgnoreCase("null")) {
+                        type = e.getType();
+                    }
+                    if(isMonthSelected.equalsIgnoreCase("null")) {
+                        matched = performConditionalCheck(ts, type, isMonthSelected, values);
+                    }
+                    if (!isMonthSelected.equalsIgnoreCase("null") && performConditionalCheck(ts, type, isMonthSelected, values) ){
+                        matched = true;
+                    }
+                    return matched;
+                })
+                .collect(Collectors.toCollection(FXCollections::observableArrayList));
+        return temp;
     }
 
     /**
@@ -163,15 +278,28 @@ public class ReportController implements Initializable {
 
     /**
      * Method tied to the Contact Tab.
-     * Upon Click, a database call will be made thus updating the current customer's ObservableList
+     * Upon Click, a database call will be made thus updating the current Appointments and the ComboBoxes
      *
      * @param event Event
      */
     @FXML
-    void onCustmerTabAction(Event event) {
+    void onByMonthTypeTabAction(Event event) {
+        try {
         allAppointments = appointmentDAO.getAll();
-        allCustomers = customerDAO.getAll();
-        customerComboBoxReports = initializeComboBox(customerDAO, customerComboBoxReports);
+        }catch(NullPointerException e) {
+            getApplicationLogger().logWARN("Issue trying to initialize the Reports By Month/Type Page - Appointments DAO is Null: " + e.getMessage());
+        }
+        finally {
+            allAppointments = new AppointmentDAO().getAll();
+        }
+        monthComboBoxReports.getSelectionModel().clearSelection();
+        typeComboBoxReports.getSelectionModel().clearSelection();
+        monthComboBoxReports.setPromptText("Select Month");
+        typeComboBoxReports.setPromptText("Select Type");
+        monthTypeTotalViewReports.getSelectionModel().clearSelection();
+//        allCustomers = customerDAO.getAll();
+        initializeMonthComboBox();
+        initializeTypeComboBox();
     }
 
     /**
@@ -196,79 +324,84 @@ public class ReportController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        appointmentDAO = new AppointmentDAO();
-        contactDAO = new ContactDAO();
-        userDAO = new UserDAO();
-        customerDAO = new CustomerDAO();
-        allAppointments = appointmentDAO.getAll();
-        allContacts = contactDAO.getAll();
-        allUsers = userDAO.getAll();
-        allCustomers = customerDAO.getAll();
-        customerComboBoxReports = initializeComboBox(customerDAO, customerComboBoxReports);
+        try {
+            appointmentDAO = new AppointmentDAO();
+            contactDAO = new ContactDAO();
+            userDAO = new UserDAO();
+            customerDAO = new CustomerDAO();
+            allAppointments = appointmentDAO.getAll();
+            allContacts = contactDAO.getAll();
+            allUsers = userDAO.getAll();
+            allCustomers = customerDAO.getAll();
+        }
+        catch(NullPointerException e) {
+            getApplicationLogger().logERROR("Error trying to initialize the Reports By Month/Type Page: " + e.getMessage());
+        }
+        initializeMonthComboBox();
+        initializeTypeComboBox();
         initializeContactDropDown();
         initializeLastLoggedInTable();
         initializeUsersAppointmentTotals();
     }
 
-    /**
-     * Method that will initialize the by Type Table View based on the Customer_Id
-     *
-     * @param customer_Id
-     */
-    private void initializeCustomerReports(Integer customer_Id) {
-        initializeTypeTableView(customer_Id);
-    }
+//    /**
+//     * Method that will initialize the by Type Table View based on the Customer_Id
+//     *
+//     * @param customer_Id
+//     */
+//    private void initializeCustomerReports(Integer customer_Id) {
+//        initializeTypeTableView(customer_Id);
+//    }
 
-    /**
-     * Three Lambda Expressions
-     * First will filter all values by the matching Customer_Id and return an Observable List
-     * Second Lambda Expression will be by Method Reference that will create a unique or Distinct List of Appointments By Types
-     * and Return an ObservableList
-     * Second Lambda Expression that will distinctly total the number of matched appointments
-     * <p>
-     * Method that will update the Appointment By Type Table
-     */
-    private void initializeTypeTableView(Integer customer_Id) {
-        ObservableList<Appointment> types = allAppointments.stream()
-                .filter(e -> e.getCustomer_id() == customer_Id)
-                .collect(Collectors.toCollection(FXCollections::observableArrayList));
-        initializeByMonthTableView(types);
-        typeTableViewReports.setItems(types.stream()
-                .filter(distinctUsingReference(Appointment::getType))
-                .collect(Collectors.toCollection(FXCollections::observableArrayList)));
-        typeTypeTotalTableCol.setCellValueFactory(new PropertyValueFactory<>(DBCOLUMNS.TYPE.getValue().toLowerCase()));
-        final ObservableList<Appointment> finalTypes = types;
-        totalsTypeTotalTableCol.setCellValueFactory(e -> {
-            Integer count = Math.toIntExact(finalTypes.stream()
-                    .filter(a -> a.getType().equalsIgnoreCase(e.getValue().getType()))
-                    .count());
-            return new ReadOnlyObjectWrapper(count);
-        });
-    }
+//    /**
+//     * Three Lambda Expressions
+//     * First will filter all values by the matching Customer_Id and return an Observable List
+//     * Second Lambda Expression will be by Method Reference that will create a unique or Distinct List of Appointments By Types
+//     * and Return an ObservableList
+//     * Second Lambda Expression that will distinctly total the number of matched appointments
+//     * <p>
+//     * Method that will update the Appointment By Type Table
+//     */
+//    private void initializeTypeTableView(Integer customer_Id) {
+//ObservableList<Appointment> types = allAppointments.stream()
+//        .filter(e -> e.getCustomer_id() == customer_Id)
+//        .collect(Collectors.toCollection(FXCollections::observableArrayList));
+//    initializeByMonthTableView(types);
+//        typeTableViewReports.setItems(types.stream()
+//                .filter(distinctUsingReference(Appointment::getType))
+//                .collect(Collectors.toCollection(FXCollections::observableArrayList)));
+//        typeTypeTotalTableCol.setCellValueFactory(new PropertyValueFactory<>(DBCOLUMNS.TYPE.getValue().toLowerCase()));
+//        final ObservableList<Appointment> finalTypes = types;
+//        totalsTypeTotalTableCol.setCellValueFactory(e -> {
+//            Integer count = Math.toIntExact(finalTypes.stream()
+//                    .filter(a -> a.getType().equalsIgnoreCase(e.getValue().getType()))
+//                    .count());
+//            return new ReadOnlyObjectWrapper(count);
+//        });
+//    }
 
-    /**
-     * Two Lambda Expressions
-     * First Lambda Expression that will distinctly create a row for the months
-     * Second Lambda Expression that will distinctly total the number of matched appointments
-     * Method that will update the Appointments By Month Table
-     */
+    //    /**
+//     * Two Lambda Expressions
+//     * First Lambda Expression that will distinctly create a row for the months
+//     * Second Lambda Expression that will distinctly total the number of matched appointments
+//     * Method that will update the Appointments By Month Table
+//     */
     private void initializeByMonthTableView(ObservableList<Appointment> filtered) {
-        monthTableViewReports.setItems(filtered.stream()
-                .filter(distinctUsingReference(e-> e.getStart().toLocalDateTime().toLocalDate().getMonth()))
+        monthTypeTotalViewReports.setItems(filtered.stream()
+                .filter(distinctUsingReference(e -> e.getStart().toLocalDateTime().toLocalDate().getMonth()))
                 .collect(Collectors.toCollection(FXCollections::observableArrayList)));
-        monthMonthTableCol.setCellValueFactory(e -> {
+        monthTotalTableCol.setCellValueFactory(e -> {
             String month = e.getValue().getStart().toLocalDateTime().getMonth().name();
             return new ReadOnlyObjectWrapper<>(month);
         });
         final ObservableList<Appointment> finalAppt = filtered;
-        totalMonthTableCol.setCellValueFactory(e -> {
+        totalsMonthTypeTotalTableCol.setCellValueFactory(e -> {
             Integer count = Math.toIntExact(finalAppt.stream()
                     .filter(a -> a.getStart().toLocalDateTime().toLocalDate().getMonth()
                             .equals(e.getValue().getStart().toLocalDateTime().toLocalDate().getMonth()))
                     .count());
             return new ReadOnlyObjectWrapper(count);
         });
-
     }
 
     /**
@@ -354,6 +487,35 @@ public class ReportController implements Initializable {
             Integer count = Math.toIntExact(finalAppts.stream().filter(z -> e.getValue().getUser_id() == (z.getUser_id())).count());
             return new ReadOnlyObjectWrapper<>(count);
         });
+    }
+
+    /**
+     * One Lambda Expression that will create a unique list of types from the current appointments table
+     */
+    private void initializeTypeComboBox() {
+        typeComboBoxList = FXCollections.observableArrayList();
+        allAppointments.stream()
+                .filter(distinctUsingReference(e -> e.getType()))
+                .collect(Collectors.toCollection(FXCollections::observableArrayList))
+                .forEach(e -> {
+                    typeComboBoxList.add(e.getType());
+                });
+        typeComboBoxReports.setItems(typeComboBoxList);
+    }
+
+    /**
+     * One Lambda Expression that will create a unique list of months from the current appointments table
+     */
+    private void initializeMonthComboBox() {
+        monthComboBoxList = FXCollections.observableArrayList();
+        allAppointments.stream()
+                .filter(distinctUsingReference(e -> e.getStart().toLocalDateTime().toLocalDate().getMonth()))
+                .collect(Collectors.toCollection(FXCollections::observableArrayList))
+                .forEach(e -> {
+                    monthComboBoxList.add(e.getStart().toLocalDateTime().toLocalDate().getMonth().toString());
+                });
+
+        monthComboBoxReports.setItems(monthComboBoxList);
     }
 
 }

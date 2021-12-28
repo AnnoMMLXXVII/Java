@@ -760,7 +760,6 @@ public class AppointmentController implements Controller<Appointment> {
      * @return boolean
      */
     private boolean isBetween(LocalDate lower, LocalDate upper, LocalDate value) {
-
         return value.equals(lower) || (value.isAfter(lower) && value.isBefore(upper) || value.isBefore(upper));
     }
 
