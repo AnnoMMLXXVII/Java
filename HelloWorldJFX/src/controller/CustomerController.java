@@ -28,6 +28,9 @@ import static shared.Common.*;
 import static shared.Constants.DBCOLUMNS;
 import static shared.Constants.FXMLVIEW;
 
+/**
+ * Customer Controller that will handle all CRUD actions for the customer entity. Customers can be used in the appointments table or screen
+ */
 public class CustomerController implements Controller<Customer> {
 
     private DataAccessObject<Customer> dao;
@@ -297,7 +300,7 @@ public class CustomerController implements Controller<Customer> {
     /**
      * Helper method that toggles all Input fields to be Disabled
      *
-     * @param isDisabled
+     * @param isDisabled boolean
      */
     private void toggleDisable(boolean isDisabled) {
         customerIdLblCustomer.setDisable(isDisabled);

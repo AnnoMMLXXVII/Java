@@ -122,7 +122,7 @@ public class UserDAO implements DataAccessObject<User> {
      * Empty Body
      *
      * @param id Integer
-     * @return
+     * @return boolean
      */
     @Override
     public boolean removeById(int id) {
@@ -151,7 +151,7 @@ public class UserDAO implements DataAccessObject<User> {
     /**
      * @param ps     PreparedStatement
      * @param object T
-     * @throws SQLException
+     * @throws SQLException SQLException
      */
     @Override
     public void executeModificationQuery(PreparedStatement ps, User object) throws SQLException {

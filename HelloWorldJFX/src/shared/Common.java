@@ -99,9 +99,11 @@ public class Common {
     }
 
     /**
-     * @param table
-     * @param innerJoinTable
-     * @param joinPK
+     *
+     * @param table DB_TABLES
+     * @param innerJoinTable DB_TABLES
+     * @param joinPK DBCOLUMNS
+     * @param joinPKValue String
      * @return String
      */
     public static String queryAllWithInnerJoin(DB_TABLES table, DB_TABLES innerJoinTable, DBCOLUMNS joinPK, String joinPKValue) {
@@ -187,9 +189,9 @@ public class Common {
     }
 
     /**
-     * @param table
-     * @param joinTable
-     * @param joinPK
+     * @param table String
+     * @param joinTable String
+     * @param joinPK String
      * @return String
      */
     public static String appendInnerJoin(String table, String joinTable, String joinPK) {
@@ -224,7 +226,6 @@ public class Common {
      * Reuseable method that can close a previous window
      *
      * @param btn Button
-     * @throws SQLException sqlException
      */
     public static void closePreviousWindow(Button btn) {
         Stage stage = (Stage) btn.getScene().getWindow();
@@ -258,6 +259,12 @@ public class Common {
         return LocalDateTime.of(date, time);
     }
 
+    /**
+     * Returns the Timstamp with the Zone and LocalDateTime in the parameter
+     * @param ldt LocalDateTime
+     * @param zone String
+     * @return Timestamp
+     */
     public static Timestamp getTimestampByZone(LocalDateTime ldt, String zone) {
         return Timestamp.valueOf(ldt.atZone(getCurrentZone()).withZoneSameInstant(
                 ZoneId.of((zone == null || zone.isEmpty() || zone.isBlank()) ? "UTC" : zone)).toLocalDateTime());
@@ -266,10 +273,10 @@ public class Common {
     /**
      * Extracts Date and Time from UI and converts to UTC for Database
      *
-     * @param date
-     * @param time
-     * @param timeZone
-     * @return
+     * @param date String
+     * @param time String
+     * @param timeZone String
+     * @return Timestamp
      */
     public static Timestamp getTimestamp(String date, String time, String timeZone) {
         return getTimestampByZone(convertToLocalDateTime(
@@ -287,9 +294,9 @@ public class Common {
     }
 
     /**
-     * Getter Methdo that will return the current Time Zone using ZoneId
+     * Getter Method that will return the current Time Zone using ZoneId
      *
-     * @return
+     * @return ZoneId
      */
     public static ZoneId getCurrentZone() {
         return zoneId;
@@ -350,7 +357,6 @@ public class Common {
      * @param date LocalDate
      * @param time LocalTime
      * @return String.Format
-     * @throws ParseException parseException
      */
     public static String formatDateTimeForDB(LocalDate date, LocalTime time) {
         String format = "";

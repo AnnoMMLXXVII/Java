@@ -27,7 +27,7 @@ public class Constants {
         /**
          * Constructor for the FXMLView
          *
-         * @param value
+         * @param value String
          */
         FXMLVIEW(String value) {
             this.value = value;

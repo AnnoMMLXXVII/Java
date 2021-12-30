@@ -12,7 +12,7 @@ import static shared.Common.*;
  * Generics Abstract Class for the two Loggers
  * Activity and Application Logger
  *
- * @param <T>
+ * @param <T> Generic Object
  */
 public abstract class Logs<T> {
 
@@ -23,7 +23,7 @@ public abstract class Logs<T> {
     /**
      * Logs the INFO related Level Messages
      *
-     * @param message
+     * @param message String
      */
     public synchronized void logINFO(String message) {
         log.log(Level.INFO, formatMessage(message));
@@ -32,7 +32,7 @@ public abstract class Logs<T> {
     /**
      * Logs the WARN related Level Messages
      *
-     * @param message
+     * @param message String
      */
     public synchronized void logWARN(String message) {
         log.log(Level.WARNING, formatMessage(message));
@@ -41,7 +41,7 @@ public abstract class Logs<T> {
     /**
      * Logs the ERROR related Level Messages
      *
-     * @param message
+     * @param message String
      */
     public synchronized void logERROR(String message) {
         log.log(Level.SEVERE, formatMessage(message));
@@ -50,7 +50,7 @@ public abstract class Logs<T> {
     /**
      * initializes the Loggers
      *
-     * @param file
+     * @param file String
      */
     public void initLoggerConfigs(String file) {
         try {
@@ -68,13 +68,11 @@ public abstract class Logs<T> {
     /**
      * Protected method that will format the message
      *
-     * @param message
+     * @param message String
      * @return String
      */
     protected String formatMessage(String message) {
-        String time = getCurrentDate() + " " + getCurrentTime();
-        time = formatDateTimeForDB(getCurrentDate(), getCurrentTime());
-        return String.format("%s %s", time, message);
+        return String.format("%s %s", formatDateTimeForDB(getCurrentDate(), getCurrentTime()), message);
     }
 
 }

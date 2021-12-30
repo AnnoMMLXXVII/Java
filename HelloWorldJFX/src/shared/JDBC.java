@@ -58,8 +58,8 @@ public class JDBC {
     /**
      * Creates a PreparedStatement
      *
-     * @param sqlStatement
-     * @param conn
+     * @param sqlStatement String
+     * @param conn Connection
      * @throws SQLException SQLException
      */
     public static void makePreparedStatement(String sqlStatement, Connection conn) throws SQLException {

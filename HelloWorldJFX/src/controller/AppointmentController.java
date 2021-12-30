@@ -143,8 +143,8 @@ public class AppointmentController implements Controller<Appointment> {
     /**
      * Overridden Method from the Initializable Interface
      *
-     * @param url
-     * @param resourceBundle
+     * @param url            URL
+     * @param resourceBundle ResourceBundle
      */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -604,8 +604,8 @@ public class AppointmentController implements Controller<Appointment> {
      * Validates if the Time is properly Formatted in either HH:mm:ss or HH:mm
      * Also validates if the Hour and Minute values are accurate for the 24 hour format
      *
-     * @param time
-     * @return
+     * @param time String
+     * @return boolean
      */
     private boolean isTimeFormatted(String time) {
         if (time.contains(":")) {
@@ -649,6 +649,8 @@ public class AppointmentController implements Controller<Appointment> {
     /**
      * Checks Both Start and End Times are between 0800 and 2200
      *
+     * @param start LocalTime
+     * @param end   LocalTime
      * @return boolean
      */
     private boolean isWithinWorkingHours(LocalTime start, LocalTime end) {
@@ -672,6 +674,8 @@ public class AppointmentController implements Controller<Appointment> {
     /**
      * Checks both Start and End Dates to see if either are land on a weekend
      *
+     * @param start LocalDate
+     * @param end   LocalDate
      * @return boolean
      */
     private boolean isDateNotDuringTheWeek(LocalDate start, LocalDate end) {
@@ -722,6 +726,7 @@ public class AppointmentController implements Controller<Appointment> {
      * Checks to see if the current Appointment's start date and time
      * from the Database are within another appointment of that customer
      * Lambda Expression that excludes the currently selected appointment from the appointment view
+     *
      * @param date LocalDate
      * @param time LocalTime
      * @return boolean

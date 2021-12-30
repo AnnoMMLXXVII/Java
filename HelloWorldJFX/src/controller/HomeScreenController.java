@@ -6,7 +6,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 
 import java.net.URL;
-import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 import static shared.Common.closePreviousWindow;
@@ -32,6 +31,7 @@ public class HomeScreenController implements Initializable {
 
     /**
      * Method that will be tied to the Reports View Button
+     *
      * @param event ActionEvent
      */
     @FXML
@@ -42,7 +42,8 @@ public class HomeScreenController implements Initializable {
 
     /**
      * Method that will be tied to the Appointments View Button
-     * @param event
+     *
+     * @param event ActionEvent
      */
     @FXML
     void apptViewBtn(ActionEvent event) {
@@ -52,29 +53,30 @@ public class HomeScreenController implements Initializable {
 
     /**
      * Method that will be tied to the Customer View Button
+     *
      * @param event ActionEvent
-     * @throws SQLException SQLErrors
      */
     @FXML
-    void customerViewBtn(ActionEvent event) throws SQLException {
+    void customerViewBtn(ActionEvent event) {
         closePreviousWindow(customerBtn);
         navigateToWindow(FXMLVIEW.CUSTOMER, "Customer Screen");
     }
 
     /**
      * Method that will be tied to the Login View Button
-     * @param event
-     * @throws SQLException
+     *
+     * @param event ActionEvent
      */
     @FXML
-    void onDBLogoutBtn(ActionEvent event) throws SQLException {
+    void onDBLogoutBtn(ActionEvent event) {
         closePreviousWindow(databaseLogoutBtn);
         navigateToWindow(FXMLVIEW.LOGIN, "Login Screen");
     }
 
     /**
      * Empty Method Body
-     * @param url URL
+     *
+     * @param url            URL
      * @param resourceBundle ResourceBundle
      */
     @Override

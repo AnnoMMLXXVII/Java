@@ -12,14 +12,14 @@ import java.util.ResourceBundle;
  * Generics Controller Interface that will contain the basic features on the UI
  * Cancel, Remove, Add, Update
  *
- * @param <T>
+ * @param <T> Generic Object
  */
 public interface Controller<T> extends Initializable {
 
     /**
      * Method from the Initializable Interface
-     * @param url
-     * @param rb
+     * @param url URL
+     * @param rb ResourceBundle
      */
     void initialize(URL url, ResourceBundle rb);
 

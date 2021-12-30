@@ -131,7 +131,7 @@ public class DivisionDAO implements DataAccessObject<Division> {
      *
      * @param rs ResultSet
      * @return Division
-     * @throws SQLException
+     * @throws SQLException SQLException
      */
     @Override
     public Division getAllColumnsUsingResultSet(ResultSet rs) throws SQLException {
@@ -160,7 +160,7 @@ public class DivisionDAO implements DataAccessObject<Division> {
     /**
      * Helper method that will add the Found Division to the List in the Map Object
      *
-     * @param division
+     * @param division Division
      * @return ObservableMap
      */
     private ObservableMap<Integer, ObservableList<Division>> addToMap(Division division) {

@@ -223,10 +223,9 @@ public class AppointmentDAO implements DataAccessObject<Appointment> {
     /**
      * @param ps     PreparedStatement
      * @param object T
-     * @throws SQLException
+     * @throws SQLException SQLException
      */
     public void executeModificationQuery(PreparedStatement ps, Appointment object) throws SQLException {
-//        ps.setInt(object.APPOINTMENT_ID.getValue());
         try {
             ps.setString(1, object.getTitle());
             ps.setString(2, object.getDescription());

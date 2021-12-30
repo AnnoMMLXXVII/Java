@@ -114,7 +114,7 @@ public class ContactDAO implements DataAccessObject<Contact> {
      * Returns new Contact using ResultSet
      *
      * @param rs ResultSet
-     * @return
+     * @return Contact
      * @throws SQLException SQLException
      */
     @Override

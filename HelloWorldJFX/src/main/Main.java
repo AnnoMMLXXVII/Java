@@ -25,8 +25,8 @@ public class Main extends Application {
     private Logs<ApplicationLogger> applicationLogger;
 
     /**
-     * @param primaryStage
-     * @throws Exception
+     * @param primaryStage String
+     * @throws Exception Exception
      */
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -42,7 +42,7 @@ public class Main extends Application {
     /**
      * Entry Point for the Application
      *
-     * @param args
+     * @param args String array
      */
     public static void main(String[] args) {
         setCurrentZone(ZoneId.systemDefault());

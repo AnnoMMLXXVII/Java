@@ -94,7 +94,7 @@ public class LoginController implements Initializable {
     /**
      * Cancel Action or Logout action on the Login Page
      *
-     * @param event
+     * @param event ActionEvent
      */
     @FXML
     void cancelBtnLogin(ActionEvent event) {
@@ -111,8 +111,8 @@ public class LoginController implements Initializable {
      * Method that is called due to Initializable Interface
      * Will create a new User Dao
      *
-     * @param url
-     * @param rb
+     * @param url URL
+     * @param rb  ResourceBundle
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -124,9 +124,8 @@ public class LoginController implements Initializable {
         updateLoginToLanguage(ResourceBundle.getBundle(LANG_RB, Locale.getDefault()));
         timeZoneLoginLbl.setText(getCurrentZone().toString());
         dao = new UserDAO();
-        userNameInputLogin.setText("admin");
-        passwordInputLogin.setText("admin");
     }
+
 
     /**
      * Method call that will valida the login after making the DAO call
@@ -135,6 +134,7 @@ public class LoginController implements Initializable {
      * @param clientName   String
      * @param clientSecret String
      * @return boolean
+     * @throws ParseException parseException
      */
     private boolean validLogin(String clientName, String clientSecret) throws ParseException {
         users = dao.getAll();
@@ -158,6 +158,8 @@ public class LoginController implements Initializable {
 
     /**
      * Helper Method call that will update the userLogin timestamp
+     *
+     * @throws ParseException parseException
      */
     private void updateLogginTime() throws ParseException {
         user.setLast_update(getTimestamp(getCurrentDate().toString(), formatUsingDTF(getCurrentTime(), "HH:mm:ss"), getCurrentZone().toString()));

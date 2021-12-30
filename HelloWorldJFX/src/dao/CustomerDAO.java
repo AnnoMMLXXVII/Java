@@ -192,7 +192,7 @@ public class CustomerDAO implements DataAccessObject<Customer> {
      *
      * @param ps     PreparedStatement
      * @param object T
-     * @throws SQLException
+     * @throws SQLException SQLException
      */
     public void executeModificationQuery(PreparedStatement ps, Customer object) throws SQLException {
 //        ps.setString(1, "NULL");
