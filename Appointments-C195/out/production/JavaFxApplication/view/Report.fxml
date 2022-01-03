@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1200.0" style="-fx-background-color: #57A0D3;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportController">
+    <children>
+        <Label alignment="CENTER" prefHeight="63.0" prefWidth="1200.0" style="-fx-background-color: #111111;" text="REPORTS" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="43.0" />
+            </font>
+        </Label>
+        <TabPane layoutY="62.0" prefHeight="450.0" prefWidth="1200.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab fx:id="tabByCustomerReports" onSelectionChanged="#onByMonthTypeTabAction" style="-fx-background-color: #EBECF0; -fx-border-color: #111111;" text="By Month and Type">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="340.0" prefWidth="1200.0">
+                            <children>
+                        <ComboBox fx:id="monthComboBoxReports" layoutX="10.0" layoutY="50.0" onAction="#onMonthReportsAction" prefHeight="35.0" prefWidth="200.0" promptText="Select Month" style="-fx-background-color: #EBECF0;" />
+                                <Label layoutY="90.0" prefHeight="35.0" prefWidth="1200.0" style="-fx-background-color: #EBECF0;" text="Appointment Totals By Type and Month">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                    <padding>
+                                        <Insets left="50.0" />
+                                    </padding>
+                                </Label>
+                                <TableView fx:id="monthTypeTotalViewReports" layoutX="10.0" layoutY="130.0" prefHeight="285.0" prefWidth="1180.0" style="-fx-background-color: #EBECF0; -fx-border-color: #111111;">
+                                    <columns>
+                                        <TableColumn fx:id="monthTotalTableCol" prefWidth="393.0" text="Month" />
+                              <TableColumn fx:id="typeTypeTotalTableCol" prefWidth="393.0" text="Type" />
+                                        <TableColumn fx:id="totalsMonthTypeTotalTableCol" prefWidth="393.0" text="Totals" />
+                                    </columns>
+                                </TableView>
+                                <Label alignment="CENTER" prefHeight="50.0" prefWidth="1200.0" text="Month/Type Reports" textAlignment="CENTER">
+                                    <font>
+                                        <Font name="System Bold" size="34.0" />
+                                    </font>
+                                </Label>
+                        <ComboBox fx:id="typeComboBoxReports" layoutX="225.0" layoutY="50.0" onAction="#onTypeReportsAction" prefHeight="35.0" prefWidth="200.0" promptText="Select Type" style="-fx-background-color: #EBECF0;" />
+                        <Label layoutX="14.0" layoutY="25.0" prefHeight="18.0" prefWidth="54.0" text="Month" />
+                        <Label layoutX="226.0" layoutY="25.0" prefHeight="18.0" prefWidth="54.0" text="Type" />
+                        <Button fx:id="resetComboBoxBtnReports" layoutX="435.0" layoutY="50.0" mnemonicParsing="false" onAction="#onResetForComboBoxReports" prefHeight="35.0" prefWidth="75.0" style="-fx-background-color: #EBECF0;" text="RESET" textFill="#d74e4e">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="tabContactTableViewReports" onSelectionChanged="#onContactTabAction" style="-fx-background-color: #EBECF0; -fx-border-color: #111111;" text="By Contact">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="1200.0">
+                            <children>
+                                <ComboBox fx:id="contactDropDownReports" layoutX="160.0" layoutY="40.0" onAction="#onContactDropDownAction" prefHeight="27.5" prefWidth="150.0" promptText="Select Contact" style="-fx-background-color: #EBECF0;" />
+                                <TableView fx:id="contactTableViewReports" layoutX="10.0" layoutY="75.0" prefHeight="325.0" prefWidth="1180.0" style="-fx-background-color: #EBECF0; -fx-border-color: #111111;">
+                                    <columns>
+                                        <TableColumn fx:id="customerIdContactTableCol" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="76.00000286102295" text="Customer_ID" />
+                                        <TableColumn fx:id="appointmentIdContactTableCol" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="98.39996337890625" text="Appointment_ID" />
+                                        <TableColumn fx:id="titleContactTableCol" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="113.59996032714844" text="Title" />
+                                        <TableColumn fx:id="descriptionContactTableCol" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="234.4000244140625" text="Description" />
+                                        <TableColumn fx:id="typeContactTableCol" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="92.0" text="Type" />
+                                        <TableColumn fx:id="startDateContactTableCol" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="168.800048828125" text="Start Date" />
+                                        <TableColumn fx:id="endDateContactTableCol" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="130.0" text="End Date" />
+                                        <TableColumn fx:id="startTimeContactTableCol" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="130.0" text="Start Time" />
+                                        <TableColumn fx:id="endTimeContactTableCol" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="130.0" text="End Time" />
+                                    </columns>
+                                </TableView>
+                                <Label prefHeight="35.0" prefWidth="1200.0" style="-fx-background-color: #EBECF0;" text="Schedule By Contact">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                    <padding>
+                                        <Insets left="50.0" />
+                                    </padding>
+                                </Label>
+                                <Label layoutX="10.0" layoutY="35.0" prefHeight="35.0" prefWidth="150.0" text="Choose Contact: ">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="tabByUserReports" onSelectionChanged="#onUsersTabAction" style="-fx-background-color: #EBECF0; -fx-border-color: #111111;" text="User Reports">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="273.0" prefWidth="1200.0">
+                            <children>
+                                <Label prefHeight="35.0" prefWidth="1200.0" style="-fx-background-color: #EBECF0;" text="Users Reports">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                    <padding>
+                                        <Insets left="50.0" />
+                                    </padding>
+                                </Label>
+                                <TableView fx:id="customerTableViewReports" layoutX="15.0" layoutY="255.0" opacity="0.0" prefHeight="50.0" prefWidth="1168.0" style="-fx-background-color: #EBECF0; -fx-border-color: #111111;">
+                                    <columns>
+                                        <TableColumn fx:id="typeCustomerTableCol" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="148.0" text="Type" />
+                                        <TableColumn fx:id="titleCustomerTableCol" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="148.0" text="Title" />
+                                        <TableColumn fx:id="descriptionCustomerTableCol" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="148.0" text="Description" />
+                                        <TableColumn fx:id="startDateCustomerTableCol" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="148.0" text="Start Date" />
+                                        <TableColumn fx:id="endDateCustomerTableCol" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="148.0" text="End Date" />
+                                        <TableColumn fx:id="startTimeCustomerTableCol" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="148.0" text="Start Time" />
+                                        <TableColumn fx:id="endTimeCustomerTableCol" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="148.0" text="End Time" />
+                                        <TableColumn fx:id="userAssociationCustomerTableCol" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="148.0" text="User Association" />
+                                    </columns>
+                                </TableView>
+                                <Label layoutX="605.0" layoutY="40.0" prefHeight="35.0" prefWidth="585.0" style="-fx-background-color: #EBECF0;" text="Total Appointments Created By Users">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                    <padding>
+                                        <Insets left="50.0" />
+                                    </padding>
+                                </Label>
+                                <TableView fx:id="createdByUesrsTableViewReports" layoutX="608.0" layoutY="85.0" prefHeight="150.0" prefWidth="575.0" style="-fx-background-color: #EBECF0; -fx-border-color: #111111;">
+                                    <columns>
+                                        <TableColumn fx:id="userCreatedByUserTableCol" prefWidth="290.0" text="User" />
+                                        <TableColumn fx:id="totalApptsCreatedByUserTableCol" prefWidth="290.0" text="Total Appointments" />
+                                    </columns>
+                                </TableView>
+                                <Label layoutX="10.0" layoutY="40.0" prefHeight="35.0" prefWidth="585.0" style="-fx-background-color: #EBECF0;" text="Last Time Users Logged">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                    <padding>
+                                        <Insets left="50.0" />
+                                    </padding>
+                                </Label>
+                                <TableView fx:id="userLoggedInTableViewReports" layoutX="15.0" layoutY="85.0" prefHeight="150.0" prefWidth="575.0" style="-fx-background-color: #EBECF0; -fx-border-color: #111111;">
+                                    <columns>
+                                        <TableColumn fx:id="userUserLogTableCol" prefWidth="193.0" text="User" />
+                                        <TableColumn fx:id="lastLogUserLogTableCol" prefWidth="193.0" text="Last Logged In" />
+                                        <TableColumn fx:id="createDateUserLogTableCol" prefWidth="193.0" text="Create Date" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+        <Button fx:id="backBtnReports" alignment="CENTER" contentDisplay="CENTER" layoutX="1039.0" layoutY="525.0" mnemonicParsing="false" onAction="#cancelAction" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #EBECF0;" text="Back">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

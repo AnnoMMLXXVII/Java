@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1200.0" style="-fx-background-color: #57A0D3;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AppointmentController">
+    <effect>
+        <SepiaTone level="0.15" />
+    </effect>
+    <children>
+        <Label alignment="CENTER" contentDisplay="CENTER" opacity="0.7" prefHeight="50.0" prefWidth="1200.0" style="-fx-background-color: #111111;" text="APPOINTMENTS" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="36.0" />
+            </font>
+        </Label>
+        <TableView fx:id="appointmentsTableView" layoutY="99.0" onMouseClicked="#onTableViewAppointments" prefHeight="277.0" prefWidth="1200.0" style="-fx-border-color: #111111;">
+            <columns>
+                <TableColumn fx:id="apptIDCol" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="103.0" text="Appointment_ID" />
+                <TableColumn fx:id="titleCol" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="111.0" text="Title" />
+                <TableColumn fx:id="descriptionCol" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="176.0" text="Description" />
+                <TableColumn fx:id="locationCol" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="109.0" text="Location" />
+                <TableColumn fx:id="contactCol" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="119.0" text="Contact_ID" />
+                <TableColumn fx:id="typeCol" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="103.0" text="Type" />
+                <TableColumn fx:id="startCol" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="120.0" text="Start" />
+                <TableColumn fx:id="endCol" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="120.0" text="End" />
+                <TableColumn fx:id="customerIDCol" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="120.0" text="Customer_ID" />
+                <TableColumn fx:id="userIDCol" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="120.0" text="User_ID" />
+            </columns>
+        </TableView>
+        <Pane layoutY="535.0" prefHeight="65.0" prefWidth="1200.0" style="-fx-border-color: #111111;">
+            <children>
+                <Button fx:id="updateBtnAppointment" layoutX="605.0" layoutY="15.0" mnemonicParsing="false" onAction="#updateAction" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: Chartreuse;" text="SAVE">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Button>
+                <Button fx:id="deleteBtn" layoutX="410.0" layoutY="15.0" mnemonicParsing="false" onAction="#removeAction" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #FF2A1B;" text="REMOVE">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Button>
+                <Button fx:id="addBtn" layoutX="800.0" layoutY="15.0" mnemonicParsing="false" onAction="#addAction" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: cyan;" text="ADD">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Button>
+                <Button fx:id="cancelBtn" layoutX="995.0" layoutY="15.0" mnemonicParsing="false" onAction="#cancelAction" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #EBECF0;" text="CANCEL">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Button>
+            <Label fx:id="errorLblAppointments" layoutX="13.0" layoutY="16.0" prefHeight="40.0" prefWidth="383.0" />
+            </children>
+        </Pane>
+        <Pane fx:id="appointmentsFormPane" layoutY="396.0" prefHeight="140.0" prefWidth="1200.0" style="-fx-border-color: #111111;">
+            <children>
+                <TextField fx:id="titleOfAppt" layoutX="210.0" layoutY="30.0" prefHeight="30.0" prefWidth="185.0" style="-fx-background-color: #EBECF0;" />
+                <TextField fx:id="description" layoutX="410.0" layoutY="30.0" prefHeight="30.0" prefWidth="185.0" style="-fx-background-color: #EBECF0;" />
+                <TextField fx:id="location" layoutX="605.0" layoutY="30.0" prefHeight="30.0" prefWidth="185.0" style="-fx-background-color: #EBECF0;" />
+                <Label layoutX="10.0" layoutY="70.0" prefHeight="30.0" prefWidth="185.0" text="Customer">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label layoutX="210.0" prefHeight="30.0" prefWidth="185.0" text="Title of Appointment">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label layoutX="410.0" prefHeight="30.0" prefWidth="185.0" text="Description">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label layoutX="605.0" prefHeight="30.0" prefWidth="185.0" text="Location">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label layoutX="800.0" layoutY="2.0" prefHeight="30.0" prefWidth="185.0" text="Contact">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label layoutX="995.0" prefHeight="30.0" prefWidth="185.0" text="Type of Appointment">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label layoutX="210.0" layoutY="70.0" prefHeight="30.0" prefWidth="185.0" text="Start Date">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="customerSelect" layoutX="10.0" layoutY="100.0" prefHeight="30.0" prefWidth="185.0" promptText="Choose Customer" style="-fx-background-color: #EBECF0;" />
+                <Label layoutX="800.0" layoutY="70.0" prefHeight="20.0" prefWidth="185.0" text="End Date">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <DatePicker fx:id="endDatePickerAppointment" layoutX="800.0" layoutY="100.0" prefHeight="30.0" prefWidth="185.0" promptText="Select date" style="-fx-background-color: #EBECF0;" />
+                <Label layoutX="410.0" layoutY="70.0" prefHeight="30.0" prefWidth="185.0" text="Start Time">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label layoutX="605.0" layoutY="70.0" prefHeight="30.0" prefWidth="185.0" text="End Time">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="apptID" editable="false" layoutX="10.0" layoutY="30.0" prefHeight="30.0" prefWidth="185.0" style="-fx-background-color: #EBECF0;" />
+                <Label layoutX="10.0" prefHeight="30.0" prefWidth="185.0" text="Appointment_ID">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="contactSelect" layoutX="800.0" layoutY="32.0" prefHeight="30.0" prefWidth="185.0" promptText="Select Contact" style="-fx-background-color: #EBECF0;" />
+                <DatePicker fx:id="startDatePickerAppointment" layoutX="210.0" layoutY="100.0" prefHeight="30.0" prefWidth="185.0" promptText="Select Start Date" style="-fx-background-color: #EBECF0;" />
+                <TextField fx:id="startTimeInputAppointment" layoutX="410.0" layoutY="100.0" prefHeight="30.0" prefWidth="185.0" style="-fx-background-color: #EBECF0;" />
+                <TextField fx:id="endTimeInputAppointment" layoutX="605.0" layoutY="100.0" prefHeight="30.0" prefWidth="185.0" style="-fx-background-color: #EBECF0;" />
+                <TextField fx:id="typeInputAppointment" layoutX="995.0" layoutY="34.0" prefHeight="30.0" prefWidth="185.0" style="-fx-background-color: #EBECF0;" />
+            </children>
+        </Pane>
+        <BorderPane layoutY="376.0" opacity="0.7" prefHeight="20.0" prefWidth="1200.0" style="-fx-background-color: #111111;" />
+        <HBox alignment="CENTER" layoutY="52.0" prefHeight="48.0" prefWidth="1200.0" style="-fx-border-color: #111111;">
+            <children>
+                <RadioButton fx:id="weekRadioBtn" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onWeekRadioBtn" prefHeight="40.0" prefWidth="225.0" text="This &amp; Next week">
+                    <padding>
+                        <Insets right="30.0" />
+                    </padding>
+                    <toggleGroup>
+                        <ToggleGroup fx:id="group" />
+                    </toggleGroup>
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </RadioButton>
+                <RadioButton fx:id="monthRadioBtn" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onMonthRadioBtn" prefHeight="40.0" prefWidth="225.0" text="Next month" toggleGroup="$group">
+                    <padding>
+                        <Insets left="30.0" right="30.0" />
+                    </padding>
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </RadioButton>
+                <RadioButton fx:id="allRadioBtn" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onAllRadioBtn" prefHeight="40.0" prefWidth="225.0" text="Show all" toggleGroup="$group">
+                    <HBox.margin>
+                        <Insets left="30.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </RadioButton>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>
