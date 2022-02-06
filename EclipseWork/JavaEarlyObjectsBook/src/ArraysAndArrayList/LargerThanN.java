@@ -7,11 +7,20 @@ public class LargerThanN {
     private static int[] arr;
     private static Random r;
 
+    /**
+     *  BLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAH
+     * @param args
+     */
     public static void main(String... args) {
         generateRandomNumbers();
         printGreaterThanN(50, arr);
     }
 
+    /**
+     * BLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAH
+     * @param n
+     * @param arr
+     */
     public static void printGreaterThanN(int n, int... arr) {
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] > n) {
@@ -20,6 +29,10 @@ public class LargerThanN {
         }
     }
 
+    /**
+     * BLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAH
+     * @return
+     */
     public static int[] generateRandomNumbers() {
         r = new Random();
         int[] arr = new int[100];

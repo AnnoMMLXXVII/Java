@@ -170,13 +170,13 @@ class EmailValidationTest {
         assertTrue(instance.isValidDomain("abc-def.ghi"));
         assertTrue(instance.isValidDomain("abc_def.ghi"));
 
-        System.out.println(isValidPrefix("abc-d@mail.cc"));
-        System.out.println(isValidPrefix("abc.def@mail-archive.com"));
-        System.out.println(isValidPrefix("abc@mail.org"));
-        System.out.println(isValidPrefix("abc def@mail.mst.ca"));
-        System.out.println(isValidDomain("abc-@mail..com"));
-        System.out.println(isValidDomain("abc..d@..com"));
-        System.out.println(isValidPrefix("abc#def@email.c9m"));
+//        System.out.println(isValidPrefix("abc-d@mail.cc"));
+//        System.out.println(isValidPrefix("abc.def@mail-archive.com"));
+//        System.out.println(isValidPrefix("abc@mail.org"));
+//        System.out.println(isValidPrefix("abc def@mail.mst.ca"));
+//        System.out.println(isValidDomain("abc-@mail..com"));
+//        System.out.println(isValidDomain("abc..d@..com"));
+//        System.out.println(isValidPrefix("abc#def@email.c9m"));
     }
 
     @Test

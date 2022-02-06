@@ -1,0 +1,4 @@
+Cabin:5, Cabin:1, Bungalow:9, High Rise:11
+Cabin:2, Cabin:4, Bungalow:8, Bungalow:10
+High Rise:13, Cabin:3, Bungalow:6, Bungalow:7
+High Rise:15, High Rise:14, High Rise:12, High Rise:16

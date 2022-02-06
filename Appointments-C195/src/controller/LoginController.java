@@ -91,6 +91,8 @@ public class LoginController implements Initializable {
         }
     }
 
+    // Optimizing parameter Hours, Minutes, and Seconds by calculating using totalSeconds and returns an appropriately formatted time -- HH:mm:ss
+
     /**
      * Cancel Action or Logout action on the Login Page
      *
@@ -123,7 +125,9 @@ public class LoginController implements Initializable {
         }
         updateLoginToLanguage(ResourceBundle.getBundle(LANG_RB, Locale.getDefault()));
         timeZoneLoginLbl.setText(getCurrentZone().toString());
-        dao = new UserDAO();
+        userNameInputLogin.setText("admin");
+        passwordInputLogin.setText("admin");
+        dao = new UserDAO();  // -- NULL POINTER EXCEPTION
     }
 
 
@@ -174,7 +178,7 @@ public class LoginController implements Initializable {
     }
 
     /**
-     * Mehod that will be mainly for
+     * Method that will be mainly for
      *
      * @param resourceBundle ResourceBundle
      */

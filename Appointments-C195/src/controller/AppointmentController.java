@@ -746,14 +746,12 @@ public class AppointmentController implements Controller<Appointment> {
             LocalTime sTime = s.toLocalDateTime().toLocalTime();
             LocalDate eDate = e.toLocalDateTime().toLocalDate();
             LocalTime eTime = e.toLocalDateTime().toLocalTime();
-            if (isBetween(sDate, eDate, date)) {
-                if (isBetween(sTime, eTime, time)) {
-                    getApplicationLogger().logWARN(String.format("------ CONFLICTING SCHEDULE ------\n")
-                            + String.format("Customer -> DATE: %s - %s - %s\n", sDate, date, eDate)
-                            + String.format("Customer -> TIME: %s - %s - %s\n", sTime, time, eTime)
-                            + String.format("Conflicts with Appointment -> %s - %s", a.getAppointment_id(), a.getTitle()));
-                    isOverlapped = true;
-                }
+            if (isBetween(sDate, eDate, date) && isBetween(sTime, eTime, time)) {
+                getApplicationLogger().logWARN(String.format("------ CONFLICTING SCHEDULE ------\n")
+                        + String.format("Customer -> DATE: %s - %s - %s\n", sDate, date, eDate)
+                        + String.format("Customer -> TIME: %s - %s - %s\n", sTime, time, eTime)
+                        + String.format("Conflicts with Appointment -> %s - %s", a.getAppointment_id(), a.getTitle()));
+                isOverlapped = true;
             }
         }
         return isOverlapped;

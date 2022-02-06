@@ -34,6 +34,7 @@ public class WebScraper {
 			}
 			org.w3c.dom.Document document = new Tidy().parseDOM(input, null);
 			NodeList imgs = document.getElementsByTagName("img");
+			System.err.println("IMGS FOUND! --> " + imgs.getLength());
 			for (int i = 0; i < imgs.getLength(); i++) {
 				String title = imgs.item(i).getAttributes().getNamedItem("alt").getNodeValue();
 				String src = imgs.item(i).getAttributes().getNamedItem("src").getNodeValue();

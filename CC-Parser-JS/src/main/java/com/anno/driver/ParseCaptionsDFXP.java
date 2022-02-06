@@ -13,12 +13,15 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
+import main.java.com.anno.page.WixNursingNotesPage;
+import main.java.com.anno.page.WixNursingNotesStepLib;
 import main.java.com.anno.shared.CC_Constant;
 import main.java.com.anno.slide.SlideBodyObject;
 import main.java.com.anno.slide.SlideJSObject;
 import main.java.com.anno.slide.SlideLine;
 import main.java.com.anno.slide.SlidePrefixObject;
 import main.java.com.anno.slide.SlideSuffixObject;
+import main.java.com.anno.slide.WeeklySlideIndex;
 
 public class ParseCaptionsDFXP {
 
@@ -34,23 +37,56 @@ public class ParseCaptionsDFXP {
 	private static List<String> disposedTags = new ArrayList<>();
 	private static List<String> allLines = new ArrayList<>();
 	private static Map<String, String> images = new HashMap<>();
+	private static Map<Integer, List<String>> weeklyIndex = new HashMap<>();
+	private static int week;
 	private static String jsClippyLines = "";
 	private static SlidePrefixObject prefixObject;
 	private static SlideBodyObject bodyObject;
 	private static SlideSuffixObject suffixObject;
 
+	// If ChromDriver not able to be closed in TaskManager -- taskkill /f /im
+	// chromedriver.exe in CMD
 	public static void main(String... args) {
+		boolean flag = false;
+		runConditionally(flag);
+	}
+
+	private static void runConditionally(boolean flag) {
+		String path = "C:\\Users\\Haku Wei\\Documents\\git\\nursing-health-plan\\VOICE_THREAD_CC\\NUR-202\\WEEK2\\connectiveTissueDiseaseArthritis\\js-slides-connectiveTissueDiseaseArthritis";
+		int week = 2;
+		String topic = "Connective Tissue Disease -- Arthritis";
+		String html = "connectiveTissueDiseaseArthritis";
+//		if (flag) {
+//			runWebScrapper(path);
+//		} else {
+//			runSeleniumScrapper(path);
+//		}
+//		updateNursingIndex(week, topic, html);
+		readINDEX_JSFile();
+	}
+
+	private static void runWebScrapper(String path) {
 		images = WebScraper.parsingImagesFromSite(CC_Constant.IMAGE_REPOSITORY);
+		initialize();
+		run(path, "connTissueDiseaseArthritis");
+		copyToClipboard();
+	}
+
+	private static void runSeleniumScrapper(String path) {
+		WixNursingNotesStepLib wixStepLib = null;
+		initialize();
+		wixStepLib = new WixNursingNotesStepLib();
+		wixStepLib.setWixPage(new WixNursingNotesPage(WixNursingNotesStepLib.configDriver()));
+		wixStepLib.startPageParsing(false);
+		images = wixStepLib.getAllImagesFromParse("musculoSkeletalTrauma", 47);
 //		images.forEach((e, v) -> {
 //			if (e.contains("kidneyFailure")) {
-//				System.out.printf("%s -> %s\n", e, v);
+//			System.out.printf("%s -> %s\n", e, v);
 //			}
 //		});
-		String path = "C:\\Users\\Haku Wei\\Documents\\git\\nursing-health-plan\\VOICE_THREAD_CC\\WEEK14\\ClientWithHIVAndAIDS\\js-slides-ClientWithHIVAndAIDS";
-//		String imageName = args[1];
-		initialize();
-		run(path, "clientHIVandAIDS");
+		run(path, "connTissueDiseaseArthritis");
 		copyToClipboard();
+//		wixPage.closeWindow();
 	}
 
 	private static void run(String dir, String title) {
@@ -72,6 +108,18 @@ public class ParseCaptionsDFXP {
 			slideObject.setSuffix(getSuffixObject());
 			slideJSObject.add(slideObject);
 		}
+	}
+
+	private static void updateNursingIndex(int week, String topic, String file) {
+		List<String> weekSection = new ArrayList<>();
+		String s = appendNewWeek(new WeeklySlideIndex(week, topic, file));
+		System.out.println(s);
+
+//		weeklyIndex.forEach((e,v) -> {
+//			if(week == e) {
+//				
+//			}
+//		});
 	}
 
 	private static void initialize() {
@@ -126,8 +174,13 @@ public class ParseCaptionsDFXP {
 	}
 
 	private static String runThroughReplaces(String s) {
+//		if (s.contains("{") || s.contains("}")) {
+//			return replaceDivContentEditableTag(replacePrefixDivTag(replaceOpenCurlyBracket(
+//					replaceCloseBracket(replaceRightPTag(replaceLeftPTag(replaceApostropheWithBreak(s)))))));
+//		} else {
 		return replaceDivContentEditableTag(
 				replacePrefixDivTag(replaceRightPTag(replaceLeftPTag(replaceApostropheWithBreak(s)))));
+//		}
 	}
 
 	private static List<SlideLine> removeTags(List<SlideLine> lines) {
@@ -136,6 +189,7 @@ public class ParseCaptionsDFXP {
 		trimUnwanntedTags(lines, CC_Constant.SUFFIX_BODY_TAG);
 		trimUnwanntedTags(lines, CC_Constant.SUFFIX_TT_TAG);
 		trimUnwanntedTags(lines, CC_Constant.SUFFIX_DIV_TAG);
+		trimUnwanntedTags(lines, CC_Constant.EMPTY_P_TAGS);
 		return lines;
 	}
 
@@ -170,6 +224,18 @@ public class ParseCaptionsDFXP {
 
 	private static String replaceDivContentEditableTag(String s) {
 		return s.replace(CC_Constant.DIV_EDITABLE_TAG, "-us\">'+");
+	}
+
+	private static String replaceOpenCurlyBracket(String s) {
+		return removeUnwantedNewLine(s.replace(CC_Constant.OPEN_CURLY, "\'<p>"));
+	}
+
+	private static String replaceCloseBracket(String s) {
+		return removeUnwantedNewLine(s.replace(CC_Constant.CLOSE_CURLY, "</p>'+"));
+	}
+
+	private static String removeUnwantedNewLine(String s) {
+		return s.contains("\n") ? s.replace("\n", "") : s.replace("\r", "");
 	}
 
 	private static void printLines(List<SlideLine> lines) {
@@ -305,4 +371,75 @@ public class ParseCaptionsDFXP {
 		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
 		clipboard.setContents(stringSelection, null);
 	}
+
+	private static String appendNewWeek(WeeklySlideIndex index) {
+		List<String> list = new ArrayList<>();
+		list.add("<li>\n");
+		list.add("<a href='" + formatForHREF(index.getWeek(), index.getFile()) + "'>\n");
+		list.add(index.getTopic() + "\n");
+		list.add("</a>\n");
+		list.add("</li>");
+		return (list.toString().replace(",", "").replace("[", "").replace("]", "")).trim();
+	}
+
+	private static String formatForHREF(int week, String file) {
+		return "./WEEK" + week + "/" + file + "/" + file + ".html";
+	}
+
+	private static void readINDEX_JSFile() {
+		List<String> allLines = new ArrayList<>();
+		System.out.println("PARSING");
+		try (Scanner z = new Scanner(new FileReader(new File(CC_Constant.NUR202_INDEX)))) {
+			while (z.hasNextLine()) {
+				String line = z.nextLine();
+				if (!line.trim().isBlank() || !line.trim().isEmpty() || !line.trim().equalsIgnoreCase("")) {
+					allLines.add(line);
+				}
+			}
+			parseWeeklySection(allLines);
+		} catch (FileNotFoundException ex) {
+			// Unable to Locate File
+			ex.printStackTrace();
+		}
+	}
+
+	private static void parseWeeklySection(List<String> lines) {
+		boolean isSection = false;
+		int i = 0;
+		for (String line : lines) {
+			String trimmed = line;
+			isSection = trimmed.trim().equals(CC_Constant.INDEX_PREFIX_SECTION);
+			if (isSection) {
+				addToSection(i, lines);
+			}
+			i++;
+		}
+		weeklyIndex.forEach((e, v) -> {
+			System.out.println(v.toString().replace(",", "").replace("[", "").replace("]", ""));
+			v.forEach(k -> {
+				System.out.println(k.toString().replace(",", "").replace("[", "").replace("]", ""));
+			});
+		});
+	}
+
+	private static void addToSection(int i, List<String> line) {
+		List<String> section = new ArrayList<>();
+		boolean toStop = false;
+		int j = i;
+		while (!toStop) {
+			String trimmed = line.get(j);
+			section.add(line.get(j));
+			if (trimmed.trim().contains("<h3>")) {
+				week = Integer.parseInt(trimmed.trim().replace("<h3>", "").replace("</h3>", "").replace("Week ", ""));
+			}
+			if (toStop = trimmed.trim().equalsIgnoreCase(CC_Constant.INDEX_SUFFIX_SECTION)) {
+//				System.out.printf("Week %s\n\t->%s", week,
+//						section.toString().replace(",", "").replace("[", "").replace("]", ""));
+				weeklyIndex.put(week, section);
+
+			}
+			j++;
+		}
+	}
+
 }
