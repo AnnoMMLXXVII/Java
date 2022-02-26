@@ -16,7 +16,7 @@ public class TextParser {
     //	private static final String SINGLE_ANS_REGEX = "ANS: ([A-F+])$";
 //	private static final String MULTI_ANS_REGEX = "ANS: ((([A-F+])*,)\s)+[A-F]$";
     private static final String ANS_REGEX = "ANS: ((([A-F]),) )*[A-F]";
-    private static final String INLINE_NUMBER_DELIM = "\s[0-9]\\.+\s(([A-z]+\s)+)";
+//    private static final String INLINE_NUMBER_DELIM = "\s[0-9]\\.+\s(([A-z]+\s)+)";
     private static final String CHOICE_WITH_EXTRA_NEWLINE = "^[a-f].\\s\\n+";
     private static final String REMOVEABLE_LINK = "abirb.com/test".trim();
     private static final String START_OF_EMPTY_LINE = "^\n";

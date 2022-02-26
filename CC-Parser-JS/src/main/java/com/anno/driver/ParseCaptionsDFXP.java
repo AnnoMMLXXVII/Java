@@ -47,28 +47,28 @@ public class ParseCaptionsDFXP {
 	// If ChromDriver not able to be closed in TaskManager -- taskkill /f /im
 	// chromedriver.exe in CMD
 	public static void main(String... args) {
-		boolean flag = false;
+		boolean flag = true;
 		runConditionally(flag);
 	}
 
 	private static void runConditionally(boolean flag) {
-		String path = "C:\\Users\\Haku Wei\\Documents\\git\\nursing-health-plan\\VOICE_THREAD_CC\\NUR-202\\WEEK2\\connectiveTissueDiseaseArthritis\\js-slides-connectiveTissueDiseaseArthritis";
+		String path = "C:\\Users\\Haku Wei\\Documents\\git\\nursing-health-plan\\VOICE_THREAD_CC\\NUR-202\\WEEK6\\PatientWithVisualProblems\\js-slides-PatientWithVisualProblems";
 		int week = 2;
 		String topic = "Connective Tissue Disease -- Arthritis";
-		String html = "connectiveTissueDiseaseArthritis";
-//		if (flag) {
-//			runWebScrapper(path);
-//		} else {
-//			runSeleniumScrapper(path);
-//		}
-//		updateNursingIndex(week, topic, html);
-		readINDEX_JSFile();
+		String html = "diabetes";
+		if (flag) {
+			runWebScrapper(path);
+		} else {
+			runSeleniumScrapper(path);
+		}
+		updateNursingIndex(week, topic, html);
+//		readINDEX_JSFile();
 	}
 
 	private static void runWebScrapper(String path) {
 		images = WebScraper.parsingImagesFromSite(CC_Constant.IMAGE_REPOSITORY);
 		initialize();
-		run(path, "connTissueDiseaseArthritis");
+		run(path, "aPatientWithVisualProblems");
 		copyToClipboard();
 	}
 

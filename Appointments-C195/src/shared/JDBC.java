@@ -85,7 +85,6 @@ public class JDBC {
             getApplicationLogger().logERROR("Null reference to Prepared Statement");
             return null;
         }
-
     }
 
 

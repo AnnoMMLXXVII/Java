@@ -9,7 +9,7 @@ public class Faculty {
 	private String rank;
 	private int salary;
 	private String specialty;
-	private int zipCode;
+	private String zipCode;
 	private int officeNumber;
 	private int sectionId;
 
@@ -33,7 +33,7 @@ public class Faculty {
 	 * @param sectionId
 	 */
 	public Faculty(int id, String firstName, String lastName, String address, String rank, int salary, String specialty,
-			int zipCode, int officeNumber, int sectionId) {
+			String zipCode, int officeNumber, int sectionId) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
@@ -99,7 +99,7 @@ public class Faculty {
 	/**
 	 * @return the zipCode
 	 */
-	public int getZipCode() {
+	public String getZipCode() {
 		return zipCode;
 	}
 
@@ -169,7 +169,7 @@ public class Faculty {
 	/**
 	 * @param zipCode the zipCode to set
 	 */
-	public void setZipCode(int zipCode) {
+	public void setZipCode(String zipCode) {
 		this.zipCode = zipCode;
 	}
 
@@ -200,7 +200,7 @@ public class Faculty {
 		result = prime * result + salary;
 		result = prime * result + sectionId;
 		result = prime * result + ((specialty == null) ? 0 : specialty.hashCode());
-		result = prime * result + zipCode;
+		result = prime * result + ((zipCode == null) ? 0 : zipCode.hashCode());
 		return result;
 	}
 
@@ -246,7 +246,10 @@ public class Faculty {
 				return false;
 		} else if (!specialty.equals(other.specialty))
 			return false;
-		if (zipCode != other.zipCode)
+		if (zipCode == null) {
+			if (other.zipCode != null)
+				return false;
+		} else if (!zipCode.equals(other.zipCode))
 			return false;
 		return true;
 	}

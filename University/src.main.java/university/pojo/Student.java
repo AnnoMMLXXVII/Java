@@ -9,8 +9,11 @@ public class Student {
 	private String lastName;
 	private String address;
 	private String phone;
-	private Date bithdate;
-	private int zipCode;
+	private Date birthdate;
+	private String grade;
+	private Date startDate;
+	private Date endDate;
+	private String zipCode;
 	private int facultyId;
 	private int sectionId;
 
@@ -27,20 +30,26 @@ public class Student {
 	 * @param lastName
 	 * @param address
 	 * @param phone
-	 * @param bithdate
+	 * @param birthdate
+	 * @param grade
+	 * @param startDate
+	 * @param endDate
 	 * @param zipCode
 	 * @param facultyId
 	 * @param sectionId
 	 */
-	public Student(int id, String firstName, String lastName, String address, String phone, Date bithdate, int zipCode,
-			int facultyId, int sectionId) {
+	public Student(int id, String firstName, String lastName, String address, String phone, Date birthdate,
+			String grade, Date startDate, Date endDate, String zipCode, int facultyId, int sectionId) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.address = address;
 		this.phone = phone;
-		this.bithdate = bithdate;
+		this.birthdate = birthdate;
+		this.grade = grade;
+		this.startDate = startDate;
+		this.endDate = endDate;
 		this.zipCode = zipCode;
 		this.facultyId = facultyId;
 		this.sectionId = sectionId;
@@ -82,16 +91,37 @@ public class Student {
 	}
 
 	/**
-	 * @return the bithdate
+	 * @return the birthdate
 	 */
-	public Date getBithdate() {
-		return bithdate;
+	public Date getBirthdate() {
+		return birthdate;
+	}
+
+	/**
+	 * @return the grade
+	 */
+	public String getGrade() {
+		return grade;
+	}
+
+	/**
+	 * @return the startDate
+	 */
+	public Date getStartDate() {
+		return startDate;
+	}
+
+	/**
+	 * @return the endDate
+	 */
+	public Date getEndDate() {
+		return endDate;
 	}
 
 	/**
 	 * @return the zipCode
 	 */
-	public int getZipCode() {
+	public String getZipCode() {
 		return zipCode;
 	}
 
@@ -145,16 +175,37 @@ public class Student {
 	}
 
 	/**
-	 * @param bithdate the bithdate to set
+	 * @param birthdate the birthdate to set
 	 */
-	public void setBithdate(Date bithdate) {
-		this.bithdate = bithdate;
+	public void setBirthdate(Date birthdate) {
+		this.birthdate = birthdate;
+	}
+
+	/**
+	 * @param grade the grade to set
+	 */
+	public void setGrade(String grade) {
+		this.grade = grade;
+	}
+
+	/**
+	 * @param startDate the startDate to set
+	 */
+	public void setStartDate(Date startDate) {
+		this.startDate = startDate;
+	}
+
+	/**
+	 * @param endDate the endDate to set
+	 */
+	public void setEndDate(Date endDate) {
+		this.endDate = endDate;
 	}
 
 	/**
 	 * @param zipCode the zipCode to set
 	 */
-	public void setZipCode(int zipCode) {
+	public void setZipCode(String zipCode) {
 		this.zipCode = zipCode;
 	}
 
@@ -177,14 +228,17 @@ public class Student {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((address == null) ? 0 : address.hashCode());
-		result = prime * result + ((bithdate == null) ? 0 : bithdate.hashCode());
+		result = prime * result + ((birthdate == null) ? 0 : birthdate.hashCode());
+		result = prime * result + ((endDate == null) ? 0 : endDate.hashCode());
 		result = prime * result + facultyId;
 		result = prime * result + ((firstName == null) ? 0 : firstName.hashCode());
+		result = prime * result + ((grade == null) ? 0 : grade.hashCode());
 		result = prime * result + id;
 		result = prime * result + ((lastName == null) ? 0 : lastName.hashCode());
 		result = prime * result + ((phone == null) ? 0 : phone.hashCode());
 		result = prime * result + sectionId;
-		result = prime * result + zipCode;
+		result = prime * result + ((startDate == null) ? 0 : startDate.hashCode());
+		result = prime * result + ((zipCode == null) ? 0 : zipCode.hashCode());
 		return result;
 	}
 
@@ -202,10 +256,15 @@ public class Student {
 				return false;
 		} else if (!address.equals(other.address))
 			return false;
-		if (bithdate == null) {
-			if (other.bithdate != null)
+		if (birthdate == null) {
+			if (other.birthdate != null)
 				return false;
-		} else if (!bithdate.equals(other.bithdate))
+		} else if (!birthdate.equals(other.birthdate))
+			return false;
+		if (endDate == null) {
+			if (other.endDate != null)
+				return false;
+		} else if (!endDate.equals(other.endDate))
 			return false;
 		if (facultyId != other.facultyId)
 			return false;
@@ -213,6 +272,11 @@ public class Student {
 			if (other.firstName != null)
 				return false;
 		} else if (!firstName.equals(other.firstName))
+			return false;
+		if (grade == null) {
+			if (other.grade != null)
+				return false;
+		} else if (!grade.equals(other.grade))
 			return false;
 		if (id != other.id)
 			return false;
@@ -228,15 +292,24 @@ public class Student {
 			return false;
 		if (sectionId != other.sectionId)
 			return false;
-		if (zipCode != other.zipCode)
+		if (startDate == null) {
+			if (other.startDate != null)
+				return false;
+		} else if (!startDate.equals(other.startDate))
+			return false;
+		if (zipCode == null) {
+			if (other.zipCode != null)
+				return false;
+		} else if (!zipCode.equals(other.zipCode))
 			return false;
 		return true;
 	}
 
 	@Override
 	public String toString() {
-		return "Student [" + id + ", " + firstName + ", " + lastName + ", " + address + ", " + phone + ", " + bithdate
-				+ ", zipCode=" + zipCode + ", facultyId=" + facultyId + ", sectionId=" + sectionId + "]";
+		return "Student [" + id + ", " + firstName + ", " + lastName + ", " + address + ", " + phone + ", " + birthdate
+				+ ", " + grade + ", " + startDate + ", " + endDate + ", zipCode=" + zipCode + ", facultyId=" + facultyId
+				+ ", sectionId=" + sectionId + "]";
 	}
 
 }

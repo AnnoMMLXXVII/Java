@@ -2,7 +2,7 @@ package university.pojo;
 
 public class ZipCode {
 
-	private int zipcode;
+	private String zipcode;
 	private String city;
 	private String stateAbbr;
 
@@ -18,7 +18,7 @@ public class ZipCode {
 	 * @param city
 	 * @param stateAbbr
 	 */
-	public ZipCode(int zipcode, String city, String stateAbbr) {
+	public ZipCode(String zipcode, String city, String stateAbbr) {
 		super();
 		this.zipcode = zipcode;
 		this.city = city;
@@ -28,7 +28,7 @@ public class ZipCode {
 	/**
 	 * @return the zipcode
 	 */
-	public int getZipcode() {
+	public String getZipcode() {
 		return zipcode;
 	}
 
@@ -49,7 +49,7 @@ public class ZipCode {
 	/**
 	 * @param zipcode the zipcode to set
 	 */
-	public void setZipcode(int zipcode) {
+	public void setZipcode(String zipcode) {
 		this.zipcode = zipcode;
 	}
 
@@ -73,7 +73,7 @@ public class ZipCode {
 		int result = 1;
 		result = prime * result + ((city == null) ? 0 : city.hashCode());
 		result = prime * result + ((stateAbbr == null) ? 0 : stateAbbr.hashCode());
-		result = prime * result + zipcode;
+		result = prime * result + ((zipcode == null) ? 0 : zipcode.hashCode());
 		return result;
 	}
 
@@ -96,7 +96,10 @@ public class ZipCode {
 				return false;
 		} else if (!stateAbbr.equals(other.stateAbbr))
 			return false;
-		if (zipcode != other.zipcode)
+		if (zipcode == null) {
+			if (other.zipcode != null)
+				return false;
+		} else if (!zipcode.equals(other.zipcode))
 			return false;
 		return true;
 	}

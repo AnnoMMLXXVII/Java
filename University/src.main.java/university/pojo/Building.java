@@ -6,7 +6,7 @@ public class Building {
 	private String address;
 	private String name;
 	private int campusId;
-	private int zipCode;
+	private String zipCode;
 	private int roomNumber;
 
 	/**
@@ -17,7 +17,7 @@ public class Building {
 	 * @param zipCode
 	 * @param roomNumber
 	 */
-	public Building(int id, String address, String name, int campusId, int zipCode, int roomNumber) {
+	public Building(int id, String address, String name, int campusId, String zipCode, int roomNumber) {
 		super();
 		this.id = id;
 		this.address = address;
@@ -65,7 +65,7 @@ public class Building {
 	/**
 	 * @return the zipCode
 	 */
-	public int getZipCode() {
+	public String getZipCode() {
 		return zipCode;
 	}
 
@@ -107,7 +107,7 @@ public class Building {
 	/**
 	 * @param zipCode the zipCode to set
 	 */
-	public void setZipCode(int zipCode) {
+	public void setZipCode(String zipCode) {
 		this.zipCode = zipCode;
 	}
 
@@ -127,7 +127,7 @@ public class Building {
 		result = prime * result + id;
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		result = prime * result + roomNumber;
-		result = prime * result + zipCode;
+		result = prime * result + ((zipCode == null) ? 0 : zipCode.hashCode());
 		return result;
 	}
 
@@ -156,7 +156,10 @@ public class Building {
 			return false;
 		if (roomNumber != other.roomNumber)
 			return false;
-		if (zipCode != other.zipCode)
+		if (zipCode == null) {
+			if (other.zipCode != null)
+				return false;
+		} else if (!zipCode.equals(other.zipCode))
 			return false;
 		return true;
 	}

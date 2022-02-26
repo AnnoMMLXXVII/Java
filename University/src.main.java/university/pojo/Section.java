@@ -1,13 +1,11 @@
 package university.pojo;
 
-import java.sql.Date;
-
 public class Section {
 
 	private int id;
 	private int number;
 	private int term;
-	private Date year;
+	private int year;
 	private int courseId;
 	private int roomNumber;
 
@@ -26,7 +24,7 @@ public class Section {
 	 * @param courseId
 	 * @param roomNumber
 	 */
-	public Section(int id, int number, int term, Date year, int courseId, int roomNumber) {
+	public Section(int id, int number, int term, int year, int courseId, int roomNumber) {
 		super();
 		this.id = id;
 		this.number = number;
@@ -60,7 +58,7 @@ public class Section {
 	/**
 	 * @return the year
 	 */
-	public Date getYear() {
+	public int getYear() {
 		return year;
 	}
 
@@ -102,7 +100,7 @@ public class Section {
 	/**
 	 * @param year the year to set
 	 */
-	public void setYear(Date year) {
+	public void setYear(int year) {
 		this.year = year;
 	}
 
@@ -129,7 +127,7 @@ public class Section {
 		result = prime * result + number;
 		result = prime * result + roomNumber;
 		result = prime * result + term;
-		result = prime * result + ((year == null) ? 0 : year.hashCode());
+		result = prime * result + year;
 		return result;
 	}
 
@@ -152,10 +150,7 @@ public class Section {
 			return false;
 		if (term != other.term)
 			return false;
-		if (year == null) {
-			if (other.year != null)
-				return false;
-		} else if (!year.equals(other.year))
+		if (year != other.year)
 			return false;
 		return true;
 	}
