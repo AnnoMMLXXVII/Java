@@ -6,7 +6,6 @@ import java.awt.Dimension;
 
 import javax.swing.JFrame;
 
-import com.GUI.NavigationBar.NavBar;
 import com.GUI.NavigationBar.Controller.NavigationController;
 import com.GUI.Panels.MainJPanel;
 

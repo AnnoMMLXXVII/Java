@@ -8,6 +8,8 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -39,6 +41,7 @@ public class ParseCaptionsDFXP {
 	private static Map<String, String> images = new HashMap<>();
 	private static Map<Integer, List<String>> weeklyIndex = new HashMap<>();
 	private static int week;
+	private static int start = 0, end = 0;
 	private static String jsClippyLines = "";
 	private static SlidePrefixObject prefixObject;
 	private static SlideBodyObject bodyObject;
@@ -52,23 +55,25 @@ public class ParseCaptionsDFXP {
 	}
 
 	private static void runConditionally(boolean flag) {
-		String path = "C:\\Users\\Haku Wei\\Documents\\git\\nursing-health-plan\\VOICE_THREAD_CC\\NUR-202\\WEEK6\\PatientWithVisualProblems\\js-slides-PatientWithVisualProblems";
-		int week = 2;
-		String topic = "Connective Tissue Disease -- Arthritis";
-		String html = "diabetes";
+		String path = "C:\\Users\\Haku Wei\\Documents\\git\\nursing-health-plan\\VOICE_THREAD_CC\\NUR-202\\WEEK9\\SpinalCordInjury\\js-slides-SpinalCordInjury";
 		if (flag) {
+			start = 0;
+			end = 0;
 			runWebScrapper(path);
 		} else {
 			runSeleniumScrapper(path);
 		}
-		updateNursingIndex(week, topic, html);
+//		int week = 2;
+//		String topic = "Connective Tissue Disease -- Arthritis";
+//		String html = "diabetes";
+//		updateNursingIndex(week, topic, html);
 //		readINDEX_JSFile();
 	}
 
 	private static void runWebScrapper(String path) {
 		images = WebScraper.parsingImagesFromSite(CC_Constant.IMAGE_REPOSITORY);
 		initialize();
-		run(path, "aPatientWithVisualProblems");
+		run(path, "aSpinalCordInjury");
 		copyToClipboard();
 	}
 
@@ -91,22 +96,49 @@ public class ParseCaptionsDFXP {
 
 	private static void run(String dir, String title) {
 		validateArgs(title);
-		SlideJSObject slideObject;
 		File directory = new File(dir);
 		imageCountBound = directory.list().length;
 		setImageTitle(title);
-		List<File> files = Arrays.asList(directory.listFiles());
-		for (File f : files) {
-			String[] fileName = splitFileName(f.getName());
-			slideObject = new SlideJSObject();
-			constructPrefix(Integer.parseInt(fileName[1].trim()), Integer.parseInt(fileName[1].trim()));
-			constructBody(f);
-			constructSuffix();
-			System.out.println();
-			slideObject.setPrefix(getPrefixObject());
-			slideObject.setBody(getBodyObject());
-			slideObject.setSuffix(getSuffixObject());
-			slideJSObject.add(slideObject);
+		generateSlides(Arrays.asList(directory.listFiles()));
+	}
+
+	private static void generateSlides(List<File> files) {
+		Collections.sort(files, new Comparator<File>() {
+
+			@Override
+			public int compare(File o1, File o2) {
+				String[] firstFile = splitFileName(o1.getName());
+				String[] secondFile = splitFileName(o2.getName());
+				return Integer.parseInt(firstFile[1].trim()) - Integer.parseInt(secondFile[1].trim());
+			}
+
+		});
+		if (start <= 0 || end <= 0) {
+			files.forEach(e -> {
+				String[] fileName = splitFileName(e.getName());
+				SlideJSObject slideObject = new SlideJSObject();
+				constructPrefix(Integer.parseInt(fileName[1].trim()), Integer.parseInt(fileName[1].trim()));
+				constructBody(e);
+				constructSuffix();
+				System.out.println();
+				slideObject.setPrefix(getPrefixObject());
+				slideObject.setBody(getBodyObject());
+				slideObject.setSuffix(getSuffixObject());
+				slideJSObject.add(slideObject);
+			});
+		} else {
+			for (int i = start; i < end; i++) {
+				String[] fileName = splitFileName(files.get(i - 1).getName());
+				SlideJSObject slideObject = new SlideJSObject();
+				constructPrefix(Integer.parseInt(fileName[1].trim()), Integer.parseInt(fileName[1].trim()));
+				constructBody(files.get(i - 1));
+				constructSuffix();
+				System.out.println();
+				slideObject.setPrefix(getPrefixObject());
+				slideObject.setBody(getBodyObject());
+				slideObject.setSuffix(getSuffixObject());
+				slideJSObject.add(slideObject);
+			}
 		}
 	}
 
