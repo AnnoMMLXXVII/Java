@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="unit-11-case-problem-2-team_ironman-main/main"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

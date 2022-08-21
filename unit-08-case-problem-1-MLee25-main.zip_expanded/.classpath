@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="unit-08-case-problem-1-MLee25-main/main"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
