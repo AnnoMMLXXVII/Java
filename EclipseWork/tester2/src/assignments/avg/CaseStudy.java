@@ -48,7 +48,7 @@ public class CaseStudy {
 					max = temp;
 				}
 				min = lookForMinimum(array2D.get(rowCounter), columnCounter - 1, temp);
-				addToModeSet(temp);
+//				addToModeSet(temp);
 				counter++;
 			}
 			sectionInfo.put(rowCounter + 1, new SectionInformation(calculateAverage(sum, counter), max, min));
@@ -156,13 +156,59 @@ public class CaseStudy {
 	private static double calculateAverage(double sum, int divisor) {
 		return (sum / divisor);
 	}
+	
+	private double getMedian(double[][] sections) {
+		List<Double> temp = new ArrayList<>();
+		for (int i = 0; i < sections.length; i++) {
+			for (int j = 0; j < sections[i].length; j++) {
+				temp.add(sections[i][j]);
+			}
+		}
+		Arrays.sort(temp.toArray());
+		return temp.get(temp.size() / 2);
+	}
 
-	private static void addToModeSet(double key) {
+	private double[] getMode(double[][] sections) {
+		Map<Double, Integer> modeSet = new HashMap<>();
+		for (int i = 0; i < sections.length; i++) {
+			for (int j = 0; j < sections[i].length; j++) {
+				modeSet = addToModeSet(modeSet, sections[i][j]);
+			}
+		}
+		Integer max = (Integer) modeSet.values().toArray()[0];
+		double[] modes = new double[modeSet.keySet().size()];
+		int i = 0;
+		int size = 0;
+		for (Map.Entry<Double, Integer> entry : modeSet.entrySet()) {
+			if (i > 0) {
+				if (entry.getValue() >= max) {
+					max = entry.getValue();
+					addToMode(entry.getKey(), modes);
+					size++;
+				}
+			}
+			i++;
+		}
+		return Arrays.copyOf(modes, size);
+	}
+
+	private Map<Double, Integer> addToModeSet(Map<Double, Integer> modeSet, double key) {
 		if (modeSet.containsKey(key)) {
 			modeSet.put(key, modeSet.get(key) + 1);
 		} else {
 			modeSet.put(key, 1);
 		}
+		return modeSet;
+	}
+
+	private double[] addToMode(double mode, double... modes) {
+		for (int i = 0; i < modes.length; i++) {
+			if (modes[i] == 0.0) {
+				modes[i] = mode;
+				break;
+			}
+		}
+		return modes;
 	}
 
 }

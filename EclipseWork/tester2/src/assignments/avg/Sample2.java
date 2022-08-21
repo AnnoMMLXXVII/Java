@@ -8,56 +8,72 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class Sample2 {
+
 	public static void main(String[] args) {
+		new Sample2();
+	}
+
+	public Sample2() {
+//		double[] sectionOne = { 80, 85, 90, 85, 94, 93, 80, 93, 82, 93, 82, 80 };
+//		double[] sectionTwo = { 85, 90, 87, 88, 90, 82, 88, 82 };
+//		double[] sectionThree = { 90, 92, 83, 85, 88, 90, 93, 80, 82, 81 };
+//		double[][] sections = { sectionOne, sectionTwo, sectionThree };
 		Scanner input = new Scanner(System.in);
 
-		double[][] array2d;
 		int numberOfRows, numberOfcolumns;
-		double sum = 0;
 		System.out.println("My first JAVA! Good day\n");
 		System.out.print("Enter number of Section");
 		numberOfRows = input.nextInt();
-		System.out.print("Enter number of Students : ");
-		numberOfcolumns = input.nextInt();
+		double[][] sections = new double[numberOfRows][0];
+		for (int i = 0; i < numberOfRows; i++) {
+			System.out.printf("Enter number of students in section %s\n", (i + 1));
+			numberOfcolumns = input.nextInt();
+			sections[i] = new double[numberOfcolumns];
+		}
 		System.out.println();
-		array2d = new double[numberOfRows][numberOfcolumns];
 		double max = 0.0;
 		double min = 0.0;
-		for (int rowCounter = 0; rowCounter < numberOfRows; rowCounter++) {
+		double allMax = 0.0;
+		double[] allMins = new double[sections.length];
+		for (int rowCounter = 0; rowCounter < sections.length; rowCounter++) {
 			System.out.println("Grades of Students " + rowCounter + ":");
-			for (int columnCounter = 0; columnCounter < numberOfcolumns; columnCounter++) {
-				array2d[rowCounter][columnCounter] = input.nextDouble();
-
-				if (array2d[rowCounter][columnCounter] < min) {
-					min = array2d[rowCounter][columnCounter];
+			for (int columnCounter = 0; columnCounter < sections[rowCounter].length; columnCounter++) {
+				sections[rowCounter][columnCounter] = input.nextDouble();
+				input.nextLine();
+				if (sections[rowCounter][columnCounter] > max) {
+					max = sections[rowCounter][columnCounter];
 				}
-
-				if (array2d[rowCounter][columnCounter] > max) {
-					max = array2d[rowCounter][columnCounter];
-				}
+				min = lookForMinimum(sections[rowCounter], columnCounter - 1, sections[rowCounter][columnCounter]);
 			}
-			System.err.println("Current Min Value: " + min);
-			System.err.println("Current Max Value: " + max);
+			if (max > allMax) {
+				allMax = max;
+			}
+			allMins[rowCounter] = min;
+			System.out.printf("Average Score in Section %s: %.2f\n", 1, getAverageSectionN(sections, 1));
+			System.out.printf("Lowest  Score in Section %s: %s\n", 2, min);
+			System.out.printf("Highest Score in Section %s: %s\n", 3, max);
+			max = 0.0;
 		}
 
-		System.out.println("Display of Grades");
-		for (int rowCounter = 0; rowCounter < numberOfRows; rowCounter++) {
-			for (int columnCounter = 0; columnCounter < numberOfcolumns; columnCounter++) {
-				System.out.print(array2d[rowCounter][columnCounter] + " | ");
-			}
-			System.out.println();
+		for (int i = 1; i < allMins.length; i++) {
+			min = lookForMinimum(allMins, i - 1, allMins[i]);
 		}
-		for (double[] num : array2d) {
-			for (double n : num) {
-				sum = sum + n;
-			}
+		System.out.println("--------------------------------------");
+		System.out.printf("Average Score in All Sections : %.2f\n", getAverageForAllSections(sections));
+		System.out.printf("Highest Score in All Sections : %s\n", allMax);
+		System.out.printf("Lowest Score in All Sections : %s\n", min);
+		double[] mode = getMode(sections);
+		String str = "";
+		for (int i = 0; i < mode.length; i++) {
+			str = str + mode[i] + ",";
 		}
-
-		double average = sum / array2d[0].length;
-		System.out.format("The average is: %.2f", average);
-
+		System.out.printf("Mode: %s\n", str.substring(0, str.length() - 1));
+		System.out.printf("Median: %s\n", getMedian(sections));
 		input.close();
+		System.out.println("Display of Grades");
+		print(sections);
 	}
+
 	private void print(double[][] sections) {
 		for (int i = 0; i < sections.length; i++) {
 			for (int j = 0; j < sections[i].length; j++) {
@@ -65,13 +81,6 @@ public class Sample2 {
 			}
 			System.out.println();
 		}
-	}
-
-	private void sort(double[][] sections, int row) {
-		if (row > sections.length || row < 0) {
-			return;
-		}
-		Arrays.sort(sections[row]);
 	}
 
 	private double lookForMinimum(double[] subSet, int high, double value) {
@@ -165,4 +174,5 @@ public class Sample2 {
 		}
 		return modes;
 	}
+
 }
