@@ -1,56 +1,32 @@
 package com.game.adventuregame.model;
 
-public class NPC {
+public class NPC extends Character {
 
-    private int health;
-    private int strength;
-    private int dexterity;
-    private int intelligence;
+    private String name;
 
-    public NPC() {
-        this.health = (int) ((Math.random() * 6) + 1);
-        this.strength = (int) ((Math.random() * 6) + 1) * 2;
-        this.dexterity = (int) ((Math.random() * 6) + 1) * 2;
-        this.intelligence = (int) ((Math.random() * 6) + 1) * 2;
+    public NPC(String name) {
+        this.name = name;
+        setHealth((int) ((Math.random() * 6) + 1));
+        setStrength((int) ((Math.random() * 6) + 1) * 2);
+        setDexterity((int) ((Math.random() * 6) + 1) * 2);
+        setIntelligence((int) ((Math.random() * 6) + 1) * 2);
     }
 
-
-    public int getHealth() {
-        return health;
+    public String getName() {
+        return name;
     }
 
-    public void setHealth(int health) {
-        this.health = health;
+    public int getGold() {
+        return -1;
     }
 
-    public int getStrength() {
-        return strength;
-    }
-
-    public void setStrength(int strength) {
-        this.strength = strength;
-    }
-
-    public int getDexterity() {
-        return dexterity;
-    }
-
-    public void setDexterity(int dexterity) {
-        this.dexterity = dexterity;
-    }
-
-    public int getIntelligence() {
-        return intelligence;
-    }
-
-    public void setIntelligence(int intelligence) {
-        this.intelligence = intelligence;
-    }
-
-    public int minHealth() {
-        if (health < 0) {
-            health = 0;
-        }
-        return health;
+    @Override
+    public String toString() {
+        return "NPC{" +
+                "health=" + health +
+                ", strength=" + strength +
+                ", dexterity=" + dexterity +
+                ", intelligence=" + intelligence +
+                '}';
     }
 }

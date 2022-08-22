@@ -1,42 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.game.adventuregame.controller.HelloController">
+<BorderPane maxWidth="783.0" minWidth="650.0" prefHeight="451.0" prefWidth="783.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.game.adventuregame.controller.GameController">
     <left>
-        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+        <VBox prefHeight="450.0" prefWidth="100.0" BorderPane.alignment="CENTER">
             <children>
-                <Label text="Player Stats" />
-                <TextArea fx:id="playerTextArea" prefHeight="200.0" prefWidth="200.0" />
-                <Button fx:id="playerStatsRollButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#buttonClicked" text="Roll" />
+                <Label prefHeight="17.0" prefWidth="201.0" text="Player Stats">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+                <TextArea fx:id="playerTextArea" minWidth="175.0" prefHeight="217.0" prefWidth="175.0" />
+                <Button fx:id="playerStatsRollButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#rollPlayer" prefHeight="25.0" prefWidth="185.0" text="Roll" />
             </children>
         </VBox>
     </left>
     <right>
         <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
             <children>
-                <Label text="NPC Stats" />
-                <TextArea fx:id="npcTextArea" prefHeight="200.0" prefWidth="200.0" />
-                <Button fx:id="npcStatsRollButton" mnemonicParsing="false" onAction="#buttonClicked" text="Roll" />
+                <Label prefHeight="17.0" prefWidth="177.0" text="NPC Stats">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+                <TextArea fx:id="npcTextArea" minWidth="175.0" prefHeight="212.0" prefWidth="175.0" />
+                <Button fx:id="npcStatsRollButton" mnemonicParsing="false" onAction="#rollNPC" prefHeight="25.0" prefWidth="181.0" text="Roll" />
             </children>
         </VBox>
     </right>
     <top>
-        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="650.0" BorderPane.alignment="CENTER">
             <children>
-                <Button fx:id="attackButton" mnemonicParsing="false" onAction="#buttonClicked" text="Attack" />
-                <Button fx:id="runButton" mnemonicParsing="false" onAction="#buttonClicked" text="Run" />
-                <Button fx:id="searchButton" mnemonicParsing="false" onAction="#buttonClicked" text="Search" />
-                <Button fx:id="sleepButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#buttonClicked" text="Sleep" />
+                <Button fx:id="attackButton" mnemonicParsing="false" onAction="#attackAction" text="Attack" BorderPane.alignment="CENTER" />
+                <Button fx:id="runButton" mnemonicParsing="false" onAction="#runAction" text="Run" />
+                <Button fx:id="searchButton" mnemonicParsing="false" onAction="#searchAction" text="Search" />
+                <Button fx:id="sleepButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#sleepAction" text="Sleep" />
             </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
         </HBox>
     </top>
     <bottom>
@@ -54,16 +58,16 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                     <children>
-                        <Button fx:id="upButton" mnemonicParsing="false" onAction="#buttonClicked" text="Up" GridPane.columnIndex="1" />
-                        <Button fx:id="leftButton" mnemonicParsing="false" onAction="#buttonClicked" text="Left" GridPane.rowIndex="1" />
-                        <Button fx:id="downButton" mnemonicParsing="false" onAction="#buttonClicked" text="Down" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <Button fx:id="rightButton" mnemonicParsing="false" onAction="#buttonClicked" text="Right" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Button fx:id="upButton" mnemonicParsing="false" onAction="#upAction" text="Up" GridPane.columnIndex="1" />
+                        <Button fx:id="leftButton" mnemonicParsing="false" onAction="#leftAction" text="Left" GridPane.rowIndex="1" />
+                        <Button fx:id="downButton" mnemonicParsing="false" onAction="#downAction" text="Down" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Button fx:id="rightButton" mnemonicParsing="false" onAction="#rightAction" text="Right" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                     </children>
                 </GridPane>
             </children>
         </HBox>
     </bottom>
-    <center>
-        <TextArea fx:id="textArea" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
-    </center>
+   <center>
+        <TextArea fx:id="textArea" maxWidth="398.0" prefHeight="251.0" prefWidth="398.0" BorderPane.alignment="CENTER" />
+   </center>
 </BorderPane>
